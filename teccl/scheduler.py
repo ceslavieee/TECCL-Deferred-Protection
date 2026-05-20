@@ -12,11 +12,16 @@ from teccl.solvers.allgather import AllGatherFormulation
 from teccl.solvers.allgather_astar import AStarFormulation
 from teccl.solvers.alltoall import AlltoAllFormulation
 from teccl.solvers.base_formulation import BaseFormulation
+from teccl.solvers.dedicated_protection import DedicatedProtectionFormulation
+from teccl.solvers.deferred_protection import DeferredProtectionFormulation
+from teccl.solvers.shared_protection import SharedProtectionFormulation
 from teccl.topologies.dgx1 import DGX1
 from teccl.topologies.dgx2 import DGX2
 from teccl.topologies.ndv2 import NDv2
 from teccl.topologies.amd import AMD
 from teccl.topologies.mesh import Mesh
+from teccl.topologies.ladder6 import Ladder6
+from teccl.topologies.interdc8 import InterDC8
 from teccl.topologies.topology import Topology
 
 
@@ -38,6 +43,10 @@ class TECCLSolver(object):
             return AMD(topology_params)
         elif topology_params.name == "Mesh":
             return Mesh(topology_params)
+        elif topology_params.name == "Ladder6":
+            return Ladder6(topology_params)
+        elif topology_params.name == "InterDC8":
+            return InterDC8(topology_params)
         else:
             raise NotImplementedError(
                 f"Input topology {topology_params.name} not implemented")
@@ -45,6 +54,12 @@ class TECCLSolver(object):
 
     def get_solver(self, user_input: UserInputParams, topology: Topology) -> BaseFormulation:
         if user_input.instance.collective == Collective.ALLGATHER:
+            if user_input.instance.protection_mode == ProtectionMode.DEFERRED:
+                return DeferredProtectionFormulation(user_input, topology)
+            if user_input.instance.protection_mode == ProtectionMode.DEDICATED:
+                return DedicatedProtectionFormulation(user_input, topology)
+            if user_input.instance.protection_mode == ProtectionMode.SHARED:
+                return SharedProtectionFormulation(user_input, topology)
             if user_input.instance.objective_type == ObjectiveType.ASTAR:
                 return AStarFormulation(user_input, topology)
             return AllGatherFormulation(user_input, topology)
@@ -201,5 +216,3 @@ class TECCLSolver(object):
 
         else:
             logging.error("No schedule found with the given parameters")
-
-

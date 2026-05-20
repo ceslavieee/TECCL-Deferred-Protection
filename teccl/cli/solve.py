@@ -29,6 +29,10 @@ def make_handle_solve(cmd_parsers):
                     user_input.instance.__setattr__(k, Collective(v))
                 elif k == 'epoch_type':
                     user_input.instance.__setattr__(k, EpochType(v))
+                elif k == 'protection_mode':
+                    user_input.instance.__setattr__(k, ProtectionMode(v))
+                elif k == 'failure_model':
+                    user_input.instance.__setattr__(k, FailureModel(v))
                 else:
                     user_input.instance.__setattr__(k, v)
 
@@ -38,4 +42,3 @@ def make_handle_solve(cmd_parsers):
         return True
     
     return handler
-

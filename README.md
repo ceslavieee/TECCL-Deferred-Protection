@@ -56,6 +56,27 @@ teccl solve --input_args teccl/examples/sample_inputs/ndv2_input.json
 ```
 This will generate the schedule file `teccl/examples/schedules/ndv2_schedule.json`
 
+### Cross-Data-Center Protection Extension
+This version extends TE-CCL with protection-aware AllGather scheduling for
+cross-data-center collective communication. It adds:
+
+- `InterDC8`, an 8-node WAN-style topology for inter-data-center experiments.
+- `Ladder6`, a small illustrative topology for debugging and explaining
+  protection behavior.
+- Deferred protection, where the working AllGather finishes first and protection
+  flows are scheduled in a later phase.
+- Dedicated and shared protection baselines for comparison.
+
+Minimal examples:
+
+```
+teccl solve --input_args teccl/examples/sample_inputs/interdc8_baseline.json
+teccl solve --input_args teccl/examples/sample_inputs/interdc8_deferred_protection.json
+teccl solve --input_args teccl/examples/sample_inputs/interdc8_dedicated_protection.json
+teccl solve --input_args teccl/examples/sample_inputs/interdc8_shared_protection.json
+teccl solve --input_args teccl/examples/sample_inputs/ladder6_deferred_protection.json
+```
+
 ### Detailed Examples
 For detailed examples, please refer to instructions in the [examples](teccl/examples/) directory.
 
