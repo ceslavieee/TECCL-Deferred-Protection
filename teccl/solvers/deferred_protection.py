@@ -16,7 +16,7 @@ from teccl.topologies.topology import Topology
 
 class DeferredProtectionFormulation(BaseFormulation):
     """
-    Prototype ILP for deferred protection.
+    Preliminary MILP formulation for deferred protection.
 
     The model separates the communication horizon into two windows:
     - Working phase: deliver the collective by the working deadline.
@@ -93,6 +93,12 @@ class DeferredProtectionFormulation(BaseFormulation):
         self.demand_link_used_w = {}
         self.scenario_demand_sat = {}
         self.scenario_demand_fail = {}
+        self.working_completion_epoch = self.model.addVar(
+            0, self.num_epochs, vtype=GRB.CONTINUOUS, name="T_work"
+        )
+        self.protection_completion_epoch = self.model.addVar(
+            0, self.num_epochs, vtype=GRB.CONTINUOUS, name="T_protection"
+        )
 
         for i, j in product(self.nodes, self.nodes):
             if self.topology.capacity[i][j] <= 0:
@@ -214,6 +220,45 @@ class DeferredProtectionFormulation(BaseFormulation):
                         name="dest_required_%s_%d_%d_%d" % (phase_name, s, d, c),
                     )
         logging.debug("Finished adding %s destination constraints in %s", phase_name, time.time() - start)
+
+    def _add_completion_time_constraints_for_phase(
+        self,
+        demand_vars: List[List[List[List[gp.Var]]]],
+        completion_var: gp.Var,
+        phase_name: str,
+    ) -> None:
+        """Bind an explicit completion-time variable to first demand satisfaction.
+
+        total_demand_sat variables are monotone in k. Therefore
+        y[k] - y[k-1] is 1 only at the first epoch where a demand becomes
+        satisfied. Minimizing completion_var then minimizes the maximum first
+        satisfaction epoch across all relevant demands.
+        """
+        start = time.time()
+        for s, d, c, k in product(self.nodes, self.nodes, self.chunks, self.epochs):
+            if not self.demand[s][d][c]:
+                continue
+            first_satisfied_at_k = gp.LinExpr(0.0)
+            first_satisfied_at_k.add(demand_vars[s][d][c][k])
+            if k > 0:
+                first_satisfied_at_k.add(demand_vars[s][d][c][k - 1], -1.0)
+            self.model.addConstr(
+                completion_var >= (k + 1) * first_satisfied_at_k,
+                name="completion_time_%s_%d_%d_%d_%d" % (phase_name, s, d, c, k),
+            )
+        logging.debug("Finished adding %s completion-time constraints in %s", phase_name, time.time() - start)
+
+    def completion_time_constraints(self) -> None:
+        self._add_completion_time_constraints_for_phase(
+            self.total_demand_sat_w,
+            self.working_completion_epoch,
+            "working",
+        )
+        self._add_completion_time_constraints_for_phase(
+            self.total_demand_sat_p,
+            self.protection_completion_epoch,
+            "protection",
+        )
 
     def _add_node_constraints_for_phase(
         self,
@@ -466,23 +511,17 @@ class DeferredProtectionFormulation(BaseFormulation):
         del objective_type
         logging.debug("Adding deferred-protection objective")
         objective = gp.LinExpr(0.0)
-        demand_reward = 100
+        completion_weight = 1000.0
+        working_completion_weight = 100.0
         protection_penalty = 0.05
         lateness_penalty = 0.01
-        for s, d, c, k in product(self.nodes, self.nodes, self.chunks, self.epochs):
-            if not self.demand[s][d][c]:
-                continue
-            if k <= self.working_deadline:
-                objective.add(self.total_demand_sat_w[s][d][c][k], -demand_reward)
-            objective.add(self.total_demand_sat_p[s][d][c][k], -(demand_reward * 0.2))
+        objective.add(self.protection_completion_epoch, completion_weight)
+        objective.add(self.working_completion_epoch, working_completion_weight)
         for s, i, j, c, k in product(self.nodes, self.nodes, self.nodes, self.chunks, self.epochs):
             if self.topology.capacity[i][j] <= 0:
                 continue
             if self._is_var(self.flow_p[s][i][j][c][k]):
                 objective.add(self.flow_p[s][i][j][c][k], protection_penalty + lateness_penalty * k)
-        if self.user_input.instance.enable_failure_scenarios:
-            for scenario_idx, s, d, c in self.scenario_demand_sat:
-                objective.add(self.scenario_demand_sat[(scenario_idx, s, d, c)], -(demand_reward * 0.3))
         return objective
 
     def encode_problem(self, use_one_less_epoch: bool = False, previous_buffers: List[List[int]] = []) -> int:
@@ -497,6 +536,7 @@ class DeferredProtectionFormulation(BaseFormulation):
         self._add_destination_constraints_for_phase(
             self.flow_p, self.buffer_p, self.total_demand_sat_p, "protection", self.final_deadline, False
         )
+        self.completion_time_constraints()
         self._add_node_constraints_for_phase(self.flow_w, self.buffer_w, "working")
         self._add_node_constraints_for_phase(self.flow_p, self.buffer_p, "protection")
         self.capacity_constraints()
@@ -611,6 +651,8 @@ class DeferredProtectionFormulation(BaseFormulation):
             "7-Working_Deadline_Epoch": self.working_deadline + 1,
             "8-Final_Deadline_Epoch": self.final_deadline + 1,
             "9-Epochs_Required": self.find_demand_satisfied_k() + 1,
+            "9c-Objective_Working_Completion_Epoch": self.working_completion_epoch.X,
+            "9d-Objective_Protection_Completion_Epoch": self.protection_completion_epoch.X,
             "9a-Failure_Scenarios": [f"{i}->{j}" for i, j in self.failure_scenarios],
             "9b-Failure_Scenario_Summary": failure_summary,
             "10-Working_Flows": [

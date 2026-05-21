@@ -56,18 +56,13 @@ class SharedProtectionFormulation(DedicatedProtectionFormulation):
         del objective_type
         logging.debug("Adding shared-protection objective")
         objective = gp.LinExpr(0.0)
-        working_reward = 100
-        scenario_reward = 40
+        completion_weight = 1000.0
+        protection_completion_weight = 100.0
         protection_flow_penalty = 0.05
         shared_link_penalty = 0.2
 
-        for s in self.nodes:
-            for d in self.nodes:
-                for c in self.chunks:
-                    if not self.demand[s][d][c]:
-                        continue
-                    for k in self.epochs:
-                        objective += -working_reward * self.total_demand_sat_w[s][d][c][k]
+        objective += completion_weight * self.working_completion_epoch
+        objective += protection_completion_weight * self.protection_completion_epoch
 
         for i in self.nodes:
             for j in self.nodes:
@@ -80,10 +75,6 @@ class SharedProtectionFormulation(DedicatedProtectionFormulation):
                             flow_var = self.flow_p[s][i][j][c][k]
                             if self._is_var(flow_var):
                                 objective += protection_flow_penalty * flow_var
-
-        if self.user_input.instance.enable_failure_scenarios:
-            for scenario_sat in self.scenario_demand_sat.values():
-                objective += -scenario_reward * scenario_sat
 
         return objective
 
@@ -108,6 +99,7 @@ class SharedProtectionFormulation(DedicatedProtectionFormulation):
             self.final_deadline,
             False,
         )
+        self.completion_time_constraints()
         self._add_node_constraints_for_phase(self.flow_w, self.buffer_w, "working")
         self._add_node_constraints_for_phase(self.flow_p, self.buffer_p, "protection")
         self.capacity_constraints()
