@@ -582,6 +582,8 @@ class AllGatherFormulation(BaseFormulation):
             flows_str_info["5-Algo_Bandwidth"] = self.topology.node_per_chassis * self.topology.chunk_size * self.topology.chassis / flows_str_info["4-Collective_Finish_Time"]
             flows_str_info['7-Flows'] = [
                 f"Chunk {c} from {s} traveled over {i}->{j} in epoch {k}" for s, i, j, c, k in flows]
+            flows_str_info['7a-Raw_Flows'] = [
+                f"Chunk {c} from {s} traveled over {i}->{j} in epoch {k}" for s, i, j, c, k in flows]
             return flows, flows_str_info
         required_flows = set()
         required_flows_str = set()
@@ -649,6 +651,10 @@ class AllGatherFormulation(BaseFormulation):
         flows_str_info["5-Algo_Bandwidth"] = self.topology.node_per_chassis * self.topology.chunk_size * self.topology.chassis / flows_str_info["4-Collective_Finish_Time"]
         flows_str_info["6-Demand_Met"] = demand_met_str
         flows_str_info['7-Flows'] = [x[1] for x in required_flows_str]
+        flows_str_info['7a-Raw_Flows'] = [
+            f"Chunk {c} from {s} traveled over {i}->{j} in epoch {k}"
+            for s, i, j, c, k in sorted(required_flows, key=lambda item: item[4])
+        ]
         flows_str_info['8-Chunk paths'] = chunk_paths
         return required_flows, flows_str_info
 

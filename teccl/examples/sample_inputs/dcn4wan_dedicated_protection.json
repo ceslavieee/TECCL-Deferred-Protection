@@ -1,12 +1,15 @@
 {
   "TopologyParams": {
-    "name": "InterDC8",
+    "name": "DCN4WAN",
     "chassis": 1,
     "chunk_size": 100.0,
-    "alpha": [0.0, 0.0]
+    "alpha": [
+      0.0,
+      0.0
+    ]
   },
   "GurobiParams": {
-    "time_limit": 0.02,
+    "time_limit": 0.05,
     "output_flag": 0,
     "mip_gap": 0.001,
     "mip_focus": 1,
@@ -18,19 +21,18 @@
     "epoch_type": 1,
     "epoch_duration": -1,
     "epoch_multiplier": 1,
-    "num_epochs": 20,
+    "num_epochs": 18,
     "objective_type": 3,
     "solution_method": 1,
     "alpha_threshold": 0.1,
-    "switch_copy": false,
+    "switch_copy": true,
     "switch_to_gpu_link_on": true,
-    "protection_mode": 3,
+    "protection_mode": 2,
     "protection_link_disjoint": true,
     "enable_failure_scenarios": true,
     "failure_scenario_offset": 0,
     "max_failure_scenarios": -1,
     "failure_model": 2,
-    "fixed_working_schedule": "teccl/examples/schedules/interdc8_dedicated_protection_schedule.json",
-    "schedule_output_file": "teccl/examples/schedules/interdc8_shared_protection_schedule.json"
+    "schedule_output_file": "teccl/examples/schedules/dcn4wan_dedicated_protection_schedule.json"
   }
 }

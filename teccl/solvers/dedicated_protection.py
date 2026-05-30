@@ -22,6 +22,9 @@ class DedicatedProtectionFormulation(DeferredProtectionFormulation):
     def __init__(self, user_input: UserInputParams, topology: Topology) -> None:
         super().__init__(user_input, topology)
         self.solver_name = "DedicatedProtection_MILP"
+        # Dedicated protection keeps backup resources from the beginning, so the
+        # deferred dynamic-release approximation must not change its coverage.
+        self.enable_dynamic_backup_release = False
 
     def objective_formulation(self, objective_type: ObjectiveType = ObjectiveType.PAPER):
         del objective_type
@@ -54,6 +57,7 @@ class DedicatedProtectionFormulation(DeferredProtectionFormulation):
         setup_start = time.time()
         self.model = gp.Model(self.solver_name)
         self.initialize_variables()
+        self.fixed_working_schedule_constraints()
         self._add_destination_constraints_for_phase(
             self.flow_w,
             self.buffer_w,
@@ -125,7 +129,10 @@ class DedicatedProtectionFormulation(DeferredProtectionFormulation):
             if not var.varName.startswith(prefix) or var.x <= 0.5:
                 continue
             suffix = var.varName[len(prefix):]
-            s, i, j, c = suffix.split("_")
+            parts = suffix.split("_")
+            if len(parts) != 4:
+                continue
+            s, i, j, c = parts
             links.append((int(s), int(i), int(j), int(c)))
         links.sort()
         return links
@@ -135,6 +142,7 @@ class DedicatedProtectionFormulation(DeferredProtectionFormulation):
             return [], {}
         working_flows = self._extract_phase_flows("flow_w_")
         protection_flows = self._extract_phase_flows("flow_p_")
+        working_demand_links = self._extract_working_demand_links()
         working_links = self._extract_link_usage("link_used_w_")
         protection_links = self._extract_link_usage("link_used_p_")
         failure_summary = self._extract_failure_scenario_summary()
@@ -150,12 +158,21 @@ class DedicatedProtectionFormulation(DeferredProtectionFormulation):
             "6-Protection_Flow_Count": len(protection_flows),
             "7-Working_Link_Count": len(working_links),
             "8-Protection_Link_Count": len(protection_links),
+            "8b-Failure_Model": self.user_input.instance.failure_model.name,
+            "8c-Failure_Exposure_Granularity": (
+                "per-demand path exposure"
+                if self.user_input.instance.failure_model == FailureModel.EXACT
+                else "source-chunk path exposure"
+            ),
+            "8d-Protection_Timing_Model": "pre-planned protection",
+            "8e-Fixed_Working_Schedule": self.user_input.instance.fixed_working_schedule,
             "9-Failure_Scenarios": [f"{i}->{j}" for i, j in self.failure_scenarios],
             "10-Failure_Scenario_Summary": failure_summary,
             "11-Working_Flows": [
                 f"Chunk {c} from {s} traveled over {i}->{j} in epoch {k}"
                 for s, i, j, c, k in working_flows
             ],
+            "11a-Working_Demand_Links": working_demand_links,
             "12-Protection_Flows": [
                 f"Chunk {c} from {s} traveled over {i}->{j} in epoch {k}"
                 for s, i, j, c, k in protection_flows

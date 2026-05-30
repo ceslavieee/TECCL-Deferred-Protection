@@ -29,7 +29,7 @@
     "enable_failure_scenarios": true,
     "failure_scenario_offset": 0,
     "max_failure_scenarios": -1,
-    "failure_model": 1,
+    "failure_model": 2,
     "schedule_output_file": "teccl/examples/schedules/interdc8_dedicated_protection_schedule.json"
   }
 }

@@ -96,10 +96,17 @@ class InstanceParams:
     lower: bool = False # If true will use the lowering code from Meghan to lower the input.
     lower_xml: str = "" # If not empty, the XML is written to this file. Default is "Topology-Chunks-chunksize-timestamp.xml"
     warmstart: str = "" # If not empty, the warmstart file is used to warmstart the optimization.
+    fixed_working_schedule: str = "" # If not empty, protection solvers fix working flows to this schedule JSON.
     symmetry: bool = False # If true, nodes that are given as symmetric are constrainted to have same number of total flows. 
     protection_mode: ProtectionMode = ProtectionMode.NONE # Enables alternative resilient formulations for AllGather.
     working_deadline_ratio: float = 0.6 # Fraction of total epochs reserved for the working phase in deferred protection.
     deferred_deadline_factor: float = 2.0 # Deadline upper bound = factor * heuristic completion time for deferred protection.
+    deferred_activation_ratio: float = -1.0 # First epoch ratio where deferred backup/recovery can be scheduled (-1 follows working_deadline_ratio).
+    failure_observation_ratio: float = -1.0 # Epoch ratio used to decide which already-delivered demands release backup protection (-1 uses half of the working deadline).
+    enable_dynamic_backup_release: bool = True # If true, delivered demands no longer require deferred backup protection.
+    enable_real_failure_timing: bool = True # If true, deferred protection models a failed link plus a concrete failure epoch.
+    failure_time_epoch: int = -1 # 0-based failure occurrence epoch for deferred recovery (-1 uses half of the working deadline).
+    detection_delay_epochs: int = 1 # Number of epochs between failure occurrence and recovery activation.
     protection_link_disjoint: bool = True # If true, working and protection paths cannot share a directed link.
     enable_failure_scenarios: bool = True # If true, deferred protection adds explicit single-link failure coverage constraints.
     failure_scenario_offset: int = 0 # Starting index when selecting a subset of enumerated directed-link failure scenarios.

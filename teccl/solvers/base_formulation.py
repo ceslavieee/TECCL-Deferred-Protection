@@ -216,6 +216,43 @@ class BaseFormulation(ABC):
         # self.model_.Params.RINS = 5000
         # self.model_.Params.Threads = 80
 
+    def solver_quality(self) -> dict:
+        status = getattr(self.model, "Status", None)
+        status_names = {
+            gp.GRB.LOADED: "LOADED",
+            gp.GRB.OPTIMAL: "OPTIMAL",
+            gp.GRB.INFEASIBLE: "INFEASIBLE",
+            gp.GRB.INF_OR_UNBD: "INF_OR_UNBD",
+            gp.GRB.UNBOUNDED: "UNBOUNDED",
+            gp.GRB.CUTOFF: "CUTOFF",
+            gp.GRB.ITERATION_LIMIT: "ITERATION_LIMIT",
+            gp.GRB.NODE_LIMIT: "NODE_LIMIT",
+            gp.GRB.TIME_LIMIT: "TIME_LIMIT",
+            gp.GRB.SOLUTION_LIMIT: "SOLUTION_LIMIT",
+            gp.GRB.INTERRUPTED: "INTERRUPTED",
+            gp.GRB.NUMERIC: "NUMERIC",
+            gp.GRB.SUBOPTIMAL: "SUBOPTIMAL",
+            gp.GRB.INPROGRESS: "INPROGRESS",
+            gp.GRB.USER_OBJ_LIMIT: "USER_OBJ_LIMIT",
+        }
+        quality = {
+            "solver_name": self.solver_name,
+            "status_code": status,
+            "status_name": status_names.get(status, str(status)),
+            "solution_count": getattr(self.model, "SolCount", 0),
+            "runtime": getattr(self.model, "Runtime", None),
+            "node_count": getattr(self.model, "NodeCount", None),
+        }
+        if quality["solution_count"] > 0:
+            quality["objective_value"] = getattr(self.model, "ObjVal", None)
+            quality["objective_bound"] = getattr(self.model, "ObjBound", None)
+            quality["mip_gap"] = getattr(self.model, "MIPGap", None)
+        else:
+            quality["objective_value"] = None
+            quality["objective_bound"] = None
+            quality["mip_gap"] = None
+        return quality
+
     @abstractmethod
     def get_schedule(self) -> None:
         pass

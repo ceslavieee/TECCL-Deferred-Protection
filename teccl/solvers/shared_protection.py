@@ -83,6 +83,7 @@ class SharedProtectionFormulation(DedicatedProtectionFormulation):
         setup_start = time.time()
         self.model = gp.Model(self.solver_name)
         self.initialize_variables()
+        self.fixed_working_schedule_constraints()
         self._add_destination_constraints_for_phase(
             self.flow_w,
             self.buffer_w,
@@ -147,6 +148,8 @@ class SharedProtectionFormulation(DedicatedProtectionFormulation):
 
     def get_schedule(self):
         flows, schedule_json = super().get_schedule()
+        if not schedule_json:
+            return flows, schedule_json
         shared_links = self._extract_shared_link_usage()
         schedule_json["8-Protection_Link_Count"] = len(shared_links)
         schedule_json["8a-Per_Demand_Protection_Link_Count"] = len(

@@ -22,6 +22,7 @@ from teccl.topologies.amd import AMD
 from teccl.topologies.mesh import Mesh
 from teccl.topologies.ladder6 import Ladder6
 from teccl.topologies.interdc8 import InterDC8
+from teccl.topologies.dcn4wan import DCN4WAN
 from teccl.topologies.topology import Topology
 
 
@@ -47,6 +48,8 @@ class TECCLSolver(object):
             return Ladder6(topology_params)
         elif topology_params.name == "InterDC8":
             return InterDC8(topology_params)
+        elif topology_params.name == "DCN4WAN":
+            return DCN4WAN(topology_params)
         else:
             raise NotImplementedError(
                 f"Input topology {topology_params.name} not implemented")
@@ -206,6 +209,18 @@ class TECCLSolver(object):
                 output_file = f'{user_input.topology.name}_{solver.num_nodes}-nodes_{solver.num_chunks}-chunks_{user_input.topology.chunk_size}-chunksize_{solver.solver_name}_{timestamp}.json'
             epoch_result_schedule_solver[best_epochs]["schedule"][1]["Solver_Time"] = time(
             ) - start
+            solver_quality = solver.solver_quality()
+            schedule_json = epoch_result_schedule_solver[best_epochs]["schedule"][1]
+            schedule_json["Solver_Quality"] = solver_quality
+            schedule_json["Solver_Name"] = solver_quality["solver_name"]
+            schedule_json["Solver_Status"] = solver_quality["status_code"]
+            schedule_json["Solver_Status_Name"] = solver_quality["status_name"]
+            schedule_json["Solver_Solution_Count"] = solver_quality["solution_count"]
+            schedule_json["Solver_Runtime"] = solver_quality["runtime"]
+            schedule_json["Solver_Objective_Value"] = solver_quality["objective_value"]
+            schedule_json["Solver_Objective_Bound"] = solver_quality["objective_bound"]
+            schedule_json["Solver_MIP_Gap"] = solver_quality["mip_gap"]
+            schedule_json["Solver_Node_Count"] = solver_quality["node_count"]
             pathlib.Path(output_file).parent.mkdir(parents=True, exist_ok=True)
             with open(output_file, 'w+') as f:
                 json_obj = json.dumps(
