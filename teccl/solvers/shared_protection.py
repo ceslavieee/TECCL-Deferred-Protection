@@ -15,6 +15,9 @@ class SharedProtectionFormulation(DedicatedProtectionFormulation):
     This formulation keeps the same pre-planned working/protection structure as the
     dedicated baseline, but accounts for backup resources at the shared-segment level.
     Multiple source-chunk backup paths can reuse the same reserved protection link.
+
+    Like dedicated protection, shared protection is intentionally not time-aware:
+    the failure epoch is not used to release protection obligations.
     """
 
     def __init__(self, user_input: UserInputParams, topology: Topology) -> None:
@@ -63,6 +66,7 @@ class SharedProtectionFormulation(DedicatedProtectionFormulation):
 
         objective += completion_weight * self.working_completion_epoch
         objective += protection_completion_weight * self.protection_completion_epoch
+        self._add_demand_path_tiebreaker(objective)
 
         for i in self.nodes:
             for j in self.nodes:

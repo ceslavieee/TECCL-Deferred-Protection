@@ -67,6 +67,19 @@ cross-data-center collective communication. It adds:
   flows are scheduled in a later phase.
 - Dedicated and shared protection baselines for comparison.
 
+Protection timing semantics:
+
+- Dedicated and shared protection are static pre-planned baselines. They do not
+  use failure-time information; any demand whose working path is exposed to a
+  failed link requires backup.
+- Deferred protection evaluates a realized failure-time scenario. A single MILP
+  solve uses one configured `failure_time_epoch`, and
+  `teccl/examples/failure_time_sensitivity.py` sweeps possible failure epochs
+  when the claim depends on unknown failure timing.
+- The affected counts therefore have different meanings: dedicated/shared report
+  static path-exposed demands, while deferred reports demands still at risk after
+  the realized failure time.
+
 Minimal examples:
 
 ```

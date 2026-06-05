@@ -2,128 +2,69 @@
   "1-Epoch_Duration": 1.0,
   "10-Working_Flows": [
     "Chunk 0 from 0 traveled over 0->4 in epoch 0",
-    "Chunk 0 from 0 traveled over 0->5 in epoch 0",
     "Chunk 0 from 1 traveled over 1->5 in epoch 0",
     "Chunk 0 from 1 traveled over 1->8 in epoch 0",
     "Chunk 0 from 2 traveled over 2->4 in epoch 0",
     "Chunk 0 from 2 traveled over 2->7 in epoch 0",
+    "Chunk 0 from 3 traveled over 3->7 in epoch 0",
     "Chunk 0 from 3 traveled over 3->8 in epoch 0",
-    "Chunk 0 from 0 traveled over 0->4 in epoch 1",
-    "Chunk 0 from 0 traveled over 0->5 in epoch 1",
     "Chunk 0 from 1 traveled over 1->5 in epoch 1",
-    "Chunk 0 from 1 traveled over 1->8 in epoch 1",
     "Chunk 0 from 2 traveled over 2->4 in epoch 1",
-    "Chunk 0 from 3 traveled over 3->7 in epoch 1",
+    "Chunk 0 from 2 traveled over 2->7 in epoch 1",
+    "Chunk 0 from 3 traveled over 3->8 in epoch 1",
+    "Chunk 0 from 0 traveled over 0->4 in epoch 2",
     "Chunk 0 from 0 traveled over 0->5 in epoch 2",
-    "Chunk 0 from 1 traveled over 1->5 in epoch 2",
     "Chunk 0 from 1 traveled over 1->8 in epoch 2",
-    "Chunk 0 from 2 traveled over 2->4 in epoch 2",
-    "Chunk 0 from 2 traveled over 2->7 in epoch 2",
-    "Chunk 0 from 3 traveled over 3->7 in epoch 2",
     "Chunk 0 from 2 traveled over 4->0 in epoch 2",
     "Chunk 0 from 0 traveled over 4->2 in epoch 2",
     "Chunk 0 from 1 traveled over 5->0 in epoch 2",
-    "Chunk 0 from 1 traveled over 5->6 in epoch 2",
+    "Chunk 0 from 3 traveled over 7->2 in epoch 2",
     "Chunk 0 from 2 traveled over 7->3 in epoch 2",
     "Chunk 0 from 3 traveled over 8->1 in epoch 2",
     "Chunk 0 from 1 traveled over 8->3 in epoch 2",
-    "Chunk 0 from 0 traveled over 0->4 in epoch 3",
-    "Chunk 0 from 0 traveled over 0->5 in epoch 3",
-    "Chunk 0 from 1 traveled over 1->8 in epoch 3",
+    "Chunk 0 from 3 traveled over 8->6 in epoch 2",
+    "Chunk 0 from 1 traveled over 1->5 in epoch 3",
     "Chunk 0 from 2 traveled over 2->4 in epoch 3",
     "Chunk 0 from 2 traveled over 2->7 in epoch 3",
-    "Chunk 0 from 2 traveled over 4->6 in epoch 3",
-    "Chunk 0 from 0 traveled over 5->1 in epoch 3",
-    "Chunk 0 from 2 traveled over 0->5 in epoch 4",
-    "Chunk 0 from 3 traveled over 1->5 in epoch 4",
-    "Chunk 0 from 1 traveled over 1->8 in epoch 4",
+    "Chunk 0 from 3 traveled over 3->8 in epoch 3",
+    "Chunk 0 from 1 traveled over 5->6 in epoch 3",
+    "Chunk 0 from 1 traveled over 0->4 in epoch 4",
+    "Chunk 0 from 3 traveled over 2->4 in epoch 4",
     "Chunk 0 from 0 traveled over 2->7 in epoch 4",
-    "Chunk 0 from 1 traveled over 3->7 in epoch 4",
     "Chunk 0 from 2 traveled over 3->8 in epoch 4",
-    "Chunk 0 from 1 traveled over 5->6 in epoch 4",
-    "Chunk 0 from 3 traveled over 7->2 in epoch 4",
-    "Chunk 0 from 2 traveled over 2->4 in epoch 5",
-    "Chunk 0 from 2 traveled over 4->6 in epoch 5",
-    "Chunk 0 from 1 traveled over 0->5 in epoch 6",
-    "Chunk 0 from 1 traveled over 0->6 in epoch 6",
-    "Chunk 0 from 1 traveled over 1->5 in epoch 6",
+    "Chunk 0 from 0 traveled over 5->1 in epoch 4",
     "Chunk 0 from 2 traveled over 2->4 in epoch 6",
-    "Chunk 0 from 2 traveled over 2->7 in epoch 6",
-    "Chunk 0 from 3 traveled over 5->0 in epoch 6",
-    "Chunk 0 from 2 traveled over 5->1 in epoch 6",
-    "Chunk 0 from 2 traveled over 5->6 in epoch 6",
-    "Chunk 0 from 1 traveled over 7->2 in epoch 6",
+    "Chunk 0 from 3 traveled over 4->0 in epoch 6",
+    "Chunk 0 from 1 traveled over 4->2 in epoch 6",
     "Chunk 0 from 0 traveled over 7->3 in epoch 6",
-    "Chunk 0 from 1 traveled over 0->5 in epoch 7",
-    "Chunk 0 from 1 traveled over 1->5 in epoch 7",
-    "Chunk 0 from 2 traveled over 2->7 in epoch 7",
-    "Chunk 0 from 2 traveled over 6->4 in epoch 7",
-    "Chunk 0 from 1 traveled over 1->5 in epoch 8",
-    "Chunk 0 from 3 traveled over 1->8 in epoch 8",
-    "Chunk 0 from 0 traveled over 2->4 in epoch 8",
+    "Chunk 0 from 2 traveled over 8->1 in epoch 6",
+    "Chunk 0 from 2 traveled over 2->4 in epoch 7",
     "Chunk 0 from 0 traveled over 2->7 in epoch 8",
-    "Chunk 0 from 1 traveled over 3->7 in epoch 8",
     "Chunk 0 from 2 traveled over 3->8 in epoch 8",
-    "Chunk 0 from 2 traveled over 4->6 in epoch 8",
-    "Chunk 0 from 1 traveled over 5->6 in epoch 8",
-    "Chunk 0 from 2 traveled over 0->4 in epoch 9",
+    "Chunk 0 from 1 traveled over 0->4 in epoch 9",
     "Chunk 0 from 1 traveled over 0->5 in epoch 9",
-    "Chunk 0 from 1 traveled over 0->6 in epoch 9",
-    "Chunk 0 from 1 traveled over 1->8 in epoch 9",
-    "Chunk 0 from 2 traveled over 2->4 in epoch 9",
     "Chunk 0 from 2 traveled over 2->7 in epoch 9",
-    "Chunk 0 from 2 traveled over 3->8 in epoch 9",
-    "Chunk 0 from 1 traveled over 1->5 in epoch 10",
-    "Chunk 0 from 0 traveled over 2->6 in epoch 10",
-    "Chunk 0 from 2 traveled over 3->7 in epoch 10",
-    "Chunk 0 from 1 traveled over 3->8 in epoch 10",
-    "Chunk 0 from 1 traveled over 5->6 in epoch 10",
-    "Chunk 0 from 0 traveled over 7->6 in epoch 10",
-    "Chunk 0 from 2 traveled over 8->6 in epoch 10",
-    "Chunk 0 from 1 traveled over 0->4 in epoch 11",
-    "Chunk 0 from 2 traveled over 0->5 in epoch 11",
-    "Chunk 0 from 0 traveled over 1->5 in epoch 11",
-    "Chunk 0 from 0 traveled over 2->4 in epoch 11",
+    "Chunk 0 from 3 traveled over 1->8 in epoch 10",
+    "Chunk 0 from 3 traveled over 2->7 in epoch 10",
+    "Chunk 0 from 1 traveled over 3->7 in epoch 10",
+    "Chunk 0 from 2 traveled over 2->4 in epoch 11",
     "Chunk 0 from 2 traveled over 2->7 in epoch 11",
-    "Chunk 0 from 0 traveled over 3->7 in epoch 11",
-    "Chunk 0 from 2 traveled over 4->6 in epoch 11",
-    "Chunk 0 from 3 traveled over 0->4 in epoch 12",
-    "Chunk 0 from 1 traveled over 0->5 in epoch 12",
-    "Chunk 0 from 0 traveled over 1->5 in epoch 12",
-    "Chunk 0 from 1 traveled over 1->8 in epoch 12",
-    "Chunk 0 from 2 traveled over 2->4 in epoch 12",
-    "Chunk 0 from 2 traveled over 2->7 in epoch 12",
-    "Chunk 0 from 1 traveled over 3->8 in epoch 12",
-    "Chunk 0 from 1 traveled over 5->6 in epoch 12",
-    "Chunk 0 from 2 traveled over 0->4 in epoch 13",
-    "Chunk 0 from 1 traveled over 0->6 in epoch 13",
-    "Chunk 0 from 1 traveled over 1->8 in epoch 13",
-    "Chunk 0 from 0 traveled over 2->4 in epoch 13",
     "Chunk 0 from 1 traveled over 2->7 in epoch 13",
-    "Chunk 0 from 0 traveled over 3->7 in epoch 13",
-    "Chunk 0 from 1 traveled over 3->8 in epoch 13",
-    "Chunk 0 from 0 traveled over 7->6 in epoch 13",
-    "Chunk 0 from 3 traveled over 0->4 in epoch 14",
-    "Chunk 0 from 2 traveled over 0->5 in epoch 14",
-    "Chunk 0 from 1 traveled over 1->5 in epoch 14",
-    "Chunk 0 from 1 traveled over 1->8 in epoch 14",
-    "Chunk 0 from 2 traveled over 2->4 in epoch 14",
+    "Chunk 0 from 1 traveled over 3->6 in epoch 13",
+    "Chunk 0 from 2 traveled over 4->6 in epoch 13",
+    "Chunk 0 from 3 traveled over 0->6 in epoch 14",
     "Chunk 0 from 3 traveled over 2->7 in epoch 14",
-    "Chunk 0 from 0 traveled over 3->8 in epoch 14",
-    "Chunk 0 from 2 traveled over 4->6 in epoch 14",
-    "Chunk 0 from 1 traveled over 5->6 in epoch 14",
-    "Chunk 0 from 2 traveled over 0->4 in epoch 15",
-    "Chunk 0 from 2 traveled over 0->5 in epoch 15",
-    "Chunk 0 from 3 traveled over 1->5 in epoch 15",
+    "Chunk 0 from 1 traveled over 3->8 in epoch 14",
+    "Chunk 0 from 0 traveled over 1->8 in epoch 15",
     "Chunk 0 from 2 traveled over 2->7 in epoch 15",
-    "Chunk 0 from 1 traveled over 3->7 in epoch 15",
     "Chunk 0 from 2 traveled over 3->8 in epoch 15",
-    "Chunk 0 from 2 traveled over 0->5 in epoch 16",
-    "Chunk 0 from 2 traveled over 1->8 in epoch 16",
-    "Chunk 0 from 2 traveled over 2->4 in epoch 16",
-    "Chunk 0 from 0 traveled over 2->7 in epoch 16",
-    "Chunk 0 from 2 traveled over 4->6 in epoch 17",
-    "Chunk 0 from 2 traveled over 8->1 in epoch 17"
+    "Chunk 0 from 0 traveled over 1->8 in epoch 16",
+    "Chunk 0 from 1 traveled over 2->7 in epoch 16",
+    "Chunk 0 from 1 traveled over 3->8 in epoch 16",
+    "Chunk 0 from 1 traveled over 6->2 in epoch 16",
+    "Chunk 0 from 3 traveled over 6->0 in epoch 17",
+    "Chunk 0 from 3 traveled over 6->1 in epoch 17",
+    "Chunk 0 from 0 traveled over 8->3 in epoch 17"
   ],
   "10a-Working_Demand_Links": [
     {
@@ -153,25 +94,25 @@
     {
       "chunk": 0,
       "destination": 3,
-      "link": "0->4",
+      "link": "0->5",
       "source": 0
     },
     {
       "chunk": 0,
       "destination": 3,
-      "link": "2->7",
+      "link": "1->8",
       "source": 0
     },
     {
       "chunk": 0,
       "destination": 3,
-      "link": "4->2",
+      "link": "5->1",
       "source": 0
     },
     {
       "chunk": 0,
       "destination": 3,
-      "link": "7->3",
+      "link": "8->3",
       "source": 0
     },
     {
@@ -189,25 +130,19 @@
     {
       "chunk": 0,
       "destination": 2,
-      "link": "1->8",
+      "link": "1->5",
       "source": 1
     },
     {
       "chunk": 0,
       "destination": 2,
-      "link": "3->7",
+      "link": "5->6",
       "source": 1
     },
     {
       "chunk": 0,
       "destination": 2,
-      "link": "7->2",
-      "source": 1
-    },
-    {
-      "chunk": 0,
-      "destination": 2,
-      "link": "8->3",
+      "link": "6->2",
       "source": 1
     },
     {
@@ -237,12 +172,6 @@
     {
       "chunk": 0,
       "destination": 1,
-      "link": "0->5",
-      "source": 2
-    },
-    {
-      "chunk": 0,
-      "destination": 1,
       "link": "2->7",
       "source": 2
     },
@@ -250,24 +179,6 @@
       "chunk": 0,
       "destination": 1,
       "link": "3->8",
-      "source": 2
-    },
-    {
-      "chunk": 0,
-      "destination": 1,
-      "link": "4->0",
-      "source": 2
-    },
-    {
-      "chunk": 0,
-      "destination": 1,
-      "link": "5->6",
-      "source": 2
-    },
-    {
-      "chunk": 0,
-      "destination": 1,
-      "link": "6->4",
       "source": 2
     },
     {
@@ -297,25 +208,19 @@
     {
       "chunk": 0,
       "destination": 0,
-      "link": "1->5",
-      "source": 3
-    },
-    {
-      "chunk": 0,
-      "destination": 0,
       "link": "3->8",
       "source": 3
     },
     {
       "chunk": 0,
       "destination": 0,
-      "link": "5->0",
+      "link": "6->0",
       "source": 3
     },
     {
       "chunk": 0,
       "destination": 0,
-      "link": "8->1",
+      "link": "8->6",
       "source": 3
     },
     {
@@ -343,54 +248,256 @@
       "source": 3
     }
   ],
+  "10b-Working_Demand_Link_Epochs": [
+    {
+      "chunk": 0,
+      "destination": 1,
+      "epoch": 2,
+      "link": "0->5",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "epoch": 4,
+      "link": "5->1",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "epoch": 0,
+      "link": "0->4",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "epoch": 2,
+      "link": "4->2",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "epoch": 2,
+      "link": "0->5",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "epoch": 15,
+      "link": "1->8",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "epoch": 4,
+      "link": "5->1",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "epoch": 17,
+      "link": "8->3",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "epoch": 0,
+      "link": "1->5",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "epoch": 2,
+      "link": "5->0",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "epoch": 0,
+      "link": "1->5",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "epoch": 3,
+      "link": "5->6",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "epoch": 16,
+      "link": "6->2",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "epoch": 0,
+      "link": "1->8",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "epoch": 2,
+      "link": "8->3",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "epoch": 0,
+      "link": "2->4",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "epoch": 2,
+      "link": "4->0",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "epoch": 0,
+      "link": "2->7",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "epoch": 4,
+      "link": "3->8",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "epoch": 2,
+      "link": "7->3",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "epoch": 6,
+      "link": "8->1",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "epoch": 0,
+      "link": "2->7",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "epoch": 2,
+      "link": "7->3",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "epoch": 0,
+      "link": "3->8",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "epoch": 17,
+      "link": "6->0",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "epoch": 2,
+      "link": "8->6",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "epoch": 0,
+      "link": "3->8",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "epoch": 2,
+      "link": "8->1",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "epoch": 0,
+      "link": "3->7",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "epoch": 2,
+      "link": "7->2",
+      "source": 3
+    }
+  ],
   "11-Protection_Flows": [
-    "Chunk 0 from 2 traveled over 1->5 in epoch 13",
-    "Chunk 0 from 2 traveled over 5->0 in epoch 15",
+    "Chunk 0 from 2 traveled over 1->5 in epoch 14",
+    "Chunk 0 from 2 traveled over 5->0 in epoch 16",
     "Chunk 0 from 0 traveled over 3->7 in epoch 14",
     "Chunk 0 from 0 traveled over 7->2 in epoch 16",
-    "Chunk 0 from 1 traveled over 1->6 in epoch 10",
-    "Chunk 0 from 3 traveled over 2->6 in epoch 12",
-    "Chunk 0 from 1 traveled over 6->0 in epoch 13",
-    "Chunk 0 from 3 traveled over 6->0 in epoch 15",
-    "Chunk 0 from 0 traveled over 2->6 in epoch 12",
-    "Chunk 0 from 0 traveled over 6->1 in epoch 15",
-    "Chunk 0 from 3 traveled over 1->6 in epoch 9",
-    "Chunk 0 from 1 traveled over 1->6 in epoch 12",
-    "Chunk 0 from 3 traveled over 6->4 in epoch 12",
-    "Chunk 0 from 1 traveled over 6->2 in epoch 15",
+    "Chunk 0 from 1 traveled over 2->4 in epoch 14",
+    "Chunk 0 from 1 traveled over 4->0 in epoch 16",
+    "Chunk 0 from 0 traveled over 3->8 in epoch 13",
+    "Chunk 0 from 0 traveled over 8->1 in epoch 15",
+    "Chunk 0 from 3 traveled over 0->4 in epoch 14",
     "Chunk 0 from 3 traveled over 4->2 in epoch 16",
-    "Chunk 0 from 2 traveled over 1->8 in epoch 11",
-    "Chunk 0 from 0 traveled over 2->6 in epoch 12",
-    "Chunk 0 from 2 traveled over 8->3 in epoch 13",
-    "Chunk 0 from 0 traveled over 6->3 in epoch 15",
-    "Chunk 0 from 3 traveled over 0->5 in epoch 13",
-    "Chunk 0 from 3 traveled over 5->1 in epoch 15",
-    "Chunk 0 from 1 traveled over 1->6 in epoch 12",
+    "Chunk 0 from 2 traveled over 1->8 in epoch 14",
+    "Chunk 0 from 2 traveled over 8->3 in epoch 16",
+    "Chunk 0 from 2 traveled over 0->5 in epoch 13",
+    "Chunk 0 from 3 traveled over 0->5 in epoch 14",
+    "Chunk 0 from 2 traveled over 5->1 in epoch 15",
+    "Chunk 0 from 3 traveled over 5->1 in epoch 16",
+    "Chunk 0 from 1 traveled over 2->6 in epoch 12",
     "Chunk 0 from 1 traveled over 6->3 in epoch 15"
   ],
   "11a-Recovery_Flows_By_Scenario": [
-    "Scenario 12: chunk 0 from 2 recovered over 1->5 in epoch 13",
-    "Scenario 12: chunk 0 from 2 recovered over 5->0 in epoch 15",
+    "Scenario 12: chunk 0 from 2 recovered over 1->5 in epoch 14",
+    "Scenario 12: chunk 0 from 2 recovered over 5->0 in epoch 16",
     "Scenario 13: chunk 0 from 0 recovered over 3->7 in epoch 14",
     "Scenario 13: chunk 0 from 0 recovered over 7->2 in epoch 16",
-    "Scenario 15: chunk 0 from 1 recovered over 1->6 in epoch 10",
-    "Scenario 15: chunk 0 from 3 recovered over 2->6 in epoch 12",
-    "Scenario 15: chunk 0 from 1 recovered over 6->0 in epoch 13",
-    "Scenario 15: chunk 0 from 3 recovered over 6->0 in epoch 15",
-    "Scenario 16: chunk 0 from 0 recovered over 2->6 in epoch 12",
-    "Scenario 16: chunk 0 from 0 recovered over 6->1 in epoch 15",
-    "Scenario 26: chunk 0 from 3 recovered over 1->6 in epoch 9",
-    "Scenario 26: chunk 0 from 1 recovered over 1->6 in epoch 12",
-    "Scenario 26: chunk 0 from 3 recovered over 6->4 in epoch 12",
-    "Scenario 26: chunk 0 from 1 recovered over 6->2 in epoch 15",
+    "Scenario 15: chunk 0 from 1 recovered over 2->4 in epoch 14",
+    "Scenario 15: chunk 0 from 1 recovered over 4->0 in epoch 16",
+    "Scenario 16: chunk 0 from 0 recovered over 3->8 in epoch 13",
+    "Scenario 16: chunk 0 from 0 recovered over 8->1 in epoch 15",
+    "Scenario 26: chunk 0 from 3 recovered over 0->4 in epoch 14",
     "Scenario 26: chunk 0 from 3 recovered over 4->2 in epoch 16",
-    "Scenario 27: chunk 0 from 2 recovered over 1->8 in epoch 11",
-    "Scenario 27: chunk 0 from 0 recovered over 2->6 in epoch 12",
-    "Scenario 27: chunk 0 from 2 recovered over 8->3 in epoch 13",
-    "Scenario 27: chunk 0 from 0 recovered over 6->3 in epoch 15",
-    "Scenario 29: chunk 0 from 3 recovered over 0->5 in epoch 13",
-    "Scenario 29: chunk 0 from 3 recovered over 5->1 in epoch 15",
-    "Scenario 30: chunk 0 from 1 recovered over 1->6 in epoch 12",
+    "Scenario 27: chunk 0 from 2 recovered over 1->8 in epoch 14",
+    "Scenario 27: chunk 0 from 2 recovered over 8->3 in epoch 16",
+    "Scenario 29: chunk 0 from 2 recovered over 0->5 in epoch 13",
+    "Scenario 29: chunk 0 from 3 recovered over 0->5 in epoch 14",
+    "Scenario 29: chunk 0 from 2 recovered over 5->1 in epoch 15",
+    "Scenario 29: chunk 0 from 3 recovered over 5->1 in epoch 16",
+    "Scenario 30: chunk 0 from 1 recovered over 2->6 in epoch 12",
     "Scenario 30: chunk 0 from 1 recovered over 6->3 in epoch 15"
   ],
   "2-Expected_Epoch_Duration": 1.0,
@@ -409,7 +516,7 @@
   "7h-Recovery_Inherits_Scenario_Valid_Working_Buffers": true,
   "7i-Post_Failure_Working_Flows_Continue": true,
   "7j-Failure_Model": "EXACT",
-  "7k-Failure_Exposure_Granularity": "per-demand future link exposure",
+  "7k-Failure_Exposure_Granularity": "fixed demand-link-epoch exposure",
   "7l-Fixed_Working_Schedule": "teccl/examples/schedules/dcn4wan_dedicated_protection_schedule.json",
   "8-Final_Deadline_Epoch": 18,
   "9-Epochs_Required": 18,
@@ -449,18 +556,14 @@
   ],
   "9b-Failure_Scenario_Summary": {
     "Failure 0: 0->4": {
-      "affected_demands": [
-        "Demand (0->2, chunk 0)",
-        "Demand (0->3, chunk 0)"
-      ],
+      "affected_demands": [],
       "dynamically_released_demands": [],
       "failed_link": "0->4",
-      "protected_demands": [
-        "Demand (0->2, chunk 0)",
-        "Demand (0->3, chunk 0)"
-      ],
+      "protected_demands": [],
       "unaffected_demands": [
         "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
         "Demand (1->0, chunk 0)",
         "Demand (1->2, chunk 0)",
         "Demand (1->3, chunk 0)",
@@ -474,27 +577,23 @@
       "unprotected_demands": []
     },
     "Failure 10: 3->7": {
-      "affected_demands": [
-        "Demand (1->2, chunk 0)",
-        "Demand (3->2, chunk 0)"
-      ],
+      "affected_demands": [],
       "dynamically_released_demands": [],
       "failed_link": "3->7",
-      "protected_demands": [
-        "Demand (1->2, chunk 0)",
-        "Demand (3->2, chunk 0)"
-      ],
+      "protected_demands": [],
       "unaffected_demands": [
         "Demand (0->1, chunk 0)",
         "Demand (0->2, chunk 0)",
         "Demand (0->3, chunk 0)",
         "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
         "Demand (1->3, chunk 0)",
         "Demand (2->0, chunk 0)",
         "Demand (2->1, chunk 0)",
         "Demand (2->3, chunk 0)",
         "Demand (3->0, chunk 0)",
-        "Demand (3->1, chunk 0)"
+        "Demand (3->1, chunk 0)",
+        "Demand (3->2, chunk 0)"
       ],
       "unprotected_demands": []
     },
@@ -524,14 +623,12 @@
     },
     "Failure 12: 4->0": {
       "affected_demands": [
-        "Demand (2->0, chunk 0)",
-        "Demand (2->1, chunk 0)"
+        "Demand (2->0, chunk 0)"
       ],
       "dynamically_released_demands": [],
       "failed_link": "4->0",
       "protected_demands": [
-        "Demand (2->0, chunk 0)",
-        "Demand (2->1, chunk 0)"
+        "Demand (2->0, chunk 0)"
       ],
       "unaffected_demands": [
         "Demand (0->1, chunk 0)",
@@ -540,6 +637,7 @@
         "Demand (1->0, chunk 0)",
         "Demand (1->2, chunk 0)",
         "Demand (1->3, chunk 0)",
+        "Demand (2->1, chunk 0)",
         "Demand (2->3, chunk 0)",
         "Demand (3->0, chunk 0)",
         "Demand (3->1, chunk 0)",
@@ -549,17 +647,16 @@
     },
     "Failure 13: 4->2": {
       "affected_demands": [
-        "Demand (0->2, chunk 0)",
-        "Demand (0->3, chunk 0)"
+        "Demand (0->2, chunk 0)"
       ],
       "dynamically_released_demands": [],
       "failed_link": "4->2",
       "protected_demands": [
-        "Demand (0->2, chunk 0)",
-        "Demand (0->3, chunk 0)"
+        "Demand (0->2, chunk 0)"
       ],
       "unaffected_demands": [
         "Demand (0->1, chunk 0)",
+        "Demand (0->3, chunk 0)",
         "Demand (1->0, chunk 0)",
         "Demand (1->2, chunk 0)",
         "Demand (1->3, chunk 0)",
@@ -595,14 +692,12 @@
     },
     "Failure 15: 5->0": {
       "affected_demands": [
-        "Demand (1->0, chunk 0)",
-        "Demand (3->0, chunk 0)"
+        "Demand (1->0, chunk 0)"
       ],
       "dynamically_released_demands": [],
       "failed_link": "5->0",
       "protected_demands": [
-        "Demand (1->0, chunk 0)",
-        "Demand (3->0, chunk 0)"
+        "Demand (1->0, chunk 0)"
       ],
       "unaffected_demands": [
         "Demand (0->1, chunk 0)",
@@ -613,6 +708,7 @@
         "Demand (2->0, chunk 0)",
         "Demand (2->1, chunk 0)",
         "Demand (2->3, chunk 0)",
+        "Demand (3->0, chunk 0)",
         "Demand (3->1, chunk 0)",
         "Demand (3->2, chunk 0)"
       ],
@@ -620,16 +716,17 @@
     },
     "Failure 16: 5->1": {
       "affected_demands": [
-        "Demand (0->1, chunk 0)"
+        "Demand (0->1, chunk 0)",
+        "Demand (0->3, chunk 0)"
       ],
       "dynamically_released_demands": [],
       "failed_link": "5->1",
       "protected_demands": [
-        "Demand (0->1, chunk 0)"
+        "Demand (0->1, chunk 0)",
+        "Demand (0->3, chunk 0)"
       ],
       "unaffected_demands": [
         "Demand (0->2, chunk 0)",
-        "Demand (0->3, chunk 0)",
         "Demand (1->0, chunk 0)",
         "Demand (1->2, chunk 0)",
         "Demand (1->3, chunk 0)",
@@ -644,21 +741,21 @@
     },
     "Failure 17: 5->6": {
       "affected_demands": [
-        "Demand (2->1, chunk 0)"
+        "Demand (1->2, chunk 0)"
       ],
       "dynamically_released_demands": [],
       "failed_link": "5->6",
       "protected_demands": [
-        "Demand (2->1, chunk 0)"
+        "Demand (1->2, chunk 0)"
       ],
       "unaffected_demands": [
         "Demand (0->1, chunk 0)",
         "Demand (0->2, chunk 0)",
         "Demand (0->3, chunk 0)",
         "Demand (1->0, chunk 0)",
-        "Demand (1->2, chunk 0)",
         "Demand (1->3, chunk 0)",
         "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
         "Demand (2->3, chunk 0)",
         "Demand (3->0, chunk 0)",
         "Demand (3->1, chunk 0)",
@@ -667,10 +764,14 @@
       "unprotected_demands": []
     },
     "Failure 18: 6->0": {
-      "affected_demands": [],
+      "affected_demands": [
+        "Demand (3->0, chunk 0)"
+      ],
       "dynamically_released_demands": [],
       "failed_link": "6->0",
-      "protected_demands": [],
+      "protected_demands": [
+        "Demand (3->0, chunk 0)"
+      ],
       "unaffected_demands": [
         "Demand (0->1, chunk 0)",
         "Demand (0->2, chunk 0)",
@@ -681,7 +782,6 @@
         "Demand (2->0, chunk 0)",
         "Demand (2->1, chunk 0)",
         "Demand (2->3, chunk 0)",
-        "Demand (3->0, chunk 0)",
         "Demand (3->1, chunk 0)",
         "Demand (3->2, chunk 0)"
       ],
@@ -711,21 +811,21 @@
     "Failure 1: 0->5": {
       "affected_demands": [
         "Demand (0->1, chunk 0)",
-        "Demand (2->1, chunk 0)"
+        "Demand (0->3, chunk 0)"
       ],
       "dynamically_released_demands": [],
       "failed_link": "0->5",
       "protected_demands": [
         "Demand (0->1, chunk 0)",
-        "Demand (2->1, chunk 0)"
+        "Demand (0->3, chunk 0)"
       ],
       "unaffected_demands": [
         "Demand (0->2, chunk 0)",
-        "Demand (0->3, chunk 0)",
         "Demand (1->0, chunk 0)",
         "Demand (1->2, chunk 0)",
         "Demand (1->3, chunk 0)",
         "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
         "Demand (2->3, chunk 0)",
         "Demand (3->0, chunk 0)",
         "Demand (3->1, chunk 0)",
@@ -734,16 +834,19 @@
       "unprotected_demands": []
     },
     "Failure 20: 6->2": {
-      "affected_demands": [],
+      "affected_demands": [
+        "Demand (1->2, chunk 0)"
+      ],
       "dynamically_released_demands": [],
       "failed_link": "6->2",
-      "protected_demands": [],
+      "protected_demands": [
+        "Demand (1->2, chunk 0)"
+      ],
       "unaffected_demands": [
         "Demand (0->1, chunk 0)",
         "Demand (0->2, chunk 0)",
         "Demand (0->3, chunk 0)",
         "Demand (1->0, chunk 0)",
-        "Demand (1->2, chunk 0)",
         "Demand (1->3, chunk 0)",
         "Demand (2->0, chunk 0)",
         "Demand (2->1, chunk 0)",
@@ -776,14 +879,10 @@
       "unprotected_demands": []
     },
     "Failure 22: 6->4": {
-      "affected_demands": [
-        "Demand (2->1, chunk 0)"
-      ],
+      "affected_demands": [],
       "dynamically_released_demands": [],
       "failed_link": "6->4",
-      "protected_demands": [
-        "Demand (2->1, chunk 0)"
-      ],
+      "protected_demands": [],
       "unaffected_demands": [
         "Demand (0->1, chunk 0)",
         "Demand (0->2, chunk 0)",
@@ -792,6 +891,7 @@
         "Demand (1->2, chunk 0)",
         "Demand (1->3, chunk 0)",
         "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
         "Demand (2->3, chunk 0)",
         "Demand (3->0, chunk 0)",
         "Demand (3->1, chunk 0)",
@@ -864,13 +964,11 @@
     },
     "Failure 26: 7->2": {
       "affected_demands": [
-        "Demand (1->2, chunk 0)",
         "Demand (3->2, chunk 0)"
       ],
       "dynamically_released_demands": [],
       "failed_link": "7->2",
       "protected_demands": [
-        "Demand (1->2, chunk 0)",
         "Demand (3->2, chunk 0)"
       ],
       "unaffected_demands": [
@@ -878,6 +976,7 @@
         "Demand (0->2, chunk 0)",
         "Demand (0->3, chunk 0)",
         "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
         "Demand (1->3, chunk 0)",
         "Demand (2->0, chunk 0)",
         "Demand (2->1, chunk 0)",
@@ -889,20 +988,19 @@
     },
     "Failure 27: 7->3": {
       "affected_demands": [
-        "Demand (0->3, chunk 0)",
         "Demand (2->1, chunk 0)",
         "Demand (2->3, chunk 0)"
       ],
       "dynamically_released_demands": [],
       "failed_link": "7->3",
       "protected_demands": [
-        "Demand (0->3, chunk 0)",
         "Demand (2->1, chunk 0)",
         "Demand (2->3, chunk 0)"
       ],
       "unaffected_demands": [
         "Demand (0->1, chunk 0)",
         "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
         "Demand (1->0, chunk 0)",
         "Demand (1->2, chunk 0)",
         "Demand (1->3, chunk 0)",
@@ -937,14 +1035,12 @@
     "Failure 29: 8->1": {
       "affected_demands": [
         "Demand (2->1, chunk 0)",
-        "Demand (3->0, chunk 0)",
         "Demand (3->1, chunk 0)"
       ],
       "dynamically_released_demands": [],
       "failed_link": "8->1",
       "protected_demands": [
         "Demand (2->1, chunk 0)",
-        "Demand (3->0, chunk 0)",
         "Demand (3->1, chunk 0)"
       ],
       "unaffected_demands": [
@@ -956,6 +1052,7 @@
         "Demand (1->3, chunk 0)",
         "Demand (2->0, chunk 0)",
         "Demand (2->3, chunk 0)",
+        "Demand (3->0, chunk 0)",
         "Demand (3->2, chunk 0)"
       ],
       "unprotected_demands": []
@@ -983,20 +1080,20 @@
     },
     "Failure 30: 8->3": {
       "affected_demands": [
-        "Demand (1->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
         "Demand (1->3, chunk 0)"
       ],
       "dynamically_released_demands": [],
       "failed_link": "8->3",
       "protected_demands": [
-        "Demand (1->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
         "Demand (1->3, chunk 0)"
       ],
       "unaffected_demands": [
         "Demand (0->1, chunk 0)",
         "Demand (0->2, chunk 0)",
-        "Demand (0->3, chunk 0)",
         "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
         "Demand (2->0, chunk 0)",
         "Demand (2->1, chunk 0)",
         "Demand (2->3, chunk 0)",
@@ -1007,9 +1104,33 @@
       "unprotected_demands": []
     },
     "Failure 31: 8->6": {
-      "affected_demands": [],
+      "affected_demands": [
+        "Demand (3->0, chunk 0)"
+      ],
       "dynamically_released_demands": [],
       "failed_link": "8->6",
+      "protected_demands": [
+        "Demand (3->0, chunk 0)"
+      ],
+      "unaffected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
+        "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)",
+        "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)",
+        "Demand (3->1, chunk 0)",
+        "Demand (3->2, chunk 0)"
+      ],
+      "unprotected_demands": []
+    },
+    "Failure 3: 1->5": {
+      "affected_demands": [],
+      "dynamically_released_demands": [],
+      "failed_link": "1->5",
       "protected_demands": [],
       "unaffected_demands": [
         "Demand (0->1, chunk 0)",
@@ -1022,31 +1143,6 @@
         "Demand (2->1, chunk 0)",
         "Demand (2->3, chunk 0)",
         "Demand (3->0, chunk 0)",
-        "Demand (3->1, chunk 0)",
-        "Demand (3->2, chunk 0)"
-      ],
-      "unprotected_demands": []
-    },
-    "Failure 3: 1->5": {
-      "affected_demands": [
-        "Demand (1->0, chunk 0)",
-        "Demand (3->0, chunk 0)"
-      ],
-      "dynamically_released_demands": [],
-      "failed_link": "1->5",
-      "protected_demands": [
-        "Demand (1->0, chunk 0)",
-        "Demand (3->0, chunk 0)"
-      ],
-      "unaffected_demands": [
-        "Demand (0->1, chunk 0)",
-        "Demand (0->2, chunk 0)",
-        "Demand (0->3, chunk 0)",
-        "Demand (1->2, chunk 0)",
-        "Demand (1->3, chunk 0)",
-        "Demand (2->0, chunk 0)",
-        "Demand (2->1, chunk 0)",
-        "Demand (2->3, chunk 0)",
         "Demand (3->1, chunk 0)",
         "Demand (3->2, chunk 0)"
       ],
@@ -1075,20 +1171,19 @@
     },
     "Failure 5: 1->8": {
       "affected_demands": [
-        "Demand (1->2, chunk 0)",
-        "Demand (1->3, chunk 0)"
+        "Demand (0->3, chunk 0)"
       ],
       "dynamically_released_demands": [],
       "failed_link": "1->8",
       "protected_demands": [
-        "Demand (1->2, chunk 0)",
-        "Demand (1->3, chunk 0)"
+        "Demand (0->3, chunk 0)"
       ],
       "unaffected_demands": [
         "Demand (0->1, chunk 0)",
         "Demand (0->2, chunk 0)",
-        "Demand (0->3, chunk 0)",
         "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)",
         "Demand (2->0, chunk 0)",
         "Demand (2->1, chunk 0)",
         "Demand (2->3, chunk 0)",
@@ -1099,14 +1194,10 @@
       "unprotected_demands": []
     },
     "Failure 6: 2->4": {
-      "affected_demands": [
-        "Demand (2->0, chunk 0)"
-      ],
+      "affected_demands": [],
       "dynamically_released_demands": [],
       "failed_link": "2->4",
-      "protected_demands": [
-        "Demand (2->0, chunk 0)"
-      ],
+      "protected_demands": [],
       "unaffected_demands": [
         "Demand (0->1, chunk 0)",
         "Demand (0->2, chunk 0)",
@@ -1114,6 +1205,7 @@
         "Demand (1->0, chunk 0)",
         "Demand (1->2, chunk 0)",
         "Demand (1->3, chunk 0)",
+        "Demand (2->0, chunk 0)",
         "Demand (2->1, chunk 0)",
         "Demand (2->3, chunk 0)",
         "Demand (3->0, chunk 0)",
@@ -1144,25 +1236,20 @@
       "unprotected_demands": []
     },
     "Failure 8: 2->7": {
-      "affected_demands": [
-        "Demand (0->3, chunk 0)",
-        "Demand (2->1, chunk 0)",
-        "Demand (2->3, chunk 0)"
-      ],
+      "affected_demands": [],
       "dynamically_released_demands": [],
       "failed_link": "2->7",
-      "protected_demands": [
-        "Demand (0->3, chunk 0)",
-        "Demand (2->1, chunk 0)",
-        "Demand (2->3, chunk 0)"
-      ],
+      "protected_demands": [],
       "unaffected_demands": [
         "Demand (0->1, chunk 0)",
         "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
         "Demand (1->0, chunk 0)",
         "Demand (1->2, chunk 0)",
         "Demand (1->3, chunk 0)",
         "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)",
         "Demand (3->0, chunk 0)",
         "Demand (3->1, chunk 0)",
         "Demand (3->2, chunk 0)"
@@ -1193,25 +1280,25 @@
   },
   "9c-Objective_Working_Completion_Epoch": 8.0,
   "9d-Objective_Protection_Completion_Epoch": 18.0,
-  "Solver_MIP_Gap": 0.0009411735757834414,
+  "Solver_MIP_Gap": 0.0,
   "Solver_Name": "DeferredProtection_MILP",
   "Solver_Node_Count": 1.0,
-  "Solver_Objective_Bound": 8120.5,
-  "Solver_Objective_Value": 8128.150000000004,
+  "Solver_Objective_Bound": 8079.930000000009,
+  "Solver_Objective_Value": 8079.930000000009,
   "Solver_Quality": {
-    "mip_gap": 0.0009411735757834414,
+    "mip_gap": 0.0,
     "node_count": 1.0,
-    "objective_bound": 8120.5,
-    "objective_value": 8128.150000000004,
-    "runtime": 0.782480001449585,
-    "solution_count": 5,
+    "objective_bound": 8079.930000000009,
+    "objective_value": 8079.930000000009,
+    "runtime": 0.9201631546020508,
+    "solution_count": 3,
     "solver_name": "DeferredProtection_MILP",
     "status_code": 2,
     "status_name": "OPTIMAL"
   },
-  "Solver_Runtime": 0.782480001449585,
-  "Solver_Solution_Count": 5,
+  "Solver_Runtime": 0.9201631546020508,
+  "Solver_Solution_Count": 3,
   "Solver_Status": 2,
   "Solver_Status_Name": "OPTIMAL",
-  "Solver_Time": 3.495267152786255
+  "Solver_Time": 3.7053699493408203
 }

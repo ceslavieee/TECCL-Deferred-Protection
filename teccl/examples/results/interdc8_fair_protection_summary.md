@@ -7,9 +7,9 @@ It also reports a normalized link-epoch-style resource metric so that reserved a
 | Strategy | Failure Scenarios | Reference Path Exposed | Reference Time-Aware At Risk | Model Affected | Model Protected | Unprotected | Failure Model | Exposure Granularity | Protection Timing | Working Time | Final Time | Resource Units | Normalized Link-Epoch Resource | Resource / Reference Path Exposed | Resource / Reference Time-Aware Risk | Resource Metric | Solver Status | MIP Gap | Objective | Bound | Solver Runtime |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | No Protection | - | - | - | - | - | - | - | - | - | 11.000 | - | - | - | - | - | - | - | - | - | - | - |
-| Dedicated Protection | 26 | 113 | 5 | 113 | 113 | 0 | EXACT | per-demand path exposure | pre-planned protection | 11.000 | 18.000 | 56 | 1008 | 8.920 | 201.600 | reserved backup link-epochs | OPTIMAL | 0.000 | 12808.400 | 12808.100 | 14.252 |
-| Shared Protection | 26 | 113 | 5 | 113 | 113 | 0 | EXACT | per-demand path exposure | pre-planned protection | 11.000 | 18.000 | 23 | 414 | 3.664 | 82.800 | shared reserved backup link-epochs | OPTIMAL | 0.000 | 12807.400 | 12806.350 | 0.735 |
-| Deferred Protection | 26 | 113 | 5 | 5 | 5 | 0 | EXACT | per-demand future link exposure | failure-time-aware deferred recovery | 11.000 | 30.000 | 5 | 5 | 0.044 | 1.000 | post-failure recovery link-epochs | OPTIMAL | 0.000 | 11052.250 | 11052.250 | 0.209 |
+| Dedicated Protection | 26 | 102 | 5 | 102 | 102 | 0 | EXACT | per-demand path exposure | pre-planned protection | 11.000 | 18.000 | 56 | 1008 | 9.882 | 201.600 | reserved backup link-epochs | OPTIMAL | 0.000 | 12808.502 | 12807.533 | 18.916 |
+| Shared Protection | 26 | 102 | 5 | 102 | 102 | 0 | EXACT | per-demand path exposure | pre-planned protection | 11.000 | 18.000 | 20 | 360 | 3.529 | 72.000 | shared reserved backup link-epochs | OPTIMAL | 0.000 | 12806.902 | 12806.552 | 0.924 |
+| Deferred Protection | 26 | 102 | 5 | 5 | 5 | 0 | EXACT | fixed demand-link-epoch exposure | failure-time-aware deferred recovery | 11.000 | 30.000 | 5 | 5 | 0.049 | 1.000 | post-failure recovery link-epochs | OPTIMAL | 0.000 | 11054.352 | 11054.352 | 0.237 |
 
 ### Interpretation Notes
 

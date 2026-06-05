@@ -1,0 +1,7 @@
+dataset,detection_delay_epochs,failure_time_epoch,recovery_start_epoch,affected,protected,unprotected,recovery_flow_link_epochs,recovery_occupied_link_epochs,final_epoch,solver_status,solver_mip_gap,solver_runtime,schedule_file
+InterDC8,0,9,9,5,5,0,5,5,30,OPTIMAL,0.0,0.2526249885559082,teccl/examples/results/detection_delay_sensitivity/schedules/interdc8_deferred_detection_delay_0.json
+InterDC8,1,9,10,5,5,0,5,5,30,OPTIMAL,0.0,0.253709077835083,teccl/examples/results/detection_delay_sensitivity/schedules/interdc8_deferred_detection_delay_1.json
+InterDC8,2,9,11,5,5,0,5,5,30,OPTIMAL,0.0,0.27692413330078125,teccl/examples/results/detection_delay_sensitivity/schedules/interdc8_deferred_detection_delay_2.json
+InterDC8,3,9,12,5,5,0,5,5,30,OPTIMAL,0.0,0.24081206321716309,teccl/examples/results/detection_delay_sensitivity/schedules/interdc8_deferred_detection_delay_3.json
+InterDC8,4,9,13,5,5,0,5,5,30,OPTIMAL,0.0,0.2350010871887207,teccl/examples/results/detection_delay_sensitivity/schedules/interdc8_deferred_detection_delay_4.json
+InterDC8,5,9,14,5,5,0,5,5,30,OPTIMAL,0.0,0.18839216232299805,teccl/examples/results/detection_delay_sensitivity/schedules/interdc8_deferred_detection_delay_5.json

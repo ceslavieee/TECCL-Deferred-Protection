@@ -17,6 +17,11 @@ class DedicatedProtectionFormulation(DeferredProtectionFormulation):
     time horizon. Unlike deferred protection, the backup is not postponed to a later
     phase: it is provisioned together with the working communication and consumes
     capacity in the same static schedule.
+
+    Although this class inherits shared helper methods from
+    DeferredProtectionFormulation, it intentionally does not use concrete
+    failure-time information. Any demand whose working path is exposed to a failed
+    link is treated as requiring pre-planned backup.
     """
 
     def __init__(self, user_input: UserInputParams, topology: Topology) -> None:
@@ -37,6 +42,7 @@ class DedicatedProtectionFormulation(DeferredProtectionFormulation):
 
         objective += completion_weight * self.working_completion_epoch
         objective += protection_completion_weight * self.protection_completion_epoch
+        self._add_demand_path_tiebreaker(objective)
 
         for s in self.nodes:
             for i in self.nodes:
@@ -143,6 +149,7 @@ class DedicatedProtectionFormulation(DeferredProtectionFormulation):
         working_flows = self._extract_phase_flows("flow_w_")
         protection_flows = self._extract_phase_flows("flow_p_")
         working_demand_links = self._extract_working_demand_links()
+        working_demand_link_epochs = self._extract_working_demand_link_epochs()
         working_links = self._extract_link_usage("link_used_w_")
         protection_links = self._extract_link_usage("link_used_p_")
         failure_summary = self._extract_failure_scenario_summary()
@@ -173,6 +180,7 @@ class DedicatedProtectionFormulation(DeferredProtectionFormulation):
                 for s, i, j, c, k in working_flows
             ],
             "11a-Working_Demand_Links": working_demand_links,
+            "11b-Working_Demand_Link_Epochs": working_demand_link_epochs,
             "12-Protection_Flows": [
                 f"Chunk {c} from {s} traveled over {i}->{j} in epoch {k}"
                 for s, i, j, c, k in protection_flows

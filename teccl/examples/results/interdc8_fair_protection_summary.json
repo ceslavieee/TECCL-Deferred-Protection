@@ -33,10 +33,10 @@
     {
       "strategy": "Dedicated Protection",
       "failure_scenarios": 26,
-      "reference_path_exposed_demands": 113,
+      "reference_path_exposed_demands": 102,
       "reference_time_aware_at_risk_demands": 5,
-      "model_reported_affected": 113,
-      "model_reported_protected": 113,
+      "model_reported_affected": 102,
+      "model_reported_protected": 102,
       "model_reported_unprotected": 0,
       "model_reported_released": 0,
       "failure_model": "EXACT",
@@ -46,14 +46,14 @@
       "final_time": 18.0,
       "resource_units": 56,
       "normalized_link_epoch_resource": 1008,
-      "resource_per_reference_path_exposed": 8.920353982300885,
+      "resource_per_reference_path_exposed": 9.882352941176471,
       "resource_per_reference_time_aware_at_risk": 201.6,
       "resource_metric": "reserved backup link-epochs",
       "solver_status": "OPTIMAL",
-      "solver_mip_gap": 2.3422129226217404e-05,
-      "solver_objective_value": 12808.39999999998,
-      "solver_objective_bound": 12808.099999999999,
-      "solver_runtime": 14.252397060394287,
+      "solver_mip_gap": 7.563429642610233e-05,
+      "solver_objective_value": 12808.502,
+      "solver_objective_bound": 12807.533237962958,
+      "solver_runtime": 18.9161319732666,
       "solver_solution_count": 10,
       "failure_time_epoch": "",
       "detection_delay_epochs": "",
@@ -63,10 +63,10 @@
     {
       "strategy": "Shared Protection",
       "failure_scenarios": 26,
-      "reference_path_exposed_demands": 113,
+      "reference_path_exposed_demands": 102,
       "reference_time_aware_at_risk_demands": 5,
-      "model_reported_affected": 113,
-      "model_reported_protected": 113,
+      "model_reported_affected": 102,
+      "model_reported_protected": 102,
       "model_reported_unprotected": 0,
       "model_reported_released": 0,
       "failure_model": "EXACT",
@@ -74,16 +74,16 @@
       "protection_timing_model": "pre-planned protection",
       "working_time": 11.0,
       "final_time": 18.0,
-      "resource_units": 23,
-      "normalized_link_epoch_resource": 414,
-      "resource_per_reference_path_exposed": 3.663716814159292,
-      "resource_per_reference_time_aware_at_risk": 82.8,
+      "resource_units": 20,
+      "normalized_link_epoch_resource": 360,
+      "resource_per_reference_path_exposed": 3.5294117647058822,
+      "resource_per_reference_time_aware_at_risk": 72.0,
       "resource_metric": "shared reserved backup link-epochs",
       "solver_status": "OPTIMAL",
-      "solver_mip_gap": 8.198385308303227e-05,
-      "solver_objective_value": 12807.399999999976,
-      "solver_objective_bound": 12806.35,
-      "solver_runtime": 0.7350540161132812,
+      "solver_mip_gap": 2.732901368257913e-05,
+      "solver_objective_value": 12806.901999999995,
+      "solver_objective_bound": 12806.552000000005,
+      "solver_runtime": 0.9240520000457764,
       "solver_solution_count": 10,
       "failure_time_epoch": "",
       "detection_delay_epochs": "",
@@ -93,27 +93,27 @@
     {
       "strategy": "Deferred Protection",
       "failure_scenarios": 26,
-      "reference_path_exposed_demands": 113,
+      "reference_path_exposed_demands": 102,
       "reference_time_aware_at_risk_demands": 5,
       "model_reported_affected": 5,
       "model_reported_protected": 5,
       "model_reported_unprotected": 0,
       "model_reported_released": 0,
       "failure_model": "EXACT",
-      "failure_exposure_granularity": "per-demand future link exposure",
+      "failure_exposure_granularity": "fixed demand-link-epoch exposure",
       "protection_timing_model": "failure-time-aware deferred recovery",
       "working_time": 11.0,
       "final_time": 30.0,
       "resource_units": 5,
       "normalized_link_epoch_resource": 5,
-      "resource_per_reference_path_exposed": 0.04424778761061947,
+      "resource_per_reference_path_exposed": 0.049019607843137254,
       "resource_per_reference_time_aware_at_risk": 1.0,
       "resource_metric": "post-failure recovery link-epochs",
       "solver_status": "OPTIMAL",
       "solver_mip_gap": 0.0,
-      "solver_objective_value": 11052.249999999996,
-      "solver_objective_bound": 11052.25,
-      "solver_runtime": 0.20870304107666016,
+      "solver_objective_value": 11054.352000000017,
+      "solver_objective_bound": 11054.351999999997,
+      "solver_runtime": 0.23726201057434082,
       "solver_solution_count": 4,
       "failure_time_epoch": 9,
       "detection_delay_epochs": 1,
@@ -201,25 +201,25 @@
         "name": "dedicated exports working demand links",
         "passed": true,
         "severity": "error",
-        "detail": "count=113"
+        "detail": "count=102"
       },
       {
         "name": "Shared Protection working demand links match dedicated",
         "passed": true,
         "severity": "error",
-        "detail": "count=113, missing=0, extra=0"
+        "detail": "count=102, missing=0, extra=0"
       },
       {
         "name": "Deferred Protection working demand links match dedicated",
         "passed": true,
         "severity": "error",
-        "detail": "count=113, missing=0, extra=0"
+        "detail": "count=102, missing=0, extra=0"
       },
       {
         "name": "Dedicated Protection solver quality present",
         "passed": true,
         "severity": "error",
-        "detail": "status=OPTIMAL, solutions=10, mip_gap=2.3422129226217404e-05"
+        "detail": "status=OPTIMAL, solutions=10, mip_gap=7.563429642610233e-05"
       },
       {
         "name": "Dedicated Protection solver finished with accepted status",
@@ -231,13 +231,13 @@
         "name": "Dedicated Protection protects every reported affected demand",
         "passed": true,
         "severity": "error",
-        "detail": "affected=113, protected=113, unprotected=0"
+        "detail": "affected=102, protected=102, unprotected=0"
       },
       {
         "name": "Shared Protection solver quality present",
         "passed": true,
         "severity": "error",
-        "detail": "status=OPTIMAL, solutions=10, mip_gap=8.198385308303227e-05"
+        "detail": "status=OPTIMAL, solutions=10, mip_gap=2.732901368257913e-05"
       },
       {
         "name": "Shared Protection solver finished with accepted status",
@@ -249,7 +249,7 @@
         "name": "Shared Protection protects every reported affected demand",
         "passed": true,
         "severity": "error",
-        "detail": "affected=113, protected=113, unprotected=0"
+        "detail": "affected=102, protected=102, unprotected=0"
       },
       {
         "name": "Deferred Protection solver quality present",
@@ -273,52 +273,52 @@
         "name": "dedicated and shared static exposure aligned",
         "passed": true,
         "severity": "error",
-        "detail": "dedicated=113, shared=113"
+        "detail": "dedicated=102, shared=102"
       },
       {
         "name": "deferred time-aware affected no larger than static exposure",
         "passed": true,
         "severity": "error",
-        "detail": "deferred=5, static=113"
+        "detail": "deferred=5, static=102"
       }
     ],
     "metrics": {
       "Dedicated Protection": {
         "failure_scenarios": 26,
         "working_flows": 56,
-        "working_demand_links": 113,
-        "affected": 113,
-        "protected": 113,
+        "working_demand_links": 102,
+        "affected": 102,
+        "protected": 102,
         "unprotected": 0,
         "fixed_working_schedule": "",
         "failure_model": "EXACT",
         "solver_status": "OPTIMAL",
-        "solver_mip_gap": 2.3422129226217404e-05,
-        "solver_objective_value": 12808.39999999998,
-        "solver_objective_bound": 12808.099999999999,
-        "solver_runtime": 14.252397060394287,
+        "solver_mip_gap": 7.563429642610233e-05,
+        "solver_objective_value": 12808.502,
+        "solver_objective_bound": 12807.533237962958,
+        "solver_runtime": 18.9161319732666,
         "solver_solution_count": 10
       },
       "Shared Protection": {
         "failure_scenarios": 26,
         "working_flows": 56,
-        "working_demand_links": 113,
-        "affected": 113,
-        "protected": 113,
+        "working_demand_links": 102,
+        "affected": 102,
+        "protected": 102,
         "unprotected": 0,
         "fixed_working_schedule": "teccl/examples/schedules/interdc8_dedicated_protection_schedule.json",
         "failure_model": "EXACT",
         "solver_status": "OPTIMAL",
-        "solver_mip_gap": 8.198385308303227e-05,
-        "solver_objective_value": 12807.399999999976,
-        "solver_objective_bound": 12806.35,
-        "solver_runtime": 0.7350540161132812,
+        "solver_mip_gap": 2.732901368257913e-05,
+        "solver_objective_value": 12806.901999999995,
+        "solver_objective_bound": 12806.552000000005,
+        "solver_runtime": 0.9240520000457764,
         "solver_solution_count": 10
       },
       "Deferred Protection": {
         "failure_scenarios": 26,
         "working_flows": 56,
-        "working_demand_links": 113,
+        "working_demand_links": 102,
         "affected": 5,
         "protected": 5,
         "unprotected": 0,
@@ -326,9 +326,9 @@
         "failure_model": "EXACT",
         "solver_status": "OPTIMAL",
         "solver_mip_gap": 0.0,
-        "solver_objective_value": 11052.249999999996,
-        "solver_objective_bound": 11052.25,
-        "solver_runtime": 0.20870304107666016,
+        "solver_objective_value": 11054.352000000017,
+        "solver_objective_bound": 11054.351999999997,
+        "solver_runtime": 0.23726201057434082,
         "solver_solution_count": 4
       }
     }

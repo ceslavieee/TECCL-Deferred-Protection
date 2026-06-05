@@ -3,6 +3,8 @@ import json
 import math
 import re
 import time
+import heapq
+from collections import defaultdict
 from itertools import product
 from pathlib import Path
 from typing import Dict, List, Tuple
@@ -29,6 +31,10 @@ class DeferredProtectionFormulation(BaseFormulation):
       which can only start after failure detection.
     - Dynamic backup release: demands already delivered before the failure epoch
       do not require backup/recovery resources.
+
+    A single solve is a fixed failure-time scenario evaluation. Broader claims
+    about unknown failure timing should be made from an outer sweep over possible
+    failure epochs, not from one configured failure epoch alone.
 
     This is still a flow-level CCL formulation rather than a spectrum-slot optical
     model, but it captures the paper's two key mechanisms: delayed backup
@@ -71,6 +77,10 @@ class DeferredProtectionFormulation(BaseFormulation):
             self.final_deadline,
             max(0, int((self.final_deadline + 1) * self.user_input.instance.working_deadline_ratio) - 1),
         )
+        # DedicatedProtectionFormulation and SharedProtectionFormulation inherit
+        # this helper implementation, but their baseline semantics are static
+        # pre-planned protection. Keep concrete failure-time logic exclusive to
+        # the actual deferred formulation.
         self.real_failure_timing_enabled = (
             self.user_input.instance.enable_real_failure_timing
             and type(self) is DeferredProtectionFormulation
@@ -108,6 +118,7 @@ class DeferredProtectionFormulation(BaseFormulation):
         )
         self.enable_dynamic_backup_release = self.user_input.instance.enable_dynamic_backup_release
         self.failure_scenarios = self._enumerate_failure_scenarios()
+        self._fixed_demand_link_epoch_cache = None
 
     def _enumerate_failure_scenarios(self) -> List[Tuple[int, int]]:
         scenarios = []
@@ -191,6 +202,56 @@ class DeferredProtectionFormulation(BaseFormulation):
                 j = int(match.group("j"))
             demand_links.append((s, d, i, j, c))
         return demand_links
+
+    def _load_fixed_working_demand_link_epochs(self) -> List[Tuple[int, int, int, int, int, int]]:
+        if self._fixed_demand_link_epoch_cache is not None:
+            return self._fixed_demand_link_epoch_cache
+        schedule_path = self.user_input.instance.fixed_working_schedule
+        if not schedule_path:
+            self._fixed_demand_link_epoch_cache = []
+            return []
+        data = json.loads(Path(schedule_path).read_text())
+        epoch_rows = (
+            data.get("10b-Working_Demand_Link_Epochs")
+            or data.get("11b-Working_Demand_Link_Epochs")
+            or []
+        )
+        demand_link_epochs = []
+        demand_link_epoch_re = re.compile(
+            r"Demand (?P<s>\d+)->(?P<d>\d+) chunk (?P<c>\d+) uses "
+            r"(?P<i>\d+)->(?P<j>\d+) in epoch (?P<k>\d+)"
+        )
+        for row in epoch_rows:
+            if isinstance(row, dict):
+                s = int(row["source"])
+                d = int(row["destination"])
+                c = int(row["chunk"])
+                k = int(row["epoch"])
+                i, j = [int(node) for node in row["link"].split("->")]
+            else:
+                match = demand_link_epoch_re.search(str(row))
+                if not match:
+                    raise ValueError(f"Could not parse fixed working demand link epoch: {row}")
+                s = int(match.group("s"))
+                d = int(match.group("d"))
+                c = int(match.group("c"))
+                i = int(match.group("i"))
+                j = int(match.group("j"))
+                k = int(match.group("k"))
+            demand_link_epochs.append((s, d, i, j, c, k))
+        self._fixed_demand_link_epoch_cache = demand_link_epochs
+        return self._fixed_demand_link_epoch_cache
+
+    def _fixed_demand_link_after_failure_values(self) -> Dict[Tuple[int, int, int, int, int], int]:
+        demand_link_epochs = self._load_fixed_working_demand_link_epochs()
+        if not demand_link_epochs:
+            return {}
+        fixed_values = {key: 0 for key in self._load_fixed_working_demand_links()}
+        for s, d, i, j, c, k in demand_link_epochs:
+            key = (s, d, i, j, c)
+            if key in fixed_values and k >= self.failure_time_epoch:
+                fixed_values[key] = 1
+        return fixed_values
 
     def fixed_working_schedule_constraints(self) -> None:
         fixed_flows = set(self._load_fixed_working_flows())
@@ -682,6 +743,11 @@ class DeferredProtectionFormulation(BaseFormulation):
 
     def demand_path_constraints(self) -> None:
         start = time.time()
+        fixed_after_failure_values = (
+            self._fixed_demand_link_after_failure_values()
+            if self.real_failure_timing_enabled and self.user_input.instance.fixed_working_schedule
+            else {}
+        )
         for s, d, c in product(self.nodes, self.nodes, self.chunks):
             if not self.demand[s][d][c]:
                 continue
@@ -695,18 +761,25 @@ class DeferredProtectionFormulation(BaseFormulation):
                 )
                 demand_after_failure_var = self.demand_link_used_w_after_failure[(s, d, i, j, c)]
                 future_link_var = self.link_used_w_after_failure[(s, i, j, c)]
-                self.model.addConstr(
-                    demand_after_failure_var <= demand_var,
-                    name="demand_path_after_failure_path_ub_%d_%d_%d_%d_%d" % (s, d, i, j, c),
-                )
-                self.model.addConstr(
-                    demand_after_failure_var <= future_link_var,
-                    name="demand_path_after_failure_future_ub_%d_%d_%d_%d_%d" % (s, d, i, j, c),
-                )
-                self.model.addConstr(
-                    demand_after_failure_var >= demand_var + future_link_var - 1,
-                    name="demand_path_after_failure_lb_%d_%d_%d_%d_%d" % (s, d, i, j, c),
-                )
+                fixed_after_failure = fixed_after_failure_values.get((s, d, i, j, c))
+                if fixed_after_failure is not None:
+                    self.model.addConstr(
+                        demand_after_failure_var == fixed_after_failure,
+                        name="fixed_demand_path_after_failure_%d_%d_%d_%d_%d" % (s, d, i, j, c),
+                    )
+                else:
+                    self.model.addConstr(
+                        demand_after_failure_var <= demand_var,
+                        name="demand_path_after_failure_path_ub_%d_%d_%d_%d_%d" % (s, d, i, j, c),
+                    )
+                    self.model.addConstr(
+                        demand_after_failure_var <= future_link_var,
+                        name="demand_path_after_failure_future_ub_%d_%d_%d_%d_%d" % (s, d, i, j, c),
+                    )
+                    self.model.addConstr(
+                        demand_after_failure_var >= demand_var + future_link_var - 1,
+                        name="demand_path_after_failure_lb_%d_%d_%d_%d_%d" % (s, d, i, j, c),
+                    )
 
             for node in self.nodes:
                 incoming = gp.quicksum(
@@ -1123,6 +1196,12 @@ class DeferredProtectionFormulation(BaseFormulation):
                 )
         logging.debug("Finished adding failure-scenario constraints in %s", time.time() - start)
 
+    def _add_demand_path_tiebreaker(self, objective: gp.LinExpr, weight: float = 0.001) -> None:
+        if self.user_input.instance.failure_model != FailureModel.EXACT:
+            return
+        for demand_var in self.demand_link_used_w.values():
+            objective.add(demand_var, weight)
+
     def objective_formulation(self, objective_type: ObjectiveType = ObjectiveType.PAPER) -> gp.LinExpr:
         del objective_type
         logging.debug("Adding deferred-protection objective")
@@ -1134,6 +1213,7 @@ class DeferredProtectionFormulation(BaseFormulation):
 
         objective.add(self.working_completion_epoch, working_completion_weight)
         objective.add(self.protection_completion_epoch, protection_completion_tiebreak)
+        self._add_demand_path_tiebreaker(objective)
         if self.real_failure_timing_enabled:
             for (scenario_idx, s, i, j, c, k), flow_var in self.flow_r.items():
                 del scenario_idx, s, i, j, c
@@ -1364,11 +1444,115 @@ class DeferredProtectionFormulation(BaseFormulation):
         demand_links.sort(key=lambda row: (row["source"], row["destination"], row["chunk"], row["link"]))
         return demand_links
 
+    def _flow_arrival_epoch(self, i: int, j: int, send_epoch: int) -> int:
+        alpha_num_back = self.get_alpha_num_back(i, j)
+        link_type = self.get_link_type(i, j)
+        if link_type == self.LinkType.SWITCH_GPU and not self.user_input.instance.switch_to_gpu_link_on:
+            return send_epoch + alpha_num_back
+        beta_num_back = self.get_beta_num_back(i, j)
+        return send_epoch + alpha_num_back + 1 + beta_num_back
+
+    def _extract_temporal_demand_path_epochs(self, s: int, d: int, c: int) -> List[Dict[str, int]]:
+        edges_by_node = defaultdict(list)
+        send_epochs_by_edge = {}
+        for (path_s, path_d, i, j, path_c), var in self.demand_link_used_w.items():
+            if (path_s, path_d, path_c) != (s, d, c) or var.X <= 0.5:
+                continue
+            epochs = [
+                k
+                for k in self.epochs
+                if self._is_var(self.flow_w[s][i][j][c][k]) and self.flow_w[s][i][j][c][k].X > 0.5
+            ]
+            if not epochs:
+                continue
+            edge = (i, j)
+            edges_by_node[i].append(edge)
+            send_epochs_by_edge[edge] = sorted(epochs)
+
+        queue = [(0, s)]
+        best_arrival = {s: 0}
+        predecessor = {}
+        while queue:
+            available_epoch, node = heapq.heappop(queue)
+            if available_epoch != best_arrival.get(node):
+                continue
+            if node == d:
+                break
+            for edge in edges_by_node.get(node, []):
+                i, j = edge
+                send_epoch = next(
+                    (epoch for epoch in send_epochs_by_edge[edge] if epoch >= available_epoch),
+                    None,
+                )
+                if send_epoch is None:
+                    continue
+                arrival_epoch = self._flow_arrival_epoch(i, j, send_epoch)
+                if arrival_epoch < best_arrival.get(j, math.inf):
+                    best_arrival[j] = arrival_epoch
+                    predecessor[j] = (node, edge, send_epoch)
+                    heapq.heappush(queue, (arrival_epoch, j))
+
+        if d not in predecessor:
+            return []
+
+        path = []
+        node = d
+        while node != s:
+            previous_node, (i, j), send_epoch = predecessor[node]
+            path.append(
+                {
+                    "source": s,
+                    "destination": d,
+                    "chunk": c,
+                    "link": f"{i}->{j}",
+                    "epoch": send_epoch,
+                }
+            )
+            node = previous_node
+        path.reverse()
+        return path
+
+    def _extract_working_demand_link_epochs(self) -> List[Dict[str, int]]:
+        demand_link_epochs = []
+        for s, d, c in product(self.nodes, self.nodes, self.chunks):
+            if not self.demand[s][d][c]:
+                continue
+            temporal_path = self._extract_temporal_demand_path_epochs(s, d, c)
+            if temporal_path:
+                demand_link_epochs.extend(temporal_path)
+                continue
+            for (path_s, path_d, i, j, path_c), var in self.demand_link_used_w.items():
+                if (path_s, path_d, path_c) != (s, d, c) or var.X <= 0.5:
+                    continue
+                for k in self.epochs:
+                    flow_var = self.flow_w[s][i][j][c][k]
+                    if self._is_var(flow_var) and flow_var.X > 0.5:
+                        demand_link_epochs.append(
+                            {
+                                "source": s,
+                                "destination": d,
+                                "chunk": c,
+                                "link": f"{i}->{j}",
+                                "epoch": k,
+                            }
+                        )
+        demand_link_epochs.sort(
+            key=lambda row: (
+                row["source"],
+                row["destination"],
+                row["chunk"],
+                row["link"],
+                row["epoch"],
+            )
+        )
+        return demand_link_epochs
+
     def get_schedule(self) -> Tuple[List[Tuple[int, int, int, int, int]], Dict]:
         if self.model.SolCount <= 0:
             return [], {}
         working_flows = self._extract_phase_flows("flow_w_")
         working_demand_links = self._extract_working_demand_links()
+        working_demand_link_epochs = self._extract_working_demand_link_epochs()
         if self.real_failure_timing_enabled:
             recovery_flows = self._extract_recovery_flows()
             protection_flows = [(s, i, j, c, k) for _, s, i, j, c, k in recovery_flows]
@@ -1395,7 +1579,12 @@ class DeferredProtectionFormulation(BaseFormulation):
             "7i-Post_Failure_Working_Flows_Continue": self.real_failure_timing_enabled,
             "7j-Failure_Model": self.user_input.instance.failure_model.name,
             "7k-Failure_Exposure_Granularity": (
-                "per-demand future link exposure"
+                "fixed demand-link-epoch exposure"
+                if (
+                    self.user_input.instance.failure_model == FailureModel.EXACT
+                    and self._load_fixed_working_demand_link_epochs()
+                )
+                else "per-demand future link exposure"
                 if self.user_input.instance.failure_model == FailureModel.EXACT
                 else "source-chunk future link exposure"
             ),
@@ -1411,6 +1600,7 @@ class DeferredProtectionFormulation(BaseFormulation):
                 for s, i, j, c, k in working_flows
             ],
             "10a-Working_Demand_Links": working_demand_links,
+            "10b-Working_Demand_Link_Epochs": working_demand_link_epochs,
             "11-Protection_Flows": [
                 f"Chunk {c} from {s} traveled over {i}->{j} in epoch {k}"
                 for s, i, j, c, k in protection_flows

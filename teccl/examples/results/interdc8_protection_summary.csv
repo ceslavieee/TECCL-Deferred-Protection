@@ -1,0 +1,5 @@
+strategy,epoch_duration,normal_case_working_time,failure_aware_final_time,working_epochs,final_epochs,working_flow_count,protection_flow_count,working_link_count,protection_link_count,per_demand_protection_link_count,failure_scenarios,affected_demands,protected_demands,unprotected_demands,dynamically_released_demands,heuristic_working_finish_epochs,heuristic_deferred_finish_epochs,deferred_deadline_factor,working_deadline_epoch,deferred_activation_epoch,failure_observation_epoch,real_failure_timing,failure_time_epoch,detection_delay_epochs,recovery_start_epoch,final_deadline_epoch,solver_time
+No Protection,1.0,11.0,,11,,56,,26,,,,,,,,,,,,,,,,,,,0.05277299880981445
+Dedicated Protection,1.0,11.0,17.0,11,,56,56,25,56,,26,392,392,0,0,,,,,,,,,,,,21.125244140625
+Shared Protection,1.0,11.0,17.0,11,,56,56,21,15,56,26,392,392,0,0,,,,,,,,,,,,69.29978275299072
+Deferred Protection,1.0,11.0,30.0,11.0,30,56,8,26,8,,26,4,4,0,10,9.916666666666668,19.833333333333336,1.5,18,10,9,True,9,1,10,30,30.34195303916931

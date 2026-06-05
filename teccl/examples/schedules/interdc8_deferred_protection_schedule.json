@@ -2,60 +2,60 @@
   "1-Epoch_Duration": 1.0,
   "10-Working_Flows": [
     "Chunk 0 from 0 traveled over 0->1 in epoch 0",
-    "Chunk 0 from 1 traveled over 1->0 in epoch 0",
     "Chunk 0 from 1 traveled over 1->2 in epoch 0",
-    "Chunk 0 from 2 traveled over 2->1 in epoch 0",
+    "Chunk 0 from 1 traveled over 1->5 in epoch 0",
+    "Chunk 0 from 2 traveled over 2->3 in epoch 0",
     "Chunk 0 from 2 traveled over 2->6 in epoch 0",
+    "Chunk 0 from 3 traveled over 3->2 in epoch 0",
     "Chunk 0 from 3 traveled over 3->4 in epoch 0",
     "Chunk 0 from 4 traveled over 4->3 in epoch 0",
     "Chunk 0 from 4 traveled over 4->6 in epoch 0",
     "Chunk 0 from 5 traveled over 5->1 in epoch 0",
+    "Chunk 0 from 5 traveled over 5->6 in epoch 0",
     "Chunk 0 from 5 traveled over 5->7 in epoch 0",
     "Chunk 0 from 6 traveled over 6->2 in epoch 0",
-    "Chunk 0 from 6 traveled over 6->4 in epoch 0",
-    "Chunk 0 from 7 traveled over 7->6 in epoch 0",
-    "Chunk 0 from 1 traveled over 0->3 in epoch 2",
+    "Chunk 0 from 6 traveled over 6->5 in epoch 0",
+    "Chunk 0 from 7 traveled over 7->5 in epoch 0",
+    "Chunk 0 from 6 traveled over 6->7 in epoch 1",
     "Chunk 0 from 0 traveled over 1->2 in epoch 2",
+    "Chunk 0 from 0 traveled over 1->3 in epoch 2",
     "Chunk 0 from 0 traveled over 1->5 in epoch 2",
+    "Chunk 0 from 1 traveled over 2->3 in epoch 2",
     "Chunk 0 from 1 traveled over 2->6 in epoch 2",
     "Chunk 0 from 3 traveled over 3->0 in epoch 2",
-    "Chunk 0 from 3 traveled over 3->2 in epoch 2",
-    "Chunk 0 from 7 traveled over 6->2 in epoch 2",
-    "Chunk 0 from 7 traveled over 6->4 in epoch 2",
-    "Chunk 0 from 7 traveled over 6->5 in epoch 2",
-    "Chunk 0 from 6 traveled over 6->7 in epoch 2",
-    "Chunk 0 from 2 traveled over 1->0 in epoch 3",
-    "Chunk 0 from 4 traveled over 6->5 in epoch 4",
+    "Chunk 0 from 5 traveled over 1->3 in epoch 4",
+    "Chunk 0 from 3 traveled over 2->1 in epoch 4",
+    "Chunk 0 from 2 traveled over 3->0 in epoch 4",
+    "Chunk 0 from 7 traveled over 5->1 in epoch 4",
+    "Chunk 0 from 7 traveled over 5->4 in epoch 4",
+    "Chunk 0 from 7 traveled over 5->6 in epoch 4",
+    "Chunk 0 from 1 traveled over 5->7 in epoch 4",
+    "Chunk 0 from 4 traveled over 6->2 in epoch 4",
     "Chunk 0 from 4 traveled over 6->7 in epoch 4",
-    "Chunk 0 from 5 traveled over 7->6 in epoch 4",
-    "Chunk 0 from 2 traveled over 0->3 in epoch 5",
-    "Chunk 0 from 5 traveled over 1->0 in epoch 5",
-    "Chunk 0 from 0 traveled over 1->3 in epoch 5",
+    "Chunk 0 from 1 traveled over 1->0 in epoch 5",
     "Chunk 0 from 6 traveled over 2->1 in epoch 5",
     "Chunk 0 from 6 traveled over 2->3 in epoch 5",
     "Chunk 0 from 4 traveled over 3->1 in epoch 5",
     "Chunk 0 from 3 traveled over 4->5 in epoch 5",
     "Chunk 0 from 3 traveled over 4->6 in epoch 5",
+    "Chunk 0 from 6 traveled over 5->4 in epoch 5",
     "Chunk 0 from 2 traveled over 6->4 in epoch 5",
-    "Chunk 0 from 2 traveled over 6->7 in epoch 5",
-    "Chunk 0 from 5 traveled over 1->2 in epoch 6",
+    "Chunk 0 from 2 traveled over 6->5 in epoch 5",
+    "Chunk 0 from 5 traveled over 1->0 in epoch 6",
     "Chunk 0 from 4 traveled over 3->0 in epoch 6",
-    "Chunk 0 from 4 traveled over 3->2 in epoch 6",
-    "Chunk 0 from 1 traveled over 3->4 in epoch 6",
+    "Chunk 0 from 7 traveled over 4->3 in epoch 6",
+    "Chunk 0 from 0 traveled over 5->4 in epoch 6",
     "Chunk 0 from 0 traveled over 5->6 in epoch 6",
-    "Chunk 0 from 5 traveled over 0->3 in epoch 7",
-    "Chunk 0 from 6 traveled over 1->5 in epoch 7",
-    "Chunk 0 from 7 traveled over 2->1 in epoch 7",
-    "Chunk 0 from 7 traveled over 2->3 in epoch 7",
-    "Chunk 0 from 0 traveled over 5->4 in epoch 7",
-    "Chunk 0 from 0 traveled over 5->7 in epoch 7",
+    "Chunk 0 from 0 traveled over 5->7 in epoch 6",
+    "Chunk 0 from 5 traveled over 1->2 in epoch 7",
+    "Chunk 0 from 2 traveled over 3->1 in epoch 7",
+    "Chunk 0 from 1 traveled over 5->4 in epoch 7",
     "Chunk 0 from 5 traveled over 6->4 in epoch 7",
-    "Chunk 0 from 1 traveled over 6->5 in epoch 7",
-    "Chunk 0 from 2 traveled over 7->5 in epoch 7",
-    "Chunk 0 from 6 traveled over 1->0 in epoch 8",
-    "Chunk 0 from 1 traveled over 6->7 in epoch 8",
-    "Chunk 0 from 3 traveled over 0->1 in epoch 9",
-    "Chunk 0 from 7 traveled over 1->0 in epoch 9",
+    "Chunk 0 from 4 traveled over 6->5 in epoch 7",
+    "Chunk 0 from 7 traveled over 1->0 in epoch 8",
+    "Chunk 0 from 7 traveled over 1->2 in epoch 8",
+    "Chunk 0 from 2 traveled over 6->7 in epoch 8",
+    "Chunk 0 from 6 traveled over 1->0 in epoch 9",
     "Chunk 0 from 3 traveled over 6->7 in epoch 9"
   ],
   "10a-Working_Demand_Links": [
@@ -170,49 +170,31 @@
     {
       "chunk": 0,
       "destination": 3,
-      "link": "0->3",
+      "link": "1->2",
       "source": 1
     },
     {
       "chunk": 0,
       "destination": 3,
-      "link": "1->0",
+      "link": "2->3",
       "source": 1
     },
     {
       "chunk": 0,
       "destination": 4,
-      "link": "0->3",
+      "link": "1->5",
       "source": 1
     },
     {
       "chunk": 0,
       "destination": 4,
-      "link": "1->0",
-      "source": 1
-    },
-    {
-      "chunk": 0,
-      "destination": 4,
-      "link": "3->4",
+      "link": "5->4",
       "source": 1
     },
     {
       "chunk": 0,
       "destination": 5,
-      "link": "1->2",
-      "source": 1
-    },
-    {
-      "chunk": 0,
-      "destination": 5,
-      "link": "2->6",
-      "source": 1
-    },
-    {
-      "chunk": 0,
-      "destination": 5,
-      "link": "6->5",
+      "link": "1->5",
       "source": 1
     },
     {
@@ -230,55 +212,43 @@
     {
       "chunk": 0,
       "destination": 7,
-      "link": "1->2",
+      "link": "1->5",
       "source": 1
     },
     {
       "chunk": 0,
       "destination": 7,
-      "link": "2->6",
-      "source": 1
-    },
-    {
-      "chunk": 0,
-      "destination": 7,
-      "link": "6->7",
+      "link": "5->7",
       "source": 1
     },
     {
       "chunk": 0,
       "destination": 0,
-      "link": "1->0",
+      "link": "2->3",
       "source": 2
     },
     {
       "chunk": 0,
       "destination": 0,
-      "link": "2->1",
+      "link": "3->0",
       "source": 2
     },
     {
       "chunk": 0,
       "destination": 1,
-      "link": "2->1",
+      "link": "2->3",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "link": "3->1",
       "source": 2
     },
     {
       "chunk": 0,
       "destination": 3,
-      "link": "0->3",
-      "source": 2
-    },
-    {
-      "chunk": 0,
-      "destination": 3,
-      "link": "1->0",
-      "source": 2
-    },
-    {
-      "chunk": 0,
-      "destination": 3,
-      "link": "2->1",
+      "link": "2->3",
       "source": 2
     },
     {
@@ -302,13 +272,7 @@
     {
       "chunk": 0,
       "destination": 5,
-      "link": "6->7",
-      "source": 2
-    },
-    {
-      "chunk": 0,
-      "destination": 5,
-      "link": "7->5",
+      "link": "6->5",
       "source": 2
     },
     {
@@ -338,13 +302,13 @@
     {
       "chunk": 0,
       "destination": 1,
-      "link": "0->1",
+      "link": "2->1",
       "source": 3
     },
     {
       "chunk": 0,
       "destination": 1,
-      "link": "3->0",
+      "link": "3->2",
       "source": 3
     },
     {
@@ -428,13 +392,13 @@
     {
       "chunk": 0,
       "destination": 2,
-      "link": "3->2",
+      "link": "4->6",
       "source": 4
     },
     {
       "chunk": 0,
       "destination": 2,
-      "link": "4->3",
+      "link": "6->2",
       "source": 4
     },
     {
@@ -506,13 +470,7 @@
     {
       "chunk": 0,
       "destination": 3,
-      "link": "0->3",
-      "source": 5
-    },
-    {
-      "chunk": 0,
-      "destination": 3,
-      "link": "1->0",
+      "link": "1->3",
       "source": 5
     },
     {
@@ -524,7 +482,7 @@
     {
       "chunk": 0,
       "destination": 4,
-      "link": "5->7",
+      "link": "5->6",
       "source": 5
     },
     {
@@ -535,20 +493,8 @@
     },
     {
       "chunk": 0,
-      "destination": 4,
-      "link": "7->6",
-      "source": 5
-    },
-    {
-      "chunk": 0,
       "destination": 6,
-      "link": "5->7",
-      "source": 5
-    },
-    {
-      "chunk": 0,
-      "destination": 6,
-      "link": "7->6",
+      "link": "5->6",
       "source": 5
     },
     {
@@ -608,25 +554,19 @@
     {
       "chunk": 0,
       "destination": 4,
-      "link": "6->4",
+      "link": "5->4",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "link": "6->5",
       "source": 6
     },
     {
       "chunk": 0,
       "destination": 5,
-      "link": "1->5",
-      "source": 6
-    },
-    {
-      "chunk": 0,
-      "destination": 5,
-      "link": "2->1",
-      "source": 6
-    },
-    {
-      "chunk": 0,
-      "destination": 5,
-      "link": "6->2",
+      "link": "6->5",
       "source": 6
     },
     {
@@ -644,112 +584,822 @@
     {
       "chunk": 0,
       "destination": 0,
-      "link": "2->1",
+      "link": "5->1",
       "source": 7
     },
     {
       "chunk": 0,
       "destination": 0,
-      "link": "6->2",
-      "source": 7
-    },
-    {
-      "chunk": 0,
-      "destination": 0,
-      "link": "7->6",
+      "link": "7->5",
       "source": 7
     },
     {
       "chunk": 0,
       "destination": 1,
-      "link": "2->1",
+      "link": "5->1",
       "source": 7
     },
     {
       "chunk": 0,
       "destination": 1,
-      "link": "6->2",
-      "source": 7
-    },
-    {
-      "chunk": 0,
-      "destination": 1,
-      "link": "7->6",
+      "link": "7->5",
       "source": 7
     },
     {
       "chunk": 0,
       "destination": 2,
-      "link": "6->2",
+      "link": "1->2",
       "source": 7
     },
     {
       "chunk": 0,
       "destination": 2,
-      "link": "7->6",
+      "link": "5->1",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "link": "7->5",
       "source": 7
     },
     {
       "chunk": 0,
       "destination": 3,
-      "link": "2->3",
+      "link": "4->3",
       "source": 7
     },
     {
       "chunk": 0,
       "destination": 3,
-      "link": "6->2",
+      "link": "5->4",
       "source": 7
     },
     {
       "chunk": 0,
       "destination": 3,
-      "link": "7->6",
+      "link": "7->5",
       "source": 7
     },
     {
       "chunk": 0,
       "destination": 4,
-      "link": "6->4",
+      "link": "5->4",
       "source": 7
     },
     {
       "chunk": 0,
       "destination": 4,
-      "link": "7->6",
+      "link": "7->5",
       "source": 7
     },
     {
       "chunk": 0,
       "destination": 5,
-      "link": "6->5",
-      "source": 7
-    },
-    {
-      "chunk": 0,
-      "destination": 5,
-      "link": "7->6",
+      "link": "7->5",
       "source": 7
     },
     {
       "chunk": 0,
       "destination": 6,
-      "link": "7->6",
+      "link": "5->6",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "link": "7->5",
+      "source": 7
+    }
+  ],
+  "10b-Working_Demand_Link_Epochs": [
+    {
+      "chunk": 0,
+      "destination": 1,
+      "epoch": 0,
+      "link": "0->1",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "epoch": 0,
+      "link": "0->1",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "epoch": 2,
+      "link": "1->2",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "epoch": 0,
+      "link": "0->1",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "epoch": 2,
+      "link": "1->3",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "epoch": 0,
+      "link": "0->1",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "epoch": 2,
+      "link": "1->5",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "epoch": 6,
+      "link": "5->4",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 5,
+      "epoch": 0,
+      "link": "0->1",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 5,
+      "epoch": 2,
+      "link": "1->5",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "epoch": 0,
+      "link": "0->1",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "epoch": 2,
+      "link": "1->5",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "epoch": 6,
+      "link": "5->6",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "epoch": 0,
+      "link": "0->1",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "epoch": 2,
+      "link": "1->5",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "epoch": 6,
+      "link": "5->7",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "epoch": 5,
+      "link": "1->0",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "epoch": 0,
+      "link": "1->2",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "epoch": 0,
+      "link": "1->2",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "epoch": 2,
+      "link": "2->3",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "epoch": 0,
+      "link": "1->5",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "epoch": 7,
+      "link": "5->4",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 5,
+      "epoch": 0,
+      "link": "1->5",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "epoch": 0,
+      "link": "1->2",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "epoch": 2,
+      "link": "2->6",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "epoch": 0,
+      "link": "1->5",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "epoch": 4,
+      "link": "5->7",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "epoch": 0,
+      "link": "2->3",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "epoch": 4,
+      "link": "3->0",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "epoch": 0,
+      "link": "2->3",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "epoch": 7,
+      "link": "3->1",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "epoch": 0,
+      "link": "2->3",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "epoch": 0,
+      "link": "2->6",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "epoch": 5,
+      "link": "6->4",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 5,
+      "epoch": 0,
+      "link": "2->6",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 5,
+      "epoch": 5,
+      "link": "6->5",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "epoch": 0,
+      "link": "2->6",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "epoch": 0,
+      "link": "2->6",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "epoch": 8,
+      "link": "6->7",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "epoch": 2,
+      "link": "3->0",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "epoch": 4,
+      "link": "2->1",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "epoch": 0,
+      "link": "3->2",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "epoch": 0,
+      "link": "3->2",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "epoch": 0,
+      "link": "3->4",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 5,
+      "epoch": 0,
+      "link": "3->4",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 5,
+      "epoch": 5,
+      "link": "4->5",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "epoch": 0,
+      "link": "3->4",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "epoch": 5,
+      "link": "4->6",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "epoch": 0,
+      "link": "3->4",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "epoch": 5,
+      "link": "4->6",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "epoch": 9,
+      "link": "6->7",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "epoch": 6,
+      "link": "3->0",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "epoch": 0,
+      "link": "4->3",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "epoch": 5,
+      "link": "3->1",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "epoch": 0,
+      "link": "4->3",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "epoch": 0,
+      "link": "4->6",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "epoch": 4,
+      "link": "6->2",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "epoch": 0,
+      "link": "4->3",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 5,
+      "epoch": 0,
+      "link": "4->6",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 5,
+      "epoch": 7,
+      "link": "6->5",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "epoch": 0,
+      "link": "4->6",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "epoch": 0,
+      "link": "4->6",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "epoch": 4,
+      "link": "6->7",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "epoch": 6,
+      "link": "1->0",
+      "source": 5
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "epoch": 0,
+      "link": "5->1",
+      "source": 5
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "epoch": 0,
+      "link": "5->1",
+      "source": 5
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "epoch": 7,
+      "link": "1->2",
+      "source": 5
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "epoch": 0,
+      "link": "5->1",
+      "source": 5
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "epoch": 4,
+      "link": "1->3",
+      "source": 5
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "epoch": 0,
+      "link": "5->1",
+      "source": 5
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "epoch": 0,
+      "link": "5->6",
+      "source": 5
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "epoch": 7,
+      "link": "6->4",
+      "source": 5
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "epoch": 0,
+      "link": "5->6",
+      "source": 5
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "epoch": 0,
+      "link": "5->7",
+      "source": 5
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "epoch": 9,
+      "link": "1->0",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "epoch": 5,
+      "link": "2->1",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "epoch": 0,
+      "link": "6->2",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "epoch": 5,
+      "link": "2->1",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "epoch": 0,
+      "link": "6->2",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "epoch": 0,
+      "link": "6->2",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "epoch": 5,
+      "link": "2->3",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "epoch": 0,
+      "link": "6->2",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "epoch": 5,
+      "link": "5->4",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "epoch": 0,
+      "link": "6->5",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 5,
+      "epoch": 0,
+      "link": "6->5",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "epoch": 1,
+      "link": "6->7",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "epoch": 8,
+      "link": "1->0",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "epoch": 4,
+      "link": "5->1",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "epoch": 0,
+      "link": "7->5",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "epoch": 4,
+      "link": "5->1",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "epoch": 0,
+      "link": "7->5",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "epoch": 8,
+      "link": "1->2",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "epoch": 4,
+      "link": "5->1",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "epoch": 0,
+      "link": "7->5",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "epoch": 6,
+      "link": "4->3",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "epoch": 4,
+      "link": "5->4",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "epoch": 0,
+      "link": "7->5",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "epoch": 4,
+      "link": "5->4",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "epoch": 0,
+      "link": "7->5",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 5,
+      "epoch": 0,
+      "link": "7->5",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "epoch": 4,
+      "link": "5->6",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "epoch": 0,
+      "link": "7->5",
       "source": 7
     }
   ],
   "11-Protection_Flows": [
-    "Chunk 0 from 3 traveled over 2->1 in epoch 28",
     "Chunk 0 from 7 traveled over 3->0 in epoch 24",
     "Chunk 0 from 6 traveled over 3->0 in epoch 26",
-    "Chunk 0 from 1 traveled over 5->7 in epoch 24",
+    "Chunk 0 from 7 traveled over 3->2 in epoch 26",
+    "Chunk 0 from 2 traveled over 5->7 in epoch 24",
     "Chunk 0 from 3 traveled over 5->7 in epoch 26"
   ],
   "11a-Recovery_Flows_By_Scenario": [
-    "Scenario 0: chunk 0 from 3 recovered over 2->1 in epoch 28",
     "Scenario 2: chunk 0 from 7 recovered over 3->0 in epoch 24",
     "Scenario 2: chunk 0 from 6 recovered over 3->0 in epoch 26",
-    "Scenario 23: chunk 0 from 1 recovered over 5->7 in epoch 24",
+    "Scenario 3: chunk 0 from 7 recovered over 3->2 in epoch 26",
+    "Scenario 23: chunk 0 from 2 recovered over 5->7 in epoch 24",
     "Scenario 23: chunk 0 from 3 recovered over 5->7 in epoch 26"
   ],
   "2-Expected_Epoch_Duration": 1.0,
@@ -768,7 +1418,7 @@
   "7h-Recovery_Inherits_Scenario_Valid_Working_Buffers": true,
   "7i-Post_Failure_Working_Flows_Continue": true,
   "7j-Failure_Model": "EXACT",
-  "7k-Failure_Exposure_Granularity": "per-demand future link exposure",
+  "7k-Failure_Exposure_Granularity": "fixed demand-link-epoch exposure",
   "7l-Fixed_Working_Schedule": "teccl/examples/schedules/interdc8_dedicated_protection_schedule.json",
   "8-Final_Deadline_Epoch": 30,
   "9-Epochs_Required": 30,
@@ -802,14 +1452,10 @@
   ],
   "9b-Failure_Scenario_Summary": {
     "Failure 0: 0->1": {
-      "affected_demands": [
-        "Demand (3->1, chunk 0)"
-      ],
+      "affected_demands": [],
       "dynamically_released_demands": [],
       "failed_link": "0->1",
-      "protected_demands": [
-        "Demand (3->1, chunk 0)"
-      ],
+      "protected_demands": [],
       "unaffected_demands": [
         "Demand (0->1, chunk 0)",
         "Demand (0->2, chunk 0)",
@@ -833,6 +1479,7 @@
         "Demand (2->6, chunk 0)",
         "Demand (2->7, chunk 0)",
         "Demand (3->0, chunk 0)",
+        "Demand (3->1, chunk 0)",
         "Demand (3->2, chunk 0)",
         "Demand (3->4, chunk 0)",
         "Demand (3->5, chunk 0)",
@@ -1781,13 +2428,13 @@
     },
     "Failure 23: 6->7": {
       "affected_demands": [
-        "Demand (1->7, chunk 0)",
+        "Demand (2->7, chunk 0)",
         "Demand (3->7, chunk 0)"
       ],
       "dynamically_released_demands": [],
       "failed_link": "6->7",
       "protected_demands": [
-        "Demand (1->7, chunk 0)",
+        "Demand (2->7, chunk 0)",
         "Demand (3->7, chunk 0)"
       ],
       "unaffected_demands": [
@@ -1804,13 +2451,13 @@
         "Demand (1->4, chunk 0)",
         "Demand (1->5, chunk 0)",
         "Demand (1->6, chunk 0)",
+        "Demand (1->7, chunk 0)",
         "Demand (2->0, chunk 0)",
         "Demand (2->1, chunk 0)",
         "Demand (2->3, chunk 0)",
         "Demand (2->4, chunk 0)",
         "Demand (2->5, chunk 0)",
         "Demand (2->6, chunk 0)",
-        "Demand (2->7, chunk 0)",
         "Demand (3->0, chunk 0)",
         "Demand (3->1, chunk 0)",
         "Demand (3->2, chunk 0)",
@@ -2048,10 +2695,14 @@
       "unprotected_demands": []
     },
     "Failure 3: 1->2": {
-      "affected_demands": [],
+      "affected_demands": [
+        "Demand (7->2, chunk 0)"
+      ],
       "dynamically_released_demands": [],
       "failed_link": "1->2",
-      "protected_demands": [],
+      "protected_demands": [
+        "Demand (7->2, chunk 0)"
+      ],
       "unaffected_demands": [
         "Demand (0->1, chunk 0)",
         "Demand (0->2, chunk 0)",
@@ -2104,7 +2755,6 @@
         "Demand (6->7, chunk 0)",
         "Demand (7->0, chunk 0)",
         "Demand (7->1, chunk 0)",
-        "Demand (7->2, chunk 0)",
         "Demand (7->3, chunk 0)",
         "Demand (7->4, chunk 0)",
         "Demand (7->5, chunk 0)",
@@ -2508,22 +3158,22 @@
   "Solver_MIP_Gap": 0.0,
   "Solver_Name": "DeferredProtection_MILP",
   "Solver_Node_Count": 1.0,
-  "Solver_Objective_Bound": 11052.25,
-  "Solver_Objective_Value": 11052.249999999996,
+  "Solver_Objective_Bound": 11054.351999999997,
+  "Solver_Objective_Value": 11054.352000000017,
   "Solver_Quality": {
     "mip_gap": 0.0,
     "node_count": 1.0,
-    "objective_bound": 11052.25,
-    "objective_value": 11052.249999999996,
-    "runtime": 0.20870304107666016,
+    "objective_bound": 11054.351999999997,
+    "objective_value": 11054.352000000017,
+    "runtime": 0.23726201057434082,
     "solution_count": 4,
     "solver_name": "DeferredProtection_MILP",
     "status_code": 2,
     "status_name": "OPTIMAL"
   },
-  "Solver_Runtime": 0.20870304107666016,
+  "Solver_Runtime": 0.23726201057434082,
   "Solver_Solution_Count": 4,
   "Solver_Status": 2,
   "Solver_Status_Name": "OPTIMAL",
-  "Solver_Time": 3.684699058532715
+  "Solver_Time": 4.12563681602478
 }

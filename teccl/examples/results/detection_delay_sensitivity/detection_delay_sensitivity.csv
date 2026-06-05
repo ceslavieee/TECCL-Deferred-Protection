@@ -1,0 +1,13 @@
+dataset,detection_delay_epochs,failure_time_epoch,recovery_start_epoch,affected,protected,unprotected,recovery_flow_link_epochs,recovery_occupied_link_epochs,final_epoch,solver_status,solver_mip_gap,solver_runtime,schedule_file
+DCN4WAN,0,2,2,20,20,0,18,18,18,OPTIMAL,0.0,1.1908009052276611,teccl/examples/results/detection_delay_sensitivity/schedules/dcn4wan_deferred_detection_delay_0.json
+DCN4WAN,1,2,3,20,20,0,18,18,18,OPTIMAL,0.0,0.9804079532623291,teccl/examples/results/detection_delay_sensitivity/schedules/dcn4wan_deferred_detection_delay_1.json
+DCN4WAN,2,2,4,20,20,0,18,18,18,OPTIMAL,0.0,1.0126621723175049,teccl/examples/results/detection_delay_sensitivity/schedules/dcn4wan_deferred_detection_delay_2.json
+DCN4WAN,3,2,5,20,20,0,18,18,18,OPTIMAL,0.0,0.8648350238800049,teccl/examples/results/detection_delay_sensitivity/schedules/dcn4wan_deferred_detection_delay_3.json
+DCN4WAN,4,2,6,20,20,0,18,18,18,OPTIMAL,0.0,0.7814788818359375,teccl/examples/results/detection_delay_sensitivity/schedules/dcn4wan_deferred_detection_delay_4.json
+DCN4WAN,5,2,7,20,20,0,18,18,18,OPTIMAL,0.0,0.77565598487854,teccl/examples/results/detection_delay_sensitivity/schedules/dcn4wan_deferred_detection_delay_5.json
+InterDC8,0,9,9,5,5,0,5,5,30,OPTIMAL,0.0,0.2526249885559082,teccl/examples/results/detection_delay_sensitivity/schedules/interdc8_deferred_detection_delay_0.json
+InterDC8,1,9,10,5,5,0,5,5,30,OPTIMAL,0.0,0.253709077835083,teccl/examples/results/detection_delay_sensitivity/schedules/interdc8_deferred_detection_delay_1.json
+InterDC8,2,9,11,5,5,0,5,5,30,OPTIMAL,0.0,0.27692413330078125,teccl/examples/results/detection_delay_sensitivity/schedules/interdc8_deferred_detection_delay_2.json
+InterDC8,3,9,12,5,5,0,5,5,30,OPTIMAL,0.0,0.24081206321716309,teccl/examples/results/detection_delay_sensitivity/schedules/interdc8_deferred_detection_delay_3.json
+InterDC8,4,9,13,5,5,0,5,5,30,OPTIMAL,0.0,0.2350010871887207,teccl/examples/results/detection_delay_sensitivity/schedules/interdc8_deferred_detection_delay_4.json
+InterDC8,5,9,14,5,5,0,5,5,30,OPTIMAL,0.0,0.18839216232299805,teccl/examples/results/detection_delay_sensitivity/schedules/interdc8_deferred_detection_delay_5.json
