@@ -1,0 +1,3 @@
+topology,comparison_quality,normal_completion_delta_epochs,protected_completion_delay_epochs,normal_completion_delta_seconds,protected_completion_delay_seconds,contingency_plan_reduction_percent,occupied_link_seconds_reduction_percent,reservation_holding_reduction_percent,physical_holding_reduction_percent,failure_free_committed_slot_reduction_percent
+DCN4WAN,OPTIMAL_PAIR,0.0,18.0,0.0,18.0,5.882352941176471,5.882352941176471,-75.34246575342466,-75.34246575342466,100.0
+InterDC8,FEASIBLE_TIME_LIMIT_PAIR,0.0,17.0,0.0,17.0,6.451612903225806,6.451612903225806,-43.11926605504587,-43.11926605504587,100.0

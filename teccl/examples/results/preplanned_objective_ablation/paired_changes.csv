@@ -1,0 +1,3 @@
+topology,comparison_quality,physical_holding_reduction_percent,occupied_link_seconds_reduction_percent,protected_completion_delta_seconds,transmission_count_delta
+DCN4WAN,OPTIMAL_PAIR,0.0,0.0,0.0,0
+InterDC8,OPTIMAL_PAIR,4.39223697650664,4.395604395604396,4.0,0

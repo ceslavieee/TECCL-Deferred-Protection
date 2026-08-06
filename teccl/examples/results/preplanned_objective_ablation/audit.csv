@@ -1,0 +1,17 @@
+topology,name,passed,detail
+DCN4WAN,Legacy solver returned a solution,True,"status=OPTIMAL, gap=None"
+DCN4WAN,Legacy accounting recomputes exactly,True,holding_link_second_squared=256.0
+DCN4WAN,Legacy is directed-link disjoint,True,"working=24, backup=16"
+DCN4WAN,Beta weighted solver returned a solution,True,"status=OPTIMAL, gap=None"
+DCN4WAN,Beta weighted accounting recomputes exactly,True,holding_link_second_squared=256.0
+DCN4WAN,Beta weighted is directed-link disjoint,True,"working=24, backup=16"
+DCN4WAN,objective variants use identical working flows,True,"legacy=24, weighted=24"
+DCN4WAN,weighted schedule reports the selected primary objective,True,"label=beta-weighted occupied link-epoch holding, value=256, accounting=256.0"
+InterDC8,Legacy solver returned a solution,True,"status=OPTIMAL, gap=None"
+InterDC8,Legacy accounting recomputes exactly,True,holding_link_second_squared=979.0
+InterDC8,Legacy is directed-link disjoint,True,"working=56, backup=56"
+InterDC8,Beta weighted solver returned a solution,True,"status=OPTIMAL, gap=None"
+InterDC8,Beta weighted accounting recomputes exactly,True,holding_link_second_squared=936.0
+InterDC8,Beta weighted is directed-link disjoint,True,"working=56, backup=56"
+InterDC8,objective variants use identical working flows,True,"legacy=56, weighted=56"
+InterDC8,weighted schedule reports the selected primary objective,True,"label=beta-weighted occupied link-epoch holding, value=936, accounting=936.0"

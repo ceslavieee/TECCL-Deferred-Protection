@@ -1,0 +1,5 @@
+topology,objective_mode,optimization_quality,solver_status,solver_mip_gap,normal_completion_seconds,protected_completion_seconds,flow_start_holding_units,beta_weighted_holding_link_second_squared,contingency_plan_transmissions,contingency_plan_occupied_link_seconds,primary_objective_label
+DCN4WAN,LEGACY_FLOW_START,OPTIMAL,OPTIMAL,,8.0,27.0,128,256.0,16,32.0,unweighted reserved flow-start holding
+DCN4WAN,BETA_WEIGHTED_HOLDING,OPTIMAL,OPTIMAL,,8.0,27.0,128,256.0,16,32.0,beta-weighted occupied link-epoch holding
+InterDC8,LEGACY_FLOW_START,OPTIMAL,OPTIMAL,,11.0,31.0,602,979.0,56,91.0,unweighted reserved flow-start holding
+InterDC8,BETA_WEIGHTED_HOLDING,OPTIMAL,OPTIMAL,,11.0,35.0,602,936.0,56,87.0,beta-weighted occupied link-epoch holding
