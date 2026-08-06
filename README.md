@@ -61,19 +61,30 @@ This version extends TE-CCL with protection-aware AllGather scheduling for
 cross-data-center collective communication. It adds:
 
 - `InterDC8`, an 8-node WAN-style topology for inter-data-center experiments.
+- `DCN4WAN`, the 4-DCN and 5-WAN-transit-node topology used in the formal
+  paired protection experiment.
 - `Ladder6`, a small illustrative topology for debugging and explaining
-  protection behavior.
-- Deferred protection, where the working AllGather finishes first and protection
-  flows are scheduled in a later phase.
+  protection behavior; it is not used in the formal paired results.
+- Preplanned deferred protection, where a complete contingency schedule is
+  computed before failure, placed after the working window, and progressively
+  released as atomic source chunks complete.
+- Post-failure deferred recovery, where a realized failure time and detection
+  delay determine scenario-specific recovery flows.
 - Dedicated and shared protection baselines for comparison.
 
 Protection timing semantics:
 
+- `deferred_timing_mode = PREPLANNED` selects pre-failure planning with delayed
+  backup reservation. Its protection unit is an atomic `(source, chunk)`
+  multicast commodity, and it reports an exact per-epoch reservation release
+  profile for that unit.
+- `deferred_timing_mode = POST_FAILURE` selects the existing realized
+  failure-time recovery model.
 - Dedicated and shared protection are static pre-planned baselines. They do not
   use failure-time information; any demand whose working path is exposed to a
   failed link requires backup.
-- Deferred protection evaluates a realized failure-time scenario. A single MILP
-  solve uses one configured `failure_time_epoch`, and
+- Post-failure deferred protection evaluates a realized failure-time scenario.
+  A single MILP solve uses one configured `failure_time_epoch`, and
   `teccl/examples/failure_time_sensitivity.py` sweeps possible failure epochs
   when the claim depends on unknown failure timing.
 - The affected counts therefore have different meanings: dedicated/shared report
@@ -87,8 +98,66 @@ teccl solve --input_args teccl/examples/sample_inputs/interdc8_baseline.json
 teccl solve --input_args teccl/examples/sample_inputs/interdc8_deferred_protection.json
 teccl solve --input_args teccl/examples/sample_inputs/interdc8_dedicated_protection.json
 teccl solve --input_args teccl/examples/sample_inputs/interdc8_shared_protection.json
-teccl solve --input_args teccl/examples/sample_inputs/ladder6_deferred_protection.json
+teccl solve --input_args teccl/examples/sample_inputs/dcn4wan_deferred_protection.json
+teccl solve --input_args teccl/examples/sample_inputs/dcn4wan_preplanned_deferred_protection.json
 ```
+
+Run the paired Dedicated versus Preplanned Deferred experiment after activating
+the project Conda environment:
+
+```
+python teccl/examples/compare_preplanned_protection.py --run
+```
+
+The runner generates a protectable Dedicated working schedule first, fixes the
+same raw working flows in Preplanned Deferred, checks 24 fairness/correctness
+invariants for `DCN4WAN` and `InterDC8`, and writes CSV/JSON/Markdown results under
+`teccl/examples/results/preplanned_comparison/`.
+
+Run the fixed-total-data chunk-granularity sensitivity with:
+
+```
+python teccl/examples/chunk_granularity_sensitivity.py --run
+```
+
+This compares 1, 2, and 4 chunks for 100 GB per source on `DCN4WAN` and
+`InterDC8`. It uses beta-weighted occupied link-seconds, records solver
+optimality and working-schedule provenance, and writes auditable results under
+`teccl/examples/results/chunk_granularity/`.
+
+Compare the legacy flow-start holding objective with the beta-weighted physical
+holding objective using:
+
+```
+python teccl/examples/compare_preplanned_holding_objectives.py --run
+```
+
+This A/B test fixes the same working schedule and changes only the
+highest-priority Preplanned Deferred objective. Results are written under
+`teccl/examples/results/preplanned_objective_ablation/`.
+
+Replay the paired schedules under every relevant single directed-link failure
+time and activate protection only for affected `(source, chunk)` units:
+
+```
+python teccl/examples/evaluate_preplanned_failure_execution.py
+```
+
+Results are written under
+`teccl/examples/results/preplanned_failure_execution/`.
+
+Generate the corresponding thesis-ready PNG, PDF, and SVG comparison figure
+with:
+
+```
+python teccl/examples/plot_preplanned_failure_execution.py
+```
+
+Figures are written under
+`teccl/examples/results/figures/preplanned_failure_execution/`.
+
+The formal preplanned model and its claim boundaries are documented in
+[`PREPLANNED_DEFERRED_PROTECTION.md`](PREPLANNED_DEFERRED_PROTECTION.md).
 
 ### Detailed Examples
 For detailed examples, please refer to instructions in the [examples](teccl/examples/) directory.
