@@ -1,0 +1,46 @@
+{
+  "TopologyParams": {
+    "name": "InterDC8",
+    "chassis": 1,
+    "chunk_size": 100.0,
+    "alpha": [
+      0.0,
+      0.0
+    ]
+  },
+  "GurobiParams": {
+    "time_limit": 0.05,
+    "output_flag": 0,
+    "mip_gap": 0.001,
+    "mip_focus": 1,
+    "heuristics": 0.3
+  },
+  "InstanceParams": {
+    "collective": 1,
+    "num_chunks": 1,
+    "epoch_type": 1,
+    "epoch_duration": -1,
+    "epoch_multiplier": 1,
+    "num_epochs": 30,
+    "alpha_threshold": 0.1,
+    "switch_copy": false,
+    "switch_to_gpu_link_on": true,
+    "debug": false,
+    "debug_output_file": "",
+    "fixed_working_schedule": "teccl/examples/schedules/interdc8_dedicated_comparison_schedule.json",
+    "objective_type": 3,
+    "solution_method": 1,
+    "protection_mode": 1,
+    "deferred_timing_mode": 1,
+    "working_deadline_ratio": 0.4,
+    "deferred_deadline_factor": 2.0,
+    "deferred_activation_ratio": -1.0,
+    "enable_dynamic_backup_release": true,
+    "beta_weighted_holding_objective": true,
+    "enable_real_failure_timing": false,
+    "protection_link_disjoint": true,
+    "enable_failure_scenarios": false,
+    "failure_model": 1,
+    "schedule_output_file": "teccl/examples/schedules/interdc8_preplanned_deferred_beta_weighted_schedule.json"
+  }
+}

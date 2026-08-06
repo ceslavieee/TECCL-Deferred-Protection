@@ -14,6 +14,7 @@ from teccl.solvers.alltoall import AlltoAllFormulation
 from teccl.solvers.base_formulation import BaseFormulation
 from teccl.solvers.dedicated_protection import DedicatedProtectionFormulation
 from teccl.solvers.deferred_protection import DeferredProtectionFormulation
+from teccl.solvers.preplanned_deferred_protection import PreplannedDeferredProtectionFormulation
 from teccl.solvers.shared_protection import SharedProtectionFormulation
 from teccl.topologies.dgx1 import DGX1
 from teccl.topologies.dgx2 import DGX2
@@ -58,6 +59,8 @@ class TECCLSolver(object):
     def get_solver(self, user_input: UserInputParams, topology: Topology) -> BaseFormulation:
         if user_input.instance.collective == Collective.ALLGATHER:
             if user_input.instance.protection_mode == ProtectionMode.DEFERRED:
+                if user_input.instance.deferred_timing_mode == DeferredTimingMode.PREPLANNED:
+                    return PreplannedDeferredProtectionFormulation(user_input, topology)
                 return DeferredProtectionFormulation(user_input, topology)
             if user_input.instance.protection_mode == ProtectionMode.DEDICATED:
                 return DedicatedProtectionFormulation(user_input, topology)

@@ -71,6 +71,11 @@ class ProtectionMode(Enum):
     SHARED = 3
 
 
+class DeferredTimingMode(Enum):
+    PREPLANNED = 1
+    POST_FAILURE = 2
+
+
 class FailureModel(Enum):
     APPROXIMATE = 1
     EXACT = 2
@@ -99,11 +104,13 @@ class InstanceParams:
     fixed_working_schedule: str = "" # If not empty, protection solvers fix working flows to this schedule JSON.
     symmetry: bool = False # If true, nodes that are given as symmetric are constrainted to have same number of total flows. 
     protection_mode: ProtectionMode = ProtectionMode.NONE # Enables alternative resilient formulations for AllGather.
+    deferred_timing_mode: DeferredTimingMode = DeferredTimingMode.POST_FAILURE # PREPLANNED reserves a later backup schedule before failure; POST_FAILURE computes scenario recovery.
     working_deadline_ratio: float = 0.6 # Fraction of total epochs reserved for the working phase in deferred protection.
     deferred_deadline_factor: float = 2.0 # Deadline upper bound = factor * heuristic completion time for deferred protection.
     deferred_activation_ratio: float = -1.0 # First epoch ratio where deferred backup/recovery can be scheduled (-1 follows working_deadline_ratio).
     failure_observation_ratio: float = -1.0 # Epoch ratio used to decide which already-delivered demands release backup protection (-1 uses half of the working deadline).
     enable_dynamic_backup_release: bool = True # If true, delivered demands no longer require deferred backup protection.
+    beta_weighted_holding_objective: bool = False # If true, preplanned deferred protection weights each held backup flow by beta(i,j) + 1.
     enable_real_failure_timing: bool = True # If true, deferred protection models a failed link plus a concrete failure epoch.
     failure_time_epoch: int = -1 # 0-based failure occurrence epoch for deferred recovery (-1 uses half of the working deadline).
     detection_delay_epochs: int = 1 # Number of epochs between failure occurrence and recovery activation.

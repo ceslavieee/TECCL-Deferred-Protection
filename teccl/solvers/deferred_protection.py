@@ -1319,6 +1319,38 @@ class DeferredProtectionFormulation(BaseFormulation):
         flows.sort(key=lambda item: item[4])
         return flows
 
+    def _extract_chunk_working_completion_profile(self) -> List[Dict[str, int]]:
+        profile = []
+        for s, c in product(self.nodes, self.chunks):
+            destinations = [d for d in self.nodes if self.demand[s][d][c]]
+            if not destinations:
+                continue
+            completion_epoch = self.final_deadline + 1
+            for observation_epoch in range(1, self.final_deadline + 2):
+                demand_epoch = observation_epoch - 1
+                if all(
+                    self.total_demand_sat_w[s][d][c][demand_epoch].X > 0.5
+                    for d in destinations
+                ):
+                    completion_epoch = observation_epoch
+                    break
+            profile.append(
+                {
+                    "source": s,
+                    "chunk": c,
+                    "working_completion_epoch": completion_epoch,
+                }
+            )
+        profile.sort(key=lambda row: (row["source"], row["chunk"]))
+        return profile
+
+    def _extract_link_occupancy_epochs(self) -> Dict[Tuple[int, int], int]:
+        return {
+            (i, j): self.get_beta_num_back(i, j) + 1
+            for i, j in product(self.nodes, self.nodes)
+            if self.topology.capacity[i][j] > 0
+        }
+
     def _extract_recovery_flows(self) -> List[Tuple[int, int, int, int, int, int]]:
         flows = []
         for var in self.model.getVars():

@@ -31,6 +31,8 @@ def make_handle_solve(cmd_parsers):
                     user_input.instance.__setattr__(k, EpochType(v))
                 elif k == 'protection_mode':
                     user_input.instance.__setattr__(k, ProtectionMode(v))
+                elif k == 'deferred_timing_mode':
+                    user_input.instance.__setattr__(k, DeferredTimingMode(v))
                 elif k == 'failure_model':
                     user_input.instance.__setattr__(k, FailureModel(v))
                 else:

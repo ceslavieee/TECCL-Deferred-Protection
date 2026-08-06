@@ -6,6 +6,10 @@ from gurobipy import GRB
 
 from teccl.input_data import FailureModel, ObjectiveType, SolutionMethod, UserInputParams
 from teccl.solvers.deferred_protection import DeferredProtectionFormulation
+from teccl.solvers.protection_resource_accounting import (
+    add_common_resource_fields,
+    build_future_reservation_accounting,
+)
 from teccl.topologies.topology import Topology
 
 
@@ -37,6 +41,7 @@ class DedicatedProtectionFormulation(DeferredProtectionFormulation):
         objective = gp.LinExpr(0.0)
         completion_weight = 1000.0
         protection_completion_weight = 100.0
+        working_flow_penalty = 0.01
         protection_flow_penalty = 0.05
         protection_link_penalty = 0.1
 
@@ -52,6 +57,9 @@ class DedicatedProtectionFormulation(DeferredProtectionFormulation):
                     for c in self.chunks:
                         objective += protection_link_penalty * self.link_used_p[s][i][j][c]
                         for k in self.epochs:
+                            working_var = self.flow_w[s][i][j][c][k]
+                            if self._is_var(working_var):
+                                objective += working_flow_penalty * working_var
                             flow_var = self.flow_p[s][i][j][c][k]
                             if self._is_var(flow_var):
                                 objective += protection_flow_penalty * flow_var
@@ -78,7 +86,7 @@ class DedicatedProtectionFormulation(DeferredProtectionFormulation):
             self.total_demand_sat_p,
             "protection",
             self.final_deadline,
-            False,
+            True,
         )
         self.completion_time_constraints()
         self._add_node_constraints_for_phase(self.flow_w, self.buffer_w, "working")
@@ -190,4 +198,13 @@ class DedicatedProtectionFormulation(DeferredProtectionFormulation):
                 for s, i, j, c in protection_links
             ],
         }
+        chunk_completion_profile = self._extract_chunk_working_completion_profile()
+        accounting = build_future_reservation_accounting(
+            protection_flows,
+            chunk_completion_profile,
+            self._extract_link_occupancy_epochs(),
+            self.epoch_duration,
+            self.user_input.topology.chunk_size,
+        )
+        add_common_resource_fields(schedule_json, accounting)
         return working_flows + protection_flows, schedule_json
