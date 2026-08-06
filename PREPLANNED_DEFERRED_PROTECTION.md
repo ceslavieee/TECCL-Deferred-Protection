@@ -256,14 +256,14 @@ epoch before working completion, the evaluator:
 
 This follows the MILP's discrete failure convention: a transmission that
 started before the failure epoch remains valid even if its occupied interval
-extends across that epoch. Dedicated failure-execution resource counts the
-complete committed static backup plan. Preplanned Deferred failure-execution
-resource counts only the plans activated for affected units. The detailed and
+extends across that epoch. Provisioned resource counts each strategy's complete
+backup plan. Activated resource uses the same affected-only rule for both
+strategies and counts only plans belonging to affected units. The detailed and
 aggregated results are under
 `teccl/examples/results/preplanned_failure_execution/`.
 
-The thesis figure comparing failure-execution resource and completion time is
-generated with:
+The thesis figure comparing provisioned resource, affected-only activated
+resource, and completion time is generated with:
 
 ```bash
 python teccl/examples/plot_preplanned_failure_execution.py
@@ -272,9 +272,9 @@ python teccl/examples/plot_preplanned_failure_execution.py
 PNG, PDF, and SVG versions are written under
 `teccl/examples/results/figures/preplanned_failure_execution/`. The figure uses
 only failure scenarios that actually prevent at least one `(source, chunk)`
-from completing AllGather. Its resource panel counts the complete committed
-backup plan for Dedicated Protection and the activated affected-unit plans for
-Preplanned Deferred Protection.
+from completing AllGather. Separate panels report complete provisioned backup
+resource and affected-only activated resource, using the same definition for
+both strategies, followed by the protected-completion trade-off.
 
 The serialized InterDC8 Dedicated schedule is a verified feasible
 `TIME_LIMIT` solution with a relative MIP gap of approximately `0.7878%`.

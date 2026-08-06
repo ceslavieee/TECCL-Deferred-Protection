@@ -97,6 +97,34 @@ def completion_epoch(data: Dict, phase: str):
     )
 
 
+def optimization_quality(data: Dict) -> str:
+    status = str(data.get("Solver_Status_Name", "") or "UNKNOWN")
+    if status == "OPTIMAL":
+        return "OPTIMAL"
+    if int(data.get("Solver_Solution_Count", 0) or 0) > 0:
+        return f"FEASIBLE_{status}"
+    return f"NO_SOLUTION_{status}"
+
+
+def pair_optimization_quality(rows: Sequence[Dict[str, object]]) -> str:
+    if all(row["optimization_quality"] == "OPTIMAL" for row in rows):
+        return "OPTIMAL_PAIR"
+    if all(
+        row["optimization_quality"] == "OPTIMAL"
+        or str(row["optimization_quality"]).startswith("FEASIBLE_")
+        for row in rows
+    ):
+        nonoptimal_statuses = {
+            str(row["solver_status"])
+            for row in rows
+            if row["solver_status"] != "OPTIMAL"
+        }
+        if nonoptimal_statuses == {"TIME_LIMIT"}:
+            return "FEASIBLE_TIME_LIMIT_PAIR"
+        return "FEASIBLE_NONOPTIMAL_PAIR"
+    return "INVALID_PAIR"
+
+
 def run_solver(input_path: Path) -> None:
     command = [
         sys.executable,
@@ -188,9 +216,7 @@ def metric_row(topology: str, strategy: str, data: Dict) -> Dict[str, object]:
             "12f-Primary_Holding_Objective",
             "not applicable",
         ),
-        "optimization_quality": (
-            "OPTIMAL" if solver_status == "OPTIMAL" else "FEASIBLE_TIME_LIMIT"
-        ),
+        "optimization_quality": optimization_quality(data),
         "solver_status": solver_status,
         "solver_mip_gap": data.get("Solver_MIP_Gap", ""),
         "normal_completion_epoch": working_epoch,
@@ -340,13 +366,8 @@ def summarize():
         )
         dedicated_row = rows[-2]
         deferred_row = rows[-1]
-        comparison_quality = (
-            "OPTIMAL_PAIR"
-            if all(
-                row["solver_status"] == "OPTIMAL"
-                for row in (dedicated_row, deferred_row)
-            )
-            else "FEASIBLE_TIME_LIMIT_PAIR"
+        comparison_quality = pair_optimization_quality(
+            (dedicated_row, deferred_row)
         )
         comparisons.append(
             {
@@ -409,7 +430,11 @@ def summarize():
 def write_csv(rows: Sequence[Dict[str, object]], path: Path) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(rows[0].keys()))
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=list(rows[0].keys()),
+            lineterminator="\n",
+        )
         writer.writeheader()
         writer.writerows(rows)
 

@@ -1,5 +1,5 @@
-topology,strategy,directed_link_scenarios,scenarios_with_affected_commodities,mean_affected_commodities,max_affected_commodities,provisioned_backup_occupied_link_seconds,mean_activated_backup_occupied_link_seconds_all,mean_activated_backup_occupied_link_seconds_when_affected,max_activated_backup_occupied_link_seconds,mean_failure_execution_backup_occupied_link_seconds_all,mean_failure_execution_backup_occupied_link_seconds_when_affected,max_failure_execution_backup_occupied_link_seconds,mean_completion_seconds_all,mean_completion_seconds_when_affected,max_completion_seconds
-DCN4WAN,Dedicated Protection,128,72,0.6875,2,34.0,5.9375,10.555555555555555,18.0,34.0,34.0,34.0,8.375,8.666666666666666,9.0
-DCN4WAN,Preplanned Deferred Protection,128,72,0.6875,2,32.0,5.5,9.777777777777779,16.0,5.5,9.777777777777779,16.0,17.25,24.444444444444443,27.0
-InterDC8,Dedicated Protection,264,154,1.0643939393939394,4,93.0,12.393939393939394,21.246753246753247,48.0,93.0,93.0,93.0,14.609848484848484,17.18831168831169,18.0
-InterDC8,Preplanned Deferred Protection,264,154,1.0643939393939394,4,87.0,11.617424242424242,19.915584415584416,45.0,11.617424242424242,19.915584415584416,45.0,24.117424242424242,33.48701298701299,35.0
+topology,strategy,directed_link_scenarios,scenarios_with_affected_commodities,mean_affected_commodities,max_affected_commodities,provisioned_backup_occupied_link_seconds,mean_activated_backup_occupied_link_seconds_all,mean_activated_backup_occupied_link_seconds_when_affected,max_activated_backup_occupied_link_seconds,mean_completion_seconds_all,mean_completion_seconds_when_affected,max_completion_seconds
+DCN4WAN,Dedicated Protection,128,72,0.6875,2,34.0,5.9375,10.555555555555555,18.0,8.375,8.666666666666666,9.0
+DCN4WAN,Preplanned Deferred Protection,128,72,0.6875,2,32.0,5.5,9.777777777777779,16.0,17.25,24.444444444444443,27.0
+InterDC8,Dedicated Protection,264,154,1.0643939393939394,4,93.0,12.393939393939394,21.246753246753247,48.0,14.609848484848484,17.18831168831169,18.0
+InterDC8,Preplanned Deferred Protection,264,154,1.0643939393939394,4,87.0,11.617424242424242,19.915584415584416,45.0,24.117424242424242,33.48701298701299,35.0

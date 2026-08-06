@@ -14,6 +14,8 @@ from teccl.examples.compare_preplanned_protection import (  # noqa: E402
     check_disjoint,
     completion_epoch,
     load,
+    optimization_quality,
+    pair_optimization_quality,
     percent_change,
     protection_flows,
     run_solver,
@@ -79,9 +81,7 @@ def metric_row(
     return {
         "topology": topology,
         "objective_mode": objective_mode,
-        "optimization_quality": (
-            "OPTIMAL" if status == "OPTIMAL" else "FEASIBLE_TIME_LIMIT"
-        ),
+        "optimization_quality": optimization_quality(data),
         "solver_status": status,
         "solver_mip_gap": data.get("Solver_MIP_Gap", ""),
         "normal_completion_seconds": (
@@ -205,17 +205,11 @@ def summarize():
             weighted,
         )
         rows.extend([legacy_row, weighted_row])
-        pair_is_optimal = all(
-            row["solver_status"] == "OPTIMAL"
-            for row in (legacy_row, weighted_row)
-        )
         comparisons.append(
             {
                 "topology": topology,
-                "comparison_quality": (
-                    "OPTIMAL_PAIR"
-                    if pair_is_optimal
-                    else "FEASIBLE_TIME_LIMIT_PAIR"
+                "comparison_quality": pair_optimization_quality(
+                    (legacy_row, weighted_row)
                 ),
                 "physical_holding_reduction_percent": percent_change(
                     float(
@@ -257,7 +251,11 @@ def summarize():
 def write_csv(rows: Sequence[Dict[str, object]], path: Path) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(rows[0].keys()))
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=list(rows[0].keys()),
+            lineterminator="\n",
+        )
         writer.writeheader()
         writer.writerows(rows)
 

@@ -15,6 +15,8 @@ from teccl.examples.compare_preplanned_protection import (  # noqa: E402
     check_disjoint,
     completion_epoch,
     load,
+    optimization_quality,
+    pair_optimization_quality,
     percent_change,
     protection_flows,
     run_solver,
@@ -406,9 +408,7 @@ def physical_metric_row(
         * float(data["14q-Accounting_Chunk_Size_GB"]),
         "strategy": strategy,
         "schedule_origin": schedule_origin,
-        "optimization_quality": (
-            "OPTIMAL" if solver_status == "OPTIMAL" else "FEASIBLE_TIME_LIMIT"
-        ),
+        "optimization_quality": optimization_quality(data),
         "solver_status": solver_status,
         "solver_mip_gap": data.get("Solver_MIP_Gap", ""),
         "solver_runtime_seconds": data.get("Solver_Runtime", ""),
@@ -579,19 +579,13 @@ def summarize(topologies: Sequence[str], chunk_counts: Sequence[int]):
                 schedule_origin,
             )
             rows.extend([dedicated_row, deferred_row])
-            pair_is_optimal = all(
-                row["solver_status"] == "OPTIMAL"
-                for row in (dedicated_row, deferred_row)
-            )
             quality_prefix = (
                 "FIXED_REFERENCE"
                 if schedule_origin == "SERIALIZED_COARSE_REFERENCE"
                 else "DIRECT"
             )
-            quality_suffix = (
-                "OPTIMAL_PAIR"
-                if pair_is_optimal
-                else "FEASIBLE_TIME_LIMIT_PAIR"
+            quality_suffix = pair_optimization_quality(
+                (dedicated_row, deferred_row)
             )
             comparison_quality = f"{quality_prefix}_{quality_suffix}"
             comparisons.append(
@@ -671,7 +665,11 @@ def summarize(topologies: Sequence[str], chunk_counts: Sequence[int]):
 def write_csv(rows: Sequence[Dict[str, object]], path: Path) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(rows[0].keys()))
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=list(rows[0].keys()),
+            lineterminator="\n",
+        )
         writer.writeheader()
         writer.writerows(rows)
 

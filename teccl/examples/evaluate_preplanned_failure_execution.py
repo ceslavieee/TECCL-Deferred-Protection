@@ -351,11 +351,6 @@ def evaluate() -> Tuple[List[Dict[str, object]], List[Dict[str, object]]]:
                         epoch_duration,
                         chunk_size_gb,
                     )
-                    failure_execution_metrics = (
-                        full_backup_metrics[strategy]
-                        if strategy == "Dedicated Protection"
-                        else activated_metrics
-                    )
                     final_epoch = scenario_completion(
                         commodities,
                         affected,
@@ -406,19 +401,6 @@ def evaluate() -> Tuple[List[Dict[str, object]], List[Dict[str, object]]]:
                             ),
                             "activated_backup_occupied_link_seconds": (
                                 activated_metrics["occupied_link_seconds"]
-                            ),
-                            "failure_execution_backup_transmissions": (
-                                failure_execution_metrics["transmissions"]
-                            ),
-                            "failure_execution_backup_payload_gb_links": (
-                                failure_execution_metrics[
-                                    "payload_gb_links"
-                                ]
-                            ),
-                            "failure_execution_backup_occupied_link_seconds": (
-                                failure_execution_metrics[
-                                    "occupied_link_seconds"
-                                ]
                             ),
                             "scenario_completion_epoch": (
                                 final_epoch if final_epoch is not None else ""
@@ -502,10 +484,6 @@ def aggregate(
             float(row["activated_backup_occupied_link_seconds"])
             for row in affected_group
         ]
-        affected_failure_execution_resources = [
-            float(row["failure_execution_backup_occupied_link_seconds"])
-            for row in affected_group
-        ]
         affected_completions = [
             float(row["scenario_completion_seconds"])
             for row in affected_group
@@ -538,27 +516,6 @@ def aggregate(
                     float(row["activated_backup_occupied_link_seconds"])
                     for row in group
                 ),
-                "mean_failure_execution_backup_occupied_link_seconds_all": (
-                    mean(
-                        float(
-                            row[
-                                "failure_execution_backup_occupied_link_seconds"
-                            ]
-                        )
-                        for row in group
-                    )
-                ),
-                "mean_failure_execution_backup_occupied_link_seconds_when_affected": (
-                    mean(affected_failure_execution_resources)
-                    if affected_failure_execution_resources
-                    else 0.0
-                ),
-                "max_failure_execution_backup_occupied_link_seconds": max(
-                    float(
-                        row["failure_execution_backup_occupied_link_seconds"]
-                    )
-                    for row in group
-                ),
                 "mean_completion_seconds_all": (
                     mean(completions) if completions else ""
                 ),
@@ -578,7 +535,11 @@ def aggregate(
 def write_csv(rows: Sequence[Dict[str, object]], path: Path) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=list(rows[0]),
+            lineterminator="\n",
+        )
         writer.writeheader()
         writer.writerows(rows)
 
@@ -607,17 +568,15 @@ def write_markdown(
         "A `(source, chunk)` is affected only when it can no longer reach every "
         "AllGather endpoint. Only affected units activate a backup plan.",
         "",
-        "Dedicated provisioned resource is the complete static backup plan. "
-        "For the comparable failure-execution resource, Dedicated counts its "
-        "complete committed backup plan, while Deferred counts only the plans "
-        "activated for affected units. The CSV also retains the affected-only "
-        "portion of Dedicated for diagnosis.",
+        "Provisioned resource counts each strategy's complete backup plan. "
+        "Activated resource uses the same affected-only rule for both strategies: "
+        "only backup plans belonging to affected `(source, chunk)` units count.",
         "",
         "## Overall",
         "",
         "| topology | strategy | link-time scenarios | affected scenarios | "
-        "mean affected | provisioned backup link-s | mean failure-execution "
-        "link-s (affected only) | worst failure-execution link-s | mean completion s "
+        "mean affected | provisioned backup link-s | mean activated "
+        "link-s (affected only) | worst activated link-s | mean completion s "
         "(affected only) | worst completion s |",
         "|---|---|---:|---:|---:|---:|---:|---:|---:|---:|",
     ]
@@ -627,8 +586,8 @@ def write_markdown(
             "{scenarios_with_affected_commodities} | "
             "{mean_affected_commodities} | "
             "{provisioned_backup_occupied_link_seconds} | "
-            "{mean_failure_execution_backup_occupied_link_seconds_when_affected} | "
-            "{max_failure_execution_backup_occupied_link_seconds} | "
+            "{mean_activated_backup_occupied_link_seconds_when_affected} | "
+            "{max_activated_backup_occupied_link_seconds} | "
             "{mean_completion_seconds_when_affected} | "
             "{max_completion_seconds} |".format(
                 **{key: fmt(value) for key, value in row.items()}
@@ -641,7 +600,7 @@ def write_markdown(
             "## By failure time",
             "",
             "| topology | failure epoch | strategy | affected link scenarios | "
-            "mean affected | mean failure-execution link-s (affected only) | "
+            "mean affected | mean activated link-s (affected only) | "
             "mean completion s (affected only) | worst completion s |",
             "|---|---:|---|---:|---:|---:|---:|---:|",
         ]
@@ -651,7 +610,7 @@ def write_markdown(
             "| {topology} | {failure_epoch_zero_based} | {strategy} | "
             "{scenarios_with_affected_commodities} | "
             "{mean_affected_commodities} | "
-            "{mean_failure_execution_backup_occupied_link_seconds_when_affected} | "
+            "{mean_activated_backup_occupied_link_seconds_when_affected} | "
             "{mean_completion_seconds_when_affected} | "
             "{max_completion_seconds} |".format(
                 **{key: fmt(value) for key, value in row.items()}

@@ -95,16 +95,25 @@ def plot_overall(rows: List[Dict[str, str]]) -> List[Path]:
     indexed = index_rows(rows)
     x = np.arange(len(TOPOLOGIES))
     width = 0.34
-    fig, axes = plt.subplots(1, 2, figsize=(11.8, 4.7))
+    fig, axes = plt.subplots(1, 3, figsize=(15.5, 4.7))
 
-    resource_bars = []
+    provisioned_bars = []
+    activated_bars = []
     completion_bars = []
     for strategy_index, strategy in enumerate(STRATEGIES):
         offset = (strategy_index - 0.5) * width
-        resource = [
+        provisioned = [
             float(
                 indexed[(topology, strategy)][
-                    "mean_failure_execution_backup_occupied_link_seconds_when_affected"
+                    "provisioned_backup_occupied_link_seconds"
+                ]
+            )
+            for topology in TOPOLOGIES
+        ]
+        activated = [
+            float(
+                indexed[(topology, strategy)][
+                    "mean_activated_backup_occupied_link_seconds_when_affected"
                 ]
             )
             for topology in TOPOLOGIES
@@ -117,10 +126,21 @@ def plot_overall(rows: List[Dict[str, str]]) -> List[Path]:
             )
             for topology in TOPOLOGIES
         ]
-        resource_bars.append(
+        provisioned_bars.append(
             axes[0].bar(
                 x + offset,
-                resource,
+                provisioned,
+                width,
+                label=LABELS[strategy],
+                color=COLORS[strategy],
+                edgecolor="white",
+                linewidth=0.8,
+            )
+        )
+        activated_bars.append(
+            axes[1].bar(
+                x + offset,
+                activated,
                 width,
                 label=LABELS[strategy],
                 color=COLORS[strategy],
@@ -129,7 +149,7 @@ def plot_overall(rows: List[Dict[str, str]]) -> List[Path]:
             )
         )
         completion_bars.append(
-            axes[1].bar(
+            axes[2].bar(
                 x + offset,
                 completion,
                 width,
@@ -141,58 +161,86 @@ def plot_overall(rows: List[Dict[str, str]]) -> List[Path]:
         )
 
     axes[0].set_title(
-        "(a) Protection resource",
+        "(a) Provisioned backup",
         loc="left",
         fontsize=13,
         fontweight="bold",
     )
-    axes[0].set_ylabel("Average occupied link-seconds")
+    axes[0].set_ylabel("Complete plan (link-seconds)")
     axes[0].set_xticks(x, TOPOLOGIES)
     axes[0].set_ylim(0, 115)
 
     axes[1].set_title(
-        "(b) AllGather completion",
+        "(b) Activated backup",
         loc="left",
         fontsize=13,
         fontweight="bold",
     )
-    axes[1].set_ylabel("Average completion time (s)")
+    axes[1].set_ylabel("Affected-only mean (link-seconds)")
     axes[1].set_xticks(x, TOPOLOGIES)
-    axes[1].set_ylim(0, 42)
+    axes[1].set_ylim(0, 28)
 
-    for bars in resource_bars:
+    axes[2].set_title(
+        "(c) AllGather completion",
+        loc="left",
+        fontsize=13,
+        fontweight="bold",
+    )
+    axes[2].set_ylabel("Affected-only mean time (s)")
+    axes[2].set_xticks(x, TOPOLOGIES)
+    axes[2].set_ylim(0, 42)
+
+    for bars in provisioned_bars:
         label_bars(axes[0], bars, decimals=1)
-    for bars in completion_bars:
+    for bars in activated_bars:
         label_bars(axes[1], bars, decimals=1)
+    for bars in completion_bars:
+        label_bars(axes[2], bars, decimals=1)
 
     for topology_index, topology in enumerate(TOPOLOGIES):
         dedicated = indexed[(topology, STRATEGIES[0])]
         deferred = indexed[(topology, STRATEGIES[1])]
-        dedicated_resource = float(
+        dedicated_provisioned = float(
+            dedicated["provisioned_backup_occupied_link_seconds"]
+        )
+        deferred_provisioned = float(
+            deferred["provisioned_backup_occupied_link_seconds"]
+        )
+        dedicated_activated = float(
             dedicated[
-                "mean_failure_execution_backup_occupied_link_seconds_when_affected"
+                "mean_activated_backup_occupied_link_seconds_when_affected"
             ]
         )
-        deferred_resource = float(
+        deferred_activated = float(
             deferred[
-                "mean_failure_execution_backup_occupied_link_seconds_when_affected"
+                "mean_activated_backup_occupied_link_seconds_when_affected"
             ]
         )
-        reduction = 100.0 * (
-            dedicated_resource - deferred_resource
-        ) / dedicated_resource
+        provisioned_reduction = 100.0 * (
+            dedicated_provisioned - deferred_provisioned
+        ) / dedicated_provisioned
+        activated_reduction = 100.0 * (
+            dedicated_activated - deferred_activated
+        ) / dedicated_activated
         completion_delay = float(
             deferred["mean_completion_seconds_when_affected"]
         ) - float(dedicated["mean_completion_seconds_when_affected"])
         add_pair_change(
             axes[0],
             topology_index,
-            max(dedicated_resource, deferred_resource) + 9,
-            f"-{reduction:.1f}%",
+            max(dedicated_provisioned, deferred_provisioned) + 9,
+            f"-{provisioned_reduction:.1f}%",
             COLORS[STRATEGIES[1]],
         )
         add_pair_change(
             axes[1],
+            topology_index,
+            max(dedicated_activated, deferred_activated) + 2.5,
+            f"-{activated_reduction:.1f}%",
+            COLORS[STRATEGIES[1]],
+        )
+        add_pair_change(
+            axes[2],
             topology_index,
             max(
                 float(dedicated["mean_completion_seconds_when_affected"]),
@@ -218,12 +266,12 @@ def plot_overall(rows: List[Dict[str, str]]) -> List[Path]:
     fig.text(
         0.5,
         0.01,
-        "Single directed-link failures that affect AllGather; identical working schedules",
+        "Provisioned = complete plan; activated = affected source-chunk plans only; identical working schedules",
         ha="center",
         fontsize=9.5,
         color="#4b5563",
     )
-    fig.tight_layout(rect=(0, 0.05, 1, 0.92), w_pad=3.0)
+    fig.tight_layout(rect=(0, 0.05, 1, 0.92), w_pad=2.4)
 
     FIGURES.mkdir(parents=True, exist_ok=True)
     outputs = [
