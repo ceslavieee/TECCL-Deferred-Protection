@@ -1,0 +1,15 @@
+{
+  "produced_schedule": true,
+  "schedule_output_file": "teccl/examples/results/multicast_tree_pair_physical_25gb/detection_delay_boundary/schedules/interdc8_dpp_delay_2_tau_5_boundary.json",
+  "solver_quality": {
+    "mip_gap": null,
+    "node_count": 0.0,
+    "objective_bound": null,
+    "objective_value": 6.0,
+    "runtime": 0.2527039051055908,
+    "solution_count": 3,
+    "solver_name": "ScenarioRobustProtection_MILP",
+    "status_code": 2,
+    "status_name": "OPTIMAL"
+  }
+}

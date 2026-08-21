@@ -1,0 +1,49 @@
+{
+  "TopologyParams": {
+    "name": "DCN4WAN",
+    "chassis": 1,
+    "chunk_size": 25.0,
+    "alpha": [0.0, 0.0]
+  },
+  "GurobiParams": {
+    "time_limit": 0.01,
+    "output_flag": 0,
+    "mip_gap": 0.01,
+    "mip_focus": 1,
+    "heuristics": 0.6
+  },
+  "InstanceParams": {
+    "collective": 1,
+    "num_chunks": 1,
+    "epoch_type": 1,
+    "epoch_duration": -1,
+    "epoch_multiplier": 1,
+    "num_epochs": 30,
+    "alpha_threshold": 0.1,
+    "switch_copy": true,
+    "switch_to_gpu_link_on": true,
+    "debug": false,
+    "debug_output_file": "",
+    "objective_type": 3,
+    "solution_method": 1,
+    "protection_mode": 4,
+    "deferred_timing_mode": 1,
+    "working_deadline_ratio": 0.5,
+    "enable_dynamic_backup_release": false,
+    "enable_real_failure_timing": true,
+    "failure_time_epoch": 0,
+    "detection_delay_epochs": 1,
+    "protection_link_disjoint": true,
+    "enforce_multicast_tree_pair": true,
+    "enable_failure_scenarios": true,
+    "failure_scenario_offset": 0,
+    "max_failure_scenarios": -1,
+    "failure_model": 2,
+    "fixed_working_schedule": "teccl/examples/results/multicast_tree_pair_physical_25gb/full_directed_failures/schedules/dcn4wan_dpp.json",
+    "fixed_reservation_schedule": "",
+    "fixed_backup_tree_schedule": "teccl/examples/results/multicast_tree_pair_physical_25gb/full_directed_failures/schedules/dcn4wan_dpp.json",
+    "schedule_output_file": "teccl/examples/results/multicast_tree_pair_physical_25gb/full_directed_failures/schedules/dcn4wan_ddpp.json",
+    "solver_result_output_file": "teccl/examples/results/multicast_tree_pair_physical_25gb/full_directed_failures/status/dcn4wan_ddpp.json"
+  }
+}
+

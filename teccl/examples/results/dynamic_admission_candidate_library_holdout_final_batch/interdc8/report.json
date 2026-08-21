@@ -1,0 +1,76 @@
+{
+  "authoritative_performance_result": false,
+  "baseline_label": "fixed rooted multicast-tree DPP adaptation, not literal unicast path-pair DPP 1:1",
+  "candidate_tree_pair_first": true,
+  "claim_boundary": "This locator sweep selects load neighborhoods. Final thesis results require more seeds, longer traces, confidence intervals, and the complete predeclared main-topology load range.",
+  "gurobi_time_limit_hours_per_fallback": 0.01,
+  "load_normalization": "offered_arrivals_per_deadline = arrival_rate_per_epoch * deadline_epochs; raw rates should not be compared across topologies without this context",
+  "loads": [
+    {
+      "arrival_rate_per_epoch": 0.06,
+      "ddpp": {
+        "accepted": 52,
+        "all_ledgers_safe": true,
+        "blocked": 4,
+        "blocking_probability_conclusive": 0.07142857142857142,
+        "unknown": 0,
+        "unknown_rate": 0.0
+      },
+      "ddpp_minus_early_dpp_accepted": 10,
+      "deadline_epochs": 40,
+      "early_dpp": {
+        "accepted": 42,
+        "all_ledgers_safe": true,
+        "blocked": 14,
+        "blocking_probability_conclusive": 0.25,
+        "unknown": 0,
+        "unknown_rate": 0.0
+      },
+      "implementation_bundle_sha256s": [
+        "18a9f894a909c3edcbca9e7a065d1b61d98467227d710718a526c18dedf81847"
+      ],
+      "offered_arrivals_per_deadline": 2.4,
+      "requests_per_policy": 56,
+      "seeds": [
+        20260821,
+        20260822,
+        20260823,
+        20260824,
+        20260825,
+        20260826,
+        20260827
+      ],
+      "source_reports": [
+        "teccl/examples/results/dynamic_admission_candidate_library_holdout_final_batch/interdc8/rate_0p06/seed_20260821/report.json",
+        "teccl/examples/results/dynamic_admission_candidate_library_holdout_final_batch/interdc8/rate_0p06/seed_20260822/report.json",
+        "teccl/examples/results/dynamic_admission_candidate_library_holdout_final_batch/interdc8/rate_0p06/seed_20260823/report.json",
+        "teccl/examples/results/dynamic_admission_candidate_library_holdout_final_batch/interdc8/rate_0p06/seed_20260824/report.json",
+        "teccl/examples/results/dynamic_admission_candidate_library_holdout_final_batch/interdc8/rate_0p06/seed_20260825/report.json",
+        "teccl/examples/results/dynamic_admission_candidate_library_holdout_final_batch/interdc8/rate_0p06/seed_20260826/report.json",
+        "teccl/examples/results/dynamic_admission_candidate_library_holdout_final_batch/interdc8/rate_0p06/seed_20260827/report.json"
+      ],
+      "source_template_sha256_by_policy": {
+        "ddpp": [
+          "2fe5a01e8a24f7c4d61574024d374f142056862c6a5a76ef2b428cecdeca60f6"
+        ],
+        "early_dpp": [
+          "a674a3f2f508b8fa52c47ddc4f1336944d5c099ce0ac6b7036dc508957bd0f4f"
+        ]
+      },
+      "trace_sha256_by_seed": {
+        "20260821": "4286549da4ce8e2903e1d0887493f4a19cb5d162d33f55dbab11a3770b290791",
+        "20260822": "01126e76b833f9c7e082539fe5e609931882129ac9e56df21acb5ed75c6e7f15",
+        "20260823": "eb5bca79b5b2d5422bba903e40d6b4176184ed9b75e167722f50e82d5d93b887",
+        "20260824": "a8d8308d23018984c0be8027a5186c9a542095228a678d658e10fa370d939b1c",
+        "20260825": "8507fd1823ad44e66a101b4a5a3745bfc9ca766ed871e9c335f3ab0bf5a9093f",
+        "20260826": "0bd6c8920100ee1b4aed3e03c674b350692670129ec6b94ec10d83496e11ad8c",
+        "20260827": "be2d08fd62b2ee705e071c736a6e54c64fc66258e3ec1af404c832878f7f1a7b"
+      }
+    }
+  ],
+  "no_rel_heur_work_per_fallback": 0.0,
+  "purpose": "resumable InterDC8 load/seed locator sweep",
+  "requests_per_seed": 8,
+  "topology": "InterDC8",
+  "wall_clock_limit_seconds_per_fallback": 60.0
+}

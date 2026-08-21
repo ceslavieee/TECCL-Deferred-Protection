@@ -1,0 +1,296 @@
+{
+  "accounting_unit": "occupied chunk-transfer units per directed link-epoch",
+  "arrival_epoch": 1,
+  "epochs": [
+    {
+      "dst": 4,
+      "epoch": 10,
+      "occupancy": 1,
+      "src": 0
+    },
+    {
+      "dst": 5,
+      "epoch": 1,
+      "occupancy": 1,
+      "src": 0
+    },
+    {
+      "dst": 5,
+      "epoch": 8,
+      "occupancy": 1,
+      "src": 0
+    },
+    {
+      "dst": 5,
+      "epoch": 12,
+      "occupancy": 1,
+      "src": 0
+    },
+    {
+      "dst": 6,
+      "epoch": 0,
+      "occupancy": 1,
+      "src": 0
+    },
+    {
+      "dst": 5,
+      "epoch": 1,
+      "occupancy": 1,
+      "src": 1
+    },
+    {
+      "dst": 5,
+      "epoch": 8,
+      "occupancy": 1,
+      "src": 1
+    },
+    {
+      "dst": 5,
+      "epoch": 12,
+      "occupancy": 1,
+      "src": 1
+    },
+    {
+      "dst": 6,
+      "epoch": 0,
+      "occupancy": 1,
+      "src": 1
+    },
+    {
+      "dst": 8,
+      "epoch": 10,
+      "occupancy": 1,
+      "src": 1
+    },
+    {
+      "dst": 4,
+      "epoch": 10,
+      "occupancy": 1,
+      "src": 2
+    },
+    {
+      "dst": 6,
+      "epoch": 0,
+      "occupancy": 1,
+      "src": 2
+    },
+    {
+      "dst": 7,
+      "epoch": 1,
+      "occupancy": 1,
+      "src": 2
+    },
+    {
+      "dst": 7,
+      "epoch": 8,
+      "occupancy": 1,
+      "src": 2
+    },
+    {
+      "dst": 7,
+      "epoch": 12,
+      "occupancy": 1,
+      "src": 2
+    },
+    {
+      "dst": 6,
+      "epoch": 0,
+      "occupancy": 1,
+      "src": 3
+    },
+    {
+      "dst": 7,
+      "epoch": 1,
+      "occupancy": 1,
+      "src": 3
+    },
+    {
+      "dst": 7,
+      "epoch": 8,
+      "occupancy": 1,
+      "src": 3
+    },
+    {
+      "dst": 7,
+      "epoch": 12,
+      "occupancy": 1,
+      "src": 3
+    },
+    {
+      "dst": 8,
+      "epoch": 10,
+      "occupancy": 1,
+      "src": 3
+    },
+    {
+      "dst": 0,
+      "epoch": 0,
+      "occupancy": 1,
+      "src": 4
+    },
+    {
+      "dst": 0,
+      "epoch": 11,
+      "occupancy": 1,
+      "src": 4
+    },
+    {
+      "dst": 2,
+      "epoch": 0,
+      "occupancy": 1,
+      "src": 4
+    },
+    {
+      "dst": 2,
+      "epoch": 11,
+      "occupancy": 1,
+      "src": 4
+    },
+    {
+      "dst": 0,
+      "epoch": 2,
+      "occupancy": 1,
+      "src": 5
+    },
+    {
+      "dst": 0,
+      "epoch": 9,
+      "occupancy": 1,
+      "src": 5
+    },
+    {
+      "dst": 0,
+      "epoch": 13,
+      "occupancy": 1,
+      "src": 5
+    },
+    {
+      "dst": 1,
+      "epoch": 2,
+      "occupancy": 1,
+      "src": 5
+    },
+    {
+      "dst": 1,
+      "epoch": 9,
+      "occupancy": 1,
+      "src": 5
+    },
+    {
+      "dst": 1,
+      "epoch": 13,
+      "occupancy": 1,
+      "src": 5
+    },
+    {
+      "dst": 0,
+      "epoch": 1,
+      "occupancy": 1,
+      "src": 6
+    },
+    {
+      "dst": 0,
+      "epoch": 2,
+      "occupancy": 1,
+      "src": 6
+    },
+    {
+      "dst": 1,
+      "epoch": 1,
+      "occupancy": 1,
+      "src": 6
+    },
+    {
+      "dst": 1,
+      "epoch": 2,
+      "occupancy": 1,
+      "src": 6
+    },
+    {
+      "dst": 2,
+      "epoch": 1,
+      "occupancy": 1,
+      "src": 6
+    },
+    {
+      "dst": 2,
+      "epoch": 2,
+      "occupancy": 1,
+      "src": 6
+    },
+    {
+      "dst": 3,
+      "epoch": 1,
+      "occupancy": 1,
+      "src": 6
+    },
+    {
+      "dst": 3,
+      "epoch": 2,
+      "occupancy": 1,
+      "src": 6
+    },
+    {
+      "dst": 2,
+      "epoch": 2,
+      "occupancy": 1,
+      "src": 7
+    },
+    {
+      "dst": 2,
+      "epoch": 9,
+      "occupancy": 1,
+      "src": 7
+    },
+    {
+      "dst": 2,
+      "epoch": 13,
+      "occupancy": 1,
+      "src": 7
+    },
+    {
+      "dst": 3,
+      "epoch": 2,
+      "occupancy": 1,
+      "src": 7
+    },
+    {
+      "dst": 3,
+      "epoch": 9,
+      "occupancy": 1,
+      "src": 7
+    },
+    {
+      "dst": 3,
+      "epoch": 13,
+      "occupancy": 1,
+      "src": 7
+    },
+    {
+      "dst": 1,
+      "epoch": 0,
+      "occupancy": 1,
+      "src": 8
+    },
+    {
+      "dst": 1,
+      "epoch": 11,
+      "occupancy": 1,
+      "src": 8
+    },
+    {
+      "dst": 3,
+      "epoch": 0,
+      "occupancy": 1,
+      "src": 8
+    },
+    {
+      "dst": 3,
+      "epoch": 11,
+      "occupancy": 1,
+      "src": 8
+    }
+  ],
+  "horizon_epochs": 30,
+  "sha256": "58e0318908158d5fd31317a6522a461a3a7ea09cc3ebcc730e713252c454d2bd"
+}

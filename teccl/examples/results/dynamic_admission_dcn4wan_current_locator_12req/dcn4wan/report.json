@@ -1,0 +1,58 @@
+{
+  "authoritative_performance_result": false,
+  "baseline_label": "fixed rooted multicast-tree DPP adaptation, not literal unicast path-pair DPP 1:1",
+  "candidate_tree_pair_first": false,
+  "claim_boundary": "This locator sweep selects load neighborhoods. Final thesis results require more seeds, longer traces, confidence intervals, and the complete predeclared main-topology load range.",
+  "gurobi_time_limit_hours_per_fallback": 0.01,
+  "load_normalization": "offered_arrivals_per_deadline = arrival_rate_per_epoch * deadline_epochs; raw rates should not be compared across topologies without this context",
+  "loads": [
+    {
+      "arrival_rate_per_epoch": 1.0,
+      "ddpp": {
+        "accepted": 12,
+        "all_ledgers_safe": true,
+        "blocked": 0,
+        "blocking_probability_conclusive": 0.0,
+        "unknown": 0,
+        "unknown_rate": 0.0
+      },
+      "ddpp_minus_early_dpp_accepted": 0,
+      "deadline_epochs": 30,
+      "early_dpp": {
+        "accepted": 12,
+        "all_ledgers_safe": true,
+        "blocked": 0,
+        "blocking_probability_conclusive": 0.0,
+        "unknown": 0,
+        "unknown_rate": 0.0
+      },
+      "implementation_bundle_sha256s": [
+        "18a9f894a909c3edcbca9e7a065d1b61d98467227d710718a526c18dedf81847"
+      ],
+      "offered_arrivals_per_deadline": 30.0,
+      "requests_per_policy": 12,
+      "seeds": [
+        20260810
+      ],
+      "source_reports": [
+        "teccl/examples/results/dynamic_admission_dcn4wan_current_locator_12req/dcn4wan/rate_1/seed_20260810/report.json"
+      ],
+      "source_template_sha256_by_policy": {
+        "ddpp": [
+          "0b609012224471d4ffc4acb5b4efbb87573b91176f1ce8221bf6f50bccc397aa"
+        ],
+        "early_dpp": [
+          "af53b8d87c8f89749b2a1db62a7d2978ad371966e7525600645827c9422ed93e"
+        ]
+      },
+      "trace_sha256_by_seed": {
+        "20260810": "27a1b06ca9b936211ca26d9037a027aa0a822049ff7eb3dffc8c084a4b58c808"
+      }
+    }
+  ],
+  "no_rel_heur_work_per_fallback": 0.0,
+  "purpose": "resumable DCN4WAN load/seed locator sweep",
+  "requests_per_seed": 12,
+  "topology": "DCN4WAN",
+  "wall_clock_limit_seconds_per_fallback": 60.0
+}

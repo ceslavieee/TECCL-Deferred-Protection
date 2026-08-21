@@ -1,0 +1,146 @@
+{
+  "authoritative_scope": "predeclared three-load InterDC8 evidence",
+  "candidate_library_frozen": true,
+  "claim_boundary": "Observed load trend for the InterDC8 discretized-exponential trace family; not universal dominance across topologies or arrival models.",
+  "implementation_bundle_sha256": "18a9f894a909c3edcbca9e7a065d1b61d98467227d710718a526c18dedf81847",
+  "loads": [
+    {
+      "arrival_rate_per_epoch": 0.03,
+      "ddpp": {
+        "accepted": 64,
+        "blocked": 0,
+        "blocking_probability_lower_bound": 0.0,
+        "blocking_probability_upper_bound": 0.0,
+        "unknown": 0
+      },
+      "early_dpp": {
+        "accepted": 58,
+        "blocked": 6,
+        "blocking_probability_lower_bound": 0.09375,
+        "blocking_probability_upper_bound": 0.09375,
+        "unknown": 0
+      },
+      "offered_arrivals_per_deadline": 1.2,
+      "paired_seed_statistics": {
+        "ddpp_losses": 0,
+        "ddpp_ties": 3,
+        "ddpp_wins": 5,
+        "mean_certified_admission_difference_per_eight_request_trace": 0.75,
+        "mean_difference_95_percent_t_interval": [
+          0.1588439371018039,
+          1.3411560628981962
+        ],
+        "two_sided_exact_sign_test_p": 0.0625
+      },
+      "requests_per_policy": 64,
+      "requests_per_seed": 8,
+      "seed_values": [
+        20260829,
+        20260830,
+        20260831,
+        20260832,
+        20260833,
+        20260834,
+        20260835,
+        20260836
+      ],
+      "seeds": 8,
+      "topology": "InterDC8"
+    },
+    {
+      "arrival_rate_per_epoch": 0.06,
+      "ddpp": {
+        "accepted": 123,
+        "blocked": 4,
+        "blocking_probability_lower_bound": 0.03125,
+        "blocking_probability_upper_bound": 0.0390625,
+        "unknown": 1
+      },
+      "early_dpp": {
+        "accepted": 108,
+        "blocked": 20,
+        "blocking_probability": 0.15625,
+        "blocking_probability_lower_bound": 0.15625,
+        "blocking_probability_upper_bound": 0.15625,
+        "unknown": 0
+      },
+      "offered_arrivals_per_deadline": 2.4,
+      "paired_seed_statistics": {
+        "ddpp_losses": 0,
+        "ddpp_ties": 4,
+        "ddpp_wins": 12,
+        "mean_certified_admission_difference_per_eight_request_trace": 0.9375,
+        "mean_difference_95_percent_t_interval": [
+          0.5261822387914044,
+          1.3488177612085956
+        ],
+        "two_sided_exact_sign_test_p": 0.00048828125
+      },
+      "requests_per_policy": 128,
+      "requests_per_seed": 8,
+      "seed_values": [
+        20260812,
+        20260813,
+        20260814,
+        20260815,
+        20260816,
+        20260817,
+        20260818,
+        20260819,
+        20260820,
+        20260821,
+        20260822,
+        20260823,
+        20260824,
+        20260825,
+        20260826,
+        20260827
+      ],
+      "seeds": 16,
+      "topology": "InterDC8"
+    },
+    {
+      "arrival_rate_per_epoch": 0.1,
+      "ddpp": {
+        "accepted": 60,
+        "blocked": 3,
+        "blocking_probability_lower_bound": 0.046875,
+        "blocking_probability_upper_bound": 0.0625,
+        "unknown": 1
+      },
+      "early_dpp": {
+        "accepted": 47,
+        "blocked": 17,
+        "blocking_probability_lower_bound": 0.265625,
+        "blocking_probability_upper_bound": 0.265625,
+        "unknown": 0
+      },
+      "offered_arrivals_per_deadline": 4.0,
+      "paired_seed_statistics": {
+        "ddpp_losses": 0,
+        "ddpp_ties": 0,
+        "ddpp_wins": 8,
+        "mean_certified_admission_difference_per_eight_request_trace": 1.625,
+        "mean_difference_95_percent_t_interval": [
+          1.0029805293659504,
+          2.24701947063405
+        ],
+        "two_sided_exact_sign_test_p": 0.0078125
+      },
+      "requests_per_policy": 64,
+      "requests_per_seed": 8,
+      "seed_values": [
+        20260829,
+        20260830,
+        20260831,
+        20260832,
+        20260833,
+        20260834,
+        20260835,
+        20260836
+      ],
+      "seeds": 8,
+      "topology": "InterDC8"
+    }
+  ]
+}

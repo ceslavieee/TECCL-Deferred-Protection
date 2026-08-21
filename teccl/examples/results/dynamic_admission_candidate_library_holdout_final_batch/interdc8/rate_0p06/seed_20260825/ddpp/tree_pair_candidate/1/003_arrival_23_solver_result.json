@@ -1,0 +1,15 @@
+{
+  "produced_schedule": true,
+  "schedule_output_file": "teccl/examples/results/dynamic_admission_candidate_library_holdout_final_batch/interdc8/rate_0p06/seed_20260825/ddpp/tree_pair_candidate/1/003_arrival_23_schedule.json",
+  "solver_quality": {
+    "mip_gap": null,
+    "node_count": 4.0,
+    "objective_bound": null,
+    "objective_value": 13.130001,
+    "runtime": 6.722860813140869,
+    "solution_count": 10,
+    "solver_name": "ScenarioRobustProtection_MILP",
+    "status_code": 2,
+    "status_name": "OPTIMAL"
+  }
+}

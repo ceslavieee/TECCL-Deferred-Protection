@@ -1,0 +1,15 @@
+{
+  "produced_schedule": true,
+  "schedule_output_file": "teccl/examples/results/multicast_tree_pair_physical_25gb/failure_time_sweep/schedules/interdc8_ddpp_tau_1.json",
+  "solver_quality": {
+    "mip_gap": null,
+    "node_count": 0.0,
+    "objective_bound": null,
+    "objective_value": 6.0,
+    "runtime": 0.241163969039917,
+    "solution_count": 2,
+    "solver_name": "ScenarioRobustProtection_MILP",
+    "status_code": 2,
+    "status_name": "OPTIMAL"
+  }
+}

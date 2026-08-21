@@ -1,0 +1,24 @@
+{
+  "arrival_epochs": [
+    0,
+    3,
+    4,
+    6,
+    43,
+    45,
+    54,
+    60
+  ],
+  "arrival_rate_per_epoch": 0.1,
+  "chunk_size_gb": 25.0,
+  "chunks_per_source": 1,
+  "collective": "AllGather",
+  "deadline_epochs": 40,
+  "detection_delay_epochs": 1,
+  "epoch_duration_seconds": 2.0,
+  "generator": "discretized exponential interarrival pilot",
+  "request_count": 8,
+  "seed": 20260832,
+  "sha256": "8ba466ffadb94578d30dffc75308d3d0b9f728509f3fac73318ba9cb346cf6bb",
+  "topology": "InterDC8"
+}

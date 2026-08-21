@@ -1,0 +1,15 @@
+{
+  "produced_schedule": true,
+  "schedule_output_file": "teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p03/seed_20260829/ddpp/tree_pair_candidate/1/005_arrival_178_schedule.json",
+  "solver_quality": {
+    "mip_gap": null,
+    "node_count": 4.0,
+    "objective_bound": null,
+    "objective_value": 14.140001,
+    "runtime": 6.716571092605591,
+    "solution_count": 10,
+    "solver_name": "ScenarioRobustProtection_MILP",
+    "status_code": 2,
+    "status_name": "OPTIMAL"
+  }
+}

@@ -1,0 +1,17 @@
+seed,arrival_rate_per_epoch,early_dpp_accepted,early_dpp_blocked,early_dpp_unknown,ddpp_accepted,ddpp_blocked,ddpp_unknown,accepted_difference_ddpp_minus_early_dpp,trace_sha256,report_file
+20260829,0.03,7,1,0,8,0,0,1,60c19afc4b8abd662a42b3d31f4b5aff34afd29e199c84a73bcd14887cf0512d,teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p03/seed_20260829/report.json
+20260830,0.03,6,2,0,8,0,0,2,c1744d5256380ce6dd1abbd67760cf5e41d4bb6ec4909f25ec3d09733b3f9305,teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p03/seed_20260830/report.json
+20260831,0.03,7,1,0,8,0,0,1,95f3677473eca4cecb677ccac8e2bd8ba67c1ac1a5c5cbdfa5b65c2cb024166a,teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p03/seed_20260831/report.json
+20260832,0.03,7,1,0,8,0,0,1,52bba46a49dfe2e49bfed8e1f2a02b62e7626cff55f5efaf353b84e37e5bc0af,teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p03/seed_20260832/report.json
+20260833,0.03,8,0,0,8,0,0,0,fc6049de223577f300e30568b7b9c50d358222b11127e2e6458407eb065a9a5d,teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p03/seed_20260833/report.json
+20260834,0.03,7,1,0,8,0,0,1,97a28a40dc81798b44fd29f12165377b9cba226da5433ed87ea550ab23dca85c,teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p03/seed_20260834/report.json
+20260835,0.03,8,0,0,8,0,0,0,0f725767e647c38c81411d6614ba49358124062e9bd3f9440945140634944662,teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p03/seed_20260835/report.json
+20260836,0.03,8,0,0,8,0,0,0,1fd0742bca5fcc70eff31f4953cfe6cb4f5d098dc6a998d304ca9de4443edcff,teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p03/seed_20260836/report.json
+20260829,0.1,5,3,0,8,0,0,3,5dd998f68fc91ef9c164ac77b35c6af534f9d03f91f56dde243328f730233951,teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260829/report.json
+20260830,0.1,6,2,0,7,1,0,1,be547dc83008ad48a2490c3ca2004c9d4c2732584688d8f2722264a02bc9ca3f,teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260830/report.json
+20260831,0.1,6,2,0,7,0,1,1,2142f1aab7e5e18a093c228c4fbdb8f3242ddf9481e10fe1bed85797445c95f9,teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260831/report.json
+20260832,0.1,5,3,0,7,1,0,2,8ba466ffadb94578d30dffc75308d3d0b9f728509f3fac73318ba9cb346cf6bb,teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260832/report.json
+20260833,0.1,7,1,0,8,0,0,1,5e0d255bf2d2bd48f92f6f957daa05ace2e846062f18a7b6c7f357914066c039,teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260833/report.json
+20260834,0.1,6,2,0,7,1,0,1,132512acf72d6e5dbe840a9e121e061f2d3e53399f2afc05f484dacdc89707ee,teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260834/report.json
+20260835,0.1,6,2,0,8,0,0,2,0445c7a5174eb854b17a28a78d4cfa9e212791238145769c99cb826bd8636163,teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260835/report.json
+20260836,0.1,6,2,0,8,0,0,2,f8f4a052b729aa681a9dc9556b34e3c106d7f4dde67e44dfa649c514e4d6057c,teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260836/report.json

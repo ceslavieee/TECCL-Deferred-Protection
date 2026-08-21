@@ -1,0 +1,155 @@
+{
+  "boundaries": [
+    {
+      "affected_failure_epochs": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "analytical_witness": {
+        "affected_demand": "Demand (3->0, chunk 0)",
+        "backup_root_edge": "3->7",
+        "backup_root_reservation_epoch_zero_based": 9,
+        "failed_link": "5->0",
+        "failure_epoch_zero_based": 3,
+        "notification_slack_epochs": 6,
+        "scenario_index": 15,
+        "source_failure_time_schedule": "teccl/examples/results/multicast_tree_pair_physical_25gb/failure_time_sweep/schedules/dcn4wan_dpp_tau_3.json"
+      },
+      "boundary_all_audits_passed": true,
+      "boundary_all_epochs_feasible": true,
+      "boundary_all_solver_statuses_optimal": true,
+      "boundary_certified": true,
+      "boundary_derivation": "For an affected strict-tree demand, recovery must originate at the source and follow reserved backup-tree capacity. Therefore notification cannot occur after the first reserved root edge on its unique source-to-destination backup path.",
+      "first_infeasible_delay_epochs": 7,
+      "first_infeasible_delay_seconds": 14.0,
+      "fixed_plan": "teccl/examples/results/multicast_tree_pair_physical_25gb/full_directed_failures/schedules/dcn4wan_dpp.json",
+      "fixed_working_and_reservation_plan_verified": true,
+      "infeasible_witness_failure_epoch_zero_based": 3,
+      "infeasible_witness_solver_status": "INFEASIBLE",
+      "maximum_detection_delay_epochs": 6,
+      "maximum_detection_delay_seconds": 12.0,
+      "policy": "DPP",
+      "topology": "DCN4WAN"
+    },
+    {
+      "affected_failure_epochs": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "analytical_witness": {
+        "affected_demand": "Demand (3->0, chunk 0)",
+        "backup_root_edge": "3->7",
+        "backup_root_reservation_epoch_zero_based": 24,
+        "failed_link": "5->0",
+        "failure_epoch_zero_based": 3,
+        "notification_slack_epochs": 21,
+        "scenario_index": 15,
+        "source_failure_time_schedule": "teccl/examples/results/multicast_tree_pair_physical_25gb/failure_time_sweep/schedules/dcn4wan_ddpp_tau_3.json"
+      },
+      "boundary_all_audits_passed": true,
+      "boundary_all_epochs_feasible": true,
+      "boundary_all_solver_statuses_optimal": true,
+      "boundary_certified": true,
+      "boundary_derivation": "For an affected strict-tree demand, recovery must originate at the source and follow reserved backup-tree capacity. Therefore notification cannot occur after the first reserved root edge on its unique source-to-destination backup path.",
+      "first_infeasible_delay_epochs": 22,
+      "first_infeasible_delay_seconds": 44.0,
+      "fixed_plan": "teccl/examples/results/multicast_tree_pair_physical_25gb/full_directed_failures/schedules/dcn4wan_ddpp.json",
+      "fixed_working_and_reservation_plan_verified": true,
+      "infeasible_witness_failure_epoch_zero_based": 3,
+      "infeasible_witness_solver_status": "INFEASIBLE",
+      "maximum_detection_delay_epochs": 21,
+      "maximum_detection_delay_seconds": 42.0,
+      "policy": "DDPP",
+      "topology": "DCN4WAN"
+    },
+    {
+      "affected_failure_epochs": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "analytical_witness": {
+        "affected_demand": "Demand (1->7, chunk 0)",
+        "backup_root_edge": "1->2",
+        "backup_root_reservation_epoch_zero_based": 7,
+        "failed_link": "6->7",
+        "failure_epoch_zero_based": 5,
+        "notification_slack_epochs": 2,
+        "scenario_index": 23,
+        "source_failure_time_schedule": "teccl/examples/results/multicast_tree_pair_physical_25gb/failure_time_sweep/schedules/interdc8_dpp_tau_5.json"
+      },
+      "boundary_all_audits_passed": true,
+      "boundary_all_epochs_feasible": true,
+      "boundary_all_solver_statuses_optimal": true,
+      "boundary_certified": true,
+      "boundary_derivation": "For an affected strict-tree demand, recovery must originate at the source and follow reserved backup-tree capacity. Therefore notification cannot occur after the first reserved root edge on its unique source-to-destination backup path.",
+      "first_infeasible_delay_epochs": 3,
+      "first_infeasible_delay_seconds": 6.0,
+      "fixed_plan": "teccl/examples/results/multicast_tree_pair_physical_25gb/full_directed_failures/schedules/interdc8_dpp.json",
+      "fixed_working_and_reservation_plan_verified": true,
+      "infeasible_witness_failure_epoch_zero_based": 5,
+      "infeasible_witness_solver_status": "INFEASIBLE",
+      "maximum_detection_delay_epochs": 2,
+      "maximum_detection_delay_seconds": 4.0,
+      "policy": "DPP",
+      "topology": "InterDC8"
+    },
+    {
+      "affected_failure_epochs": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "analytical_witness": {
+        "affected_demand": "Demand (1->7, chunk 0)",
+        "backup_root_edge": "1->2",
+        "backup_root_reservation_epoch_zero_based": 27,
+        "failed_link": "6->7",
+        "failure_epoch_zero_based": 5,
+        "notification_slack_epochs": 22,
+        "scenario_index": 23,
+        "source_failure_time_schedule": "teccl/examples/results/multicast_tree_pair_physical_25gb/failure_time_sweep/schedules/interdc8_ddpp_tau_5.json"
+      },
+      "boundary_all_audits_passed": true,
+      "boundary_all_epochs_feasible": true,
+      "boundary_all_solver_statuses_optimal": true,
+      "boundary_certified": true,
+      "boundary_derivation": "For an affected strict-tree demand, recovery must originate at the source and follow reserved backup-tree capacity. Therefore notification cannot occur after the first reserved root edge on its unique source-to-destination backup path.",
+      "first_infeasible_delay_epochs": 23,
+      "first_infeasible_delay_seconds": 46.0,
+      "fixed_plan": "teccl/examples/results/multicast_tree_pair_physical_25gb/full_directed_failures/schedules/interdc8_ddpp.json",
+      "fixed_working_and_reservation_plan_verified": true,
+      "infeasible_witness_failure_epoch_zero_based": 5,
+      "infeasible_witness_solver_status": "INFEASIBLE",
+      "maximum_detection_delay_epochs": 22,
+      "maximum_detection_delay_seconds": 44.0,
+      "policy": "DDPP",
+      "topology": "InterDC8"
+    }
+  ],
+  "certificate": "fixed-plan exact detection-delay boundary",
+  "certified": true,
+  "chunk_size_gb": 25.0,
+  "chunks_per_source": 1,
+  "epoch_duration_seconds": 2.0,
+  "evaluated_subproblems": 24,
+  "failure_model": "EXACT",
+  "fixed_working_and_reservation_plans": true,
+  "full_scenario_sets": {
+    "DCN4WAN": 32,
+    "InterDC8": 26
+  },
+  "proof_method": "All affected failure epochs are exact-MILP feasible at the analytically derived boundary; the adjacent larger delay is exact-MILP infeasible at a necessary-root-reservation witness. Feasibility is monotone because increasing detection delay only removes recovery slots from the same fixed plan.",
+  "scope_boundary": "Certifies only the exported 25 GB, one-chunk fixed plans under one directed-link failure. It does not cover alternative optimized plans, bidirectional-fiber failures, node failures, or multiple simultaneous failures.",
+  "single_directed_link_failure": true
+}

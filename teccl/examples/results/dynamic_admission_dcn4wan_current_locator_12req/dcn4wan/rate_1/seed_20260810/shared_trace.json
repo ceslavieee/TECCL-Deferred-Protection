@@ -1,0 +1,28 @@
+{
+  "arrival_epochs": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    9,
+    10,
+    11,
+    13,
+    15,
+    16
+  ],
+  "arrival_rate_per_epoch": 1.0,
+  "chunk_size_gb": 25.0,
+  "chunks_per_source": 1,
+  "collective": "AllGather",
+  "deadline_epochs": 30,
+  "detection_delay_epochs": 1,
+  "epoch_duration_seconds": 2.0,
+  "generator": "discretized exponential interarrival pilot",
+  "request_count": 12,
+  "seed": 20260810,
+  "sha256": "27a1b06ca9b936211ca26d9037a027aa0a822049ff7eb3dffc8c084a4b58c808",
+  "topology": "DCN4WAN"
+}

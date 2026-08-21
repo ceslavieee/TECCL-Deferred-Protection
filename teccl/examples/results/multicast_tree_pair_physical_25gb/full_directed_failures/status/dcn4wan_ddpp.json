@@ -1,0 +1,15 @@
+{
+  "produced_schedule": true,
+  "schedule_output_file": "teccl/examples/results/multicast_tree_pair_physical_25gb/full_directed_failures/schedules/dcn4wan_ddpp.json",
+  "solver_quality": {
+    "mip_gap": null,
+    "node_count": 4.0,
+    "objective_bound": null,
+    "objective_value": 4.0,
+    "runtime": 1.5925052165985107,
+    "solution_count": 5,
+    "solver_name": "ScenarioRobustProtection_MILP",
+    "status_code": 2,
+    "status_name": "OPTIMAL"
+  }
+}

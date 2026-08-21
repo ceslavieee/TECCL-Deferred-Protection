@@ -1,0 +1,15 @@
+{
+  "produced_schedule": false,
+  "schedule_output_file": null,
+  "solver_quality": {
+    "mip_gap": null,
+    "node_count": 0.0,
+    "objective_bound": null,
+    "objective_value": null,
+    "runtime": 0.4521219730377197,
+    "solution_count": 0,
+    "solver_name": "ScenarioRobustProtection_MILP",
+    "status_code": 3,
+    "status_name": "INFEASIBLE"
+  }
+}

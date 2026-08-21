@@ -1,0 +1,105 @@
+{
+  "all_solver_statuses_optimal": true,
+  "certificate": "fixed-plan exact directed-link failure-time coverage",
+  "certified": true,
+  "chunk_size_gb": 25.0,
+  "chunks_per_source": 1,
+  "detection_delay_epochs": 1,
+  "epoch_duration_seconds": 2.0,
+  "evaluated_rows": 24,
+  "expected_rows": 24,
+  "failure_model": "EXACT",
+  "fixed_working_and_reservation_plan_verified": true,
+  "scope_boundary": "Covers every failure epoch before working completion plus one post-completion control, with one-epoch detection delay. It does not certify other detection delays, bidirectional-fiber failures, node failures, or multiple simultaneous failures.",
+  "single_directed_link_failure": true,
+  "windows": [
+    {
+      "evaluated_failure_epochs": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected_failure_epochs": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "full_window_evaluated": true,
+      "policy": "DPP",
+      "topology": "DCN4WAN",
+      "working_completion_epoch": 4
+    },
+    {
+      "evaluated_failure_epochs": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected_failure_epochs": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "full_window_evaluated": true,
+      "policy": "DDPP",
+      "topology": "DCN4WAN",
+      "working_completion_epoch": 4
+    },
+    {
+      "evaluated_failure_epochs": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "expected_failure_epochs": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "full_window_evaluated": true,
+      "policy": "DPP",
+      "topology": "InterDC8",
+      "working_completion_epoch": 6
+    },
+    {
+      "evaluated_failure_epochs": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "expected_failure_epochs": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "full_window_evaluated": true,
+      "policy": "DDPP",
+      "topology": "InterDC8",
+      "working_completion_epoch": 6
+    }
+  ]
+}

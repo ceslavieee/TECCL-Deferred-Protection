@@ -1,0 +1,92 @@
+{
+  "certificate": "theorem-backed common failure-time construction",
+  "certified": true,
+  "construction_claimed": true,
+  "covered_failure_epochs": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "detection_delay_epochs": 1,
+  "expected_failure_scenarios": 26,
+  "failure_model": "EXACT",
+  "failure_scenarios": 26,
+  "fixed_plan": "teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260831/ddpp/tree_pair_candidate/0/005_arrival_22_schedule.json",
+  "fixed_plan_sha256": "e72bdde5ae779791a69eab7a4f1946f7da4129a2b4636400d455e4687a622b75",
+  "independent_audit_checks": [
+    {
+      "name": "scenario-robust semantic marker",
+      "passed": true
+    },
+    {
+      "name": "failure-time scope is explicit",
+      "passed": true
+    },
+    {
+      "name": "no failure-free backup data",
+      "passed": true
+    },
+    {
+      "name": "nonempty recovery exercised",
+      "passed": true
+    },
+    {
+      "name": "recovery starts after detection",
+      "passed": true
+    },
+    {
+      "name": "reservation stays inside declared policy window",
+      "passed": true
+    },
+    {
+      "name": "robust reservations follow commodity completion",
+      "passed": true
+    },
+    {
+      "name": "protected completion stays inside declared deadline",
+      "passed": true
+    },
+    {
+      "name": "full link occupancy stays inside service deadline",
+      "passed": true
+    },
+    {
+      "name": "fixed multicast working/backup tree pair",
+      "passed": true
+    },
+    {
+      "name": "recovery is bound to reservation",
+      "passed": true
+    },
+    {
+      "name": "recovery avoids failed link",
+      "passed": true
+    },
+    {
+      "name": "all affected demands are protected",
+      "passed": true
+    }
+  ],
+  "independent_audit_failures": [],
+  "independent_audit_passed": true,
+  "outer_failure_time_milps_executed": false,
+  "proof_reference": "THEORY_FOUNDATION_AUDIT.md Lemma 6: every commodity reservation starts no earlier than nominal working completion plus detection delay minus one; the tau=0 affected set is a superset of every later affected set on the unique working tree",
+  "scope_boundary": "One directed-link failure at a time under the stated event convention; excludes node, correlated, bidirectional-fiber, and multiple simultaneous failures.",
+  "seed_failure_epoch_zero_based": 0,
+  "working_completion_epoch": 18
+}

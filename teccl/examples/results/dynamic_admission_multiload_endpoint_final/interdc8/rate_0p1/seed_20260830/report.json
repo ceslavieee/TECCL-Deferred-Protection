@@ -1,0 +1,1292 @@
+{
+  "authoritative_performance_result": false,
+  "candidate_tree_pair_first": true,
+  "fallback_no_rel_heur_work": 0.0,
+  "fallback_time_limit_hours": 0.01,
+  "fallback_wall_clock_limit_seconds": 60.0,
+  "implementation_provenance": {
+    "git_revision": "242842aa8d6f0c8b863c6c43d851d88828c14e6d",
+    "implementation_bundle_sha256": "18a9f894a909c3edcbca9e7a065d1b61d98467227d710718a526c18dedf81847",
+    "relevant_file_sha256": {
+      "teccl/dynamic_admission.py": "4c489e2441d7698816f8af3501d84264745aa9591c48961a489aa2a4ebf43cbd",
+      "teccl/examples/audit_strict_dedicated_schedule.py": "7d5ca216a9240275d7b4a9776c8b683c28f5f8ce9eefc43fbebe5ead050a379b",
+      "teccl/examples/dynamic_admission_pilot.py": "ca31e0d6715d30397fd1daabd1bc800eb7b2cdb343cd99d9c06dd8a337477802",
+      "teccl/examples/dynamic_admission_topology_sweep.py": "e3e501528d168e927545e339f0b519ab0df2c1aa4847cb7e37ccc2df79169b50",
+      "teccl/input_data.py": "f6dfde2e11c3a90b242ddfe5db34328aaca66b04c63109006f0ee30667ab1e1f",
+      "teccl/solvers/base_formulation.py": "7d8b748d9a8208f09ff84a95f3990951dc0a09588834839e192c28cfb39e4c2e",
+      "teccl/solvers/deferred_protection.py": "f9e2c475d4372ce12f7b6afade055b832e764b05142caa501f85bc8696e8bbad",
+      "teccl/solvers/strict_dedicated_protection.py": "46be06b05cbff04790343a28b5eb0f9976d7c0014a232259bab4e462108c2340",
+      "teccl/topologies/dcn4wan.py": "1b4310b2b37c069aca4819a872ce23c5a88bd78137baf5b28623a1f621900163",
+      "teccl/topologies/interdc8.py": "39e730b328089b2907710952938fa2fa5c29f6f56a9d2c668629a6f4a72b27c6"
+    },
+    "worktree_dirty": true
+  },
+  "policies": [
+    {
+      "accepted": 6,
+      "admission_algorithm": "certified-template, frozen certified tree-pair timing candidates, then unrestricted residual-capacity solver",
+      "baseline_structure": "fixed rooted multicast working/backup tree pair",
+      "blocked": 2,
+      "blocking_probability_conclusive": 0.25,
+      "candidate_tree_pair_first": true,
+      "candidate_tree_pair_library": [
+        {
+          "file": "teccl/examples/results/dynamic_admission_physical_locator/interdc8/rate_0p06/seed_20260810/ddpp/002_arrival_8_schedule.json",
+          "sha256": "71d47569ec332a54a5bca29ac1bd776b4673d3d1fc441eb295c892ad3c2ceb10"
+        },
+        {
+          "file": "teccl/examples/results/dynamic_admission_candidate_tree_first_calibration/interdc8/rate_0p06/seed_20260811/ddpp/002_arrival_3_schedule.json",
+          "sha256": "904fedd0e1e801214dd17b3140b8c731aa4eac392bd315ad0701abfa7e69d8dc"
+        },
+        {
+          "file": "teccl/examples/results/dynamic_admission_candidate_tree_first_calibration/interdc8/rate_0p06/seed_20260811/ddpp/003_arrival_6_schedule.json",
+          "sha256": "5717a9d403987752561bf89b60309eb892bd895541ee474ea815eedf98edb718"
+        },
+        {
+          "file": "teccl/examples/results/dynamic_admission_long_trace_pilot/interdc8/interdc8/rate_0p06/seed_20260811/ddpp/004_arrival_13_schedule.json",
+          "sha256": "c2eb08d0e48a5a3c790c318b89ed390307f2313548ff5f6a798b49369e2bff1f"
+        }
+      ],
+      "fallback_no_rel_heur_work": 0.0,
+      "fallback_optimization": "fixed certified tree-pair timing candidates followed, when needed, by joint strict working-tree and backup-tree optimization against request-local residual capacity; DPP/DDPP differ only in the reservation timing mode",
+      "fallback_wall_clock_limit_seconds": 60.0,
+      "final_ledger_occupied_cells": 645,
+      "ledger_safe": true,
+      "policy": "early_dpp",
+      "request_results": [
+        {
+          "admission_path": "cached_template",
+          "arrival_epoch": 0,
+          "failure_time_certificate_file": "teccl/examples/results/multicast_tree_pair_physical_25gb/detection_delay_boundary/certificate.json",
+          "failure_time_certificate_sha256": "60c23cf32d981ed4915b4ed587777a257604d0c154fe1eefe6b75d67e41ddd5f",
+          "failure_time_certified": true,
+          "independent_audit_passed": true,
+          "outcome": "accepted",
+          "prior_occupied_local_cells": 0,
+          "released_protection_transfers": 0,
+          "request_id": "request-0",
+          "schedule_file": "teccl/examples/results/multicast_tree_pair_physical_25gb/full_directed_failures/schedules/interdc8_dpp.json",
+          "solver_mip_gap": null,
+          "solver_runtime_seconds": 0.0,
+          "solver_solution_count": 1,
+          "solver_status": "CACHED_CERTIFIED_TEMPLATE",
+          "trace_sha256": "be547dc83008ad48a2490c3ca2004c9d4c2732584688d8f2722264a02bc9ca3f"
+        },
+        {
+          "admission_path": "residual_capacity_solver",
+          "arrival_epoch": 1,
+          "outcome": "blocked",
+          "prior_occupied_local_cells": 161,
+          "request_id": "request-1",
+          "solver_mip_gap": null,
+          "solver_runtime_seconds": 4.883486032485962,
+          "solver_solution_count": 0,
+          "solver_status": "INFEASIBLE",
+          "solver_wall_clock_seconds": 9.24281362499994,
+          "trace_sha256": "be547dc83008ad48a2490c3ca2004c9d4c2732584688d8f2722264a02bc9ca3f",
+          "tree_pair_candidate_attempts": [
+            {
+              "classification": "TREE_PAIR_INFEASIBLE",
+              "global_infeasibility_claimed": false,
+              "input_file": "teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260830/early_dpp/tree_pair_candidate/0/001_arrival_1_input.json",
+              "method": "certified_fixed_tree_pair_timing_candidate",
+              "process_classification": "COMPLETED",
+              "solver_quality": {
+                "mip_gap": null,
+                "node_count": 0.0,
+                "objective_bound": null,
+                "objective_value": null,
+                "runtime": 0.3712949752807617,
+                "solution_count": 0,
+                "solver_name": "ScenarioRobustProtection_MILP",
+                "status_code": 3,
+                "status_name": "INFEASIBLE"
+              },
+              "solver_wall_clock_seconds": 4.774343000000044,
+              "tree_pair_template": "teccl/examples/results/multicast_tree_pair_physical_25gb/full_directed_failures/schedules/interdc8_dpp.json"
+            },
+            {
+              "classification": "TREE_PAIR_INFEASIBLE",
+              "global_infeasibility_claimed": false,
+              "input_file": "teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260830/early_dpp/tree_pair_candidate/1/001_arrival_1_input.json",
+              "method": "certified_fixed_tree_pair_timing_candidate",
+              "process_classification": "COMPLETED",
+              "solver_quality": {
+                "mip_gap": null,
+                "node_count": 0.0,
+                "objective_bound": null,
+                "objective_value": null,
+                "runtime": 0.34738802909851074,
+                "solution_count": 0,
+                "solver_name": "ScenarioRobustProtection_MILP",
+                "status_code": 3,
+                "status_name": "INFEASIBLE"
+              },
+              "solver_wall_clock_seconds": 4.565855250000027,
+              "tree_pair_template": "teccl/examples/results/dynamic_admission_physical_locator/interdc8/rate_0p06/seed_20260810/ddpp/002_arrival_8_schedule.json"
+            },
+            {
+              "classification": "TREE_PAIR_INFEASIBLE",
+              "global_infeasibility_claimed": false,
+              "input_file": "teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260830/early_dpp/tree_pair_candidate/2/001_arrival_1_input.json",
+              "method": "certified_fixed_tree_pair_timing_candidate",
+              "process_classification": "COMPLETED",
+              "solver_quality": {
+                "mip_gap": null,
+                "node_count": 0.0,
+                "objective_bound": null,
+                "objective_value": null,
+                "runtime": 0.3731849193572998,
+                "solution_count": 0,
+                "solver_name": "ScenarioRobustProtection_MILP",
+                "status_code": 3,
+                "status_name": "INFEASIBLE"
+              },
+              "solver_wall_clock_seconds": 4.715688541999953,
+              "tree_pair_template": "teccl/examples/results/dynamic_admission_candidate_tree_first_calibration/interdc8/rate_0p06/seed_20260811/ddpp/002_arrival_3_schedule.json"
+            },
+            {
+              "classification": "TREE_PAIR_INFEASIBLE",
+              "global_infeasibility_claimed": false,
+              "input_file": "teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260830/early_dpp/tree_pair_candidate/3/001_arrival_1_input.json",
+              "method": "certified_fixed_tree_pair_timing_candidate",
+              "process_classification": "COMPLETED",
+              "solver_quality": {
+                "mip_gap": null,
+                "node_count": 0.0,
+                "objective_bound": null,
+                "objective_value": null,
+                "runtime": 0.3951737880706787,
+                "solution_count": 0,
+                "solver_name": "ScenarioRobustProtection_MILP",
+                "status_code": 3,
+                "status_name": "INFEASIBLE"
+              },
+              "solver_wall_clock_seconds": 4.943454916000064,
+              "tree_pair_template": "teccl/examples/results/dynamic_admission_candidate_tree_first_calibration/interdc8/rate_0p06/seed_20260811/ddpp/003_arrival_6_schedule.json"
+            },
+            {
+              "classification": "TREE_PAIR_INFEASIBLE",
+              "global_infeasibility_claimed": false,
+              "input_file": "teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260830/early_dpp/tree_pair_candidate/4/001_arrival_1_input.json",
+              "method": "certified_fixed_tree_pair_timing_candidate",
+              "process_classification": "COMPLETED",
+              "solver_quality": {
+                "mip_gap": null,
+                "node_count": 0.0,
+                "objective_bound": null,
+                "objective_value": null,
+                "runtime": 0.3869209289550781,
+                "solution_count": 0,
+                "solver_name": "ScenarioRobustProtection_MILP",
+                "status_code": 3,
+                "status_name": "INFEASIBLE"
+              },
+              "solver_wall_clock_seconds": 4.704179083000099,
+              "tree_pair_template": "teccl/examples/results/dynamic_admission_long_trace_pilot/interdc8/interdc8/rate_0p06/seed_20260811/ddpp/004_arrival_13_schedule.json"
+            }
+          ]
+        },
+        {
+          "admission_path": "residual_capacity_solver",
+          "arrival_epoch": 4,
+          "outcome": "blocked",
+          "prior_occupied_local_cells": 114,
+          "request_id": "request-2",
+          "solver_mip_gap": null,
+          "solver_runtime_seconds": 10.62066388130188,
+          "solver_solution_count": 0,
+          "solver_status": "INFEASIBLE",
+          "solver_wall_clock_seconds": 15.02632995800002,
+          "trace_sha256": "be547dc83008ad48a2490c3ca2004c9d4c2732584688d8f2722264a02bc9ca3f",
+          "tree_pair_candidate_attempts": [
+            {
+              "classification": "TREE_PAIR_INFEASIBLE",
+              "global_infeasibility_claimed": false,
+              "input_file": "teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260830/early_dpp/tree_pair_candidate/0/002_arrival_4_input.json",
+              "method": "certified_fixed_tree_pair_timing_candidate",
+              "process_classification": "COMPLETED",
+              "solver_quality": {
+                "mip_gap": null,
+                "node_count": 0.0,
+                "objective_bound": null,
+                "objective_value": null,
+                "runtime": 0.5570120811462402,
+                "solution_count": 0,
+                "solver_name": "ScenarioRobustProtection_MILP",
+                "status_code": 3,
+                "status_name": "INFEASIBLE"
+              },
+              "solver_wall_clock_seconds": 4.769576708000045,
+              "tree_pair_template": "teccl/examples/results/multicast_tree_pair_physical_25gb/full_directed_failures/schedules/interdc8_dpp.json"
+            },
+            {
+              "classification": "TREE_PAIR_INFEASIBLE",
+              "global_infeasibility_claimed": false,
+              "input_file": "teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260830/early_dpp/tree_pair_candidate/1/002_arrival_4_input.json",
+              "method": "certified_fixed_tree_pair_timing_candidate",
+              "process_classification": "COMPLETED",
+              "solver_quality": {
+                "mip_gap": null,
+                "node_count": 0.0,
+                "objective_bound": null,
+                "objective_value": null,
+                "runtime": 0.3591740131378174,
+                "solution_count": 0,
+                "solver_name": "ScenarioRobustProtection_MILP",
+                "status_code": 3,
+                "status_name": "INFEASIBLE"
+              },
+              "solver_wall_clock_seconds": 4.639269624999997,
+              "tree_pair_template": "teccl/examples/results/dynamic_admission_physical_locator/interdc8/rate_0p06/seed_20260810/ddpp/002_arrival_8_schedule.json"
+            },
+            {
+              "classification": "TREE_PAIR_INFEASIBLE",
+              "global_infeasibility_claimed": false,
+              "input_file": "teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260830/early_dpp/tree_pair_candidate/2/002_arrival_4_input.json",
+              "method": "certified_fixed_tree_pair_timing_candidate",
+              "process_classification": "COMPLETED",
+              "solver_quality": {
+                "mip_gap": null,
+                "node_count": 0.0,
+                "objective_bound": null,
+                "objective_value": null,
+                "runtime": 0.4521219730377197,
+                "solution_count": 0,
+                "solver_name": "ScenarioRobustProtection_MILP",
+                "status_code": 3,
+                "status_name": "INFEASIBLE"
+              },
+              "solver_wall_clock_seconds": 4.969830040999909,
+              "tree_pair_template": "teccl/examples/results/dynamic_admission_candidate_tree_first_calibration/interdc8/rate_0p06/seed_20260811/ddpp/002_arrival_3_schedule.json"
+            },
+            {
+              "classification": "TREE_PAIR_INFEASIBLE",
+              "global_infeasibility_claimed": false,
+              "input_file": "teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260830/early_dpp/tree_pair_candidate/3/002_arrival_4_input.json",
+              "method": "certified_fixed_tree_pair_timing_candidate",
+              "process_classification": "COMPLETED",
+              "solver_quality": {
+                "mip_gap": null,
+                "node_count": 0.0,
+                "objective_bound": null,
+                "objective_value": null,
+                "runtime": 0.378432035446167,
+                "solution_count": 0,
+                "solver_name": "ScenarioRobustProtection_MILP",
+                "status_code": 3,
+                "status_name": "INFEASIBLE"
+              },
+              "solver_wall_clock_seconds": 4.750776290999966,
+              "tree_pair_template": "teccl/examples/results/dynamic_admission_candidate_tree_first_calibration/interdc8/rate_0p06/seed_20260811/ddpp/003_arrival_6_schedule.json"
+            },
+            {
+              "classification": "TREE_PAIR_INFEASIBLE",
+              "global_infeasibility_claimed": false,
+              "input_file": "teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260830/early_dpp/tree_pair_candidate/4/002_arrival_4_input.json",
+              "method": "certified_fixed_tree_pair_timing_candidate",
+              "process_classification": "COMPLETED",
+              "solver_quality": {
+                "mip_gap": null,
+                "node_count": 0.0,
+                "objective_bound": null,
+                "objective_value": null,
+                "runtime": 0.3530590534210205,
+                "solution_count": 0,
+                "solver_name": "ScenarioRobustProtection_MILP",
+                "status_code": 3,
+                "status_name": "INFEASIBLE"
+              },
+              "solver_wall_clock_seconds": 4.7047244999999975,
+              "tree_pair_template": "teccl/examples/results/dynamic_admission_long_trace_pilot/interdc8/interdc8/rate_0p06/seed_20260811/ddpp/004_arrival_13_schedule.json"
+            }
+          ]
+        },
+        {
+          "admission_path": "cached_template",
+          "arrival_epoch": 6,
+          "failure_time_certificate_file": "teccl/examples/results/multicast_tree_pair_physical_25gb/detection_delay_boundary/certificate.json",
+          "failure_time_certificate_sha256": "60c23cf32d981ed4915b4ed587777a257604d0c154fe1eefe6b75d67e41ddd5f",
+          "failure_time_certified": true,
+          "independent_audit_passed": true,
+          "outcome": "accepted",
+          "prior_occupied_local_cells": 0,
+          "released_protection_transfers": 0,
+          "request_id": "request-3",
+          "schedule_file": "teccl/examples/results/multicast_tree_pair_physical_25gb/full_directed_failures/schedules/interdc8_dpp.json",
+          "solver_mip_gap": null,
+          "solver_runtime_seconds": 0.0,
+          "solver_solution_count": 1,
+          "solver_status": "CACHED_CERTIFIED_TEMPLATE",
+          "trace_sha256": "be547dc83008ad48a2490c3ca2004c9d4c2732584688d8f2722264a02bc9ca3f"
+        },
+        {
+          "admission_path": "cached_template",
+          "arrival_epoch": 18,
+          "failure_time_certificate_file": "teccl/examples/results/multicast_tree_pair_physical_25gb/detection_delay_boundary/certificate.json",
+          "failure_time_certificate_sha256": "60c23cf32d981ed4915b4ed587777a257604d0c154fe1eefe6b75d67e41ddd5f",
+          "failure_time_certified": true,
+          "independent_audit_passed": true,
+          "outcome": "accepted",
+          "prior_occupied_local_cells": 0,
+          "released_protection_transfers": 0,
+          "request_id": "request-4",
+          "schedule_file": "teccl/examples/results/multicast_tree_pair_physical_25gb/full_directed_failures/schedules/interdc8_dpp.json",
+          "solver_mip_gap": null,
+          "solver_runtime_seconds": 0.0,
+          "solver_solution_count": 1,
+          "solver_status": "CACHED_CERTIFIED_TEMPLATE",
+          "trace_sha256": "be547dc83008ad48a2490c3ca2004c9d4c2732584688d8f2722264a02bc9ca3f"
+        },
+        {
+          "admission_path": "cached_template",
+          "arrival_epoch": 42,
+          "failure_time_certificate_file": "teccl/examples/results/multicast_tree_pair_physical_25gb/detection_delay_boundary/certificate.json",
+          "failure_time_certificate_sha256": "60c23cf32d981ed4915b4ed587777a257604d0c154fe1eefe6b75d67e41ddd5f",
+          "failure_time_certified": true,
+          "independent_audit_passed": true,
+          "outcome": "accepted",
+          "prior_occupied_local_cells": 0,
+          "released_protection_transfers": 0,
+          "request_id": "request-5",
+          "schedule_file": "teccl/examples/results/multicast_tree_pair_physical_25gb/full_directed_failures/schedules/interdc8_dpp.json",
+          "solver_mip_gap": null,
+          "solver_runtime_seconds": 0.0,
+          "solver_solution_count": 1,
+          "solver_status": "CACHED_CERTIFIED_TEMPLATE",
+          "trace_sha256": "be547dc83008ad48a2490c3ca2004c9d4c2732584688d8f2722264a02bc9ca3f"
+        },
+        {
+          "admission_path": "cached_template",
+          "arrival_epoch": 50,
+          "failure_time_certificate_file": "teccl/examples/results/multicast_tree_pair_physical_25gb/detection_delay_boundary/certificate.json",
+          "failure_time_certificate_sha256": "60c23cf32d981ed4915b4ed587777a257604d0c154fe1eefe6b75d67e41ddd5f",
+          "failure_time_certified": true,
+          "independent_audit_passed": true,
+          "outcome": "accepted",
+          "prior_occupied_local_cells": 0,
+          "released_protection_transfers": 0,
+          "request_id": "request-6",
+          "schedule_file": "teccl/examples/results/multicast_tree_pair_physical_25gb/full_directed_failures/schedules/interdc8_dpp.json",
+          "solver_mip_gap": null,
+          "solver_runtime_seconds": 0.0,
+          "solver_solution_count": 1,
+          "solver_status": "CACHED_CERTIFIED_TEMPLATE",
+          "trace_sha256": "be547dc83008ad48a2490c3ca2004c9d4c2732584688d8f2722264a02bc9ca3f"
+        },
+        {
+          "admission_path": "cached_template",
+          "arrival_epoch": 59,
+          "failure_time_certificate_file": "teccl/examples/results/multicast_tree_pair_physical_25gb/detection_delay_boundary/certificate.json",
+          "failure_time_certificate_sha256": "60c23cf32d981ed4915b4ed587777a257604d0c154fe1eefe6b75d67e41ddd5f",
+          "failure_time_certified": true,
+          "independent_audit_passed": true,
+          "outcome": "accepted",
+          "prior_occupied_local_cells": 0,
+          "released_protection_transfers": 0,
+          "request_id": "request-7",
+          "schedule_file": "teccl/examples/results/multicast_tree_pair_physical_25gb/full_directed_failures/schedules/interdc8_dpp.json",
+          "solver_mip_gap": null,
+          "solver_runtime_seconds": 0.0,
+          "solver_solution_count": 1,
+          "solver_status": "CACHED_CERTIFIED_TEMPLATE",
+          "trace_sha256": "be547dc83008ad48a2490c3ca2004c9d4c2732584688d8f2722264a02bc9ca3f"
+        }
+      ],
+      "requests": 8,
+      "residual_failure_time_validation": "theorem_backed_construction",
+      "source_provenance": {
+        "base_input_file": "teccl/examples/results/multicast_tree_pair_physical_25gb/full_directed_failures/inputs/interdc8_dpp.json",
+        "base_input_sha256": "57d3a2ee90b4622e98b35edd2dadf3533656b20311aa55269cfa4349bd3c603f",
+        "certificate_file": "teccl/examples/results/multicast_tree_pair_physical_25gb/detection_delay_boundary/certificate.json",
+        "certificate_policy": "DPP",
+        "certificate_sha256": "60c23cf32d981ed4915b4ed587777a257604d0c154fe1eefe6b75d67e41ddd5f",
+        "configured_detection_delay_epochs": 1,
+        "failure_model": "EXACT",
+        "failure_scenarios": 26,
+        "fixed_plan_boundary_certified": true,
+        "maximum_certified_detection_delay_epochs": 2,
+        "template_file": "teccl/examples/results/multicast_tree_pair_physical_25gb/full_directed_failures/schedules/interdc8_dpp.json",
+        "template_sha256": "a674a3f2f508b8fa52c47ddc4f1336944d5c099ce0ac6b7036dc508957bd0f4f"
+      },
+      "trace_sha256": "be547dc83008ad48a2490c3ca2004c9d4c2732584688d8f2722264a02bc9ca3f",
+      "unknown": 0,
+      "unknown_rate": 0.0
+    },
+    {
+      "accepted": 7,
+      "admission_algorithm": "certified-template, frozen certified tree-pair timing candidates, then unrestricted residual-capacity solver",
+      "baseline_structure": "fixed rooted multicast working/backup tree pair",
+      "blocked": 1,
+      "blocking_probability_conclusive": 0.125,
+      "candidate_tree_pair_first": true,
+      "candidate_tree_pair_library": [
+        {
+          "file": "teccl/examples/results/dynamic_admission_physical_locator/interdc8/rate_0p06/seed_20260810/ddpp/002_arrival_8_schedule.json",
+          "sha256": "71d47569ec332a54a5bca29ac1bd776b4673d3d1fc441eb295c892ad3c2ceb10"
+        },
+        {
+          "file": "teccl/examples/results/dynamic_admission_candidate_tree_first_calibration/interdc8/rate_0p06/seed_20260811/ddpp/002_arrival_3_schedule.json",
+          "sha256": "904fedd0e1e801214dd17b3140b8c731aa4eac392bd315ad0701abfa7e69d8dc"
+        },
+        {
+          "file": "teccl/examples/results/dynamic_admission_candidate_tree_first_calibration/interdc8/rate_0p06/seed_20260811/ddpp/003_arrival_6_schedule.json",
+          "sha256": "5717a9d403987752561bf89b60309eb892bd895541ee474ea815eedf98edb718"
+        },
+        {
+          "file": "teccl/examples/results/dynamic_admission_long_trace_pilot/interdc8/interdc8/rate_0p06/seed_20260811/ddpp/004_arrival_13_schedule.json",
+          "sha256": "c2eb08d0e48a5a3c790c318b89ed390307f2313548ff5f6a798b49369e2bff1f"
+        }
+      ],
+      "fallback_no_rel_heur_work": 0.0,
+      "fallback_optimization": "fixed certified tree-pair timing candidates followed, when needed, by joint strict working-tree and backup-tree optimization against request-local residual capacity; DPP/DDPP differ only in the reservation timing mode",
+      "fallback_wall_clock_limit_seconds": 60.0,
+      "final_ledger_occupied_cells": 742,
+      "ledger_safe": true,
+      "policy": "ddpp",
+      "request_results": [
+        {
+          "admission_path": "cached_template",
+          "arrival_epoch": 0,
+          "failure_time_certificate_file": "teccl/examples/results/multicast_tree_pair_physical_25gb/detection_delay_boundary/certificate.json",
+          "failure_time_certificate_sha256": "60c23cf32d981ed4915b4ed587777a257604d0c154fe1eefe6b75d67e41ddd5f",
+          "failure_time_certified": true,
+          "independent_audit_passed": true,
+          "outcome": "accepted",
+          "prior_occupied_local_cells": 0,
+          "released_protection_transfers": 0,
+          "request_id": "request-0",
+          "schedule_file": "teccl/examples/results/multicast_tree_pair_physical_25gb/full_directed_failures/schedules/interdc8_ddpp.json",
+          "solver_mip_gap": null,
+          "solver_runtime_seconds": 0.0,
+          "solver_solution_count": 1,
+          "solver_status": "CACHED_CERTIFIED_TEMPLATE",
+          "trace_sha256": "be547dc83008ad48a2490c3ca2004c9d4c2732584688d8f2722264a02bc9ca3f"
+        },
+        {
+          "admission_path": "certified_tree_pair_timing_candidate",
+          "arrival_epoch": 1,
+          "failure_time_certificate_file": "teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260830/ddpp/tree_pair_candidate/1/construction_certification/001_arrival_1_certificate.json",
+          "failure_time_certificate_sha256": "cd271e4804b714dee0848732304bc162a2ce01aafa4be66c13a39f62ca5d9377",
+          "failure_time_certified": true,
+          "independent_audit_passed": true,
+          "outcome": "accepted",
+          "prior_occupied_local_cells": 161,
+          "released_protection_transfers": 0,
+          "request_id": "request-1",
+          "schedule_file": "teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260830/ddpp/tree_pair_candidate/1/001_arrival_1_schedule.json",
+          "solver_mip_gap": null,
+          "solver_runtime_seconds": 7.219874858856201,
+          "solver_solution_count": 10,
+          "solver_status": "OPTIMAL",
+          "solver_wall_clock_seconds": 13.501235916000041,
+          "trace_sha256": "be547dc83008ad48a2490c3ca2004c9d4c2732584688d8f2722264a02bc9ca3f",
+          "tree_pair_candidate_attempts": [
+            {
+              "classification": "TREE_PAIR_INFEASIBLE",
+              "global_infeasibility_claimed": false,
+              "input_file": "teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260830/ddpp/tree_pair_candidate/0/001_arrival_1_input.json",
+              "method": "certified_fixed_tree_pair_timing_candidate",
+              "process_classification": "COMPLETED",
+              "solver_quality": {
+                "mip_gap": null,
+                "node_count": 1.0,
+                "objective_bound": null,
+                "objective_value": null,
+                "runtime": 0.7685022354125977,
+                "solution_count": 0,
+                "solver_name": "ScenarioRobustProtection_MILP",
+                "status_code": 3,
+                "status_name": "INFEASIBLE"
+              },
+              "solver_wall_clock_seconds": 5.320460999999909,
+              "tree_pair_template": "teccl/examples/results/multicast_tree_pair_physical_25gb/full_directed_failures/schedules/interdc8_ddpp.json"
+            },
+            {
+              "classification": "CERTIFIED_FEASIBLE",
+              "construction_certificate": {
+                "certificate": "theorem-backed common failure-time construction",
+                "certificate_file": "teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260830/ddpp/tree_pair_candidate/1/construction_certification/001_arrival_1_certificate.json",
+                "certificate_sha256": "cd271e4804b714dee0848732304bc162a2ce01aafa4be66c13a39f62ca5d9377",
+                "certified": true,
+                "construction_claimed": true,
+                "covered_failure_epochs": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10,
+                  11,
+                  12,
+                  13
+                ],
+                "detection_delay_epochs": 1,
+                "expected_failure_scenarios": 26,
+                "failure_model": "EXACT",
+                "failure_scenarios": 26,
+                "fixed_plan": "teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260830/ddpp/tree_pair_candidate/1/001_arrival_1_schedule.json",
+                "fixed_plan_sha256": "c6e6bdb6c53d91293567dfc0bef048a6d802d76e47a54eceb311df269e390f2c",
+                "independent_audit_checks": [
+                  {
+                    "name": "scenario-robust semantic marker",
+                    "passed": true
+                  },
+                  {
+                    "name": "failure-time scope is explicit",
+                    "passed": true
+                  },
+                  {
+                    "name": "no failure-free backup data",
+                    "passed": true
+                  },
+                  {
+                    "name": "nonempty recovery exercised",
+                    "passed": true
+                  },
+                  {
+                    "name": "recovery starts after detection",
+                    "passed": true
+                  },
+                  {
+                    "name": "reservation stays inside declared policy window",
+                    "passed": true
+                  },
+                  {
+                    "name": "robust reservations follow commodity completion",
+                    "passed": true
+                  },
+                  {
+                    "name": "protected completion stays inside declared deadline",
+                    "passed": true
+                  },
+                  {
+                    "name": "full link occupancy stays inside service deadline",
+                    "passed": true
+                  },
+                  {
+                    "name": "fixed multicast working/backup tree pair",
+                    "passed": true
+                  },
+                  {
+                    "name": "recovery is bound to reservation",
+                    "passed": true
+                  },
+                  {
+                    "name": "recovery avoids failed link",
+                    "passed": true
+                  },
+                  {
+                    "name": "all affected demands are protected",
+                    "passed": true
+                  }
+                ],
+                "independent_audit_failures": [],
+                "independent_audit_passed": true,
+                "outer_failure_time_milps_executed": false,
+                "proof_reference": "THEORY_FOUNDATION_AUDIT.md Lemma 6: every commodity reservation starts no earlier than nominal working completion plus detection delay minus one; the tau=0 affected set is a superset of every later affected set on the unique working tree",
+                "scope_boundary": "One directed-link failure at a time under the stated event convention; excludes node, correlated, bidirectional-fiber, and multiple simultaneous failures.",
+                "seed_failure_epoch_zero_based": 0,
+                "working_completion_epoch": 14
+              },
+              "failure_time_certificate_file": "teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260830/ddpp/tree_pair_candidate/1/construction_certification/001_arrival_1_certificate.json",
+              "failure_time_certificate_sha256": "cd271e4804b714dee0848732304bc162a2ce01aafa4be66c13a39f62ca5d9377",
+              "global_infeasibility_claimed": false,
+              "independent_audit_checks": [
+                {
+                  "name": "scenario-robust semantic marker",
+                  "passed": true
+                },
+                {
+                  "name": "failure-time scope is explicit",
+                  "passed": true
+                },
+                {
+                  "name": "no failure-free backup data",
+                  "passed": true
+                },
+                {
+                  "detail": "reservations=56, recovery=218, affected_scenarios=24",
+                  "name": "nonempty recovery exercised",
+                  "passed": true
+                },
+                {
+                  "detail": "activation=20, violations=[]",
+                  "name": "recovery starts after detection",
+                  "passed": true
+                },
+                {
+                  "detail": "window=20..39, violations=[]",
+                  "name": "reservation stays inside declared policy window",
+                  "passed": true
+                },
+                {
+                  "detail": "violations=[]",
+                  "name": "robust reservations follow commodity completion",
+                  "passed": true
+                },
+                {
+                  "detail": "completion=40, deadline=40",
+                  "name": "protected completion stays inside declared deadline",
+                  "passed": true
+                },
+                {
+                  "detail": "deadline=40, violations=[]",
+                  "name": "full link occupancy stays inside service deadline",
+                  "passed": true
+                },
+                {
+                  "detail": "required=True, claimed=True, violations={'working': [], 'reservation': []}",
+                  "name": "fixed multicast working/backup tree pair",
+                  "passed": true
+                },
+                {
+                  "detail": "violations=[]",
+                  "name": "recovery is bound to reservation",
+                  "passed": true
+                },
+                {
+                  "detail": "violations=[]",
+                  "name": "recovery avoids failed link",
+                  "passed": true
+                },
+                {
+                  "detail": "violations=[]",
+                  "name": "all affected demands are protected",
+                  "passed": true
+                }
+              ],
+              "input_file": "teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260830/ddpp/tree_pair_candidate/1/001_arrival_1_input.json",
+              "method": "certified_fixed_tree_pair_timing_candidate",
+              "process_classification": "COMPLETED",
+              "schedule_file": "teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260830/ddpp/tree_pair_candidate/1/001_arrival_1_schedule.json",
+              "solver_quality": {
+                "mip_gap": null,
+                "node_count": 4.0,
+                "objective_bound": null,
+                "objective_value": 14.140001,
+                "runtime": 7.219874858856201,
+                "solution_count": 10,
+                "solver_name": "ScenarioRobustProtection_MILP",
+                "status_code": 2,
+                "status_name": "OPTIMAL"
+              },
+              "solver_wall_clock_seconds": 13.501235916000041,
+              "tree_pair_template": "teccl/examples/results/dynamic_admission_physical_locator/interdc8/rate_0p06/seed_20260810/ddpp/002_arrival_8_schedule.json"
+            }
+          ]
+        },
+        {
+          "admission_path": "residual_capacity_solver",
+          "arrival_epoch": 4,
+          "outcome": "blocked",
+          "prior_occupied_local_cells": 290,
+          "request_id": "request-2",
+          "solver_mip_gap": null,
+          "solver_runtime_seconds": 5.153236150741577,
+          "solver_solution_count": 0,
+          "solver_status": "INFEASIBLE",
+          "solver_wall_clock_seconds": 9.904431875,
+          "trace_sha256": "be547dc83008ad48a2490c3ca2004c9d4c2732584688d8f2722264a02bc9ca3f",
+          "tree_pair_candidate_attempts": [
+            {
+              "classification": "TREE_PAIR_INFEASIBLE",
+              "global_infeasibility_claimed": false,
+              "input_file": "teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260830/ddpp/tree_pair_candidate/0/002_arrival_4_input.json",
+              "method": "certified_fixed_tree_pair_timing_candidate",
+              "process_classification": "COMPLETED",
+              "solver_quality": {
+                "mip_gap": null,
+                "node_count": 0.0,
+                "objective_bound": null,
+                "objective_value": null,
+                "runtime": 0.3730762004852295,
+                "solution_count": 0,
+                "solver_name": "ScenarioRobustProtection_MILP",
+                "status_code": 3,
+                "status_name": "INFEASIBLE"
+              },
+              "solver_wall_clock_seconds": 5.001753291999989,
+              "tree_pair_template": "teccl/examples/results/multicast_tree_pair_physical_25gb/full_directed_failures/schedules/interdc8_ddpp.json"
+            },
+            {
+              "classification": "TREE_PAIR_INFEASIBLE",
+              "global_infeasibility_claimed": false,
+              "input_file": "teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260830/ddpp/tree_pair_candidate/1/002_arrival_4_input.json",
+              "method": "certified_fixed_tree_pair_timing_candidate",
+              "process_classification": "COMPLETED",
+              "solver_quality": {
+                "mip_gap": null,
+                "node_count": 0.0,
+                "objective_bound": null,
+                "objective_value": null,
+                "runtime": 0.3577768802642822,
+                "solution_count": 0,
+                "solver_name": "ScenarioRobustProtection_MILP",
+                "status_code": 3,
+                "status_name": "INFEASIBLE"
+              },
+              "solver_wall_clock_seconds": 4.880806417000031,
+              "tree_pair_template": "teccl/examples/results/dynamic_admission_physical_locator/interdc8/rate_0p06/seed_20260810/ddpp/002_arrival_8_schedule.json"
+            },
+            {
+              "classification": "TREE_PAIR_INFEASIBLE",
+              "global_infeasibility_claimed": false,
+              "input_file": "teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260830/ddpp/tree_pair_candidate/2/002_arrival_4_input.json",
+              "method": "certified_fixed_tree_pair_timing_candidate",
+              "process_classification": "COMPLETED",
+              "solver_quality": {
+                "mip_gap": null,
+                "node_count": 0.0,
+                "objective_bound": null,
+                "objective_value": null,
+                "runtime": 0.4280409812927246,
+                "solution_count": 0,
+                "solver_name": "ScenarioRobustProtection_MILP",
+                "status_code": 3,
+                "status_name": "INFEASIBLE"
+              },
+              "solver_wall_clock_seconds": 5.051983208000024,
+              "tree_pair_template": "teccl/examples/results/dynamic_admission_candidate_tree_first_calibration/interdc8/rate_0p06/seed_20260811/ddpp/002_arrival_3_schedule.json"
+            },
+            {
+              "classification": "TREE_PAIR_INFEASIBLE",
+              "global_infeasibility_claimed": false,
+              "input_file": "teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260830/ddpp/tree_pair_candidate/3/002_arrival_4_input.json",
+              "method": "certified_fixed_tree_pair_timing_candidate",
+              "process_classification": "COMPLETED",
+              "solver_quality": {
+                "mip_gap": null,
+                "node_count": 0.0,
+                "objective_bound": null,
+                "objective_value": null,
+                "runtime": 0.4961111545562744,
+                "solution_count": 0,
+                "solver_name": "ScenarioRobustProtection_MILP",
+                "status_code": 3,
+                "status_name": "INFEASIBLE"
+              },
+              "solver_wall_clock_seconds": 5.106108500000005,
+              "tree_pair_template": "teccl/examples/results/dynamic_admission_candidate_tree_first_calibration/interdc8/rate_0p06/seed_20260811/ddpp/003_arrival_6_schedule.json"
+            },
+            {
+              "classification": "TREE_PAIR_INFEASIBLE",
+              "global_infeasibility_claimed": false,
+              "input_file": "teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260830/ddpp/tree_pair_candidate/4/002_arrival_4_input.json",
+              "method": "certified_fixed_tree_pair_timing_candidate",
+              "process_classification": "COMPLETED",
+              "solver_quality": {
+                "mip_gap": null,
+                "node_count": 0.0,
+                "objective_bound": null,
+                "objective_value": null,
+                "runtime": 0.5602140426635742,
+                "solution_count": 0,
+                "solver_name": "ScenarioRobustProtection_MILP",
+                "status_code": 3,
+                "status_name": "INFEASIBLE"
+              },
+              "solver_wall_clock_seconds": 5.277858124999966,
+              "tree_pair_template": "teccl/examples/results/dynamic_admission_long_trace_pilot/interdc8/interdc8/rate_0p06/seed_20260811/ddpp/004_arrival_13_schedule.json"
+            }
+          ]
+        },
+        {
+          "admission_path": "certified_tree_pair_timing_candidate",
+          "arrival_epoch": 6,
+          "failure_time_certificate_file": "teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260830/ddpp/tree_pair_candidate/0/construction_certification/003_arrival_6_certificate.json",
+          "failure_time_certificate_sha256": "456feacdeec8842624d5f89006739d31e1d36d213ffc48edbb0f538cd177ea41",
+          "failure_time_certified": true,
+          "independent_audit_passed": true,
+          "outcome": "accepted",
+          "prior_occupied_local_cells": 170,
+          "released_protection_transfers": 0,
+          "request_id": "request-3",
+          "schedule_file": "teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260830/ddpp/tree_pair_candidate/0/003_arrival_6_schedule.json",
+          "solver_mip_gap": null,
+          "solver_runtime_seconds": 5.393505811691284,
+          "solver_solution_count": 9,
+          "solver_status": "OPTIMAL",
+          "solver_wall_clock_seconds": 11.656540291999931,
+          "trace_sha256": "be547dc83008ad48a2490c3ca2004c9d4c2732584688d8f2722264a02bc9ca3f",
+          "tree_pair_candidate_attempts": [
+            {
+              "classification": "CERTIFIED_FEASIBLE",
+              "construction_certificate": {
+                "certificate": "theorem-backed common failure-time construction",
+                "certificate_file": "teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260830/ddpp/tree_pair_candidate/0/construction_certification/003_arrival_6_certificate.json",
+                "certificate_sha256": "456feacdeec8842624d5f89006739d31e1d36d213ffc48edbb0f538cd177ea41",
+                "certified": true,
+                "construction_claimed": true,
+                "covered_failure_epochs": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14
+                ],
+                "detection_delay_epochs": 1,
+                "expected_failure_scenarios": 26,
+                "failure_model": "EXACT",
+                "failure_scenarios": 26,
+                "fixed_plan": "teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260830/ddpp/tree_pair_candidate/0/003_arrival_6_schedule.json",
+                "fixed_plan_sha256": "62fe629e40cdf2437175ba886330f23523b432dda3810ebd143a7a876b27bc60",
+                "independent_audit_checks": [
+                  {
+                    "name": "scenario-robust semantic marker",
+                    "passed": true
+                  },
+                  {
+                    "name": "failure-time scope is explicit",
+                    "passed": true
+                  },
+                  {
+                    "name": "no failure-free backup data",
+                    "passed": true
+                  },
+                  {
+                    "name": "nonempty recovery exercised",
+                    "passed": true
+                  },
+                  {
+                    "name": "recovery starts after detection",
+                    "passed": true
+                  },
+                  {
+                    "name": "reservation stays inside declared policy window",
+                    "passed": true
+                  },
+                  {
+                    "name": "robust reservations follow commodity completion",
+                    "passed": true
+                  },
+                  {
+                    "name": "protected completion stays inside declared deadline",
+                    "passed": true
+                  },
+                  {
+                    "name": "full link occupancy stays inside service deadline",
+                    "passed": true
+                  },
+                  {
+                    "name": "fixed multicast working/backup tree pair",
+                    "passed": true
+                  },
+                  {
+                    "name": "recovery is bound to reservation",
+                    "passed": true
+                  },
+                  {
+                    "name": "recovery avoids failed link",
+                    "passed": true
+                  },
+                  {
+                    "name": "all affected demands are protected",
+                    "passed": true
+                  }
+                ],
+                "independent_audit_failures": [],
+                "independent_audit_passed": true,
+                "outer_failure_time_milps_executed": false,
+                "proof_reference": "THEORY_FOUNDATION_AUDIT.md Lemma 6: every commodity reservation starts no earlier than nominal working completion plus detection delay minus one; the tau=0 affected set is a superset of every later affected set on the unique working tree",
+                "scope_boundary": "One directed-link failure at a time under the stated event convention; excludes node, correlated, bidirectional-fiber, and multiple simultaneous failures.",
+                "seed_failure_epoch_zero_based": 0,
+                "working_completion_epoch": 15
+              },
+              "failure_time_certificate_file": "teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260830/ddpp/tree_pair_candidate/0/construction_certification/003_arrival_6_certificate.json",
+              "failure_time_certificate_sha256": "456feacdeec8842624d5f89006739d31e1d36d213ffc48edbb0f538cd177ea41",
+              "global_infeasibility_claimed": false,
+              "independent_audit_checks": [
+                {
+                  "name": "scenario-robust semantic marker",
+                  "passed": true
+                },
+                {
+                  "name": "failure-time scope is explicit",
+                  "passed": true
+                },
+                {
+                  "name": "no failure-free backup data",
+                  "passed": true
+                },
+                {
+                  "detail": "reservations=56, recovery=209, affected_scenarios=25",
+                  "name": "nonempty recovery exercised",
+                  "passed": true
+                },
+                {
+                  "detail": "activation=20, violations=[]",
+                  "name": "recovery starts after detection",
+                  "passed": true
+                },
+                {
+                  "detail": "window=20..39, violations=[]",
+                  "name": "reservation stays inside declared policy window",
+                  "passed": true
+                },
+                {
+                  "detail": "violations=[]",
+                  "name": "robust reservations follow commodity completion",
+                  "passed": true
+                },
+                {
+                  "detail": "completion=40, deadline=40",
+                  "name": "protected completion stays inside declared deadline",
+                  "passed": true
+                },
+                {
+                  "detail": "deadline=40, violations=[]",
+                  "name": "full link occupancy stays inside service deadline",
+                  "passed": true
+                },
+                {
+                  "detail": "required=True, claimed=True, violations={'working': [], 'reservation': []}",
+                  "name": "fixed multicast working/backup tree pair",
+                  "passed": true
+                },
+                {
+                  "detail": "violations=[]",
+                  "name": "recovery is bound to reservation",
+                  "passed": true
+                },
+                {
+                  "detail": "violations=[]",
+                  "name": "recovery avoids failed link",
+                  "passed": true
+                },
+                {
+                  "detail": "violations=[]",
+                  "name": "all affected demands are protected",
+                  "passed": true
+                }
+              ],
+              "input_file": "teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260830/ddpp/tree_pair_candidate/0/003_arrival_6_input.json",
+              "method": "certified_fixed_tree_pair_timing_candidate",
+              "process_classification": "COMPLETED",
+              "schedule_file": "teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260830/ddpp/tree_pair_candidate/0/003_arrival_6_schedule.json",
+              "solver_quality": {
+                "mip_gap": null,
+                "node_count": 4.0,
+                "objective_bound": null,
+                "objective_value": 15.15,
+                "runtime": 5.393505811691284,
+                "solution_count": 9,
+                "solver_name": "ScenarioRobustProtection_MILP",
+                "status_code": 2,
+                "status_name": "OPTIMAL"
+              },
+              "solver_wall_clock_seconds": 11.656540291999931,
+              "tree_pair_template": "teccl/examples/results/multicast_tree_pair_physical_25gb/full_directed_failures/schedules/interdc8_ddpp.json"
+            }
+          ]
+        },
+        {
+          "admission_path": "certified_tree_pair_timing_candidate",
+          "arrival_epoch": 18,
+          "failure_time_certificate_file": "teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260830/ddpp/tree_pair_candidate/0/construction_certification/004_arrival_18_certificate.json",
+          "failure_time_certificate_sha256": "0f6418ae64e8d8acc54d4365cf5c5760082eecd8c26a1c56621f7a8715ebf7a2",
+          "failure_time_certified": true,
+          "independent_audit_passed": true,
+          "outcome": "accepted",
+          "prior_occupied_local_cells": 126,
+          "released_protection_transfers": 0,
+          "request_id": "request-4",
+          "schedule_file": "teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260830/ddpp/tree_pair_candidate/0/004_arrival_18_schedule.json",
+          "solver_mip_gap": null,
+          "solver_runtime_seconds": 6.851530075073242,
+          "solver_solution_count": 10,
+          "solver_status": "OPTIMAL",
+          "solver_wall_clock_seconds": 13.069650291000016,
+          "trace_sha256": "be547dc83008ad48a2490c3ca2004c9d4c2732584688d8f2722264a02bc9ca3f",
+          "tree_pair_candidate_attempts": [
+            {
+              "classification": "CERTIFIED_FEASIBLE",
+              "construction_certificate": {
+                "certificate": "theorem-backed common failure-time construction",
+                "certificate_file": "teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260830/ddpp/tree_pair_candidate/0/construction_certification/004_arrival_18_certificate.json",
+                "certificate_sha256": "0f6418ae64e8d8acc54d4365cf5c5760082eecd8c26a1c56621f7a8715ebf7a2",
+                "certified": true,
+                "construction_claimed": true,
+                "covered_failure_epochs": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8
+                ],
+                "detection_delay_epochs": 1,
+                "expected_failure_scenarios": 26,
+                "failure_model": "EXACT",
+                "failure_scenarios": 26,
+                "fixed_plan": "teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260830/ddpp/tree_pair_candidate/0/004_arrival_18_schedule.json",
+                "fixed_plan_sha256": "6f0d3eb3968ea4c11bfaaf8302ab6f0fd988aa487721bc8446e99c9077763d2d",
+                "independent_audit_checks": [
+                  {
+                    "name": "scenario-robust semantic marker",
+                    "passed": true
+                  },
+                  {
+                    "name": "failure-time scope is explicit",
+                    "passed": true
+                  },
+                  {
+                    "name": "no failure-free backup data",
+                    "passed": true
+                  },
+                  {
+                    "name": "nonempty recovery exercised",
+                    "passed": true
+                  },
+                  {
+                    "name": "recovery starts after detection",
+                    "passed": true
+                  },
+                  {
+                    "name": "reservation stays inside declared policy window",
+                    "passed": true
+                  },
+                  {
+                    "name": "robust reservations follow commodity completion",
+                    "passed": true
+                  },
+                  {
+                    "name": "protected completion stays inside declared deadline",
+                    "passed": true
+                  },
+                  {
+                    "name": "full link occupancy stays inside service deadline",
+                    "passed": true
+                  },
+                  {
+                    "name": "fixed multicast working/backup tree pair",
+                    "passed": true
+                  },
+                  {
+                    "name": "recovery is bound to reservation",
+                    "passed": true
+                  },
+                  {
+                    "name": "recovery avoids failed link",
+                    "passed": true
+                  },
+                  {
+                    "name": "all affected demands are protected",
+                    "passed": true
+                  }
+                ],
+                "independent_audit_failures": [],
+                "independent_audit_passed": true,
+                "outer_failure_time_milps_executed": false,
+                "proof_reference": "THEORY_FOUNDATION_AUDIT.md Lemma 6: every commodity reservation starts no earlier than nominal working completion plus detection delay minus one; the tau=0 affected set is a superset of every later affected set on the unique working tree",
+                "scope_boundary": "One directed-link failure at a time under the stated event convention; excludes node, correlated, bidirectional-fiber, and multiple simultaneous failures.",
+                "seed_failure_epoch_zero_based": 0,
+                "working_completion_epoch": 9
+              },
+              "failure_time_certificate_file": "teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260830/ddpp/tree_pair_candidate/0/construction_certification/004_arrival_18_certificate.json",
+              "failure_time_certificate_sha256": "0f6418ae64e8d8acc54d4365cf5c5760082eecd8c26a1c56621f7a8715ebf7a2",
+              "global_infeasibility_claimed": false,
+              "independent_audit_checks": [
+                {
+                  "name": "scenario-robust semantic marker",
+                  "passed": true
+                },
+                {
+                  "name": "failure-time scope is explicit",
+                  "passed": true
+                },
+                {
+                  "name": "no failure-free backup data",
+                  "passed": true
+                },
+                {
+                  "detail": "reservations=56, recovery=209, affected_scenarios=25",
+                  "name": "nonempty recovery exercised",
+                  "passed": true
+                },
+                {
+                  "detail": "activation=20, violations=[]",
+                  "name": "recovery starts after detection",
+                  "passed": true
+                },
+                {
+                  "detail": "window=20..39, violations=[]",
+                  "name": "reservation stays inside declared policy window",
+                  "passed": true
+                },
+                {
+                  "detail": "violations=[]",
+                  "name": "robust reservations follow commodity completion",
+                  "passed": true
+                },
+                {
+                  "detail": "completion=40, deadline=40",
+                  "name": "protected completion stays inside declared deadline",
+                  "passed": true
+                },
+                {
+                  "detail": "deadline=40, violations=[]",
+                  "name": "full link occupancy stays inside service deadline",
+                  "passed": true
+                },
+                {
+                  "detail": "required=True, claimed=True, violations={'working': [], 'reservation': []}",
+                  "name": "fixed multicast working/backup tree pair",
+                  "passed": true
+                },
+                {
+                  "detail": "violations=[]",
+                  "name": "recovery is bound to reservation",
+                  "passed": true
+                },
+                {
+                  "detail": "violations=[]",
+                  "name": "recovery avoids failed link",
+                  "passed": true
+                },
+                {
+                  "detail": "violations=[]",
+                  "name": "all affected demands are protected",
+                  "passed": true
+                }
+              ],
+              "input_file": "teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260830/ddpp/tree_pair_candidate/0/004_arrival_18_input.json",
+              "method": "certified_fixed_tree_pair_timing_candidate",
+              "process_classification": "COMPLETED",
+              "schedule_file": "teccl/examples/results/dynamic_admission_multiload_endpoint_final/interdc8/rate_0p1/seed_20260830/ddpp/tree_pair_candidate/0/004_arrival_18_schedule.json",
+              "solver_quality": {
+                "mip_gap": null,
+                "node_count": 5.0,
+                "objective_bound": null,
+                "objective_value": 9.090000999999999,
+                "runtime": 6.851530075073242,
+                "solution_count": 10,
+                "solver_name": "ScenarioRobustProtection_MILP",
+                "status_code": 2,
+                "status_name": "OPTIMAL"
+              },
+              "solver_wall_clock_seconds": 13.069650291000016,
+              "tree_pair_template": "teccl/examples/results/multicast_tree_pair_physical_25gb/full_directed_failures/schedules/interdc8_ddpp.json"
+            }
+          ]
+        },
+        {
+          "admission_path": "cached_template",
+          "arrival_epoch": 42,
+          "failure_time_certificate_file": "teccl/examples/results/multicast_tree_pair_physical_25gb/detection_delay_boundary/certificate.json",
+          "failure_time_certificate_sha256": "60c23cf32d981ed4915b4ed587777a257604d0c154fe1eefe6b75d67e41ddd5f",
+          "failure_time_certified": true,
+          "independent_audit_passed": true,
+          "outcome": "accepted",
+          "prior_occupied_local_cells": 0,
+          "released_protection_transfers": 0,
+          "request_id": "request-5",
+          "schedule_file": "teccl/examples/results/multicast_tree_pair_physical_25gb/full_directed_failures/schedules/interdc8_ddpp.json",
+          "solver_mip_gap": null,
+          "solver_runtime_seconds": 0.0,
+          "solver_solution_count": 1,
+          "solver_status": "CACHED_CERTIFIED_TEMPLATE",
+          "trace_sha256": "be547dc83008ad48a2490c3ca2004c9d4c2732584688d8f2722264a02bc9ca3f"
+        },
+        {
+          "admission_path": "cached_template",
+          "arrival_epoch": 50,
+          "failure_time_certificate_file": "teccl/examples/results/multicast_tree_pair_physical_25gb/detection_delay_boundary/certificate.json",
+          "failure_time_certificate_sha256": "60c23cf32d981ed4915b4ed587777a257604d0c154fe1eefe6b75d67e41ddd5f",
+          "failure_time_certified": true,
+          "independent_audit_passed": true,
+          "outcome": "accepted",
+          "prior_occupied_local_cells": 0,
+          "released_protection_transfers": 0,
+          "request_id": "request-6",
+          "schedule_file": "teccl/examples/results/multicast_tree_pair_physical_25gb/full_directed_failures/schedules/interdc8_ddpp.json",
+          "solver_mip_gap": null,
+          "solver_runtime_seconds": 0.0,
+          "solver_solution_count": 1,
+          "solver_status": "CACHED_CERTIFIED_TEMPLATE",
+          "trace_sha256": "be547dc83008ad48a2490c3ca2004c9d4c2732584688d8f2722264a02bc9ca3f"
+        },
+        {
+          "admission_path": "cached_template",
+          "arrival_epoch": 59,
+          "failure_time_certificate_file": "teccl/examples/results/multicast_tree_pair_physical_25gb/detection_delay_boundary/certificate.json",
+          "failure_time_certificate_sha256": "60c23cf32d981ed4915b4ed587777a257604d0c154fe1eefe6b75d67e41ddd5f",
+          "failure_time_certified": true,
+          "independent_audit_passed": true,
+          "outcome": "accepted",
+          "prior_occupied_local_cells": 0,
+          "released_protection_transfers": 0,
+          "request_id": "request-7",
+          "schedule_file": "teccl/examples/results/multicast_tree_pair_physical_25gb/full_directed_failures/schedules/interdc8_ddpp.json",
+          "solver_mip_gap": null,
+          "solver_runtime_seconds": 0.0,
+          "solver_solution_count": 1,
+          "solver_status": "CACHED_CERTIFIED_TEMPLATE",
+          "trace_sha256": "be547dc83008ad48a2490c3ca2004c9d4c2732584688d8f2722264a02bc9ca3f"
+        }
+      ],
+      "requests": 8,
+      "residual_failure_time_validation": "theorem_backed_construction",
+      "source_provenance": {
+        "base_input_file": "teccl/examples/results/multicast_tree_pair_physical_25gb/full_directed_failures/inputs/interdc8_dpp.json",
+        "base_input_sha256": "57d3a2ee90b4622e98b35edd2dadf3533656b20311aa55269cfa4349bd3c603f",
+        "certificate_file": "teccl/examples/results/multicast_tree_pair_physical_25gb/detection_delay_boundary/certificate.json",
+        "certificate_policy": "DDPP",
+        "certificate_sha256": "60c23cf32d981ed4915b4ed587777a257604d0c154fe1eefe6b75d67e41ddd5f",
+        "configured_detection_delay_epochs": 1,
+        "failure_model": "EXACT",
+        "failure_scenarios": 26,
+        "fixed_plan_boundary_certified": true,
+        "maximum_certified_detection_delay_epochs": 22,
+        "template_file": "teccl/examples/results/multicast_tree_pair_physical_25gb/full_directed_failures/schedules/interdc8_ddpp.json",
+        "template_sha256": "2fe5a01e8a24f7c4d61574024d374f142056862c6a5a76ef2b428cecdeca60f6"
+      },
+      "trace_sha256": "be547dc83008ad48a2490c3ca2004c9d4c2732584688d8f2722264a02bc9ca3f",
+      "unknown": 0,
+      "unknown_rate": 0.0
+    }
+  ],
+  "purpose": "InterDC8 paired load/seed sweep run",
+  "trace": {
+    "arrival_epochs": [
+      0,
+      1,
+      4,
+      6,
+      18,
+      42,
+      50,
+      59
+    ],
+    "arrival_rate_per_epoch": 0.1,
+    "chunk_size_gb": 25.0,
+    "chunks_per_source": 1,
+    "collective": "AllGather",
+    "deadline_epochs": 40,
+    "detection_delay_epochs": 1,
+    "epoch_duration_seconds": 2.0,
+    "generator": "discretized exponential interarrival pilot",
+    "request_count": 8,
+    "seed": 20260830,
+    "sha256": "be547dc83008ad48a2490c3ca2004c9d4c2732584688d8f2722264a02bc9ca3f",
+    "topology": "InterDC8"
+  }
+}

@@ -1,0 +1,974 @@
+{
+  "accounting_unit": "occupied chunk-transfer units per directed link-epoch",
+  "arrival_epoch": 56,
+  "epochs": [
+    {
+      "dst": 1,
+      "epoch": 14,
+      "occupancy": 1,
+      "src": 0
+    },
+    {
+      "dst": 1,
+      "epoch": 15,
+      "occupancy": 1,
+      "src": 0
+    },
+    {
+      "dst": 1,
+      "epoch": 16,
+      "occupancy": 1,
+      "src": 0
+    },
+    {
+      "dst": 1,
+      "epoch": 17,
+      "occupancy": 1,
+      "src": 0
+    },
+    {
+      "dst": 3,
+      "epoch": 3,
+      "occupancy": 1,
+      "src": 0
+    },
+    {
+      "dst": 3,
+      "epoch": 4,
+      "occupancy": 1,
+      "src": 0
+    },
+    {
+      "dst": 3,
+      "epoch": 7,
+      "occupancy": 1,
+      "src": 0
+    },
+    {
+      "dst": 3,
+      "epoch": 8,
+      "occupancy": 1,
+      "src": 0
+    },
+    {
+      "dst": 3,
+      "epoch": 11,
+      "occupancy": 1,
+      "src": 0
+    },
+    {
+      "dst": 3,
+      "epoch": 12,
+      "occupancy": 1,
+      "src": 0
+    },
+    {
+      "dst": 0,
+      "epoch": 1,
+      "occupancy": 1,
+      "src": 1
+    },
+    {
+      "dst": 0,
+      "epoch": 2,
+      "occupancy": 1,
+      "src": 1
+    },
+    {
+      "dst": 0,
+      "epoch": 3,
+      "occupancy": 1,
+      "src": 1
+    },
+    {
+      "dst": 0,
+      "epoch": 4,
+      "occupancy": 1,
+      "src": 1
+    },
+    {
+      "dst": 0,
+      "epoch": 10,
+      "occupancy": 1,
+      "src": 1
+    },
+    {
+      "dst": 0,
+      "epoch": 17,
+      "occupancy": 1,
+      "src": 1
+    },
+    {
+      "dst": 0,
+      "epoch": 18,
+      "occupancy": 1,
+      "src": 1
+    },
+    {
+      "dst": 2,
+      "epoch": 0,
+      "occupancy": 1,
+      "src": 1
+    },
+    {
+      "dst": 2,
+      "epoch": 6,
+      "occupancy": 1,
+      "src": 1
+    },
+    {
+      "dst": 2,
+      "epoch": 12,
+      "occupancy": 1,
+      "src": 1
+    },
+    {
+      "dst": 2,
+      "epoch": 15,
+      "occupancy": 1,
+      "src": 1
+    },
+    {
+      "dst": 2,
+      "epoch": 16,
+      "occupancy": 1,
+      "src": 1
+    },
+    {
+      "dst": 2,
+      "epoch": 17,
+      "occupancy": 1,
+      "src": 1
+    },
+    {
+      "dst": 2,
+      "epoch": 18,
+      "occupancy": 1,
+      "src": 1
+    },
+    {
+      "dst": 3,
+      "epoch": 0,
+      "occupancy": 1,
+      "src": 1
+    },
+    {
+      "dst": 3,
+      "epoch": 1,
+      "occupancy": 1,
+      "src": 1
+    },
+    {
+      "dst": 3,
+      "epoch": 2,
+      "occupancy": 1,
+      "src": 1
+    },
+    {
+      "dst": 3,
+      "epoch": 3,
+      "occupancy": 1,
+      "src": 1
+    },
+    {
+      "dst": 3,
+      "epoch": 4,
+      "occupancy": 1,
+      "src": 1
+    },
+    {
+      "dst": 5,
+      "epoch": 0,
+      "occupancy": 1,
+      "src": 1
+    },
+    {
+      "dst": 5,
+      "epoch": 12,
+      "occupancy": 1,
+      "src": 1
+    },
+    {
+      "dst": 5,
+      "epoch": 13,
+      "occupancy": 1,
+      "src": 1
+    },
+    {
+      "dst": 1,
+      "epoch": 1,
+      "occupancy": 1,
+      "src": 2
+    },
+    {
+      "dst": 1,
+      "epoch": 3,
+      "occupancy": 1,
+      "src": 2
+    },
+    {
+      "dst": 1,
+      "epoch": 9,
+      "occupancy": 1,
+      "src": 2
+    },
+    {
+      "dst": 1,
+      "epoch": 11,
+      "occupancy": 1,
+      "src": 2
+    },
+    {
+      "dst": 3,
+      "epoch": 0,
+      "occupancy": 1,
+      "src": 2
+    },
+    {
+      "dst": 3,
+      "epoch": 1,
+      "occupancy": 1,
+      "src": 2
+    },
+    {
+      "dst": 3,
+      "epoch": 2,
+      "occupancy": 1,
+      "src": 2
+    },
+    {
+      "dst": 3,
+      "epoch": 3,
+      "occupancy": 1,
+      "src": 2
+    },
+    {
+      "dst": 3,
+      "epoch": 4,
+      "occupancy": 1,
+      "src": 2
+    },
+    {
+      "dst": 3,
+      "epoch": 7,
+      "occupancy": 1,
+      "src": 2
+    },
+    {
+      "dst": 3,
+      "epoch": 8,
+      "occupancy": 1,
+      "src": 2
+    },
+    {
+      "dst": 6,
+      "epoch": 0,
+      "occupancy": 1,
+      "src": 2
+    },
+    {
+      "dst": 6,
+      "epoch": 1,
+      "occupancy": 1,
+      "src": 2
+    },
+    {
+      "dst": 6,
+      "epoch": 2,
+      "occupancy": 1,
+      "src": 2
+    },
+    {
+      "dst": 6,
+      "epoch": 13,
+      "occupancy": 1,
+      "src": 2
+    },
+    {
+      "dst": 6,
+      "epoch": 14,
+      "occupancy": 1,
+      "src": 2
+    },
+    {
+      "dst": 0,
+      "epoch": 0,
+      "occupancy": 1,
+      "src": 3
+    },
+    {
+      "dst": 0,
+      "epoch": 1,
+      "occupancy": 1,
+      "src": 3
+    },
+    {
+      "dst": 0,
+      "epoch": 2,
+      "occupancy": 1,
+      "src": 3
+    },
+    {
+      "dst": 0,
+      "epoch": 3,
+      "occupancy": 1,
+      "src": 3
+    },
+    {
+      "dst": 0,
+      "epoch": 4,
+      "occupancy": 1,
+      "src": 3
+    },
+    {
+      "dst": 0,
+      "epoch": 9,
+      "occupancy": 1,
+      "src": 3
+    },
+    {
+      "dst": 0,
+      "epoch": 10,
+      "occupancy": 1,
+      "src": 3
+    },
+    {
+      "dst": 0,
+      "epoch": 11,
+      "occupancy": 1,
+      "src": 3
+    },
+    {
+      "dst": 0,
+      "epoch": 12,
+      "occupancy": 1,
+      "src": 3
+    },
+    {
+      "dst": 0,
+      "epoch": 13,
+      "occupancy": 1,
+      "src": 3
+    },
+    {
+      "dst": 0,
+      "epoch": 14,
+      "occupancy": 1,
+      "src": 3
+    },
+    {
+      "dst": 0,
+      "epoch": 15,
+      "occupancy": 1,
+      "src": 3
+    },
+    {
+      "dst": 0,
+      "epoch": 16,
+      "occupancy": 1,
+      "src": 3
+    },
+    {
+      "dst": 1,
+      "epoch": 1,
+      "occupancy": 1,
+      "src": 3
+    },
+    {
+      "dst": 1,
+      "epoch": 2,
+      "occupancy": 1,
+      "src": 3
+    },
+    {
+      "dst": 1,
+      "epoch": 10,
+      "occupancy": 1,
+      "src": 3
+    },
+    {
+      "dst": 1,
+      "epoch": 11,
+      "occupancy": 1,
+      "src": 3
+    },
+    {
+      "dst": 2,
+      "epoch": 0,
+      "occupancy": 1,
+      "src": 3
+    },
+    {
+      "dst": 2,
+      "epoch": 1,
+      "occupancy": 1,
+      "src": 3
+    },
+    {
+      "dst": 2,
+      "epoch": 2,
+      "occupancy": 1,
+      "src": 3
+    },
+    {
+      "dst": 2,
+      "epoch": 3,
+      "occupancy": 1,
+      "src": 3
+    },
+    {
+      "dst": 2,
+      "epoch": 4,
+      "occupancy": 1,
+      "src": 3
+    },
+    {
+      "dst": 2,
+      "epoch": 9,
+      "occupancy": 1,
+      "src": 3
+    },
+    {
+      "dst": 2,
+      "epoch": 10,
+      "occupancy": 1,
+      "src": 3
+    },
+    {
+      "dst": 4,
+      "epoch": 0,
+      "occupancy": 1,
+      "src": 3
+    },
+    {
+      "dst": 4,
+      "epoch": 3,
+      "occupancy": 1,
+      "src": 3
+    },
+    {
+      "dst": 4,
+      "epoch": 4,
+      "occupancy": 1,
+      "src": 3
+    },
+    {
+      "dst": 4,
+      "epoch": 9,
+      "occupancy": 1,
+      "src": 3
+    },
+    {
+      "dst": 4,
+      "epoch": 10,
+      "occupancy": 1,
+      "src": 3
+    },
+    {
+      "dst": 4,
+      "epoch": 13,
+      "occupancy": 1,
+      "src": 3
+    },
+    {
+      "dst": 4,
+      "epoch": 14,
+      "occupancy": 1,
+      "src": 3
+    },
+    {
+      "dst": 3,
+      "epoch": 7,
+      "occupancy": 1,
+      "src": 4
+    },
+    {
+      "dst": 3,
+      "epoch": 8,
+      "occupancy": 1,
+      "src": 4
+    },
+    {
+      "dst": 3,
+      "epoch": 9,
+      "occupancy": 1,
+      "src": 4
+    },
+    {
+      "dst": 3,
+      "epoch": 10,
+      "occupancy": 1,
+      "src": 4
+    },
+    {
+      "dst": 3,
+      "epoch": 11,
+      "occupancy": 1,
+      "src": 4
+    },
+    {
+      "dst": 3,
+      "epoch": 12,
+      "occupancy": 1,
+      "src": 4
+    },
+    {
+      "dst": 3,
+      "epoch": 13,
+      "occupancy": 1,
+      "src": 4
+    },
+    {
+      "dst": 3,
+      "epoch": 14,
+      "occupancy": 1,
+      "src": 4
+    },
+    {
+      "dst": 5,
+      "epoch": 1,
+      "occupancy": 1,
+      "src": 4
+    },
+    {
+      "dst": 5,
+      "epoch": 9,
+      "occupancy": 1,
+      "src": 4
+    },
+    {
+      "dst": 5,
+      "epoch": 11,
+      "occupancy": 1,
+      "src": 4
+    },
+    {
+      "dst": 5,
+      "epoch": 15,
+      "occupancy": 1,
+      "src": 4
+    },
+    {
+      "dst": 5,
+      "epoch": 17,
+      "occupancy": 1,
+      "src": 4
+    },
+    {
+      "dst": 5,
+      "epoch": 18,
+      "occupancy": 1,
+      "src": 4
+    },
+    {
+      "dst": 6,
+      "epoch": 0,
+      "occupancy": 1,
+      "src": 4
+    },
+    {
+      "dst": 6,
+      "epoch": 2,
+      "occupancy": 1,
+      "src": 4
+    },
+    {
+      "dst": 6,
+      "epoch": 3,
+      "occupancy": 1,
+      "src": 4
+    },
+    {
+      "dst": 1,
+      "epoch": 0,
+      "occupancy": 1,
+      "src": 5
+    },
+    {
+      "dst": 1,
+      "epoch": 1,
+      "occupancy": 1,
+      "src": 5
+    },
+    {
+      "dst": 1,
+      "epoch": 2,
+      "occupancy": 1,
+      "src": 5
+    },
+    {
+      "dst": 1,
+      "epoch": 3,
+      "occupancy": 1,
+      "src": 5
+    },
+    {
+      "dst": 1,
+      "epoch": 4,
+      "occupancy": 1,
+      "src": 5
+    },
+    {
+      "dst": 4,
+      "epoch": 1,
+      "occupancy": 1,
+      "src": 5
+    },
+    {
+      "dst": 4,
+      "epoch": 2,
+      "occupancy": 1,
+      "src": 5
+    },
+    {
+      "dst": 4,
+      "epoch": 3,
+      "occupancy": 1,
+      "src": 5
+    },
+    {
+      "dst": 4,
+      "epoch": 4,
+      "occupancy": 1,
+      "src": 5
+    },
+    {
+      "dst": 4,
+      "epoch": 8,
+      "occupancy": 1,
+      "src": 5
+    },
+    {
+      "dst": 4,
+      "epoch": 17,
+      "occupancy": 1,
+      "src": 5
+    },
+    {
+      "dst": 4,
+      "epoch": 18,
+      "occupancy": 1,
+      "src": 5
+    },
+    {
+      "dst": 6,
+      "epoch": 1,
+      "occupancy": 1,
+      "src": 5
+    },
+    {
+      "dst": 6,
+      "epoch": 2,
+      "occupancy": 1,
+      "src": 5
+    },
+    {
+      "dst": 6,
+      "epoch": 3,
+      "occupancy": 1,
+      "src": 5
+    },
+    {
+      "dst": 6,
+      "epoch": 4,
+      "occupancy": 1,
+      "src": 5
+    },
+    {
+      "dst": 6,
+      "epoch": 16,
+      "occupancy": 1,
+      "src": 5
+    },
+    {
+      "dst": 6,
+      "epoch": 17,
+      "occupancy": 1,
+      "src": 5
+    },
+    {
+      "dst": 7,
+      "epoch": 0,
+      "occupancy": 1,
+      "src": 5
+    },
+    {
+      "dst": 7,
+      "epoch": 1,
+      "occupancy": 1,
+      "src": 5
+    },
+    {
+      "dst": 7,
+      "epoch": 2,
+      "occupancy": 1,
+      "src": 5
+    },
+    {
+      "dst": 7,
+      "epoch": 3,
+      "occupancy": 1,
+      "src": 5
+    },
+    {
+      "dst": 7,
+      "epoch": 4,
+      "occupancy": 1,
+      "src": 5
+    },
+    {
+      "dst": 7,
+      "epoch": 10,
+      "occupancy": 1,
+      "src": 5
+    },
+    {
+      "dst": 7,
+      "epoch": 11,
+      "occupancy": 1,
+      "src": 5
+    },
+    {
+      "dst": 7,
+      "epoch": 12,
+      "occupancy": 1,
+      "src": 5
+    },
+    {
+      "dst": 7,
+      "epoch": 13,
+      "occupancy": 1,
+      "src": 5
+    },
+    {
+      "dst": 7,
+      "epoch": 14,
+      "occupancy": 1,
+      "src": 5
+    },
+    {
+      "dst": 7,
+      "epoch": 15,
+      "occupancy": 1,
+      "src": 5
+    },
+    {
+      "dst": 7,
+      "epoch": 16,
+      "occupancy": 1,
+      "src": 5
+    },
+    {
+      "dst": 7,
+      "epoch": 17,
+      "occupancy": 1,
+      "src": 5
+    },
+    {
+      "dst": 2,
+      "epoch": 0,
+      "occupancy": 1,
+      "src": 6
+    },
+    {
+      "dst": 2,
+      "epoch": 1,
+      "occupancy": 1,
+      "src": 6
+    },
+    {
+      "dst": 2,
+      "epoch": 2,
+      "occupancy": 1,
+      "src": 6
+    },
+    {
+      "dst": 2,
+      "epoch": 3,
+      "occupancy": 1,
+      "src": 6
+    },
+    {
+      "dst": 2,
+      "epoch": 4,
+      "occupancy": 1,
+      "src": 6
+    },
+    {
+      "dst": 4,
+      "epoch": 3,
+      "occupancy": 1,
+      "src": 6
+    },
+    {
+      "dst": 4,
+      "epoch": 4,
+      "occupancy": 1,
+      "src": 6
+    },
+    {
+      "dst": 4,
+      "epoch": 9,
+      "occupancy": 1,
+      "src": 6
+    },
+    {
+      "dst": 4,
+      "epoch": 10,
+      "occupancy": 1,
+      "src": 6
+    },
+    {
+      "dst": 4,
+      "epoch": 11,
+      "occupancy": 1,
+      "src": 6
+    },
+    {
+      "dst": 4,
+      "epoch": 12,
+      "occupancy": 1,
+      "src": 6
+    },
+    {
+      "dst": 5,
+      "epoch": 0,
+      "occupancy": 1,
+      "src": 6
+    },
+    {
+      "dst": 5,
+      "epoch": 1,
+      "occupancy": 1,
+      "src": 6
+    },
+    {
+      "dst": 5,
+      "epoch": 2,
+      "occupancy": 1,
+      "src": 6
+    },
+    {
+      "dst": 5,
+      "epoch": 3,
+      "occupancy": 1,
+      "src": 6
+    },
+    {
+      "dst": 5,
+      "epoch": 4,
+      "occupancy": 1,
+      "src": 6
+    },
+    {
+      "dst": 7,
+      "epoch": 1,
+      "occupancy": 1,
+      "src": 6
+    },
+    {
+      "dst": 7,
+      "epoch": 2,
+      "occupancy": 1,
+      "src": 6
+    },
+    {
+      "dst": 7,
+      "epoch": 3,
+      "occupancy": 1,
+      "src": 6
+    },
+    {
+      "dst": 7,
+      "epoch": 4,
+      "occupancy": 1,
+      "src": 6
+    },
+    {
+      "dst": 7,
+      "epoch": 15,
+      "occupancy": 1,
+      "src": 6
+    },
+    {
+      "dst": 7,
+      "epoch": 17,
+      "occupancy": 1,
+      "src": 6
+    },
+    {
+      "dst": 7,
+      "epoch": 18,
+      "occupancy": 1,
+      "src": 6
+    },
+    {
+      "dst": 5,
+      "epoch": 0,
+      "occupancy": 1,
+      "src": 7
+    },
+    {
+      "dst": 5,
+      "epoch": 2,
+      "occupancy": 1,
+      "src": 7
+    },
+    {
+      "dst": 5,
+      "epoch": 3,
+      "occupancy": 1,
+      "src": 7
+    },
+    {
+      "dst": 5,
+      "epoch": 16,
+      "occupancy": 1,
+      "src": 7
+    },
+    {
+      "dst": 5,
+      "epoch": 17,
+      "occupancy": 1,
+      "src": 7
+    },
+    {
+      "dst": 6,
+      "epoch": 1,
+      "occupancy": 1,
+      "src": 7
+    },
+    {
+      "dst": 6,
+      "epoch": 10,
+      "occupancy": 1,
+      "src": 7
+    },
+    {
+      "dst": 6,
+      "epoch": 15,
+      "occupancy": 1,
+      "src": 7
+    },
+    {
+      "dst": 6,
+      "epoch": 16,
+      "occupancy": 1,
+      "src": 7
+    },
+    {
+      "dst": 6,
+      "epoch": 17,
+      "occupancy": 1,
+      "src": 7
+    },
+    {
+      "dst": 6,
+      "epoch": 18,
+      "occupancy": 1,
+      "src": 7
+    }
+  ],
+  "horizon_epochs": 40,
+  "sha256": "09914977ae4b913bb1bac84239f8206d19fbb7f3b0ee3a9e01603d271fb607b2"
+}

@@ -1,0 +1,15 @@
+{
+  "produced_schedule": true,
+  "schedule_output_file": "teccl/examples/results/dynamic_admission_dcn4wan_current_locator_12req/dcn4wan/rate_1/seed_20260810/early_dpp/008_arrival_11_schedule.json",
+  "solver_quality": {
+    "mip_gap": null,
+    "node_count": 3.0,
+    "objective_bound": null,
+    "objective_value": 6.060001,
+    "runtime": 36.12138915061951,
+    "solution_count": 10,
+    "solver_name": "ScenarioRobustProtection_MILP",
+    "status_code": 9,
+    "status_name": "TIME_LIMIT"
+  }
+}

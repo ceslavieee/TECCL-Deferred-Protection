@@ -1,0 +1,20 @@
+{
+  "authoritative": true,
+  "figures": [
+    {
+      "claim": "DDPP preserves reserved capacity, completes later, and tolerates more detection delay for the fixed audited plans.",
+      "sources": [
+        "teccl/examples/results/multicast_tree_pair_physical_25gb",
+        "teccl/examples/results/multicast_tree_pair_physical_25gb/failure_time_sweep/certificate.json",
+        "teccl/examples/results/multicast_tree_pair_physical_25gb/detection_delay_boundary/certificate.json"
+      ],
+      "stem": "certified-protection-tradeoffs"
+    }
+  ],
+  "files": [
+    "teccl/examples/results/figures/certified/certified-protection-tradeoffs.png",
+    "teccl/examples/results/figures/certified/certified-protection-tradeoffs.pdf",
+    "teccl/examples/results/figures/certified/certified-protection-tradeoffs.svg"
+  ],
+  "retired_figure_directory": "teccl/examples/results/figures/preplanned_failure_execution"
+}

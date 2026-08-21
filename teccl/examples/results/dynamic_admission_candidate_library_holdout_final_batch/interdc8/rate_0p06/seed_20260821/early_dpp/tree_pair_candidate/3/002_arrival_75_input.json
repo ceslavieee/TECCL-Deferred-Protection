@@ -1,0 +1,56 @@
+{
+  "GurobiParams": {
+    "heuristics": 0.6,
+    "mip_focus": 1,
+    "mip_gap": 0.01,
+    "no_rel_heur_work": 0.0,
+    "output_flag": 0,
+    "time_limit": 0.01
+  },
+  "InstanceParams": {
+    "alpha_threshold": 0.1,
+    "collective": 1,
+    "debug": false,
+    "debug_output_file": "",
+    "deferred_timing_mode": 2,
+    "detection_delay_epochs": 1,
+    "enable_dynamic_backup_release": false,
+    "enable_failure_scenarios": true,
+    "enable_real_failure_timing": true,
+    "enforce_failure_time_robust_reservation": true,
+    "enforce_multicast_tree_pair": true,
+    "epoch_duration": -1,
+    "epoch_multiplier": 1,
+    "epoch_type": 1,
+    "failure_model": 2,
+    "failure_scenario_offset": 0,
+    "failure_time_epoch": 0,
+    "fixed_backup_tree_schedule": "teccl/examples/results/dynamic_admission_candidate_tree_first_calibration/interdc8/rate_0p06/seed_20260811/ddpp/003_arrival_6_schedule.json",
+    "fixed_reservation_schedule": "",
+    "fixed_working_schedule": "",
+    "fixed_working_tree_schedule": "teccl/examples/results/dynamic_admission_candidate_tree_first_calibration/interdc8/rate_0p06/seed_20260811/ddpp/003_arrival_6_schedule.json",
+    "max_failure_scenarios": -1,
+    "minimum_reservation_schedule": "",
+    "num_chunks": 1,
+    "num_epochs": 40,
+    "objective_type": 3,
+    "prior_link_epoch_occupancy_file": "teccl/examples/results/dynamic_admission_candidate_library_holdout_final_batch/interdc8/rate_0p06/seed_20260821/early_dpp/002_arrival_75_occupancy.json",
+    "protection_link_disjoint": true,
+    "protection_mode": 4,
+    "schedule_output_file": "teccl/examples/results/dynamic_admission_candidate_library_holdout_final_batch/interdc8/rate_0p06/seed_20260821/early_dpp/tree_pair_candidate/3/002_arrival_75_schedule.json",
+    "solution_method": 1,
+    "solver_result_output_file": "teccl/examples/results/dynamic_admission_candidate_library_holdout_final_batch/interdc8/rate_0p06/seed_20260821/early_dpp/tree_pair_candidate/3/002_arrival_75_solver_result.json",
+    "switch_copy": false,
+    "switch_to_gpu_link_on": true,
+    "working_deadline_ratio": 0.5
+  },
+  "TopologyParams": {
+    "alpha": [
+      0.0,
+      0.0
+    ],
+    "chassis": 1,
+    "chunk_size": 25.0,
+    "name": "InterDC8"
+  }
+}

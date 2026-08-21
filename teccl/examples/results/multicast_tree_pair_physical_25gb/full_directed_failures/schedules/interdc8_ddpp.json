@@ -1,0 +1,4357 @@
+{
+  "1-Epoch_Duration": 2.0,
+  "10-Working_Flows": [
+    "Chunk 0 from 0 traveled over 0->1 in epoch 0",
+    "Chunk 0 from 1 traveled over 1->3 in epoch 0",
+    "Chunk 0 from 1 traveled over 1->5 in epoch 0",
+    "Chunk 0 from 2 traveled over 2->3 in epoch 0",
+    "Chunk 0 from 2 traveled over 2->6 in epoch 0",
+    "Chunk 0 from 3 traveled over 3->0 in epoch 0",
+    "Chunk 0 from 3 traveled over 3->2 in epoch 0",
+    "Chunk 0 from 3 traveled over 3->4 in epoch 0",
+    "Chunk 0 from 4 traveled over 4->6 in epoch 0",
+    "Chunk 0 from 5 traveled over 5->1 in epoch 0",
+    "Chunk 0 from 5 traveled over 5->7 in epoch 0",
+    "Chunk 0 from 6 traveled over 6->2 in epoch 0",
+    "Chunk 0 from 6 traveled over 6->5 in epoch 0",
+    "Chunk 0 from 7 traveled over 7->5 in epoch 0",
+    "Chunk 0 from 0 traveled over 1->2 in epoch 1",
+    "Chunk 0 from 5 traveled over 1->0 in epoch 2",
+    "Chunk 0 from 5 traveled over 1->3 in epoch 2",
+    "Chunk 0 from 6 traveled over 2->1 in epoch 2",
+    "Chunk 0 from 0 traveled over 2->3 in epoch 2",
+    "Chunk 0 from 0 traveled over 2->6 in epoch 2",
+    "Chunk 0 from 1 traveled over 3->0 in epoch 2",
+    "Chunk 0 from 2 traveled over 3->1 in epoch 2",
+    "Chunk 0 from 1 traveled over 3->2 in epoch 2",
+    "Chunk 0 from 3 traveled over 4->5 in epoch 2",
+    "Chunk 0 from 7 traveled over 5->1 in epoch 2",
+    "Chunk 0 from 1 traveled over 5->4 in epoch 2",
+    "Chunk 0 from 7 traveled over 5->6 in epoch 2",
+    "Chunk 0 from 6 traveled over 5->7 in epoch 2",
+    "Chunk 0 from 4 traveled over 6->2 in epoch 2",
+    "Chunk 0 from 4 traveled over 6->5 in epoch 2",
+    "Chunk 0 from 2 traveled over 6->7 in epoch 2",
+    "Chunk 0 from 5 traveled over 7->6 in epoch 2",
+    "Chunk 0 from 6 traveled over 1->0 in epoch 3",
+    "Chunk 0 from 1 traveled over 4->6 in epoch 3",
+    "Chunk 0 from 7 traveled over 5->4 in epoch 3",
+    "Chunk 0 from 4 traveled over 6->7 in epoch 3",
+    "Chunk 0 from 2 traveled over 7->5 in epoch 3",
+    "Chunk 0 from 6 traveled over 0->3 in epoch 4",
+    "Chunk 0 from 7 traveled over 1->0 in epoch 4",
+    "Chunk 0 from 7 traveled over 1->3 in epoch 4",
+    "Chunk 0 from 4 traveled over 2->1 in epoch 4",
+    "Chunk 0 from 4 traveled over 2->3 in epoch 4",
+    "Chunk 0 from 2 traveled over 3->0 in epoch 4",
+    "Chunk 0 from 5 traveled over 3->2 in epoch 4",
+    "Chunk 0 from 5 traveled over 3->4 in epoch 4",
+    "Chunk 0 from 3 traveled over 5->1 in epoch 4",
+    "Chunk 0 from 6 traveled over 5->4 in epoch 4",
+    "Chunk 0 from 3 traveled over 5->6 in epoch 4",
+    "Chunk 0 from 3 traveled over 5->7 in epoch 4",
+    "Chunk 0 from 7 traveled over 6->2 in epoch 4",
+    "Chunk 0 from 0 traveled over 6->4 in epoch 4",
+    "Chunk 0 from 0 traveled over 6->5 in epoch 4",
+    "Chunk 0 from 0 traveled over 6->7 in epoch 4",
+    "Chunk 0 from 4 traveled over 1->0 in epoch 5",
+    "Chunk 0 from 2 traveled over 5->4 in epoch 5",
+    "Chunk 0 from 1 traveled over 6->7 in epoch 5"
+  ],
+  "10a-Working_Demand_Links": [
+    {
+      "chunk": 0,
+      "destination": 1,
+      "link": "0->1",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "link": "0->1",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "link": "1->2",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "link": "0->1",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "link": "1->2",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "link": "2->3",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "link": "0->1",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "link": "1->2",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "link": "2->6",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "link": "6->4",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 5,
+      "link": "0->1",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 5,
+      "link": "1->2",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 5,
+      "link": "2->6",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 5,
+      "link": "6->5",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "link": "0->1",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "link": "1->2",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "link": "2->6",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "link": "0->1",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "link": "1->2",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "link": "2->6",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "link": "6->7",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "link": "1->3",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "link": "3->0",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "link": "1->3",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "link": "3->2",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "link": "1->3",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "link": "1->5",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "link": "5->4",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 5,
+      "link": "1->5",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "link": "1->5",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "link": "4->6",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "link": "5->4",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "link": "1->5",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "link": "4->6",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "link": "5->4",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "link": "6->7",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "link": "2->3",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "link": "3->0",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "link": "2->3",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "link": "3->1",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "link": "2->3",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "link": "2->6",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "link": "5->4",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "link": "6->7",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "link": "7->5",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 5,
+      "link": "2->6",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 5,
+      "link": "6->7",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 5,
+      "link": "7->5",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "link": "2->6",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "link": "2->6",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "link": "6->7",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "link": "3->0",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "link": "3->4",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "link": "4->5",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "link": "5->1",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "link": "3->2",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "link": "3->4",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 5,
+      "link": "3->4",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 5,
+      "link": "4->5",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "link": "3->4",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "link": "4->5",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "link": "5->6",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "link": "3->4",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "link": "4->5",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "link": "5->7",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "link": "1->0",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "link": "2->1",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "link": "4->6",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "link": "6->2",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "link": "2->1",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "link": "4->6",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "link": "6->2",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "link": "4->6",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "link": "6->2",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "link": "2->3",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "link": "4->6",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "link": "6->2",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 5,
+      "link": "4->6",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 5,
+      "link": "6->5",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "link": "4->6",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "link": "4->6",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "link": "6->7",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "link": "1->0",
+      "source": 5
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "link": "5->1",
+      "source": 5
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "link": "5->1",
+      "source": 5
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "link": "1->3",
+      "source": 5
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "link": "3->2",
+      "source": 5
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "link": "5->1",
+      "source": 5
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "link": "1->3",
+      "source": 5
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "link": "5->1",
+      "source": 5
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "link": "1->3",
+      "source": 5
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "link": "3->4",
+      "source": 5
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "link": "5->1",
+      "source": 5
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "link": "5->7",
+      "source": 5
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "link": "7->6",
+      "source": 5
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "link": "5->7",
+      "source": 5
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "link": "1->0",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "link": "2->1",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "link": "6->2",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "link": "2->1",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "link": "6->2",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "link": "6->2",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "link": "0->3",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "link": "1->0",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "link": "2->1",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "link": "6->2",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "link": "5->4",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "link": "6->5",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 5,
+      "link": "6->5",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "link": "5->7",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "link": "6->5",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "link": "1->0",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "link": "5->1",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "link": "7->5",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "link": "5->1",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "link": "7->5",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "link": "5->6",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "link": "6->2",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "link": "7->5",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "link": "1->3",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "link": "5->1",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "link": "7->5",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "link": "5->4",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "link": "7->5",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 5,
+      "link": "7->5",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "link": "5->6",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "link": "7->5",
+      "source": 7
+    }
+  ],
+  "10b-Working_Demand_Link_Epochs": [
+    {
+      "chunk": 0,
+      "destination": 1,
+      "epoch": 0,
+      "link": "0->1",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "epoch": 0,
+      "link": "0->1",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "epoch": 1,
+      "link": "1->2",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "epoch": 0,
+      "link": "0->1",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "epoch": 1,
+      "link": "1->2",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "epoch": 2,
+      "link": "2->3",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "epoch": 0,
+      "link": "0->1",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "epoch": 1,
+      "link": "1->2",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "epoch": 2,
+      "link": "2->6",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "epoch": 4,
+      "link": "6->4",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 5,
+      "epoch": 0,
+      "link": "0->1",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 5,
+      "epoch": 1,
+      "link": "1->2",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 5,
+      "epoch": 2,
+      "link": "2->6",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 5,
+      "epoch": 4,
+      "link": "6->5",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "epoch": 0,
+      "link": "0->1",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "epoch": 1,
+      "link": "1->2",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "epoch": 2,
+      "link": "2->6",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "epoch": 0,
+      "link": "0->1",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "epoch": 1,
+      "link": "1->2",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "epoch": 2,
+      "link": "2->6",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "epoch": 4,
+      "link": "6->7",
+      "source": 0
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "epoch": 0,
+      "link": "1->3",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "epoch": 2,
+      "link": "3->0",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "epoch": 0,
+      "link": "1->3",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "epoch": 2,
+      "link": "3->2",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "epoch": 0,
+      "link": "1->3",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "epoch": 0,
+      "link": "1->5",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "epoch": 2,
+      "link": "5->4",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 5,
+      "epoch": 0,
+      "link": "1->5",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "epoch": 0,
+      "link": "1->5",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "epoch": 3,
+      "link": "4->6",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "epoch": 2,
+      "link": "5->4",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "epoch": 0,
+      "link": "1->5",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "epoch": 3,
+      "link": "4->6",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "epoch": 2,
+      "link": "5->4",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "epoch": 5,
+      "link": "6->7",
+      "source": 1
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "epoch": 0,
+      "link": "2->3",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "epoch": 4,
+      "link": "3->0",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "epoch": 0,
+      "link": "2->3",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "epoch": 2,
+      "link": "3->1",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "epoch": 0,
+      "link": "2->3",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "epoch": 0,
+      "link": "2->6",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "epoch": 5,
+      "link": "5->4",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "epoch": 2,
+      "link": "6->7",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "epoch": 3,
+      "link": "7->5",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 5,
+      "epoch": 0,
+      "link": "2->6",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 5,
+      "epoch": 2,
+      "link": "6->7",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 5,
+      "epoch": 3,
+      "link": "7->5",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "epoch": 0,
+      "link": "2->6",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "epoch": 0,
+      "link": "2->6",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "epoch": 2,
+      "link": "6->7",
+      "source": 2
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "epoch": 0,
+      "link": "3->0",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "epoch": 0,
+      "link": "3->4",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "epoch": 2,
+      "link": "4->5",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "epoch": 4,
+      "link": "5->1",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "epoch": 0,
+      "link": "3->2",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "epoch": 0,
+      "link": "3->4",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 5,
+      "epoch": 0,
+      "link": "3->4",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 5,
+      "epoch": 2,
+      "link": "4->5",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "epoch": 0,
+      "link": "3->4",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "epoch": 2,
+      "link": "4->5",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "epoch": 4,
+      "link": "5->6",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "epoch": 0,
+      "link": "3->4",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "epoch": 2,
+      "link": "4->5",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "epoch": 4,
+      "link": "5->7",
+      "source": 3
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "epoch": 5,
+      "link": "1->0",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "epoch": 4,
+      "link": "2->1",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "epoch": 0,
+      "link": "4->6",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "epoch": 2,
+      "link": "6->2",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "epoch": 4,
+      "link": "2->1",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "epoch": 0,
+      "link": "4->6",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "epoch": 2,
+      "link": "6->2",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "epoch": 0,
+      "link": "4->6",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "epoch": 2,
+      "link": "6->2",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "epoch": 4,
+      "link": "2->3",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "epoch": 0,
+      "link": "4->6",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "epoch": 2,
+      "link": "6->2",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 5,
+      "epoch": 0,
+      "link": "4->6",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 5,
+      "epoch": 2,
+      "link": "6->5",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "epoch": 0,
+      "link": "4->6",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "epoch": 0,
+      "link": "4->6",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "epoch": 3,
+      "link": "6->7",
+      "source": 4
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "epoch": 2,
+      "link": "1->0",
+      "source": 5
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "epoch": 0,
+      "link": "5->1",
+      "source": 5
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "epoch": 0,
+      "link": "5->1",
+      "source": 5
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "epoch": 2,
+      "link": "1->3",
+      "source": 5
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "epoch": 4,
+      "link": "3->2",
+      "source": 5
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "epoch": 0,
+      "link": "5->1",
+      "source": 5
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "epoch": 2,
+      "link": "1->3",
+      "source": 5
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "epoch": 0,
+      "link": "5->1",
+      "source": 5
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "epoch": 2,
+      "link": "1->3",
+      "source": 5
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "epoch": 4,
+      "link": "3->4",
+      "source": 5
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "epoch": 0,
+      "link": "5->1",
+      "source": 5
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "epoch": 0,
+      "link": "5->7",
+      "source": 5
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "epoch": 2,
+      "link": "7->6",
+      "source": 5
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "epoch": 0,
+      "link": "5->7",
+      "source": 5
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "epoch": 3,
+      "link": "1->0",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "epoch": 2,
+      "link": "2->1",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "epoch": 0,
+      "link": "6->2",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "epoch": 2,
+      "link": "2->1",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "epoch": 0,
+      "link": "6->2",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "epoch": 0,
+      "link": "6->2",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "epoch": 4,
+      "link": "0->3",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "epoch": 3,
+      "link": "1->0",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "epoch": 2,
+      "link": "2->1",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "epoch": 0,
+      "link": "6->2",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "epoch": 4,
+      "link": "5->4",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "epoch": 0,
+      "link": "6->5",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 5,
+      "epoch": 0,
+      "link": "6->5",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "epoch": 2,
+      "link": "5->7",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 7,
+      "epoch": 0,
+      "link": "6->5",
+      "source": 6
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "epoch": 4,
+      "link": "1->0",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "epoch": 2,
+      "link": "5->1",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 0,
+      "epoch": 0,
+      "link": "7->5",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "epoch": 2,
+      "link": "5->1",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 1,
+      "epoch": 0,
+      "link": "7->5",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "epoch": 2,
+      "link": "5->6",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "epoch": 4,
+      "link": "6->2",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 2,
+      "epoch": 0,
+      "link": "7->5",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "epoch": 4,
+      "link": "1->3",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "epoch": 2,
+      "link": "5->1",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 3,
+      "epoch": 0,
+      "link": "7->5",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "epoch": 3,
+      "link": "5->4",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 4,
+      "epoch": 0,
+      "link": "7->5",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 5,
+      "epoch": 0,
+      "link": "7->5",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "epoch": 2,
+      "link": "5->6",
+      "source": 7
+    },
+    {
+      "chunk": 0,
+      "destination": 6,
+      "epoch": 0,
+      "link": "7->5",
+      "source": 7
+    }
+  ],
+  "11-Protection_Flows": [],
+  "11a-Recovery_Flows_By_Scenario": [
+    "Scenario 0: chunk 0 from 0 recovered over 0->3 in epoch 28",
+    "Scenario 0: chunk 0 from 0 recovered over 3->2 in epoch 30",
+    "Scenario 0: chunk 0 from 0 recovered over 2->1 in epoch 32",
+    "Scenario 0: chunk 0 from 0 recovered over 1->5 in epoch 33",
+    "Scenario 0: chunk 0 from 0 recovered over 5->7 in epoch 35",
+    "Scenario 0: chunk 0 from 0 recovered over 7->6 in epoch 37",
+    "Scenario 0: chunk 0 from 0 recovered over 5->4 in epoch 38",
+    "Scenario 1: chunk 0 from 6 recovered over 6->4 in epoch 30",
+    "Scenario 1: chunk 0 from 6 recovered over 4->3 in epoch 32",
+    "Scenario 2: chunk 0 from 4 recovered over 4->3 in epoch 28",
+    "Scenario 2: chunk 0 from 5 recovered over 5->4 in epoch 29",
+    "Scenario 2: chunk 0 from 4 recovered over 3->0 in epoch 30",
+    "Scenario 2: chunk 0 from 5 recovered over 4->3 in epoch 30",
+    "Scenario 2: chunk 0 from 6 recovered over 6->4 in epoch 30",
+    "Scenario 2: chunk 0 from 7 recovered over 7->6 in epoch 31",
+    "Scenario 2: chunk 0 from 5 recovered over 3->0 in epoch 32",
+    "Scenario 2: chunk 0 from 6 recovered over 4->3 in epoch 32",
+    "Scenario 2: chunk 0 from 7 recovered over 6->4 in epoch 32",
+    "Scenario 2: chunk 0 from 6 recovered over 3->0 in epoch 34",
+    "Scenario 2: chunk 0 from 7 recovered over 4->3 in epoch 34",
+    "Scenario 2: chunk 0 from 7 recovered over 3->0 in epoch 36",
+    "Scenario 3: chunk 0 from 0 recovered over 0->3 in epoch 28",
+    "Scenario 3: chunk 0 from 0 recovered over 3->2 in epoch 30",
+    "Scenario 3: chunk 0 from 0 recovered over 2->1 in epoch 32",
+    "Scenario 3: chunk 0 from 0 recovered over 1->5 in epoch 33",
+    "Scenario 3: chunk 0 from 0 recovered over 5->7 in epoch 35",
+    "Scenario 3: chunk 0 from 0 recovered over 7->6 in epoch 37",
+    "Scenario 3: chunk 0 from 0 recovered over 5->4 in epoch 38",
+    "Scenario 4: chunk 0 from 1 recovered over 1->2 in epoch 27",
+    "Scenario 4: chunk 0 from 1 recovered over 2->3 in epoch 28",
+    "Scenario 4: chunk 0 from 5 recovered over 5->4 in epoch 29",
+    "Scenario 4: chunk 0 from 5 recovered over 4->3 in epoch 30",
+    "Scenario 4: chunk 0 from 7 recovered over 7->6 in epoch 31",
+    "Scenario 4: chunk 0 from 5 recovered over 3->0 in epoch 32",
+    "Scenario 4: chunk 0 from 7 recovered over 6->4 in epoch 32",
+    "Scenario 4: chunk 0 from 7 recovered over 4->3 in epoch 34",
+    "Scenario 4: chunk 0 from 5 recovered over 0->1 in epoch 37",
+    "Scenario 4: chunk 0 from 1 recovered over 1->0 in epoch 38",
+    "Scenario 4: chunk 0 from 5 recovered over 1->2 in epoch 38",
+    "Scenario 5: chunk 0 from 1 recovered over 1->2 in epoch 27",
+    "Scenario 5: chunk 0 from 1 recovered over 2->3 in epoch 28",
+    "Scenario 5: chunk 0 from 1 recovered over 3->4 in epoch 30",
+    "Scenario 5: chunk 0 from 1 recovered over 4->5 in epoch 32",
+    "Scenario 5: chunk 0 from 1 recovered over 5->7 in epoch 33",
+    "Scenario 5: chunk 0 from 1 recovered over 7->6 in epoch 38",
+    "Scenario 6: chunk 0 from 4 recovered over 4->3 in epoch 28",
+    "Scenario 6: chunk 0 from 4 recovered over 3->0 in epoch 30",
+    "Scenario 6: chunk 0 from 6 recovered over 6->4 in epoch 30",
+    "Scenario 6: chunk 0 from 6 recovered over 4->3 in epoch 32",
+    "Scenario 6: chunk 0 from 6 recovered over 3->0 in epoch 34",
+    "Scenario 6: chunk 0 from 4 recovered over 0->1 in epoch 35",
+    "Scenario 6: chunk 0 from 6 recovered over 0->1 in epoch 36",
+    "Scenario 7: chunk 0 from 0 recovered over 0->3 in epoch 28",
+    "Scenario 7: chunk 0 from 4 recovered over 4->3 in epoch 28",
+    "Scenario 7: chunk 0 from 2 recovered over 2->1 in epoch 30",
+    "Scenario 7: chunk 0 from 2 recovered over 1->0 in epoch 31",
+    "Scenario 7: chunk 0 from 2 recovered over 0->3 in epoch 32",
+    "Scenario 8: chunk 0 from 0 recovered over 0->3 in epoch 28",
+    "Scenario 8: chunk 0 from 2 recovered over 2->1 in epoch 30",
+    "Scenario 8: chunk 0 from 0 recovered over 3->2 in epoch 30",
+    "Scenario 8: chunk 0 from 2 recovered over 1->0 in epoch 31",
+    "Scenario 8: chunk 0 from 2 recovered over 0->3 in epoch 32",
+    "Scenario 8: chunk 0 from 0 recovered over 2->1 in epoch 32",
+    "Scenario 8: chunk 0 from 0 recovered over 1->5 in epoch 33",
+    "Scenario 8: chunk 0 from 2 recovered over 3->4 in epoch 34",
+    "Scenario 8: chunk 0 from 0 recovered over 5->7 in epoch 35",
+    "Scenario 8: chunk 0 from 2 recovered over 4->5 in epoch 36",
+    "Scenario 8: chunk 0 from 2 recovered over 5->7 in epoch 37",
+    "Scenario 8: chunk 0 from 0 recovered over 7->6 in epoch 37",
+    "Scenario 8: chunk 0 from 0 recovered over 5->4 in epoch 38",
+    "Scenario 8: chunk 0 from 2 recovered over 7->6 in epoch 39",
+    "Scenario 9: chunk 0 from 2 recovered over 2->1 in epoch 30",
+    "Scenario 9: chunk 0 from 2 recovered over 1->0 in epoch 31",
+    "Scenario 9: chunk 0 from 3 recovered over 3->1 in epoch 31",
+    "Scenario 9: chunk 0 from 1 recovered over 1->0 in epoch 38",
+    "Scenario 9: chunk 0 from 3 recovered over 1->0 in epoch 39",
+    "Scenario 10: chunk 0 from 2 recovered over 2->1 in epoch 30",
+    "Scenario 11: chunk 0 from 1 recovered over 1->2 in epoch 27",
+    "Scenario 11: chunk 0 from 5 recovered over 5->4 in epoch 29",
+    "Scenario 11: chunk 0 from 5 recovered over 4->3 in epoch 30",
+    "Scenario 11: chunk 0 from 3 recovered over 3->1 in epoch 31",
+    "Scenario 11: chunk 0 from 5 recovered over 3->0 in epoch 32",
+    "Scenario 11: chunk 0 from 3 recovered over 1->2 in epoch 33",
+    "Scenario 11: chunk 0 from 5 recovered over 0->1 in epoch 37",
+    "Scenario 11: chunk 0 from 5 recovered over 1->2 in epoch 38",
+    "Scenario 12: chunk 0 from 5 recovered over 5->4 in epoch 29",
+    "Scenario 12: chunk 0 from 3 recovered over 3->1 in epoch 31",
+    "Scenario 12: chunk 0 from 3 recovered over 1->2 in epoch 33",
+    "Scenario 12: chunk 0 from 3 recovered over 2->6 in epoch 34",
+    "Scenario 12: chunk 0 from 3 recovered over 6->7 in epoch 36",
+    "Scenario 12: chunk 0 from 3 recovered over 7->5 in epoch 37",
+    "Scenario 12: chunk 0 from 3 recovered over 5->4 in epoch 39",
+    "Scenario 14: chunk 0 from 3 recovered over 3->1 in epoch 31",
+    "Scenario 14: chunk 0 from 3 recovered over 1->2 in epoch 33",
+    "Scenario 14: chunk 0 from 3 recovered over 2->6 in epoch 34",
+    "Scenario 14: chunk 0 from 3 recovered over 6->7 in epoch 36",
+    "Scenario 14: chunk 0 from 3 recovered over 7->5 in epoch 37",
+    "Scenario 15: chunk 0 from 1 recovered over 1->2 in epoch 27",
+    "Scenario 15: chunk 0 from 1 recovered over 2->3 in epoch 28",
+    "Scenario 15: chunk 0 from 4 recovered over 4->3 in epoch 28",
+    "Scenario 15: chunk 0 from 4 recovered over 3->0 in epoch 30",
+    "Scenario 15: chunk 0 from 1 recovered over 3->4 in epoch 30",
+    "Scenario 15: chunk 0 from 4 recovered over 4->5 in epoch 30",
+    "Scenario 15: chunk 0 from 4 recovered over 5->7 in epoch 31",
+    "Scenario 15: chunk 0 from 1 recovered over 4->5 in epoch 32",
+    "Scenario 15: chunk 0 from 1 recovered over 5->7 in epoch 33",
+    "Scenario 15: chunk 0 from 4 recovered over 0->1 in epoch 35",
+    "Scenario 15: chunk 0 from 4 recovered over 1->2 in epoch 36",
+    "Scenario 15: chunk 0 from 4 recovered over 7->6 in epoch 36",
+    "Scenario 15: chunk 0 from 1 recovered over 7->6 in epoch 38",
+    "Scenario 16: chunk 0 from 5 recovered over 5->4 in epoch 29",
+    "Scenario 16: chunk 0 from 5 recovered over 4->3 in epoch 30",
+    "Scenario 16: chunk 0 from 3 recovered over 3->1 in epoch 31",
+    "Scenario 16: chunk 0 from 7 recovered over 7->6 in epoch 31",
+    "Scenario 16: chunk 0 from 5 recovered over 3->0 in epoch 32",
+    "Scenario 16: chunk 0 from 7 recovered over 6->4 in epoch 32",
+    "Scenario 16: chunk 0 from 7 recovered over 4->3 in epoch 34",
+    "Scenario 16: chunk 0 from 7 recovered over 3->0 in epoch 36",
+    "Scenario 16: chunk 0 from 5 recovered over 0->1 in epoch 37",
+    "Scenario 16: chunk 0 from 7 recovered over 0->1 in epoch 38",
+    "Scenario 16: chunk 0 from 5 recovered over 1->2 in epoch 38",
+    "Scenario 17: chunk 0 from 1 recovered over 1->2 in epoch 27",
+    "Scenario 17: chunk 0 from 1 recovered over 2->3 in epoch 28",
+    "Scenario 17: chunk 0 from 2 recovered over 2->1 in epoch 30",
+    "Scenario 17: chunk 0 from 1 recovered over 3->4 in epoch 30",
+    "Scenario 17: chunk 0 from 6 recovered over 6->4 in epoch 30",
+    "Scenario 17: chunk 0 from 2 recovered over 1->0 in epoch 31",
+    "Scenario 17: chunk 0 from 7 recovered over 7->6 in epoch 31",
+    "Scenario 17: chunk 0 from 2 recovered over 0->3 in epoch 32",
+    "Scenario 17: chunk 0 from 1 recovered over 4->5 in epoch 32",
+    "Scenario 17: chunk 0 from 7 recovered over 6->4 in epoch 32",
+    "Scenario 17: chunk 0 from 1 recovered over 5->7 in epoch 33",
+    "Scenario 17: chunk 0 from 2 recovered over 3->4 in epoch 34",
+    "Scenario 17: chunk 0 from 1 recovered over 7->6 in epoch 38",
+    "Scenario 18: chunk 0 from 3 recovered over 3->1 in epoch 31",
+    "Scenario 18: chunk 0 from 7 recovered over 7->6 in epoch 31",
+    "Scenario 18: chunk 0 from 7 recovered over 6->4 in epoch 32",
+    "Scenario 18: chunk 0 from 3 recovered over 1->2 in epoch 33",
+    "Scenario 18: chunk 0 from 3 recovered over 2->6 in epoch 34",
+    "Scenario 18: chunk 0 from 7 recovered over 4->3 in epoch 34",
+    "Scenario 18: chunk 0 from 7 recovered over 3->0 in epoch 36",
+    "Scenario 18: chunk 0 from 7 recovered over 0->1 in epoch 38",
+    "Scenario 18: chunk 0 from 7 recovered over 1->2 in epoch 39",
+    "Scenario 19: chunk 0 from 3 recovered over 3->1 in epoch 31",
+    "Scenario 19: chunk 0 from 3 recovered over 1->2 in epoch 33",
+    "Scenario 19: chunk 0 from 3 recovered over 2->6 in epoch 34",
+    "Scenario 19: chunk 0 from 3 recovered over 6->7 in epoch 36",
+    "Scenario 19: chunk 0 from 5 recovered over 5->6 in epoch 37",
+    "Scenario 19: chunk 0 from 6 recovered over 6->7 in epoch 38",
+    "Scenario 19: chunk 0 from 5 recovered over 6->7 in epoch 39",
+    "Scenario 20: chunk 0 from 4 recovered over 4->3 in epoch 28",
+    "Scenario 20: chunk 0 from 4 recovered over 3->0 in epoch 30",
+    "Scenario 20: chunk 0 from 6 recovered over 6->4 in epoch 30",
+    "Scenario 20: chunk 0 from 7 recovered over 7->6 in epoch 31",
+    "Scenario 20: chunk 0 from 6 recovered over 4->3 in epoch 32",
+    "Scenario 20: chunk 0 from 7 recovered over 6->4 in epoch 32",
+    "Scenario 20: chunk 0 from 6 recovered over 3->0 in epoch 34",
+    "Scenario 20: chunk 0 from 7 recovered over 4->3 in epoch 34",
+    "Scenario 20: chunk 0 from 4 recovered over 0->1 in epoch 35",
+    "Scenario 20: chunk 0 from 6 recovered over 0->1 in epoch 36",
+    "Scenario 20: chunk 0 from 4 recovered over 1->2 in epoch 36",
+    "Scenario 20: chunk 0 from 7 recovered over 3->0 in epoch 36",
+    "Scenario 20: chunk 0 from 6 recovered over 1->2 in epoch 37",
+    "Scenario 20: chunk 0 from 7 recovered over 0->1 in epoch 38",
+    "Scenario 20: chunk 0 from 7 recovered over 1->2 in epoch 39",
+    "Scenario 21: chunk 0 from 0 recovered over 0->3 in epoch 28",
+    "Scenario 21: chunk 0 from 0 recovered over 3->2 in epoch 30",
+    "Scenario 21: chunk 0 from 0 recovered over 2->1 in epoch 32",
+    "Scenario 21: chunk 0 from 0 recovered over 1->5 in epoch 33",
+    "Scenario 21: chunk 0 from 0 recovered over 5->4 in epoch 38",
+    "Scenario 22: chunk 0 from 0 recovered over 0->3 in epoch 28",
+    "Scenario 22: chunk 0 from 0 recovered over 3->2 in epoch 30",
+    "Scenario 22: chunk 0 from 4 recovered over 4->5 in epoch 30",
+    "Scenario 22: chunk 0 from 6 recovered over 6->4 in epoch 30",
+    "Scenario 22: chunk 0 from 0 recovered over 2->1 in epoch 32",
+    "Scenario 22: chunk 0 from 0 recovered over 1->5 in epoch 33",
+    "Scenario 22: chunk 0 from 6 recovered over 6->7 in epoch 38",
+    "Scenario 22: chunk 0 from 6 recovered over 4->5 in epoch 39",
+    "Scenario 23: chunk 0 from 1 recovered over 1->2 in epoch 27",
+    "Scenario 23: chunk 0 from 0 recovered over 0->3 in epoch 28",
+    "Scenario 23: chunk 0 from 1 recovered over 2->3 in epoch 28",
+    "Scenario 23: chunk 0 from 2 recovered over 2->1 in epoch 30",
+    "Scenario 23: chunk 0 from 0 recovered over 3->2 in epoch 30",
+    "Scenario 23: chunk 0 from 1 recovered over 3->4 in epoch 30",
+    "Scenario 23: chunk 0 from 4 recovered over 4->5 in epoch 30",
+    "Scenario 23: chunk 0 from 2 recovered over 1->0 in epoch 31",
+    "Scenario 23: chunk 0 from 4 recovered over 5->7 in epoch 31",
+    "Scenario 23: chunk 0 from 2 recovered over 0->3 in epoch 32",
+    "Scenario 23: chunk 0 from 0 recovered over 2->1 in epoch 32",
+    "Scenario 23: chunk 0 from 1 recovered over 4->5 in epoch 32",
+    "Scenario 23: chunk 0 from 0 recovered over 1->5 in epoch 33",
+    "Scenario 23: chunk 0 from 1 recovered over 5->7 in epoch 33",
+    "Scenario 23: chunk 0 from 2 recovered over 3->4 in epoch 34",
+    "Scenario 23: chunk 0 from 0 recovered over 5->7 in epoch 35",
+    "Scenario 23: chunk 0 from 2 recovered over 4->5 in epoch 36",
+    "Scenario 23: chunk 0 from 2 recovered over 5->7 in epoch 37",
+    "Scenario 24: chunk 0 from 2 recovered over 2->1 in epoch 30",
+    "Scenario 24: chunk 0 from 2 recovered over 1->0 in epoch 31",
+    "Scenario 24: chunk 0 from 7 recovered over 7->6 in epoch 31",
+    "Scenario 24: chunk 0 from 2 recovered over 0->3 in epoch 32",
+    "Scenario 24: chunk 0 from 7 recovered over 6->4 in epoch 32",
+    "Scenario 24: chunk 0 from 2 recovered over 3->4 in epoch 34",
+    "Scenario 24: chunk 0 from 7 recovered over 4->3 in epoch 34",
+    "Scenario 24: chunk 0 from 7 recovered over 3->0 in epoch 36",
+    "Scenario 24: chunk 0 from 2 recovered over 4->5 in epoch 36",
+    "Scenario 24: chunk 0 from 7 recovered over 0->1 in epoch 38",
+    "Scenario 24: chunk 0 from 7 recovered over 4->5 in epoch 38",
+    "Scenario 24: chunk 0 from 7 recovered over 1->2 in epoch 39",
+    "Scenario 25: chunk 0 from 5 recovered over 5->6 in epoch 37"
+  ],
+  "11b-Reserved_Backup_Slots": [
+    "Chunk 0 from 1 reserves 1->2 in epoch 27",
+    "Chunk 0 from 0 reserves 0->3 in epoch 28",
+    "Chunk 0 from 1 reserves 2->3 in epoch 28",
+    "Chunk 0 from 4 reserves 4->3 in epoch 28",
+    "Chunk 0 from 5 reserves 5->4 in epoch 29",
+    "Chunk 0 from 2 reserves 2->1 in epoch 30",
+    "Chunk 0 from 4 reserves 3->0 in epoch 30",
+    "Chunk 0 from 0 reserves 3->2 in epoch 30",
+    "Chunk 0 from 1 reserves 3->4 in epoch 30",
+    "Chunk 0 from 5 reserves 4->3 in epoch 30",
+    "Chunk 0 from 4 reserves 4->5 in epoch 30",
+    "Chunk 0 from 6 reserves 6->4 in epoch 30",
+    "Chunk 0 from 2 reserves 1->0 in epoch 31",
+    "Chunk 0 from 3 reserves 3->1 in epoch 31",
+    "Chunk 0 from 4 reserves 5->7 in epoch 31",
+    "Chunk 0 from 7 reserves 7->6 in epoch 31",
+    "Chunk 0 from 2 reserves 0->3 in epoch 32",
+    "Chunk 0 from 0 reserves 2->1 in epoch 32",
+    "Chunk 0 from 5 reserves 3->0 in epoch 32",
+    "Chunk 0 from 6 reserves 4->3 in epoch 32",
+    "Chunk 0 from 1 reserves 4->5 in epoch 32",
+    "Chunk 0 from 7 reserves 6->4 in epoch 32",
+    "Chunk 0 from 3 reserves 1->2 in epoch 33",
+    "Chunk 0 from 0 reserves 1->5 in epoch 33",
+    "Chunk 0 from 1 reserves 5->7 in epoch 33",
+    "Chunk 0 from 3 reserves 2->6 in epoch 34",
+    "Chunk 0 from 6 reserves 3->0 in epoch 34",
+    "Chunk 0 from 2 reserves 3->4 in epoch 34",
+    "Chunk 0 from 7 reserves 4->3 in epoch 34",
+    "Chunk 0 from 4 reserves 0->1 in epoch 35",
+    "Chunk 0 from 0 reserves 5->7 in epoch 35",
+    "Chunk 0 from 6 reserves 0->1 in epoch 36",
+    "Chunk 0 from 4 reserves 1->2 in epoch 36",
+    "Chunk 0 from 7 reserves 3->0 in epoch 36",
+    "Chunk 0 from 2 reserves 4->5 in epoch 36",
+    "Chunk 0 from 3 reserves 6->7 in epoch 36",
+    "Chunk 0 from 4 reserves 7->6 in epoch 36",
+    "Chunk 0 from 5 reserves 0->1 in epoch 37",
+    "Chunk 0 from 6 reserves 1->2 in epoch 37",
+    "Chunk 0 from 5 reserves 5->6 in epoch 37",
+    "Chunk 0 from 2 reserves 5->7 in epoch 37",
+    "Chunk 0 from 3 reserves 7->5 in epoch 37",
+    "Chunk 0 from 0 reserves 7->6 in epoch 37",
+    "Chunk 0 from 7 reserves 0->1 in epoch 38",
+    "Chunk 0 from 1 reserves 1->0 in epoch 38",
+    "Chunk 0 from 5 reserves 1->2 in epoch 38",
+    "Chunk 0 from 7 reserves 4->5 in epoch 38",
+    "Chunk 0 from 0 reserves 5->4 in epoch 38",
+    "Chunk 0 from 6 reserves 6->7 in epoch 38",
+    "Chunk 0 from 1 reserves 7->6 in epoch 38",
+    "Chunk 0 from 3 reserves 1->0 in epoch 39",
+    "Chunk 0 from 7 reserves 1->2 in epoch 39",
+    "Chunk 0 from 6 reserves 4->5 in epoch 39",
+    "Chunk 0 from 3 reserves 5->4 in epoch 39",
+    "Chunk 0 from 5 reserves 6->7 in epoch 39",
+    "Chunk 0 from 2 reserves 7->6 in epoch 39"
+  ],
+  "11c-Reserved_Backup_Slot_Count": 56,
+  "11d-Executed_Recovery_Flow_Count": 209,
+  "14-Resource_Accounting_Unit": "occupied directed link-epochs weighted by beta(i,j) + 1",
+  "14a-Contingency_Plan_Link_Epochs": 81,
+  "14b-Peak_Future_Reserved_Link_Epochs": 81,
+  "14c-Future_Reservation_Holding_Units": 486,
+  "14d-Released_Before_Scheduled_Slot_Link_Epochs": 81,
+  "14e-Failure_Free_Committed_Backup_Link_Epochs": 0,
+  "14f-Failure_Free_Release_Ratio": 1.0,
+  "14g-Future_Reservation_Profile": [
+    {
+      "active_future_reserved_link_epochs": 81,
+      "observation_epoch": 0,
+      "released_before_scheduled_slot_link_epochs": 0,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 81,
+      "observation_epoch": 1,
+      "released_before_scheduled_slot_link_epochs": 0,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 81,
+      "observation_epoch": 2,
+      "released_before_scheduled_slot_link_epochs": 0,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 81,
+      "observation_epoch": 3,
+      "released_before_scheduled_slot_link_epochs": 0,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 81,
+      "observation_epoch": 4,
+      "released_before_scheduled_slot_link_epochs": 0,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 81,
+      "observation_epoch": 5,
+      "released_before_scheduled_slot_link_epochs": 0,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 6,
+      "released_before_scheduled_slot_link_epochs": 81,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 7,
+      "released_before_scheduled_slot_link_epochs": 81,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 8,
+      "released_before_scheduled_slot_link_epochs": 81,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 9,
+      "released_before_scheduled_slot_link_epochs": 81,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 10,
+      "released_before_scheduled_slot_link_epochs": 81,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 11,
+      "released_before_scheduled_slot_link_epochs": 81,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 12,
+      "released_before_scheduled_slot_link_epochs": 81,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 13,
+      "released_before_scheduled_slot_link_epochs": 81,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 14,
+      "released_before_scheduled_slot_link_epochs": 81,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 15,
+      "released_before_scheduled_slot_link_epochs": 81,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 16,
+      "released_before_scheduled_slot_link_epochs": 81,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 17,
+      "released_before_scheduled_slot_link_epochs": 81,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 18,
+      "released_before_scheduled_slot_link_epochs": 81,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 19,
+      "released_before_scheduled_slot_link_epochs": 81,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 20,
+      "released_before_scheduled_slot_link_epochs": 81,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 21,
+      "released_before_scheduled_slot_link_epochs": 81,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 22,
+      "released_before_scheduled_slot_link_epochs": 81,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 23,
+      "released_before_scheduled_slot_link_epochs": 81,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 24,
+      "released_before_scheduled_slot_link_epochs": 81,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 25,
+      "released_before_scheduled_slot_link_epochs": 81,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 26,
+      "released_before_scheduled_slot_link_epochs": 81,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 27,
+      "released_before_scheduled_slot_link_epochs": 81,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 28,
+      "released_before_scheduled_slot_link_epochs": 81,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 29,
+      "released_before_scheduled_slot_link_epochs": 81,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 30,
+      "released_before_scheduled_slot_link_epochs": 81,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 31,
+      "released_before_scheduled_slot_link_epochs": 81,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 32,
+      "released_before_scheduled_slot_link_epochs": 81,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 33,
+      "released_before_scheduled_slot_link_epochs": 81,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 34,
+      "released_before_scheduled_slot_link_epochs": 81,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 35,
+      "released_before_scheduled_slot_link_epochs": 81,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 36,
+      "released_before_scheduled_slot_link_epochs": 81,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 37,
+      "released_before_scheduled_slot_link_epochs": 81,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 38,
+      "released_before_scheduled_slot_link_epochs": 81,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 39,
+      "released_before_scheduled_slot_link_epochs": 81,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 40,
+      "released_before_scheduled_slot_link_epochs": 81,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    }
+  ],
+  "14h-Chunk_Working_Completion_Profile": [
+    {
+      "chunk": 0,
+      "source": 0,
+      "working_completion_epoch": 6
+    },
+    {
+      "chunk": 0,
+      "source": 1,
+      "working_completion_epoch": 6
+    },
+    {
+      "chunk": 0,
+      "source": 2,
+      "working_completion_epoch": 6
+    },
+    {
+      "chunk": 0,
+      "source": 3,
+      "working_completion_epoch": 6
+    },
+    {
+      "chunk": 0,
+      "source": 4,
+      "working_completion_epoch": 6
+    },
+    {
+      "chunk": 0,
+      "source": 5,
+      "working_completion_epoch": 6
+    },
+    {
+      "chunk": 0,
+      "source": 6,
+      "working_completion_epoch": 6
+    },
+    {
+      "chunk": 0,
+      "source": 7,
+      "working_completion_epoch": 6
+    }
+  ],
+  "14i-Flow_Occupancy_Epochs_By_Link": [
+    {
+      "link": "0->1",
+      "occupied_epochs_per_flow": 1
+    },
+    {
+      "link": "0->3",
+      "occupied_epochs_per_flow": 2
+    },
+    {
+      "link": "1->0",
+      "occupied_epochs_per_flow": 1
+    },
+    {
+      "link": "1->2",
+      "occupied_epochs_per_flow": 1
+    },
+    {
+      "link": "1->3",
+      "occupied_epochs_per_flow": 2
+    },
+    {
+      "link": "1->5",
+      "occupied_epochs_per_flow": 2
+    },
+    {
+      "link": "2->1",
+      "occupied_epochs_per_flow": 1
+    },
+    {
+      "link": "2->3",
+      "occupied_epochs_per_flow": 2
+    },
+    {
+      "link": "2->6",
+      "occupied_epochs_per_flow": 2
+    },
+    {
+      "link": "3->0",
+      "occupied_epochs_per_flow": 2
+    },
+    {
+      "link": "3->1",
+      "occupied_epochs_per_flow": 2
+    },
+    {
+      "link": "3->2",
+      "occupied_epochs_per_flow": 2
+    },
+    {
+      "link": "3->4",
+      "occupied_epochs_per_flow": 2
+    },
+    {
+      "link": "4->3",
+      "occupied_epochs_per_flow": 2
+    },
+    {
+      "link": "4->5",
+      "occupied_epochs_per_flow": 1
+    },
+    {
+      "link": "4->6",
+      "occupied_epochs_per_flow": 2
+    },
+    {
+      "link": "5->1",
+      "occupied_epochs_per_flow": 2
+    },
+    {
+      "link": "5->4",
+      "occupied_epochs_per_flow": 1
+    },
+    {
+      "link": "5->6",
+      "occupied_epochs_per_flow": 2
+    },
+    {
+      "link": "5->7",
+      "occupied_epochs_per_flow": 2
+    },
+    {
+      "link": "6->2",
+      "occupied_epochs_per_flow": 2
+    },
+    {
+      "link": "6->4",
+      "occupied_epochs_per_flow": 2
+    },
+    {
+      "link": "6->5",
+      "occupied_epochs_per_flow": 2
+    },
+    {
+      "link": "6->7",
+      "occupied_epochs_per_flow": 1
+    },
+    {
+      "link": "7->5",
+      "occupied_epochs_per_flow": 2
+    },
+    {
+      "link": "7->6",
+      "occupied_epochs_per_flow": 1
+    }
+  ],
+  "14j-Contingency_Plan_Transmissions": 56,
+  "14k-Contingency_Plan_Payload_GB_Links": 1400.0,
+  "14l-Contingency_Plan_Occupied_Link_Seconds": 162.0,
+  "14m-Future_Reservation_Holding_Link_Second_Squared": 1944.0,
+  "14n-Released_Before_Scheduled_Slot_Link_Seconds": 162.0,
+  "14o-Failure_Free_Committed_Backup_Link_Seconds": 0.0,
+  "14p-Accounting_Epoch_Duration_Seconds": 2.0,
+  "14q-Accounting_Chunk_Size_GB": 25.0,
+  "2-Expected_Epoch_Duration": 2.0,
+  "3-Heuristic_Working_Finish_Epochs": 4.333333333333334,
+  "4-Heuristic_Deferred_Finish_Epochs": 8.666666666666668,
+  "5-Heuristic_Deferred_Finish_Time": 17.333333333333336,
+  "6-Deferred_Deadline_Factor": 2.0,
+  "7-Working_Deadline_Epoch": 20,
+  "7a-Deferred_Activation_Epoch": 21,
+  "7aa-Multicast_Tree_Pair_Enforced": true,
+  "7b-Failure_Observation_Epoch": 10,
+  "7c-Dynamic_Backup_Release": false,
+  "7d-Real_Failure_Timing": true,
+  "7e-Failure_Time_Epoch": 1,
+  "7f-Detection_Delay_Epochs": 1,
+  "7g-Recovery_Start_Epoch": 21,
+  "7h-Recovery_Inherits_Scenario_Valid_Working_Buffers": false,
+  "7i-Post_Failure_Working_Flows_Continue": true,
+  "7j-Failure_Model": "EXACT",
+  "7k-Failure_Exposure_Granularity": "fixed embedded demand-link-epoch exposure",
+  "7l-Fixed_Working_Schedule": "teccl/examples/results/multicast_tree_pair_physical_25gb/full_directed_failures/schedules/interdc8_dpp.json",
+  "7m-Protection_Semantics": "scenario-robust DDPP fixed-time subproblem",
+  "7n-Normal_Operation_Backup_Data_Transmissions": 0,
+  "7o-Recovery_Reservation_Binding": "flow_r <= flow_p",
+  "7p-DPP_Reservation_Deadline_Epoch": 20,
+  "7q-Failure_Time_Known_To_Optimizer": true,
+  "7r-Robust_Across_Unknown_Failure_Time": false,
+  "7s-Strict_Protected_Completion_Deadline_Epoch": 40,
+  "7t-Fixed_Reservation_Schedule": "",
+  "7u-Minimum_Reservation_Schedule": "",
+  "7u2-Fixed_Backup_Tree_Schedule": "teccl/examples/results/multicast_tree_pair_physical_25gb/full_directed_failures/schedules/interdc8_dpp.json",
+  "7v-Recovery_Link_Disjoint_From_Working_Per_Scenario": true,
+  "7w-Reservation_Start_Epoch": 21,
+  "7x-Reservation_End_Epoch": 40,
+  "7y-Prior_Link_Epoch_Occupancy_File": "",
+  "7z-Prior_Occupied_Link_Epoch_Count": 0,
+  "8-Final_Deadline_Epoch": 40,
+  "9-Epochs_Required": 40,
+  "9a-Failure_Scenarios": [
+    "0->1",
+    "0->3",
+    "1->0",
+    "1->2",
+    "1->3",
+    "1->5",
+    "2->1",
+    "2->3",
+    "2->6",
+    "3->0",
+    "3->1",
+    "3->2",
+    "3->4",
+    "4->3",
+    "4->5",
+    "4->6",
+    "5->1",
+    "5->4",
+    "5->6",
+    "5->7",
+    "6->2",
+    "6->4",
+    "6->5",
+    "6->7",
+    "7->5",
+    "7->6"
+  ],
+  "9b-Failure_Scenario_Summary": {
+    "Failure 0: 0->1": {
+      "affected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
+        "Demand (0->4, chunk 0)",
+        "Demand (0->5, chunk 0)",
+        "Demand (0->6, chunk 0)",
+        "Demand (0->7, chunk 0)"
+      ],
+      "dynamically_released_demands": [],
+      "failed_link": "0->1",
+      "protected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
+        "Demand (0->4, chunk 0)",
+        "Demand (0->5, chunk 0)",
+        "Demand (0->6, chunk 0)",
+        "Demand (0->7, chunk 0)"
+      ],
+      "unaffected_demands": [
+        "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)",
+        "Demand (1->4, chunk 0)",
+        "Demand (1->5, chunk 0)",
+        "Demand (1->6, chunk 0)",
+        "Demand (1->7, chunk 0)",
+        "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)",
+        "Demand (2->4, chunk 0)",
+        "Demand (2->5, chunk 0)",
+        "Demand (2->6, chunk 0)",
+        "Demand (2->7, chunk 0)",
+        "Demand (3->0, chunk 0)",
+        "Demand (3->1, chunk 0)",
+        "Demand (3->2, chunk 0)",
+        "Demand (3->4, chunk 0)",
+        "Demand (3->5, chunk 0)",
+        "Demand (3->6, chunk 0)",
+        "Demand (3->7, chunk 0)",
+        "Demand (4->0, chunk 0)",
+        "Demand (4->1, chunk 0)",
+        "Demand (4->2, chunk 0)",
+        "Demand (4->3, chunk 0)",
+        "Demand (4->5, chunk 0)",
+        "Demand (4->6, chunk 0)",
+        "Demand (4->7, chunk 0)",
+        "Demand (5->0, chunk 0)",
+        "Demand (5->1, chunk 0)",
+        "Demand (5->2, chunk 0)",
+        "Demand (5->3, chunk 0)",
+        "Demand (5->4, chunk 0)",
+        "Demand (5->6, chunk 0)",
+        "Demand (5->7, chunk 0)",
+        "Demand (6->0, chunk 0)",
+        "Demand (6->1, chunk 0)",
+        "Demand (6->2, chunk 0)",
+        "Demand (6->3, chunk 0)",
+        "Demand (6->4, chunk 0)",
+        "Demand (6->5, chunk 0)",
+        "Demand (6->7, chunk 0)",
+        "Demand (7->0, chunk 0)",
+        "Demand (7->1, chunk 0)",
+        "Demand (7->2, chunk 0)",
+        "Demand (7->3, chunk 0)",
+        "Demand (7->4, chunk 0)",
+        "Demand (7->5, chunk 0)",
+        "Demand (7->6, chunk 0)"
+      ],
+      "unprotected_demands": []
+    },
+    "Failure 10: 3->1": {
+      "affected_demands": [
+        "Demand (2->1, chunk 0)"
+      ],
+      "dynamically_released_demands": [],
+      "failed_link": "3->1",
+      "protected_demands": [
+        "Demand (2->1, chunk 0)"
+      ],
+      "unaffected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
+        "Demand (0->4, chunk 0)",
+        "Demand (0->5, chunk 0)",
+        "Demand (0->6, chunk 0)",
+        "Demand (0->7, chunk 0)",
+        "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)",
+        "Demand (1->4, chunk 0)",
+        "Demand (1->5, chunk 0)",
+        "Demand (1->6, chunk 0)",
+        "Demand (1->7, chunk 0)",
+        "Demand (2->0, chunk 0)",
+        "Demand (2->3, chunk 0)",
+        "Demand (2->4, chunk 0)",
+        "Demand (2->5, chunk 0)",
+        "Demand (2->6, chunk 0)",
+        "Demand (2->7, chunk 0)",
+        "Demand (3->0, chunk 0)",
+        "Demand (3->1, chunk 0)",
+        "Demand (3->2, chunk 0)",
+        "Demand (3->4, chunk 0)",
+        "Demand (3->5, chunk 0)",
+        "Demand (3->6, chunk 0)",
+        "Demand (3->7, chunk 0)",
+        "Demand (4->0, chunk 0)",
+        "Demand (4->1, chunk 0)",
+        "Demand (4->2, chunk 0)",
+        "Demand (4->3, chunk 0)",
+        "Demand (4->5, chunk 0)",
+        "Demand (4->6, chunk 0)",
+        "Demand (4->7, chunk 0)",
+        "Demand (5->0, chunk 0)",
+        "Demand (5->1, chunk 0)",
+        "Demand (5->2, chunk 0)",
+        "Demand (5->3, chunk 0)",
+        "Demand (5->4, chunk 0)",
+        "Demand (5->6, chunk 0)",
+        "Demand (5->7, chunk 0)",
+        "Demand (6->0, chunk 0)",
+        "Demand (6->1, chunk 0)",
+        "Demand (6->2, chunk 0)",
+        "Demand (6->3, chunk 0)",
+        "Demand (6->4, chunk 0)",
+        "Demand (6->5, chunk 0)",
+        "Demand (6->7, chunk 0)",
+        "Demand (7->0, chunk 0)",
+        "Demand (7->1, chunk 0)",
+        "Demand (7->2, chunk 0)",
+        "Demand (7->3, chunk 0)",
+        "Demand (7->4, chunk 0)",
+        "Demand (7->5, chunk 0)",
+        "Demand (7->6, chunk 0)"
+      ],
+      "unprotected_demands": []
+    },
+    "Failure 11: 3->2": {
+      "affected_demands": [
+        "Demand (1->2, chunk 0)",
+        "Demand (3->2, chunk 0)",
+        "Demand (5->2, chunk 0)"
+      ],
+      "dynamically_released_demands": [],
+      "failed_link": "3->2",
+      "protected_demands": [
+        "Demand (1->2, chunk 0)",
+        "Demand (3->2, chunk 0)",
+        "Demand (5->2, chunk 0)"
+      ],
+      "unaffected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
+        "Demand (0->4, chunk 0)",
+        "Demand (0->5, chunk 0)",
+        "Demand (0->6, chunk 0)",
+        "Demand (0->7, chunk 0)",
+        "Demand (1->0, chunk 0)",
+        "Demand (1->3, chunk 0)",
+        "Demand (1->4, chunk 0)",
+        "Demand (1->5, chunk 0)",
+        "Demand (1->6, chunk 0)",
+        "Demand (1->7, chunk 0)",
+        "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)",
+        "Demand (2->4, chunk 0)",
+        "Demand (2->5, chunk 0)",
+        "Demand (2->6, chunk 0)",
+        "Demand (2->7, chunk 0)",
+        "Demand (3->0, chunk 0)",
+        "Demand (3->1, chunk 0)",
+        "Demand (3->4, chunk 0)",
+        "Demand (3->5, chunk 0)",
+        "Demand (3->6, chunk 0)",
+        "Demand (3->7, chunk 0)",
+        "Demand (4->0, chunk 0)",
+        "Demand (4->1, chunk 0)",
+        "Demand (4->2, chunk 0)",
+        "Demand (4->3, chunk 0)",
+        "Demand (4->5, chunk 0)",
+        "Demand (4->6, chunk 0)",
+        "Demand (4->7, chunk 0)",
+        "Demand (5->0, chunk 0)",
+        "Demand (5->1, chunk 0)",
+        "Demand (5->3, chunk 0)",
+        "Demand (5->4, chunk 0)",
+        "Demand (5->6, chunk 0)",
+        "Demand (5->7, chunk 0)",
+        "Demand (6->0, chunk 0)",
+        "Demand (6->1, chunk 0)",
+        "Demand (6->2, chunk 0)",
+        "Demand (6->3, chunk 0)",
+        "Demand (6->4, chunk 0)",
+        "Demand (6->5, chunk 0)",
+        "Demand (6->7, chunk 0)",
+        "Demand (7->0, chunk 0)",
+        "Demand (7->1, chunk 0)",
+        "Demand (7->2, chunk 0)",
+        "Demand (7->3, chunk 0)",
+        "Demand (7->4, chunk 0)",
+        "Demand (7->5, chunk 0)",
+        "Demand (7->6, chunk 0)"
+      ],
+      "unprotected_demands": []
+    },
+    "Failure 12: 3->4": {
+      "affected_demands": [
+        "Demand (3->1, chunk 0)",
+        "Demand (3->4, chunk 0)",
+        "Demand (3->5, chunk 0)",
+        "Demand (3->6, chunk 0)",
+        "Demand (3->7, chunk 0)",
+        "Demand (5->4, chunk 0)"
+      ],
+      "dynamically_released_demands": [],
+      "failed_link": "3->4",
+      "protected_demands": [
+        "Demand (3->1, chunk 0)",
+        "Demand (3->4, chunk 0)",
+        "Demand (3->5, chunk 0)",
+        "Demand (3->6, chunk 0)",
+        "Demand (3->7, chunk 0)",
+        "Demand (5->4, chunk 0)"
+      ],
+      "unaffected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
+        "Demand (0->4, chunk 0)",
+        "Demand (0->5, chunk 0)",
+        "Demand (0->6, chunk 0)",
+        "Demand (0->7, chunk 0)",
+        "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)",
+        "Demand (1->4, chunk 0)",
+        "Demand (1->5, chunk 0)",
+        "Demand (1->6, chunk 0)",
+        "Demand (1->7, chunk 0)",
+        "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)",
+        "Demand (2->4, chunk 0)",
+        "Demand (2->5, chunk 0)",
+        "Demand (2->6, chunk 0)",
+        "Demand (2->7, chunk 0)",
+        "Demand (3->0, chunk 0)",
+        "Demand (3->2, chunk 0)",
+        "Demand (4->0, chunk 0)",
+        "Demand (4->1, chunk 0)",
+        "Demand (4->2, chunk 0)",
+        "Demand (4->3, chunk 0)",
+        "Demand (4->5, chunk 0)",
+        "Demand (4->6, chunk 0)",
+        "Demand (4->7, chunk 0)",
+        "Demand (5->0, chunk 0)",
+        "Demand (5->1, chunk 0)",
+        "Demand (5->2, chunk 0)",
+        "Demand (5->3, chunk 0)",
+        "Demand (5->6, chunk 0)",
+        "Demand (5->7, chunk 0)",
+        "Demand (6->0, chunk 0)",
+        "Demand (6->1, chunk 0)",
+        "Demand (6->2, chunk 0)",
+        "Demand (6->3, chunk 0)",
+        "Demand (6->4, chunk 0)",
+        "Demand (6->5, chunk 0)",
+        "Demand (6->7, chunk 0)",
+        "Demand (7->0, chunk 0)",
+        "Demand (7->1, chunk 0)",
+        "Demand (7->2, chunk 0)",
+        "Demand (7->3, chunk 0)",
+        "Demand (7->4, chunk 0)",
+        "Demand (7->5, chunk 0)",
+        "Demand (7->6, chunk 0)"
+      ],
+      "unprotected_demands": []
+    },
+    "Failure 13: 4->3": {
+      "affected_demands": [],
+      "dynamically_released_demands": [],
+      "failed_link": "4->3",
+      "protected_demands": [],
+      "unaffected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
+        "Demand (0->4, chunk 0)",
+        "Demand (0->5, chunk 0)",
+        "Demand (0->6, chunk 0)",
+        "Demand (0->7, chunk 0)",
+        "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)",
+        "Demand (1->4, chunk 0)",
+        "Demand (1->5, chunk 0)",
+        "Demand (1->6, chunk 0)",
+        "Demand (1->7, chunk 0)",
+        "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)",
+        "Demand (2->4, chunk 0)",
+        "Demand (2->5, chunk 0)",
+        "Demand (2->6, chunk 0)",
+        "Demand (2->7, chunk 0)",
+        "Demand (3->0, chunk 0)",
+        "Demand (3->1, chunk 0)",
+        "Demand (3->2, chunk 0)",
+        "Demand (3->4, chunk 0)",
+        "Demand (3->5, chunk 0)",
+        "Demand (3->6, chunk 0)",
+        "Demand (3->7, chunk 0)",
+        "Demand (4->0, chunk 0)",
+        "Demand (4->1, chunk 0)",
+        "Demand (4->2, chunk 0)",
+        "Demand (4->3, chunk 0)",
+        "Demand (4->5, chunk 0)",
+        "Demand (4->6, chunk 0)",
+        "Demand (4->7, chunk 0)",
+        "Demand (5->0, chunk 0)",
+        "Demand (5->1, chunk 0)",
+        "Demand (5->2, chunk 0)",
+        "Demand (5->3, chunk 0)",
+        "Demand (5->4, chunk 0)",
+        "Demand (5->6, chunk 0)",
+        "Demand (5->7, chunk 0)",
+        "Demand (6->0, chunk 0)",
+        "Demand (6->1, chunk 0)",
+        "Demand (6->2, chunk 0)",
+        "Demand (6->3, chunk 0)",
+        "Demand (6->4, chunk 0)",
+        "Demand (6->5, chunk 0)",
+        "Demand (6->7, chunk 0)",
+        "Demand (7->0, chunk 0)",
+        "Demand (7->1, chunk 0)",
+        "Demand (7->2, chunk 0)",
+        "Demand (7->3, chunk 0)",
+        "Demand (7->4, chunk 0)",
+        "Demand (7->5, chunk 0)",
+        "Demand (7->6, chunk 0)"
+      ],
+      "unprotected_demands": []
+    },
+    "Failure 14: 4->5": {
+      "affected_demands": [
+        "Demand (3->1, chunk 0)",
+        "Demand (3->5, chunk 0)",
+        "Demand (3->6, chunk 0)",
+        "Demand (3->7, chunk 0)"
+      ],
+      "dynamically_released_demands": [],
+      "failed_link": "4->5",
+      "protected_demands": [
+        "Demand (3->1, chunk 0)",
+        "Demand (3->5, chunk 0)",
+        "Demand (3->6, chunk 0)",
+        "Demand (3->7, chunk 0)"
+      ],
+      "unaffected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
+        "Demand (0->4, chunk 0)",
+        "Demand (0->5, chunk 0)",
+        "Demand (0->6, chunk 0)",
+        "Demand (0->7, chunk 0)",
+        "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)",
+        "Demand (1->4, chunk 0)",
+        "Demand (1->5, chunk 0)",
+        "Demand (1->6, chunk 0)",
+        "Demand (1->7, chunk 0)",
+        "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)",
+        "Demand (2->4, chunk 0)",
+        "Demand (2->5, chunk 0)",
+        "Demand (2->6, chunk 0)",
+        "Demand (2->7, chunk 0)",
+        "Demand (3->0, chunk 0)",
+        "Demand (3->2, chunk 0)",
+        "Demand (3->4, chunk 0)",
+        "Demand (4->0, chunk 0)",
+        "Demand (4->1, chunk 0)",
+        "Demand (4->2, chunk 0)",
+        "Demand (4->3, chunk 0)",
+        "Demand (4->5, chunk 0)",
+        "Demand (4->6, chunk 0)",
+        "Demand (4->7, chunk 0)",
+        "Demand (5->0, chunk 0)",
+        "Demand (5->1, chunk 0)",
+        "Demand (5->2, chunk 0)",
+        "Demand (5->3, chunk 0)",
+        "Demand (5->4, chunk 0)",
+        "Demand (5->6, chunk 0)",
+        "Demand (5->7, chunk 0)",
+        "Demand (6->0, chunk 0)",
+        "Demand (6->1, chunk 0)",
+        "Demand (6->2, chunk 0)",
+        "Demand (6->3, chunk 0)",
+        "Demand (6->4, chunk 0)",
+        "Demand (6->5, chunk 0)",
+        "Demand (6->7, chunk 0)",
+        "Demand (7->0, chunk 0)",
+        "Demand (7->1, chunk 0)",
+        "Demand (7->2, chunk 0)",
+        "Demand (7->3, chunk 0)",
+        "Demand (7->4, chunk 0)",
+        "Demand (7->5, chunk 0)",
+        "Demand (7->6, chunk 0)"
+      ],
+      "unprotected_demands": []
+    },
+    "Failure 15: 4->6": {
+      "affected_demands": [
+        "Demand (1->6, chunk 0)",
+        "Demand (1->7, chunk 0)",
+        "Demand (4->0, chunk 0)",
+        "Demand (4->1, chunk 0)",
+        "Demand (4->2, chunk 0)",
+        "Demand (4->3, chunk 0)",
+        "Demand (4->5, chunk 0)",
+        "Demand (4->6, chunk 0)",
+        "Demand (4->7, chunk 0)"
+      ],
+      "dynamically_released_demands": [],
+      "failed_link": "4->6",
+      "protected_demands": [
+        "Demand (1->6, chunk 0)",
+        "Demand (1->7, chunk 0)",
+        "Demand (4->0, chunk 0)",
+        "Demand (4->1, chunk 0)",
+        "Demand (4->2, chunk 0)",
+        "Demand (4->3, chunk 0)",
+        "Demand (4->5, chunk 0)",
+        "Demand (4->6, chunk 0)",
+        "Demand (4->7, chunk 0)"
+      ],
+      "unaffected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
+        "Demand (0->4, chunk 0)",
+        "Demand (0->5, chunk 0)",
+        "Demand (0->6, chunk 0)",
+        "Demand (0->7, chunk 0)",
+        "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)",
+        "Demand (1->4, chunk 0)",
+        "Demand (1->5, chunk 0)",
+        "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)",
+        "Demand (2->4, chunk 0)",
+        "Demand (2->5, chunk 0)",
+        "Demand (2->6, chunk 0)",
+        "Demand (2->7, chunk 0)",
+        "Demand (3->0, chunk 0)",
+        "Demand (3->1, chunk 0)",
+        "Demand (3->2, chunk 0)",
+        "Demand (3->4, chunk 0)",
+        "Demand (3->5, chunk 0)",
+        "Demand (3->6, chunk 0)",
+        "Demand (3->7, chunk 0)",
+        "Demand (5->0, chunk 0)",
+        "Demand (5->1, chunk 0)",
+        "Demand (5->2, chunk 0)",
+        "Demand (5->3, chunk 0)",
+        "Demand (5->4, chunk 0)",
+        "Demand (5->6, chunk 0)",
+        "Demand (5->7, chunk 0)",
+        "Demand (6->0, chunk 0)",
+        "Demand (6->1, chunk 0)",
+        "Demand (6->2, chunk 0)",
+        "Demand (6->3, chunk 0)",
+        "Demand (6->4, chunk 0)",
+        "Demand (6->5, chunk 0)",
+        "Demand (6->7, chunk 0)",
+        "Demand (7->0, chunk 0)",
+        "Demand (7->1, chunk 0)",
+        "Demand (7->2, chunk 0)",
+        "Demand (7->3, chunk 0)",
+        "Demand (7->4, chunk 0)",
+        "Demand (7->5, chunk 0)",
+        "Demand (7->6, chunk 0)"
+      ],
+      "unprotected_demands": []
+    },
+    "Failure 16: 5->1": {
+      "affected_demands": [
+        "Demand (3->1, chunk 0)",
+        "Demand (5->0, chunk 0)",
+        "Demand (5->1, chunk 0)",
+        "Demand (5->2, chunk 0)",
+        "Demand (5->3, chunk 0)",
+        "Demand (5->4, chunk 0)",
+        "Demand (7->0, chunk 0)",
+        "Demand (7->1, chunk 0)",
+        "Demand (7->3, chunk 0)"
+      ],
+      "dynamically_released_demands": [],
+      "failed_link": "5->1",
+      "protected_demands": [
+        "Demand (3->1, chunk 0)",
+        "Demand (5->0, chunk 0)",
+        "Demand (5->1, chunk 0)",
+        "Demand (5->2, chunk 0)",
+        "Demand (5->3, chunk 0)",
+        "Demand (5->4, chunk 0)",
+        "Demand (7->0, chunk 0)",
+        "Demand (7->1, chunk 0)",
+        "Demand (7->3, chunk 0)"
+      ],
+      "unaffected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
+        "Demand (0->4, chunk 0)",
+        "Demand (0->5, chunk 0)",
+        "Demand (0->6, chunk 0)",
+        "Demand (0->7, chunk 0)",
+        "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)",
+        "Demand (1->4, chunk 0)",
+        "Demand (1->5, chunk 0)",
+        "Demand (1->6, chunk 0)",
+        "Demand (1->7, chunk 0)",
+        "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)",
+        "Demand (2->4, chunk 0)",
+        "Demand (2->5, chunk 0)",
+        "Demand (2->6, chunk 0)",
+        "Demand (2->7, chunk 0)",
+        "Demand (3->0, chunk 0)",
+        "Demand (3->2, chunk 0)",
+        "Demand (3->4, chunk 0)",
+        "Demand (3->5, chunk 0)",
+        "Demand (3->6, chunk 0)",
+        "Demand (3->7, chunk 0)",
+        "Demand (4->0, chunk 0)",
+        "Demand (4->1, chunk 0)",
+        "Demand (4->2, chunk 0)",
+        "Demand (4->3, chunk 0)",
+        "Demand (4->5, chunk 0)",
+        "Demand (4->6, chunk 0)",
+        "Demand (4->7, chunk 0)",
+        "Demand (5->6, chunk 0)",
+        "Demand (5->7, chunk 0)",
+        "Demand (6->0, chunk 0)",
+        "Demand (6->1, chunk 0)",
+        "Demand (6->2, chunk 0)",
+        "Demand (6->3, chunk 0)",
+        "Demand (6->4, chunk 0)",
+        "Demand (6->5, chunk 0)",
+        "Demand (6->7, chunk 0)",
+        "Demand (7->2, chunk 0)",
+        "Demand (7->4, chunk 0)",
+        "Demand (7->5, chunk 0)",
+        "Demand (7->6, chunk 0)"
+      ],
+      "unprotected_demands": []
+    },
+    "Failure 17: 5->4": {
+      "affected_demands": [
+        "Demand (1->4, chunk 0)",
+        "Demand (1->6, chunk 0)",
+        "Demand (1->7, chunk 0)",
+        "Demand (2->4, chunk 0)",
+        "Demand (6->4, chunk 0)",
+        "Demand (7->4, chunk 0)"
+      ],
+      "dynamically_released_demands": [],
+      "failed_link": "5->4",
+      "protected_demands": [
+        "Demand (1->4, chunk 0)",
+        "Demand (1->6, chunk 0)",
+        "Demand (1->7, chunk 0)",
+        "Demand (2->4, chunk 0)",
+        "Demand (6->4, chunk 0)",
+        "Demand (7->4, chunk 0)"
+      ],
+      "unaffected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
+        "Demand (0->4, chunk 0)",
+        "Demand (0->5, chunk 0)",
+        "Demand (0->6, chunk 0)",
+        "Demand (0->7, chunk 0)",
+        "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)",
+        "Demand (1->5, chunk 0)",
+        "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)",
+        "Demand (2->5, chunk 0)",
+        "Demand (2->6, chunk 0)",
+        "Demand (2->7, chunk 0)",
+        "Demand (3->0, chunk 0)",
+        "Demand (3->1, chunk 0)",
+        "Demand (3->2, chunk 0)",
+        "Demand (3->4, chunk 0)",
+        "Demand (3->5, chunk 0)",
+        "Demand (3->6, chunk 0)",
+        "Demand (3->7, chunk 0)",
+        "Demand (4->0, chunk 0)",
+        "Demand (4->1, chunk 0)",
+        "Demand (4->2, chunk 0)",
+        "Demand (4->3, chunk 0)",
+        "Demand (4->5, chunk 0)",
+        "Demand (4->6, chunk 0)",
+        "Demand (4->7, chunk 0)",
+        "Demand (5->0, chunk 0)",
+        "Demand (5->1, chunk 0)",
+        "Demand (5->2, chunk 0)",
+        "Demand (5->3, chunk 0)",
+        "Demand (5->4, chunk 0)",
+        "Demand (5->6, chunk 0)",
+        "Demand (5->7, chunk 0)",
+        "Demand (6->0, chunk 0)",
+        "Demand (6->1, chunk 0)",
+        "Demand (6->2, chunk 0)",
+        "Demand (6->3, chunk 0)",
+        "Demand (6->5, chunk 0)",
+        "Demand (6->7, chunk 0)",
+        "Demand (7->0, chunk 0)",
+        "Demand (7->1, chunk 0)",
+        "Demand (7->2, chunk 0)",
+        "Demand (7->3, chunk 0)",
+        "Demand (7->5, chunk 0)",
+        "Demand (7->6, chunk 0)"
+      ],
+      "unprotected_demands": []
+    },
+    "Failure 18: 5->6": {
+      "affected_demands": [
+        "Demand (3->6, chunk 0)",
+        "Demand (7->2, chunk 0)",
+        "Demand (7->6, chunk 0)"
+      ],
+      "dynamically_released_demands": [],
+      "failed_link": "5->6",
+      "protected_demands": [
+        "Demand (3->6, chunk 0)",
+        "Demand (7->2, chunk 0)",
+        "Demand (7->6, chunk 0)"
+      ],
+      "unaffected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
+        "Demand (0->4, chunk 0)",
+        "Demand (0->5, chunk 0)",
+        "Demand (0->6, chunk 0)",
+        "Demand (0->7, chunk 0)",
+        "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)",
+        "Demand (1->4, chunk 0)",
+        "Demand (1->5, chunk 0)",
+        "Demand (1->6, chunk 0)",
+        "Demand (1->7, chunk 0)",
+        "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)",
+        "Demand (2->4, chunk 0)",
+        "Demand (2->5, chunk 0)",
+        "Demand (2->6, chunk 0)",
+        "Demand (2->7, chunk 0)",
+        "Demand (3->0, chunk 0)",
+        "Demand (3->1, chunk 0)",
+        "Demand (3->2, chunk 0)",
+        "Demand (3->4, chunk 0)",
+        "Demand (3->5, chunk 0)",
+        "Demand (3->7, chunk 0)",
+        "Demand (4->0, chunk 0)",
+        "Demand (4->1, chunk 0)",
+        "Demand (4->2, chunk 0)",
+        "Demand (4->3, chunk 0)",
+        "Demand (4->5, chunk 0)",
+        "Demand (4->6, chunk 0)",
+        "Demand (4->7, chunk 0)",
+        "Demand (5->0, chunk 0)",
+        "Demand (5->1, chunk 0)",
+        "Demand (5->2, chunk 0)",
+        "Demand (5->3, chunk 0)",
+        "Demand (5->4, chunk 0)",
+        "Demand (5->6, chunk 0)",
+        "Demand (5->7, chunk 0)",
+        "Demand (6->0, chunk 0)",
+        "Demand (6->1, chunk 0)",
+        "Demand (6->2, chunk 0)",
+        "Demand (6->3, chunk 0)",
+        "Demand (6->4, chunk 0)",
+        "Demand (6->5, chunk 0)",
+        "Demand (6->7, chunk 0)",
+        "Demand (7->0, chunk 0)",
+        "Demand (7->1, chunk 0)",
+        "Demand (7->3, chunk 0)",
+        "Demand (7->4, chunk 0)",
+        "Demand (7->5, chunk 0)"
+      ],
+      "unprotected_demands": []
+    },
+    "Failure 19: 5->7": {
+      "affected_demands": [
+        "Demand (3->7, chunk 0)",
+        "Demand (5->6, chunk 0)",
+        "Demand (5->7, chunk 0)",
+        "Demand (6->7, chunk 0)"
+      ],
+      "dynamically_released_demands": [],
+      "failed_link": "5->7",
+      "protected_demands": [
+        "Demand (3->7, chunk 0)",
+        "Demand (5->6, chunk 0)",
+        "Demand (5->7, chunk 0)",
+        "Demand (6->7, chunk 0)"
+      ],
+      "unaffected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
+        "Demand (0->4, chunk 0)",
+        "Demand (0->5, chunk 0)",
+        "Demand (0->6, chunk 0)",
+        "Demand (0->7, chunk 0)",
+        "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)",
+        "Demand (1->4, chunk 0)",
+        "Demand (1->5, chunk 0)",
+        "Demand (1->6, chunk 0)",
+        "Demand (1->7, chunk 0)",
+        "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)",
+        "Demand (2->4, chunk 0)",
+        "Demand (2->5, chunk 0)",
+        "Demand (2->6, chunk 0)",
+        "Demand (2->7, chunk 0)",
+        "Demand (3->0, chunk 0)",
+        "Demand (3->1, chunk 0)",
+        "Demand (3->2, chunk 0)",
+        "Demand (3->4, chunk 0)",
+        "Demand (3->5, chunk 0)",
+        "Demand (3->6, chunk 0)",
+        "Demand (4->0, chunk 0)",
+        "Demand (4->1, chunk 0)",
+        "Demand (4->2, chunk 0)",
+        "Demand (4->3, chunk 0)",
+        "Demand (4->5, chunk 0)",
+        "Demand (4->6, chunk 0)",
+        "Demand (4->7, chunk 0)",
+        "Demand (5->0, chunk 0)",
+        "Demand (5->1, chunk 0)",
+        "Demand (5->2, chunk 0)",
+        "Demand (5->3, chunk 0)",
+        "Demand (5->4, chunk 0)",
+        "Demand (6->0, chunk 0)",
+        "Demand (6->1, chunk 0)",
+        "Demand (6->2, chunk 0)",
+        "Demand (6->3, chunk 0)",
+        "Demand (6->4, chunk 0)",
+        "Demand (6->5, chunk 0)",
+        "Demand (7->0, chunk 0)",
+        "Demand (7->1, chunk 0)",
+        "Demand (7->2, chunk 0)",
+        "Demand (7->3, chunk 0)",
+        "Demand (7->4, chunk 0)",
+        "Demand (7->5, chunk 0)",
+        "Demand (7->6, chunk 0)"
+      ],
+      "unprotected_demands": []
+    },
+    "Failure 1: 0->3": {
+      "affected_demands": [
+        "Demand (6->3, chunk 0)"
+      ],
+      "dynamically_released_demands": [],
+      "failed_link": "0->3",
+      "protected_demands": [
+        "Demand (6->3, chunk 0)"
+      ],
+      "unaffected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
+        "Demand (0->4, chunk 0)",
+        "Demand (0->5, chunk 0)",
+        "Demand (0->6, chunk 0)",
+        "Demand (0->7, chunk 0)",
+        "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)",
+        "Demand (1->4, chunk 0)",
+        "Demand (1->5, chunk 0)",
+        "Demand (1->6, chunk 0)",
+        "Demand (1->7, chunk 0)",
+        "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)",
+        "Demand (2->4, chunk 0)",
+        "Demand (2->5, chunk 0)",
+        "Demand (2->6, chunk 0)",
+        "Demand (2->7, chunk 0)",
+        "Demand (3->0, chunk 0)",
+        "Demand (3->1, chunk 0)",
+        "Demand (3->2, chunk 0)",
+        "Demand (3->4, chunk 0)",
+        "Demand (3->5, chunk 0)",
+        "Demand (3->6, chunk 0)",
+        "Demand (3->7, chunk 0)",
+        "Demand (4->0, chunk 0)",
+        "Demand (4->1, chunk 0)",
+        "Demand (4->2, chunk 0)",
+        "Demand (4->3, chunk 0)",
+        "Demand (4->5, chunk 0)",
+        "Demand (4->6, chunk 0)",
+        "Demand (4->7, chunk 0)",
+        "Demand (5->0, chunk 0)",
+        "Demand (5->1, chunk 0)",
+        "Demand (5->2, chunk 0)",
+        "Demand (5->3, chunk 0)",
+        "Demand (5->4, chunk 0)",
+        "Demand (5->6, chunk 0)",
+        "Demand (5->7, chunk 0)",
+        "Demand (6->0, chunk 0)",
+        "Demand (6->1, chunk 0)",
+        "Demand (6->2, chunk 0)",
+        "Demand (6->4, chunk 0)",
+        "Demand (6->5, chunk 0)",
+        "Demand (6->7, chunk 0)",
+        "Demand (7->0, chunk 0)",
+        "Demand (7->1, chunk 0)",
+        "Demand (7->2, chunk 0)",
+        "Demand (7->3, chunk 0)",
+        "Demand (7->4, chunk 0)",
+        "Demand (7->5, chunk 0)",
+        "Demand (7->6, chunk 0)"
+      ],
+      "unprotected_demands": []
+    },
+    "Failure 20: 6->2": {
+      "affected_demands": [
+        "Demand (4->0, chunk 0)",
+        "Demand (4->1, chunk 0)",
+        "Demand (4->2, chunk 0)",
+        "Demand (4->3, chunk 0)",
+        "Demand (6->0, chunk 0)",
+        "Demand (6->1, chunk 0)",
+        "Demand (6->2, chunk 0)",
+        "Demand (6->3, chunk 0)",
+        "Demand (7->2, chunk 0)"
+      ],
+      "dynamically_released_demands": [],
+      "failed_link": "6->2",
+      "protected_demands": [
+        "Demand (4->0, chunk 0)",
+        "Demand (4->1, chunk 0)",
+        "Demand (4->2, chunk 0)",
+        "Demand (4->3, chunk 0)",
+        "Demand (6->0, chunk 0)",
+        "Demand (6->1, chunk 0)",
+        "Demand (6->2, chunk 0)",
+        "Demand (6->3, chunk 0)",
+        "Demand (7->2, chunk 0)"
+      ],
+      "unaffected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
+        "Demand (0->4, chunk 0)",
+        "Demand (0->5, chunk 0)",
+        "Demand (0->6, chunk 0)",
+        "Demand (0->7, chunk 0)",
+        "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)",
+        "Demand (1->4, chunk 0)",
+        "Demand (1->5, chunk 0)",
+        "Demand (1->6, chunk 0)",
+        "Demand (1->7, chunk 0)",
+        "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)",
+        "Demand (2->4, chunk 0)",
+        "Demand (2->5, chunk 0)",
+        "Demand (2->6, chunk 0)",
+        "Demand (2->7, chunk 0)",
+        "Demand (3->0, chunk 0)",
+        "Demand (3->1, chunk 0)",
+        "Demand (3->2, chunk 0)",
+        "Demand (3->4, chunk 0)",
+        "Demand (3->5, chunk 0)",
+        "Demand (3->6, chunk 0)",
+        "Demand (3->7, chunk 0)",
+        "Demand (4->5, chunk 0)",
+        "Demand (4->6, chunk 0)",
+        "Demand (4->7, chunk 0)",
+        "Demand (5->0, chunk 0)",
+        "Demand (5->1, chunk 0)",
+        "Demand (5->2, chunk 0)",
+        "Demand (5->3, chunk 0)",
+        "Demand (5->4, chunk 0)",
+        "Demand (5->6, chunk 0)",
+        "Demand (5->7, chunk 0)",
+        "Demand (6->4, chunk 0)",
+        "Demand (6->5, chunk 0)",
+        "Demand (6->7, chunk 0)",
+        "Demand (7->0, chunk 0)",
+        "Demand (7->1, chunk 0)",
+        "Demand (7->3, chunk 0)",
+        "Demand (7->4, chunk 0)",
+        "Demand (7->5, chunk 0)",
+        "Demand (7->6, chunk 0)"
+      ],
+      "unprotected_demands": []
+    },
+    "Failure 21: 6->4": {
+      "affected_demands": [
+        "Demand (0->4, chunk 0)"
+      ],
+      "dynamically_released_demands": [],
+      "failed_link": "6->4",
+      "protected_demands": [
+        "Demand (0->4, chunk 0)"
+      ],
+      "unaffected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
+        "Demand (0->5, chunk 0)",
+        "Demand (0->6, chunk 0)",
+        "Demand (0->7, chunk 0)",
+        "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)",
+        "Demand (1->4, chunk 0)",
+        "Demand (1->5, chunk 0)",
+        "Demand (1->6, chunk 0)",
+        "Demand (1->7, chunk 0)",
+        "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)",
+        "Demand (2->4, chunk 0)",
+        "Demand (2->5, chunk 0)",
+        "Demand (2->6, chunk 0)",
+        "Demand (2->7, chunk 0)",
+        "Demand (3->0, chunk 0)",
+        "Demand (3->1, chunk 0)",
+        "Demand (3->2, chunk 0)",
+        "Demand (3->4, chunk 0)",
+        "Demand (3->5, chunk 0)",
+        "Demand (3->6, chunk 0)",
+        "Demand (3->7, chunk 0)",
+        "Demand (4->0, chunk 0)",
+        "Demand (4->1, chunk 0)",
+        "Demand (4->2, chunk 0)",
+        "Demand (4->3, chunk 0)",
+        "Demand (4->5, chunk 0)",
+        "Demand (4->6, chunk 0)",
+        "Demand (4->7, chunk 0)",
+        "Demand (5->0, chunk 0)",
+        "Demand (5->1, chunk 0)",
+        "Demand (5->2, chunk 0)",
+        "Demand (5->3, chunk 0)",
+        "Demand (5->4, chunk 0)",
+        "Demand (5->6, chunk 0)",
+        "Demand (5->7, chunk 0)",
+        "Demand (6->0, chunk 0)",
+        "Demand (6->1, chunk 0)",
+        "Demand (6->2, chunk 0)",
+        "Demand (6->3, chunk 0)",
+        "Demand (6->4, chunk 0)",
+        "Demand (6->5, chunk 0)",
+        "Demand (6->7, chunk 0)",
+        "Demand (7->0, chunk 0)",
+        "Demand (7->1, chunk 0)",
+        "Demand (7->2, chunk 0)",
+        "Demand (7->3, chunk 0)",
+        "Demand (7->4, chunk 0)",
+        "Demand (7->5, chunk 0)",
+        "Demand (7->6, chunk 0)"
+      ],
+      "unprotected_demands": []
+    },
+    "Failure 22: 6->5": {
+      "affected_demands": [
+        "Demand (0->5, chunk 0)",
+        "Demand (4->5, chunk 0)",
+        "Demand (6->4, chunk 0)",
+        "Demand (6->5, chunk 0)",
+        "Demand (6->7, chunk 0)"
+      ],
+      "dynamically_released_demands": [],
+      "failed_link": "6->5",
+      "protected_demands": [
+        "Demand (0->5, chunk 0)",
+        "Demand (4->5, chunk 0)",
+        "Demand (6->4, chunk 0)",
+        "Demand (6->5, chunk 0)",
+        "Demand (6->7, chunk 0)"
+      ],
+      "unaffected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
+        "Demand (0->4, chunk 0)",
+        "Demand (0->6, chunk 0)",
+        "Demand (0->7, chunk 0)",
+        "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)",
+        "Demand (1->4, chunk 0)",
+        "Demand (1->5, chunk 0)",
+        "Demand (1->6, chunk 0)",
+        "Demand (1->7, chunk 0)",
+        "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)",
+        "Demand (2->4, chunk 0)",
+        "Demand (2->5, chunk 0)",
+        "Demand (2->6, chunk 0)",
+        "Demand (2->7, chunk 0)",
+        "Demand (3->0, chunk 0)",
+        "Demand (3->1, chunk 0)",
+        "Demand (3->2, chunk 0)",
+        "Demand (3->4, chunk 0)",
+        "Demand (3->5, chunk 0)",
+        "Demand (3->6, chunk 0)",
+        "Demand (3->7, chunk 0)",
+        "Demand (4->0, chunk 0)",
+        "Demand (4->1, chunk 0)",
+        "Demand (4->2, chunk 0)",
+        "Demand (4->3, chunk 0)",
+        "Demand (4->6, chunk 0)",
+        "Demand (4->7, chunk 0)",
+        "Demand (5->0, chunk 0)",
+        "Demand (5->1, chunk 0)",
+        "Demand (5->2, chunk 0)",
+        "Demand (5->3, chunk 0)",
+        "Demand (5->4, chunk 0)",
+        "Demand (5->6, chunk 0)",
+        "Demand (5->7, chunk 0)",
+        "Demand (6->0, chunk 0)",
+        "Demand (6->1, chunk 0)",
+        "Demand (6->2, chunk 0)",
+        "Demand (6->3, chunk 0)",
+        "Demand (7->0, chunk 0)",
+        "Demand (7->1, chunk 0)",
+        "Demand (7->2, chunk 0)",
+        "Demand (7->3, chunk 0)",
+        "Demand (7->4, chunk 0)",
+        "Demand (7->5, chunk 0)",
+        "Demand (7->6, chunk 0)"
+      ],
+      "unprotected_demands": []
+    },
+    "Failure 23: 6->7": {
+      "affected_demands": [
+        "Demand (0->7, chunk 0)",
+        "Demand (1->7, chunk 0)",
+        "Demand (2->4, chunk 0)",
+        "Demand (2->5, chunk 0)",
+        "Demand (2->7, chunk 0)",
+        "Demand (4->7, chunk 0)"
+      ],
+      "dynamically_released_demands": [],
+      "failed_link": "6->7",
+      "protected_demands": [
+        "Demand (0->7, chunk 0)",
+        "Demand (1->7, chunk 0)",
+        "Demand (2->4, chunk 0)",
+        "Demand (2->5, chunk 0)",
+        "Demand (2->7, chunk 0)",
+        "Demand (4->7, chunk 0)"
+      ],
+      "unaffected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
+        "Demand (0->4, chunk 0)",
+        "Demand (0->5, chunk 0)",
+        "Demand (0->6, chunk 0)",
+        "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)",
+        "Demand (1->4, chunk 0)",
+        "Demand (1->5, chunk 0)",
+        "Demand (1->6, chunk 0)",
+        "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)",
+        "Demand (2->6, chunk 0)",
+        "Demand (3->0, chunk 0)",
+        "Demand (3->1, chunk 0)",
+        "Demand (3->2, chunk 0)",
+        "Demand (3->4, chunk 0)",
+        "Demand (3->5, chunk 0)",
+        "Demand (3->6, chunk 0)",
+        "Demand (3->7, chunk 0)",
+        "Demand (4->0, chunk 0)",
+        "Demand (4->1, chunk 0)",
+        "Demand (4->2, chunk 0)",
+        "Demand (4->3, chunk 0)",
+        "Demand (4->5, chunk 0)",
+        "Demand (4->6, chunk 0)",
+        "Demand (5->0, chunk 0)",
+        "Demand (5->1, chunk 0)",
+        "Demand (5->2, chunk 0)",
+        "Demand (5->3, chunk 0)",
+        "Demand (5->4, chunk 0)",
+        "Demand (5->6, chunk 0)",
+        "Demand (5->7, chunk 0)",
+        "Demand (6->0, chunk 0)",
+        "Demand (6->1, chunk 0)",
+        "Demand (6->2, chunk 0)",
+        "Demand (6->3, chunk 0)",
+        "Demand (6->4, chunk 0)",
+        "Demand (6->5, chunk 0)",
+        "Demand (6->7, chunk 0)",
+        "Demand (7->0, chunk 0)",
+        "Demand (7->1, chunk 0)",
+        "Demand (7->2, chunk 0)",
+        "Demand (7->3, chunk 0)",
+        "Demand (7->4, chunk 0)",
+        "Demand (7->5, chunk 0)",
+        "Demand (7->6, chunk 0)"
+      ],
+      "unprotected_demands": []
+    },
+    "Failure 24: 7->5": {
+      "affected_demands": [
+        "Demand (2->4, chunk 0)",
+        "Demand (2->5, chunk 0)",
+        "Demand (7->0, chunk 0)",
+        "Demand (7->1, chunk 0)",
+        "Demand (7->2, chunk 0)",
+        "Demand (7->3, chunk 0)",
+        "Demand (7->4, chunk 0)",
+        "Demand (7->5, chunk 0)",
+        "Demand (7->6, chunk 0)"
+      ],
+      "dynamically_released_demands": [],
+      "failed_link": "7->5",
+      "protected_demands": [
+        "Demand (2->4, chunk 0)",
+        "Demand (2->5, chunk 0)",
+        "Demand (7->0, chunk 0)",
+        "Demand (7->1, chunk 0)",
+        "Demand (7->2, chunk 0)",
+        "Demand (7->3, chunk 0)",
+        "Demand (7->4, chunk 0)",
+        "Demand (7->5, chunk 0)",
+        "Demand (7->6, chunk 0)"
+      ],
+      "unaffected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
+        "Demand (0->4, chunk 0)",
+        "Demand (0->5, chunk 0)",
+        "Demand (0->6, chunk 0)",
+        "Demand (0->7, chunk 0)",
+        "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)",
+        "Demand (1->4, chunk 0)",
+        "Demand (1->5, chunk 0)",
+        "Demand (1->6, chunk 0)",
+        "Demand (1->7, chunk 0)",
+        "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)",
+        "Demand (2->6, chunk 0)",
+        "Demand (2->7, chunk 0)",
+        "Demand (3->0, chunk 0)",
+        "Demand (3->1, chunk 0)",
+        "Demand (3->2, chunk 0)",
+        "Demand (3->4, chunk 0)",
+        "Demand (3->5, chunk 0)",
+        "Demand (3->6, chunk 0)",
+        "Demand (3->7, chunk 0)",
+        "Demand (4->0, chunk 0)",
+        "Demand (4->1, chunk 0)",
+        "Demand (4->2, chunk 0)",
+        "Demand (4->3, chunk 0)",
+        "Demand (4->5, chunk 0)",
+        "Demand (4->6, chunk 0)",
+        "Demand (4->7, chunk 0)",
+        "Demand (5->0, chunk 0)",
+        "Demand (5->1, chunk 0)",
+        "Demand (5->2, chunk 0)",
+        "Demand (5->3, chunk 0)",
+        "Demand (5->4, chunk 0)",
+        "Demand (5->6, chunk 0)",
+        "Demand (5->7, chunk 0)",
+        "Demand (6->0, chunk 0)",
+        "Demand (6->1, chunk 0)",
+        "Demand (6->2, chunk 0)",
+        "Demand (6->3, chunk 0)",
+        "Demand (6->4, chunk 0)",
+        "Demand (6->5, chunk 0)",
+        "Demand (6->7, chunk 0)"
+      ],
+      "unprotected_demands": []
+    },
+    "Failure 25: 7->6": {
+      "affected_demands": [
+        "Demand (5->6, chunk 0)"
+      ],
+      "dynamically_released_demands": [],
+      "failed_link": "7->6",
+      "protected_demands": [
+        "Demand (5->6, chunk 0)"
+      ],
+      "unaffected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
+        "Demand (0->4, chunk 0)",
+        "Demand (0->5, chunk 0)",
+        "Demand (0->6, chunk 0)",
+        "Demand (0->7, chunk 0)",
+        "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)",
+        "Demand (1->4, chunk 0)",
+        "Demand (1->5, chunk 0)",
+        "Demand (1->6, chunk 0)",
+        "Demand (1->7, chunk 0)",
+        "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)",
+        "Demand (2->4, chunk 0)",
+        "Demand (2->5, chunk 0)",
+        "Demand (2->6, chunk 0)",
+        "Demand (2->7, chunk 0)",
+        "Demand (3->0, chunk 0)",
+        "Demand (3->1, chunk 0)",
+        "Demand (3->2, chunk 0)",
+        "Demand (3->4, chunk 0)",
+        "Demand (3->5, chunk 0)",
+        "Demand (3->6, chunk 0)",
+        "Demand (3->7, chunk 0)",
+        "Demand (4->0, chunk 0)",
+        "Demand (4->1, chunk 0)",
+        "Demand (4->2, chunk 0)",
+        "Demand (4->3, chunk 0)",
+        "Demand (4->5, chunk 0)",
+        "Demand (4->6, chunk 0)",
+        "Demand (4->7, chunk 0)",
+        "Demand (5->0, chunk 0)",
+        "Demand (5->1, chunk 0)",
+        "Demand (5->2, chunk 0)",
+        "Demand (5->3, chunk 0)",
+        "Demand (5->4, chunk 0)",
+        "Demand (5->7, chunk 0)",
+        "Demand (6->0, chunk 0)",
+        "Demand (6->1, chunk 0)",
+        "Demand (6->2, chunk 0)",
+        "Demand (6->3, chunk 0)",
+        "Demand (6->4, chunk 0)",
+        "Demand (6->5, chunk 0)",
+        "Demand (6->7, chunk 0)",
+        "Demand (7->0, chunk 0)",
+        "Demand (7->1, chunk 0)",
+        "Demand (7->2, chunk 0)",
+        "Demand (7->3, chunk 0)",
+        "Demand (7->4, chunk 0)",
+        "Demand (7->5, chunk 0)",
+        "Demand (7->6, chunk 0)"
+      ],
+      "unprotected_demands": []
+    },
+    "Failure 2: 1->0": {
+      "affected_demands": [
+        "Demand (4->0, chunk 0)",
+        "Demand (5->0, chunk 0)",
+        "Demand (6->0, chunk 0)",
+        "Demand (6->3, chunk 0)",
+        "Demand (7->0, chunk 0)"
+      ],
+      "dynamically_released_demands": [],
+      "failed_link": "1->0",
+      "protected_demands": [
+        "Demand (4->0, chunk 0)",
+        "Demand (5->0, chunk 0)",
+        "Demand (6->0, chunk 0)",
+        "Demand (6->3, chunk 0)",
+        "Demand (7->0, chunk 0)"
+      ],
+      "unaffected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
+        "Demand (0->4, chunk 0)",
+        "Demand (0->5, chunk 0)",
+        "Demand (0->6, chunk 0)",
+        "Demand (0->7, chunk 0)",
+        "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)",
+        "Demand (1->4, chunk 0)",
+        "Demand (1->5, chunk 0)",
+        "Demand (1->6, chunk 0)",
+        "Demand (1->7, chunk 0)",
+        "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)",
+        "Demand (2->4, chunk 0)",
+        "Demand (2->5, chunk 0)",
+        "Demand (2->6, chunk 0)",
+        "Demand (2->7, chunk 0)",
+        "Demand (3->0, chunk 0)",
+        "Demand (3->1, chunk 0)",
+        "Demand (3->2, chunk 0)",
+        "Demand (3->4, chunk 0)",
+        "Demand (3->5, chunk 0)",
+        "Demand (3->6, chunk 0)",
+        "Demand (3->7, chunk 0)",
+        "Demand (4->1, chunk 0)",
+        "Demand (4->2, chunk 0)",
+        "Demand (4->3, chunk 0)",
+        "Demand (4->5, chunk 0)",
+        "Demand (4->6, chunk 0)",
+        "Demand (4->7, chunk 0)",
+        "Demand (5->1, chunk 0)",
+        "Demand (5->2, chunk 0)",
+        "Demand (5->3, chunk 0)",
+        "Demand (5->4, chunk 0)",
+        "Demand (5->6, chunk 0)",
+        "Demand (5->7, chunk 0)",
+        "Demand (6->1, chunk 0)",
+        "Demand (6->2, chunk 0)",
+        "Demand (6->4, chunk 0)",
+        "Demand (6->5, chunk 0)",
+        "Demand (6->7, chunk 0)",
+        "Demand (7->1, chunk 0)",
+        "Demand (7->2, chunk 0)",
+        "Demand (7->3, chunk 0)",
+        "Demand (7->4, chunk 0)",
+        "Demand (7->5, chunk 0)",
+        "Demand (7->6, chunk 0)"
+      ],
+      "unprotected_demands": []
+    },
+    "Failure 3: 1->2": {
+      "affected_demands": [
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
+        "Demand (0->4, chunk 0)",
+        "Demand (0->5, chunk 0)",
+        "Demand (0->6, chunk 0)",
+        "Demand (0->7, chunk 0)"
+      ],
+      "dynamically_released_demands": [],
+      "failed_link": "1->2",
+      "protected_demands": [
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
+        "Demand (0->4, chunk 0)",
+        "Demand (0->5, chunk 0)",
+        "Demand (0->6, chunk 0)",
+        "Demand (0->7, chunk 0)"
+      ],
+      "unaffected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)",
+        "Demand (1->4, chunk 0)",
+        "Demand (1->5, chunk 0)",
+        "Demand (1->6, chunk 0)",
+        "Demand (1->7, chunk 0)",
+        "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)",
+        "Demand (2->4, chunk 0)",
+        "Demand (2->5, chunk 0)",
+        "Demand (2->6, chunk 0)",
+        "Demand (2->7, chunk 0)",
+        "Demand (3->0, chunk 0)",
+        "Demand (3->1, chunk 0)",
+        "Demand (3->2, chunk 0)",
+        "Demand (3->4, chunk 0)",
+        "Demand (3->5, chunk 0)",
+        "Demand (3->6, chunk 0)",
+        "Demand (3->7, chunk 0)",
+        "Demand (4->0, chunk 0)",
+        "Demand (4->1, chunk 0)",
+        "Demand (4->2, chunk 0)",
+        "Demand (4->3, chunk 0)",
+        "Demand (4->5, chunk 0)",
+        "Demand (4->6, chunk 0)",
+        "Demand (4->7, chunk 0)",
+        "Demand (5->0, chunk 0)",
+        "Demand (5->1, chunk 0)",
+        "Demand (5->2, chunk 0)",
+        "Demand (5->3, chunk 0)",
+        "Demand (5->4, chunk 0)",
+        "Demand (5->6, chunk 0)",
+        "Demand (5->7, chunk 0)",
+        "Demand (6->0, chunk 0)",
+        "Demand (6->1, chunk 0)",
+        "Demand (6->2, chunk 0)",
+        "Demand (6->3, chunk 0)",
+        "Demand (6->4, chunk 0)",
+        "Demand (6->5, chunk 0)",
+        "Demand (6->7, chunk 0)",
+        "Demand (7->0, chunk 0)",
+        "Demand (7->1, chunk 0)",
+        "Demand (7->2, chunk 0)",
+        "Demand (7->3, chunk 0)",
+        "Demand (7->4, chunk 0)",
+        "Demand (7->5, chunk 0)",
+        "Demand (7->6, chunk 0)"
+      ],
+      "unprotected_demands": []
+    },
+    "Failure 4: 1->3": {
+      "affected_demands": [
+        "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)",
+        "Demand (5->2, chunk 0)",
+        "Demand (5->3, chunk 0)",
+        "Demand (5->4, chunk 0)",
+        "Demand (7->3, chunk 0)"
+      ],
+      "dynamically_released_demands": [],
+      "failed_link": "1->3",
+      "protected_demands": [
+        "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)",
+        "Demand (5->2, chunk 0)",
+        "Demand (5->3, chunk 0)",
+        "Demand (5->4, chunk 0)",
+        "Demand (7->3, chunk 0)"
+      ],
+      "unaffected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
+        "Demand (0->4, chunk 0)",
+        "Demand (0->5, chunk 0)",
+        "Demand (0->6, chunk 0)",
+        "Demand (0->7, chunk 0)",
+        "Demand (1->4, chunk 0)",
+        "Demand (1->5, chunk 0)",
+        "Demand (1->6, chunk 0)",
+        "Demand (1->7, chunk 0)",
+        "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)",
+        "Demand (2->4, chunk 0)",
+        "Demand (2->5, chunk 0)",
+        "Demand (2->6, chunk 0)",
+        "Demand (2->7, chunk 0)",
+        "Demand (3->0, chunk 0)",
+        "Demand (3->1, chunk 0)",
+        "Demand (3->2, chunk 0)",
+        "Demand (3->4, chunk 0)",
+        "Demand (3->5, chunk 0)",
+        "Demand (3->6, chunk 0)",
+        "Demand (3->7, chunk 0)",
+        "Demand (4->0, chunk 0)",
+        "Demand (4->1, chunk 0)",
+        "Demand (4->2, chunk 0)",
+        "Demand (4->3, chunk 0)",
+        "Demand (4->5, chunk 0)",
+        "Demand (4->6, chunk 0)",
+        "Demand (4->7, chunk 0)",
+        "Demand (5->0, chunk 0)",
+        "Demand (5->1, chunk 0)",
+        "Demand (5->6, chunk 0)",
+        "Demand (5->7, chunk 0)",
+        "Demand (6->0, chunk 0)",
+        "Demand (6->1, chunk 0)",
+        "Demand (6->2, chunk 0)",
+        "Demand (6->3, chunk 0)",
+        "Demand (6->4, chunk 0)",
+        "Demand (6->5, chunk 0)",
+        "Demand (6->7, chunk 0)",
+        "Demand (7->0, chunk 0)",
+        "Demand (7->1, chunk 0)",
+        "Demand (7->2, chunk 0)",
+        "Demand (7->4, chunk 0)",
+        "Demand (7->5, chunk 0)",
+        "Demand (7->6, chunk 0)"
+      ],
+      "unprotected_demands": []
+    },
+    "Failure 5: 1->5": {
+      "affected_demands": [
+        "Demand (1->4, chunk 0)",
+        "Demand (1->5, chunk 0)",
+        "Demand (1->6, chunk 0)",
+        "Demand (1->7, chunk 0)"
+      ],
+      "dynamically_released_demands": [],
+      "failed_link": "1->5",
+      "protected_demands": [
+        "Demand (1->4, chunk 0)",
+        "Demand (1->5, chunk 0)",
+        "Demand (1->6, chunk 0)",
+        "Demand (1->7, chunk 0)"
+      ],
+      "unaffected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
+        "Demand (0->4, chunk 0)",
+        "Demand (0->5, chunk 0)",
+        "Demand (0->6, chunk 0)",
+        "Demand (0->7, chunk 0)",
+        "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)",
+        "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)",
+        "Demand (2->4, chunk 0)",
+        "Demand (2->5, chunk 0)",
+        "Demand (2->6, chunk 0)",
+        "Demand (2->7, chunk 0)",
+        "Demand (3->0, chunk 0)",
+        "Demand (3->1, chunk 0)",
+        "Demand (3->2, chunk 0)",
+        "Demand (3->4, chunk 0)",
+        "Demand (3->5, chunk 0)",
+        "Demand (3->6, chunk 0)",
+        "Demand (3->7, chunk 0)",
+        "Demand (4->0, chunk 0)",
+        "Demand (4->1, chunk 0)",
+        "Demand (4->2, chunk 0)",
+        "Demand (4->3, chunk 0)",
+        "Demand (4->5, chunk 0)",
+        "Demand (4->6, chunk 0)",
+        "Demand (4->7, chunk 0)",
+        "Demand (5->0, chunk 0)",
+        "Demand (5->1, chunk 0)",
+        "Demand (5->2, chunk 0)",
+        "Demand (5->3, chunk 0)",
+        "Demand (5->4, chunk 0)",
+        "Demand (5->6, chunk 0)",
+        "Demand (5->7, chunk 0)",
+        "Demand (6->0, chunk 0)",
+        "Demand (6->1, chunk 0)",
+        "Demand (6->2, chunk 0)",
+        "Demand (6->3, chunk 0)",
+        "Demand (6->4, chunk 0)",
+        "Demand (6->5, chunk 0)",
+        "Demand (6->7, chunk 0)",
+        "Demand (7->0, chunk 0)",
+        "Demand (7->1, chunk 0)",
+        "Demand (7->2, chunk 0)",
+        "Demand (7->3, chunk 0)",
+        "Demand (7->4, chunk 0)",
+        "Demand (7->5, chunk 0)",
+        "Demand (7->6, chunk 0)"
+      ],
+      "unprotected_demands": []
+    },
+    "Failure 6: 2->1": {
+      "affected_demands": [
+        "Demand (4->0, chunk 0)",
+        "Demand (4->1, chunk 0)",
+        "Demand (6->0, chunk 0)",
+        "Demand (6->1, chunk 0)",
+        "Demand (6->3, chunk 0)"
+      ],
+      "dynamically_released_demands": [],
+      "failed_link": "2->1",
+      "protected_demands": [
+        "Demand (4->0, chunk 0)",
+        "Demand (4->1, chunk 0)",
+        "Demand (6->0, chunk 0)",
+        "Demand (6->1, chunk 0)",
+        "Demand (6->3, chunk 0)"
+      ],
+      "unaffected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
+        "Demand (0->4, chunk 0)",
+        "Demand (0->5, chunk 0)",
+        "Demand (0->6, chunk 0)",
+        "Demand (0->7, chunk 0)",
+        "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)",
+        "Demand (1->4, chunk 0)",
+        "Demand (1->5, chunk 0)",
+        "Demand (1->6, chunk 0)",
+        "Demand (1->7, chunk 0)",
+        "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)",
+        "Demand (2->4, chunk 0)",
+        "Demand (2->5, chunk 0)",
+        "Demand (2->6, chunk 0)",
+        "Demand (2->7, chunk 0)",
+        "Demand (3->0, chunk 0)",
+        "Demand (3->1, chunk 0)",
+        "Demand (3->2, chunk 0)",
+        "Demand (3->4, chunk 0)",
+        "Demand (3->5, chunk 0)",
+        "Demand (3->6, chunk 0)",
+        "Demand (3->7, chunk 0)",
+        "Demand (4->2, chunk 0)",
+        "Demand (4->3, chunk 0)",
+        "Demand (4->5, chunk 0)",
+        "Demand (4->6, chunk 0)",
+        "Demand (4->7, chunk 0)",
+        "Demand (5->0, chunk 0)",
+        "Demand (5->1, chunk 0)",
+        "Demand (5->2, chunk 0)",
+        "Demand (5->3, chunk 0)",
+        "Demand (5->4, chunk 0)",
+        "Demand (5->6, chunk 0)",
+        "Demand (5->7, chunk 0)",
+        "Demand (6->2, chunk 0)",
+        "Demand (6->4, chunk 0)",
+        "Demand (6->5, chunk 0)",
+        "Demand (6->7, chunk 0)",
+        "Demand (7->0, chunk 0)",
+        "Demand (7->1, chunk 0)",
+        "Demand (7->2, chunk 0)",
+        "Demand (7->3, chunk 0)",
+        "Demand (7->4, chunk 0)",
+        "Demand (7->5, chunk 0)",
+        "Demand (7->6, chunk 0)"
+      ],
+      "unprotected_demands": []
+    },
+    "Failure 7: 2->3": {
+      "affected_demands": [
+        "Demand (0->3, chunk 0)",
+        "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)",
+        "Demand (4->3, chunk 0)"
+      ],
+      "dynamically_released_demands": [],
+      "failed_link": "2->3",
+      "protected_demands": [
+        "Demand (0->3, chunk 0)",
+        "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)",
+        "Demand (4->3, chunk 0)"
+      ],
+      "unaffected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->4, chunk 0)",
+        "Demand (0->5, chunk 0)",
+        "Demand (0->6, chunk 0)",
+        "Demand (0->7, chunk 0)",
+        "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)",
+        "Demand (1->4, chunk 0)",
+        "Demand (1->5, chunk 0)",
+        "Demand (1->6, chunk 0)",
+        "Demand (1->7, chunk 0)",
+        "Demand (2->4, chunk 0)",
+        "Demand (2->5, chunk 0)",
+        "Demand (2->6, chunk 0)",
+        "Demand (2->7, chunk 0)",
+        "Demand (3->0, chunk 0)",
+        "Demand (3->1, chunk 0)",
+        "Demand (3->2, chunk 0)",
+        "Demand (3->4, chunk 0)",
+        "Demand (3->5, chunk 0)",
+        "Demand (3->6, chunk 0)",
+        "Demand (3->7, chunk 0)",
+        "Demand (4->0, chunk 0)",
+        "Demand (4->1, chunk 0)",
+        "Demand (4->2, chunk 0)",
+        "Demand (4->5, chunk 0)",
+        "Demand (4->6, chunk 0)",
+        "Demand (4->7, chunk 0)",
+        "Demand (5->0, chunk 0)",
+        "Demand (5->1, chunk 0)",
+        "Demand (5->2, chunk 0)",
+        "Demand (5->3, chunk 0)",
+        "Demand (5->4, chunk 0)",
+        "Demand (5->6, chunk 0)",
+        "Demand (5->7, chunk 0)",
+        "Demand (6->0, chunk 0)",
+        "Demand (6->1, chunk 0)",
+        "Demand (6->2, chunk 0)",
+        "Demand (6->3, chunk 0)",
+        "Demand (6->4, chunk 0)",
+        "Demand (6->5, chunk 0)",
+        "Demand (6->7, chunk 0)",
+        "Demand (7->0, chunk 0)",
+        "Demand (7->1, chunk 0)",
+        "Demand (7->2, chunk 0)",
+        "Demand (7->3, chunk 0)",
+        "Demand (7->4, chunk 0)",
+        "Demand (7->5, chunk 0)",
+        "Demand (7->6, chunk 0)"
+      ],
+      "unprotected_demands": []
+    },
+    "Failure 8: 2->6": {
+      "affected_demands": [
+        "Demand (0->4, chunk 0)",
+        "Demand (0->5, chunk 0)",
+        "Demand (0->6, chunk 0)",
+        "Demand (0->7, chunk 0)",
+        "Demand (2->4, chunk 0)",
+        "Demand (2->5, chunk 0)",
+        "Demand (2->6, chunk 0)",
+        "Demand (2->7, chunk 0)"
+      ],
+      "dynamically_released_demands": [],
+      "failed_link": "2->6",
+      "protected_demands": [
+        "Demand (0->4, chunk 0)",
+        "Demand (0->5, chunk 0)",
+        "Demand (0->6, chunk 0)",
+        "Demand (0->7, chunk 0)",
+        "Demand (2->4, chunk 0)",
+        "Demand (2->5, chunk 0)",
+        "Demand (2->6, chunk 0)",
+        "Demand (2->7, chunk 0)"
+      ],
+      "unaffected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
+        "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)",
+        "Demand (1->4, chunk 0)",
+        "Demand (1->5, chunk 0)",
+        "Demand (1->6, chunk 0)",
+        "Demand (1->7, chunk 0)",
+        "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)",
+        "Demand (3->0, chunk 0)",
+        "Demand (3->1, chunk 0)",
+        "Demand (3->2, chunk 0)",
+        "Demand (3->4, chunk 0)",
+        "Demand (3->5, chunk 0)",
+        "Demand (3->6, chunk 0)",
+        "Demand (3->7, chunk 0)",
+        "Demand (4->0, chunk 0)",
+        "Demand (4->1, chunk 0)",
+        "Demand (4->2, chunk 0)",
+        "Demand (4->3, chunk 0)",
+        "Demand (4->5, chunk 0)",
+        "Demand (4->6, chunk 0)",
+        "Demand (4->7, chunk 0)",
+        "Demand (5->0, chunk 0)",
+        "Demand (5->1, chunk 0)",
+        "Demand (5->2, chunk 0)",
+        "Demand (5->3, chunk 0)",
+        "Demand (5->4, chunk 0)",
+        "Demand (5->6, chunk 0)",
+        "Demand (5->7, chunk 0)",
+        "Demand (6->0, chunk 0)",
+        "Demand (6->1, chunk 0)",
+        "Demand (6->2, chunk 0)",
+        "Demand (6->3, chunk 0)",
+        "Demand (6->4, chunk 0)",
+        "Demand (6->5, chunk 0)",
+        "Demand (6->7, chunk 0)",
+        "Demand (7->0, chunk 0)",
+        "Demand (7->1, chunk 0)",
+        "Demand (7->2, chunk 0)",
+        "Demand (7->3, chunk 0)",
+        "Demand (7->4, chunk 0)",
+        "Demand (7->5, chunk 0)",
+        "Demand (7->6, chunk 0)"
+      ],
+      "unprotected_demands": []
+    },
+    "Failure 9: 3->0": {
+      "affected_demands": [
+        "Demand (1->0, chunk 0)",
+        "Demand (2->0, chunk 0)",
+        "Demand (3->0, chunk 0)"
+      ],
+      "dynamically_released_demands": [],
+      "failed_link": "3->0",
+      "protected_demands": [
+        "Demand (1->0, chunk 0)",
+        "Demand (2->0, chunk 0)",
+        "Demand (3->0, chunk 0)"
+      ],
+      "unaffected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
+        "Demand (0->4, chunk 0)",
+        "Demand (0->5, chunk 0)",
+        "Demand (0->6, chunk 0)",
+        "Demand (0->7, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)",
+        "Demand (1->4, chunk 0)",
+        "Demand (1->5, chunk 0)",
+        "Demand (1->6, chunk 0)",
+        "Demand (1->7, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)",
+        "Demand (2->4, chunk 0)",
+        "Demand (2->5, chunk 0)",
+        "Demand (2->6, chunk 0)",
+        "Demand (2->7, chunk 0)",
+        "Demand (3->1, chunk 0)",
+        "Demand (3->2, chunk 0)",
+        "Demand (3->4, chunk 0)",
+        "Demand (3->5, chunk 0)",
+        "Demand (3->6, chunk 0)",
+        "Demand (3->7, chunk 0)",
+        "Demand (4->0, chunk 0)",
+        "Demand (4->1, chunk 0)",
+        "Demand (4->2, chunk 0)",
+        "Demand (4->3, chunk 0)",
+        "Demand (4->5, chunk 0)",
+        "Demand (4->6, chunk 0)",
+        "Demand (4->7, chunk 0)",
+        "Demand (5->0, chunk 0)",
+        "Demand (5->1, chunk 0)",
+        "Demand (5->2, chunk 0)",
+        "Demand (5->3, chunk 0)",
+        "Demand (5->4, chunk 0)",
+        "Demand (5->6, chunk 0)",
+        "Demand (5->7, chunk 0)",
+        "Demand (6->0, chunk 0)",
+        "Demand (6->1, chunk 0)",
+        "Demand (6->2, chunk 0)",
+        "Demand (6->3, chunk 0)",
+        "Demand (6->4, chunk 0)",
+        "Demand (6->5, chunk 0)",
+        "Demand (6->7, chunk 0)",
+        "Demand (7->0, chunk 0)",
+        "Demand (7->1, chunk 0)",
+        "Demand (7->2, chunk 0)",
+        "Demand (7->3, chunk 0)",
+        "Demand (7->4, chunk 0)",
+        "Demand (7->5, chunk 0)",
+        "Demand (7->6, chunk 0)"
+      ],
+      "unprotected_demands": []
+    }
+  },
+  "9c-Objective_Working_Completion_Epoch": 6.0,
+  "9d-Objective_Protection_Completion_Epoch": 40.0,
+  "9e-Actual_Working_Completion_Epoch": 6,
+  "9f-Actual_Protected_Completion_Epoch": 40,
+  "Solver_MIP_Gap": null,
+  "Solver_Name": "ScenarioRobustProtection_MILP",
+  "Solver_Node_Count": 4.0,
+  "Solver_Objective_Bound": null,
+  "Solver_Objective_Value": 6.0,
+  "Solver_Quality": {
+    "mip_gap": null,
+    "node_count": 4.0,
+    "objective_bound": null,
+    "objective_value": 6.0,
+    "runtime": 6.25067400932312,
+    "solution_count": 10,
+    "solver_name": "ScenarioRobustProtection_MILP",
+    "status_code": 2,
+    "status_name": "OPTIMAL"
+  },
+  "Solver_Runtime": 6.25067400932312,
+  "Solver_Solution_Count": 10,
+  "Solver_Status": 2,
+  "Solver_Status_Name": "OPTIMAL",
+  "Solver_Time": 11.86142110824585
+}
