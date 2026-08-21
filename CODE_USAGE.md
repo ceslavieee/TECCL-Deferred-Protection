@@ -19,7 +19,8 @@ When a user runs `teccl solve --input_args <input.json>`, the code path is:
 2. `teccl/cli/solve.py`
    - Reads the JSON input file.
    - Converts enum-like input values into `ObjectiveType`, `SolutionMethod`,
-     `Collective`, `EpochType`, `ProtectionMode`, and `FailureModel`.
+     `Collective`, `EpochType`, `ProtectionMode`, `DeferredTimingMode`, and
+     `FailureModel`.
    - Creates `TECCLSolver` and calls `solve()`.
 3. `teccl/input_data.py`
    - Defines all user input data classes and enums.
@@ -42,8 +43,11 @@ These files are used by `teccl/scheduler.py` depending on input parameters:
 - `teccl/solvers/alltoall.py`
   - AlltoAll formulation when `collective` is `ALLTOALL`.
 - `teccl/solvers/deferred_protection.py`
-  - AllGather deferred-protection formulation when `protection_mode` is
-    `DEFERRED`.
+  - AllGather scenario-specific recovery formulation when `protection_mode` is
+    `DEFERRED` and `deferred_timing_mode` is `POST_FAILURE`.
+- `teccl/solvers/preplanned_deferred_protection.py`
+  - AllGather pre-failure contingency planning and progressive reservation
+    release when `deferred_timing_mode` is `PREPLANNED`.
 - `teccl/solvers/dedicated_protection.py`
   - AllGather dedicated-protection formulation when `protection_mode` is
     `DEDICATED`.
@@ -90,6 +94,22 @@ part of the normal `teccl solve` runtime path:
   - Summarizes protection-mode schedule JSON files into CSV/JSON/Markdown.
 - `teccl/examples/plot_protection_results.py`
   - Plots protection-summary CSV data.
+- `teccl/examples/audit_preplanned_deferred_protection.py`
+  - Verifies delayed activation, directed-link disjointness, and monotone
+    reservation release for a preplanned schedule.
+- `teccl/examples/compare_preplanned_protection.py`
+  - Runs the paired Dedicated/Preplanned Deferred experiment with identical
+    working flows.
+  - Recomputes the common future-reservation accounting, audits the pair, and
+    writes CSV/JSON/Markdown results.
+- `teccl/examples/chunk_granularity_sensitivity.py`
+  - Runs the fixed-100-GB-per-source sensitivity for 1, 2, and 4 chunks on
+    `DCN4WAN` and `InterDC8`.
+  - Reports beta-weighted physical resource metrics, solver quality, working
+    schedule provenance, and paired correctness audits.
+- `teccl/examples/compare_preplanned_holding_objectives.py`
+  - A/B tests the legacy flow-start and beta-weighted physical holding
+    objectives with identical working flows and protection constraints.
 - `teccl/examples/MSCCL_examples/`
   - MSCCL-related example artifacts and scripts.
 
@@ -127,12 +147,47 @@ Do not delete these automatically without confirming intent:
 
 ## Current feature-specific useful files
 
+- `teccl/dynamic_admission.py`
+  - Stage-A transactional link-epoch ledger for dynamic multi-request
+    admission; fixed-template accounting only.
+- `teccl/examples/dynamic_admission_smoke.py`
+  - Runs the non-authoritative deterministic accounting smoke test on both
+    current DPP/DDPP schedule pairs.
+- `teccl/examples/dynamic_residual_capacity_smoke.py`
+  - Runs the Stage-B end-to-end check in which a second protected request is
+    re-solved against the first request's live capacity commitments.
+- `teccl/examples/sample_inputs/mesh2_multicast_tree_pair_protection.json`
+  - Small strict collective-baseline input that enforces one rooted working
+    tree and one link-disjoint rooted backup tree per source chunk.
+- `teccl/examples/audit_multicast_tree_pair.py`
+  - Verifies matched DCN4WAN or InterDC8 tree-pair timing certificates,
+    including identical working flows and backup-tree edges across DPP/DDPP.
+- `teccl/examples/dynamic_admission_pilot.py`
+  - Runs one byte-identical Mesh2 request trace through early DPP and DDPP with
+    explicit accepted/blocked/unknown outcomes.
+- `teccl/examples/dynamic_admission_pilot_sweep.py`
+  - Repeats the paired pilot over independent seeds.
+- `teccl/examples/dynamic_admission_topology_sweep.py`
+  - Runs resumable strict-tree paired DCN4WAN or InterDC8 load/seed locator
+    sweeps in an isolated result directory and reports normalized offered
+    arrivals per deadline.
+- `teccl/examples/summarize_dynamic_admission_load_sweep.py`
+  - Aggregates the light/transition/heavy Mesh2 pilot while retaining the
+    non-authoritative claim boundary.
+- `teccl/examples/summarize_dynamic_admission_topology_probes.py`
+  - Aggregates only the corrected DCN4WAN/InterDC8 probe runs and verifies
+    paired traces, conclusive outcomes, schedule audits, and ledger safety.
+- `tests/test_dynamic_admission.py`
+  - Checks full occupancy expansion, atomic rejection, and safe release of
+    future protection capacity.
+
 The protection/topology changes currently depend on this set:
 
 - `teccl/input_data.py`
 - `teccl/cli/solve.py`
 - `teccl/scheduler.py`
 - `teccl/solvers/deferred_protection.py`
+- `teccl/solvers/preplanned_deferred_protection.py`
 - `teccl/solvers/dedicated_protection.py`
 - `teccl/solvers/shared_protection.py`
 - `teccl/solvers/heuristics.py`
