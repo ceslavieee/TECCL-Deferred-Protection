@@ -16,6 +16,7 @@ from teccl.solvers.dedicated_protection import DedicatedProtectionFormulation
 from teccl.solvers.deferred_protection import DeferredProtectionFormulation
 from teccl.solvers.preplanned_deferred_protection import PreplannedDeferredProtectionFormulation
 from teccl.solvers.shared_protection import SharedProtectionFormulation
+from teccl.solvers.strict_dedicated_protection import StrictDedicatedProtectionFormulation
 from teccl.topologies.dgx1 import DGX1
 from teccl.topologies.dgx2 import DGX2
 from teccl.topologies.ndv2 import NDv2
@@ -66,6 +67,8 @@ class TECCLSolver(object):
                 return DedicatedProtectionFormulation(user_input, topology)
             if user_input.instance.protection_mode == ProtectionMode.SHARED:
                 return SharedProtectionFormulation(user_input, topology)
+            if user_input.instance.protection_mode == ProtectionMode.SCENARIO_ROBUST:
+                return StrictDedicatedProtectionFormulation(user_input, topology)
             if user_input.instance.objective_type == ObjectiveType.ASTAR:
                 return AStarFormulation(user_input, topology)
             return AllGatherFormulation(user_input, topology)
@@ -204,6 +207,7 @@ class TECCLSolver(object):
             solver, user_input, self.topology_obj)
         timestamp = int(time())
 
+        result_manifest = None
         if epoch_result_schedule_solver:
             output_file = user_input.instance.schedule_output_file
             best_epochs = min(epoch_result_schedule_solver.keys())
@@ -230,7 +234,26 @@ class TECCLSolver(object):
                     epoch_result_schedule_solver[best_epochs]["schedule"][1], indent=2, sort_keys=True)
                 f.write(json_obj)
             print(f'Schedule written to {output_file}')
+            result_manifest = {
+                "produced_schedule": True,
+                "schedule_output_file": str(output_file),
+                "solver_quality": solver_quality,
+            }
 
 
         else:
             logging.error("No schedule found with the given parameters")
+            result_manifest = {
+                "produced_schedule": False,
+                "schedule_output_file": None,
+                "solver_quality": solver.solver_quality(),
+            }
+
+        result_output = user_input.instance.solver_result_output_file
+        if result_output:
+            result_path = pathlib.Path(result_output)
+            result_path.parent.mkdir(parents=True, exist_ok=True)
+            result_path.write_text(
+                json.dumps(result_manifest, indent=2, sort_keys=True) + "\n"
+            )
+        return result_manifest

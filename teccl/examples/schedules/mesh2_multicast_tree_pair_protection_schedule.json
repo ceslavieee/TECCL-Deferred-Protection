@@ -1,0 +1,515 @@
+{
+  "1-Epoch_Duration": 1.0,
+  "10-Working_Flows": [
+    "Chunk 0 from 0 traveled over 0->1 in epoch 0",
+    "Chunk 0 from 1 traveled over 1->0 in epoch 0",
+    "Chunk 0 from 1 traveled over 1->2 in epoch 0",
+    "Chunk 0 from 2 traveled over 2->1 in epoch 0",
+    "Chunk 0 from 2 traveled over 2->3 in epoch 0",
+    "Chunk 0 from 3 traveled over 3->2 in epoch 0",
+    "Chunk 0 from 2 traveled over 1->0 in epoch 1",
+    "Chunk 0 from 0 traveled over 1->2 in epoch 1",
+    "Chunk 0 from 0 traveled over 1->3 in epoch 1",
+    "Chunk 0 from 3 traveled over 2->0 in epoch 1",
+    "Chunk 0 from 3 traveled over 2->1 in epoch 1",
+    "Chunk 0 from 1 traveled over 2->3 in epoch 1"
+  ],
+  "10a-Working_Demand_Links": [],
+  "10b-Working_Demand_Link_Epochs": [],
+  "11-Protection_Flows": [],
+  "11a-Recovery_Flows_By_Scenario": [
+    "Scenario 0: chunk 0 from 0 recovered over 2->1 in epoch 6",
+    "Scenario 2: chunk 0 from 2 recovered over 2->0 in epoch 5",
+    "Scenario 2: chunk 0 from 1 recovered over 2->0 in epoch 6",
+    "Scenario 3: chunk 0 from 0 recovered over 0->2 in epoch 6",
+    "Scenario 3: chunk 0 from 1 recovered over 3->2 in epoch 6",
+    "Scenario 4: chunk 0 from 0 recovered over 2->3 in epoch 6",
+    "Scenario 5: chunk 0 from 3 recovered over 1->0 in epoch 6",
+    "Scenario 6: chunk 0 from 2 recovered over 0->1 in epoch 6",
+    "Scenario 6: chunk 0 from 3 recovered over 3->1 in epoch 6",
+    "Scenario 7: chunk 0 from 2 recovered over 1->3 in epoch 5",
+    "Scenario 7: chunk 0 from 1 recovered over 1->3 in epoch 6",
+    "Scenario 9: chunk 0 from 3 recovered over 1->2 in epoch 6"
+  ],
+  "11b-Reserved_Backup_Slots": [
+    "Chunk 0 from 2 reserves 1->3 in epoch 5",
+    "Chunk 0 from 2 reserves 2->0 in epoch 5",
+    "Chunk 0 from 2 reserves 0->1 in epoch 6",
+    "Chunk 0 from 0 reserves 0->2 in epoch 6",
+    "Chunk 0 from 3 reserves 1->0 in epoch 6",
+    "Chunk 0 from 3 reserves 1->2 in epoch 6",
+    "Chunk 0 from 1 reserves 1->3 in epoch 6",
+    "Chunk 0 from 1 reserves 2->0 in epoch 6",
+    "Chunk 0 from 0 reserves 2->1 in epoch 6",
+    "Chunk 0 from 0 reserves 2->3 in epoch 6",
+    "Chunk 0 from 3 reserves 3->1 in epoch 6",
+    "Chunk 0 from 1 reserves 3->2 in epoch 6"
+  ],
+  "11c-Reserved_Backup_Slot_Count": 12,
+  "11d-Executed_Recovery_Flow_Count": 12,
+  "14-Resource_Accounting_Unit": "occupied directed link-epochs weighted by beta(i,j) + 1",
+  "14a-Contingency_Plan_Link_Epochs": 12,
+  "14b-Peak_Future_Reserved_Link_Epochs": 12,
+  "14c-Future_Reservation_Holding_Units": 24,
+  "14d-Released_Before_Scheduled_Slot_Link_Epochs": 12,
+  "14e-Failure_Free_Committed_Backup_Link_Epochs": 0,
+  "14f-Failure_Free_Release_Ratio": 1.0,
+  "14g-Future_Reservation_Profile": [
+    {
+      "active_future_reserved_link_epochs": 12,
+      "observation_epoch": 0,
+      "released_before_scheduled_slot_link_epochs": 0,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 12,
+      "observation_epoch": 1,
+      "released_before_scheduled_slot_link_epochs": 0,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 2,
+      "released_before_scheduled_slot_link_epochs": 12,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 3,
+      "released_before_scheduled_slot_link_epochs": 12,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 4,
+      "released_before_scheduled_slot_link_epochs": 12,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 5,
+      "released_before_scheduled_slot_link_epochs": 12,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 6,
+      "released_before_scheduled_slot_link_epochs": 12,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    },
+    {
+      "active_future_reserved_link_epochs": 0,
+      "observation_epoch": 7,
+      "released_before_scheduled_slot_link_epochs": 12,
+      "scheduled_slot_elapsed_before_completion_link_epochs": 0
+    }
+  ],
+  "14h-Chunk_Working_Completion_Profile": [
+    {
+      "chunk": 0,
+      "source": 0,
+      "working_completion_epoch": 2
+    },
+    {
+      "chunk": 0,
+      "source": 1,
+      "working_completion_epoch": 2
+    },
+    {
+      "chunk": 0,
+      "source": 2,
+      "working_completion_epoch": 2
+    },
+    {
+      "chunk": 0,
+      "source": 3,
+      "working_completion_epoch": 2
+    }
+  ],
+  "14i-Flow_Occupancy_Epochs_By_Link": [
+    {
+      "link": "0->1",
+      "occupied_epochs_per_flow": 1
+    },
+    {
+      "link": "0->2",
+      "occupied_epochs_per_flow": 1
+    },
+    {
+      "link": "1->0",
+      "occupied_epochs_per_flow": 1
+    },
+    {
+      "link": "1->2",
+      "occupied_epochs_per_flow": 1
+    },
+    {
+      "link": "1->3",
+      "occupied_epochs_per_flow": 1
+    },
+    {
+      "link": "2->0",
+      "occupied_epochs_per_flow": 1
+    },
+    {
+      "link": "2->1",
+      "occupied_epochs_per_flow": 1
+    },
+    {
+      "link": "2->3",
+      "occupied_epochs_per_flow": 1
+    },
+    {
+      "link": "3->1",
+      "occupied_epochs_per_flow": 1
+    },
+    {
+      "link": "3->2",
+      "occupied_epochs_per_flow": 1
+    }
+  ],
+  "14j-Contingency_Plan_Transmissions": 12,
+  "14k-Contingency_Plan_Payload_GB_Links": 1200.0,
+  "14l-Contingency_Plan_Occupied_Link_Seconds": 12.0,
+  "14m-Future_Reservation_Holding_Link_Second_Squared": 24.0,
+  "14n-Released_Before_Scheduled_Slot_Link_Seconds": 12.0,
+  "14o-Failure_Free_Committed_Backup_Link_Seconds": 0.0,
+  "14p-Accounting_Epoch_Duration_Seconds": 1.0,
+  "14q-Accounting_Chunk_Size_GB": 100.0,
+  "2-Expected_Epoch_Duration": 1.0,
+  "3-Heuristic_Working_Finish_Epochs": 2.0,
+  "4-Heuristic_Deferred_Finish_Epochs": 4.0,
+  "5-Heuristic_Deferred_Finish_Time": 4.0,
+  "6-Deferred_Deadline_Factor": 2.0,
+  "7-Working_Deadline_Epoch": 7,
+  "7a-Deferred_Activation_Epoch": 1,
+  "7aa-Multicast_Tree_Pair_Enforced": true,
+  "7b-Failure_Observation_Epoch": 2,
+  "7c-Dynamic_Backup_Release": false,
+  "7d-Real_Failure_Timing": true,
+  "7e-Failure_Time_Epoch": 1,
+  "7f-Detection_Delay_Epochs": 1,
+  "7g-Recovery_Start_Epoch": 2,
+  "7h-Recovery_Inherits_Scenario_Valid_Working_Buffers": true,
+  "7i-Post_Failure_Working_Flows_Continue": true,
+  "7j-Failure_Model": "APPROXIMATE",
+  "7k-Failure_Exposure_Granularity": "source-chunk future link exposure",
+  "7l-Fixed_Working_Schedule": "",
+  "7m-Protection_Semantics": "scenario-robust DPP fixed-time subproblem",
+  "7n-Normal_Operation_Backup_Data_Transmissions": 0,
+  "7o-Recovery_Reservation_Binding": "flow_r <= flow_p",
+  "7p-DPP_Reservation_Deadline_Epoch": 7,
+  "7q-Failure_Time_Known_To_Optimizer": true,
+  "7r-Robust_Across_Unknown_Failure_Time": false,
+  "7s-Strict_Protected_Completion_Deadline_Epoch": 7,
+  "7t-Fixed_Reservation_Schedule": "",
+  "7u-Minimum_Reservation_Schedule": "",
+  "7v-Recovery_Link_Disjoint_From_Working_Per_Scenario": true,
+  "7w-Reservation_Start_Epoch": 1,
+  "7x-Reservation_End_Epoch": 7,
+  "7y-Prior_Link_Epoch_Occupancy_File": "",
+  "7z-Prior_Occupied_Link_Epoch_Count": 0,
+  "8-Final_Deadline_Epoch": 12,
+  "9-Epochs_Required": 7,
+  "9a-Failure_Scenarios": [
+    "0->1",
+    "0->2",
+    "1->0",
+    "1->2",
+    "1->3",
+    "2->0",
+    "2->1",
+    "2->3",
+    "3->1",
+    "3->2"
+  ],
+  "9b-Failure_Scenario_Summary": {
+    "Failure 0: 0->1": {
+      "affected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)"
+      ],
+      "dynamically_released_demands": [],
+      "failed_link": "0->1",
+      "protected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)"
+      ],
+      "unaffected_demands": [
+        "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)",
+        "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)",
+        "Demand (3->0, chunk 0)",
+        "Demand (3->1, chunk 0)",
+        "Demand (3->2, chunk 0)"
+      ],
+      "unprotected_demands": []
+    },
+    "Failure 1: 0->2": {
+      "affected_demands": [],
+      "dynamically_released_demands": [],
+      "failed_link": "0->2",
+      "protected_demands": [],
+      "unaffected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
+        "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)",
+        "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)",
+        "Demand (3->0, chunk 0)",
+        "Demand (3->1, chunk 0)",
+        "Demand (3->2, chunk 0)"
+      ],
+      "unprotected_demands": []
+    },
+    "Failure 2: 1->0": {
+      "affected_demands": [
+        "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)",
+        "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)"
+      ],
+      "dynamically_released_demands": [],
+      "failed_link": "1->0",
+      "protected_demands": [
+        "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)",
+        "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)"
+      ],
+      "unaffected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
+        "Demand (3->0, chunk 0)",
+        "Demand (3->1, chunk 0)",
+        "Demand (3->2, chunk 0)"
+      ],
+      "unprotected_demands": []
+    },
+    "Failure 3: 1->2": {
+      "affected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
+        "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)"
+      ],
+      "dynamically_released_demands": [],
+      "failed_link": "1->2",
+      "protected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
+        "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)"
+      ],
+      "unaffected_demands": [
+        "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)",
+        "Demand (3->0, chunk 0)",
+        "Demand (3->1, chunk 0)",
+        "Demand (3->2, chunk 0)"
+      ],
+      "unprotected_demands": []
+    },
+    "Failure 4: 1->3": {
+      "affected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)"
+      ],
+      "dynamically_released_demands": [],
+      "failed_link": "1->3",
+      "protected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)"
+      ],
+      "unaffected_demands": [
+        "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)",
+        "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)",
+        "Demand (3->0, chunk 0)",
+        "Demand (3->1, chunk 0)",
+        "Demand (3->2, chunk 0)"
+      ],
+      "unprotected_demands": []
+    },
+    "Failure 5: 2->0": {
+      "affected_demands": [
+        "Demand (3->0, chunk 0)",
+        "Demand (3->1, chunk 0)",
+        "Demand (3->2, chunk 0)"
+      ],
+      "dynamically_released_demands": [],
+      "failed_link": "2->0",
+      "protected_demands": [
+        "Demand (3->0, chunk 0)",
+        "Demand (3->1, chunk 0)",
+        "Demand (3->2, chunk 0)"
+      ],
+      "unaffected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
+        "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)",
+        "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)"
+      ],
+      "unprotected_demands": []
+    },
+    "Failure 6: 2->1": {
+      "affected_demands": [
+        "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)",
+        "Demand (3->0, chunk 0)",
+        "Demand (3->1, chunk 0)",
+        "Demand (3->2, chunk 0)"
+      ],
+      "dynamically_released_demands": [],
+      "failed_link": "2->1",
+      "protected_demands": [
+        "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)",
+        "Demand (3->0, chunk 0)",
+        "Demand (3->1, chunk 0)",
+        "Demand (3->2, chunk 0)"
+      ],
+      "unaffected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
+        "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)"
+      ],
+      "unprotected_demands": []
+    },
+    "Failure 7: 2->3": {
+      "affected_demands": [
+        "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)",
+        "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)"
+      ],
+      "dynamically_released_demands": [],
+      "failed_link": "2->3",
+      "protected_demands": [
+        "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)",
+        "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)"
+      ],
+      "unaffected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
+        "Demand (3->0, chunk 0)",
+        "Demand (3->1, chunk 0)",
+        "Demand (3->2, chunk 0)"
+      ],
+      "unprotected_demands": []
+    },
+    "Failure 8: 3->1": {
+      "affected_demands": [],
+      "dynamically_released_demands": [],
+      "failed_link": "3->1",
+      "protected_demands": [],
+      "unaffected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
+        "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)",
+        "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)",
+        "Demand (3->0, chunk 0)",
+        "Demand (3->1, chunk 0)",
+        "Demand (3->2, chunk 0)"
+      ],
+      "unprotected_demands": []
+    },
+    "Failure 9: 3->2": {
+      "affected_demands": [
+        "Demand (3->0, chunk 0)",
+        "Demand (3->1, chunk 0)",
+        "Demand (3->2, chunk 0)"
+      ],
+      "dynamically_released_demands": [],
+      "failed_link": "3->2",
+      "protected_demands": [
+        "Demand (3->0, chunk 0)",
+        "Demand (3->1, chunk 0)",
+        "Demand (3->2, chunk 0)"
+      ],
+      "unaffected_demands": [
+        "Demand (0->1, chunk 0)",
+        "Demand (0->2, chunk 0)",
+        "Demand (0->3, chunk 0)",
+        "Demand (1->0, chunk 0)",
+        "Demand (1->2, chunk 0)",
+        "Demand (1->3, chunk 0)",
+        "Demand (2->0, chunk 0)",
+        "Demand (2->1, chunk 0)",
+        "Demand (2->3, chunk 0)"
+      ],
+      "unprotected_demands": []
+    }
+  },
+  "9c-Objective_Working_Completion_Epoch": 2.002001,
+  "9d-Objective_Protection_Completion_Epoch": 7.007001,
+  "9e-Actual_Working_Completion_Epoch": 2,
+  "9f-Actual_Protected_Completion_Epoch": 7,
+  "Solver_MIP_Gap": null,
+  "Solver_Name": "ScenarioRobustProtection_MILP",
+  "Solver_Node_Count": 4.0,
+  "Solver_Objective_Bound": null,
+  "Solver_Objective_Value": 2.002001,
+  "Solver_Quality": {
+    "mip_gap": null,
+    "node_count": 4.0,
+    "objective_bound": null,
+    "objective_value": 2.002001,
+    "runtime": 0.23202300071716309,
+    "solution_count": 9,
+    "solver_name": "ScenarioRobustProtection_MILP",
+    "status_code": 2,
+    "status_name": "OPTIMAL"
+  },
+  "Solver_Runtime": 0.23202300071716309,
+  "Solver_Solution_Count": 9,
+  "Solver_Status": 2,
+  "Solver_Status_Name": "OPTIMAL",
+  "Solver_Time": 0.38019514083862305
+}

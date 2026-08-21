@@ -24,6 +24,7 @@ class GurobiParams:
     crossover: int = -1             # https://www.gurobi.com/documentation/10.0/refman/crossover.html
     method: int = -1                # https://www.gurobi.com/documentation/10.0/refman/method.html
     heuristics: float = 0.05        # https://www.gurobi.com/documentation/9.5/refman/heuristics.html
+    no_rel_heur_work: float = 0.0   # Deterministic work budget for Gurobi's pre-root feasibility heuristic.
     presolve: int = -1              # https://www.gurobi.com/documentation/9.5/refman/presolve.html
     solution_limit: int = 2000000 # https://www.gurobi.com/documentation/9.5/refman/solutionlimit.html
 
@@ -69,6 +70,8 @@ class ProtectionMode(Enum):
     DEFERRED = 1
     DEDICATED = 2
     SHARED = 3
+    SCENARIO_ROBUST = 4
+    STRICT_DEDICATED = 4  # Backward-compatible alias for historical inputs.
 
 
 class DeferredTimingMode(Enum):
@@ -98,10 +101,16 @@ class InstanceParams:
     objective_type: ObjectiveType = ObjectiveType.PAPER # The objective function to be used (3 - The objective function used in the paper)
     solution_method: SolutionMethod = SolutionMethod.ONE_SHOT
     schedule_output_file: str = "" # If not empty, the schedule is written to this file. Default is "Topology-Chunks-chunksize-timestamp.json"
+    solver_result_output_file: str = "" # Optional status sidecar written even when no schedule is produced.
     lower: bool = False # If true will use the lowering code from Meghan to lower the input.
     lower_xml: str = "" # If not empty, the XML is written to this file. Default is "Topology-Chunks-chunksize-timestamp.xml"
     warmstart: str = "" # If not empty, the warmstart file is used to warmstart the optimization.
     fixed_working_schedule: str = "" # If not empty, protection solvers fix working flows to this schedule JSON.
+    fixed_working_tree_schedule: str = "" # If not empty, strict protection fixes working-tree edges but re-optimizes their epochs.
+    fixed_reservation_schedule: str = "" # If not empty, strict DPP fixes rho to exported reserved backup slots.
+    minimum_reservation_schedule: str = "" # If not empty, strict DPP retains every exported rho slot but may add more.
+    fixed_backup_tree_schedule: str = "" # If not empty, strict protection fixes reserved tree edges but re-optimizes their epochs.
+    prior_link_epoch_occupancy_file: str = "" # Existing accepted-request occupancy, indexed in this request's local epochs.
     symmetry: bool = False # If true, nodes that are given as symmetric are constrainted to have same number of total flows. 
     protection_mode: ProtectionMode = ProtectionMode.NONE # Enables alternative resilient formulations for AllGather.
     deferred_timing_mode: DeferredTimingMode = DeferredTimingMode.POST_FAILURE # PREPLANNED reserves a later backup schedule before failure; POST_FAILURE computes scenario recovery.
@@ -115,10 +124,12 @@ class InstanceParams:
     failure_time_epoch: int = -1 # 0-based failure occurrence epoch for deferred recovery (-1 uses half of the working deadline).
     detection_delay_epochs: int = 1 # Number of epochs between failure occurrence and recovery activation.
     protection_link_disjoint: bool = True # If true, working and protection paths cannot share a directed link.
+    enforce_multicast_tree_pair: bool = False # If true, each source chunk uses one rooted working tree and one rooted reserved backup tree.
+    enforce_failure_time_robust_reservation: bool = False # If true, reserve each commodity's backup tree only after its nominal working completion, yielding a common all-failure-time plan from the tau=0 scenario set.
     enable_failure_scenarios: bool = True # If true, deferred protection adds explicit single-link failure coverage constraints.
     failure_scenario_offset: int = 0 # Starting index when selecting a subset of enumerated directed-link failure scenarios.
     max_failure_scenarios: int = -1 # Maximum number of directed-link failure scenarios to include (-1 means all links).
-    failure_model: FailureModel = FailureModel.APPROXIMATE # APPROXIMATE uses source-chunk exposure; EXACT extracts per-demand paths.
+    failure_model: FailureModel = FailureModel.APPROXIMATE # APPROXIMATE uses atomic source-chunk exposure; EXACT embeds one per-demand path but is not deterministic failure replay.
     
 class UserInputParams:
     topology: TopologyParams = TopologyParams()

@@ -1,6 +1,8 @@
+import json
 import logging
 import time
 from itertools import product
+from pathlib import Path
 from typing import Dict, List, Tuple
 
 import gurobipy as gp
@@ -38,9 +40,32 @@ class PreplannedDeferredProtectionFormulation(DeferredProtectionFormulation):
         self.solver_name = "PreplannedDeferredProtection_MILP"
         self.real_failure_timing_enabled = False
         self.failure_scenarios = []
+        self.final_deadline = self.num_epochs - 1
+        self.working_deadline = min(
+            self.final_deadline,
+            max(
+                0,
+                int(
+                    (self.final_deadline + 1)
+                    * self.user_input.instance.working_deadline_ratio
+                )
+                - 1,
+            ),
+        )
+        fixed_working = self.user_input.instance.fixed_working_schedule
+        if fixed_working:
+            fixed_schedule = json.loads(Path(fixed_working).read_text())
+            strict_window = fixed_schedule.get(
+                "7p-DPP_Reservation_Deadline_Epoch"
+            )
+            if strict_window is not None:
+                self.working_deadline = min(
+                    self.final_deadline,
+                    max(0, int(strict_window) - 1),
+                )
         self.deferred_activation_epoch = min(
             self.final_deadline,
-            max(self.deferred_activation_epoch, self.working_deadline + 1),
+            self.working_deadline + 1,
         )
         self.observation_epochs = list(range(self.working_deadline + 2))
         self.chunk_complete_before: Dict[Tuple[int, int, int], gp.Var] = {}
@@ -154,7 +179,9 @@ class PreplannedDeferredProtectionFormulation(DeferredProtectionFormulation):
                 % (observation_epoch, s, i, j, c, backup_epoch),
             )
 
-    def objective_expressions(self) -> Tuple[gp.LinExpr, gp.LinExpr, gp.LinExpr]:
+    def objective_expressions(
+        self,
+    ) -> Tuple[gp.LinExpr, gp.LinExpr, gp.LinExpr, gp.LinExpr]:
         reservation_holding = gp.LinExpr(0.0)
         for key, reservation_var in self.backup_reservation.items():
             _, _, i, j, _, _ = key
@@ -164,7 +191,8 @@ class PreplannedDeferredProtectionFormulation(DeferredProtectionFormulation):
                 else 1
             )
             reservation_holding.add(reservation_var, weight)
-        backup_transmissions = gp.LinExpr(0.0)
+        backup_capacity = gp.LinExpr(0.0)
+        flow_tiebreaker = gp.LinExpr(0.0)
         for s, i, j, c, k in product(
             self.nodes,
             self.nodes,
@@ -174,12 +202,21 @@ class PreplannedDeferredProtectionFormulation(DeferredProtectionFormulation):
         ):
             flow_var = self.flow_p[s][i][j][c][k]
             if self._is_var(flow_var):
-                backup_transmissions.add(flow_var)
+                backup_capacity.add(
+                    flow_var,
+                    self.get_beta_num_back(i, j) + 1,
+                )
+                flow_tiebreaker.add(flow_var)
+            working_var = self.flow_w[s][i][j][c][k]
+            if self._is_var(working_var):
+                flow_tiebreaker.add(working_var)
 
-        completion = gp.LinExpr(0.0)
-        completion.add(self.working_completion_epoch)
-        completion.add(self.protection_completion_epoch)
-        return reservation_holding, backup_transmissions, completion
+        return (
+            backup_capacity,
+            reservation_holding,
+            self.protection_completion_epoch,
+            flow_tiebreaker,
+        )
 
     def encode_problem(self, use_one_less_epoch: bool = False, previous_buffers=None) -> int:
         del use_one_less_epoch, previous_buffers
@@ -214,28 +251,40 @@ class PreplannedDeferredProtectionFormulation(DeferredProtectionFormulation):
         self.chunk_completion_constraints()
         self.backup_reservation_constraints()
 
-        reservation_holding, backup_transmissions, completion = self.objective_expressions()
+        (
+            backup_capacity,
+            reservation_holding,
+            protected_completion,
+            flow_tiebreaker,
+        ) = self.objective_expressions()
         self.model.ModelSense = GRB.MINIMIZE
         self.model.setObjectiveN(
-            reservation_holding,
+            backup_capacity,
             index=0,
+            priority=4,
+            weight=1.0,
+            name="reserved_occupied_link_epochs",
+        )
+        self.model.setObjectiveN(
+            reservation_holding,
+            index=1,
             priority=3,
             weight=1.0,
             name="reservation_holding",
         )
         self.model.setObjectiveN(
-            backup_transmissions,
-            index=1,
+            protected_completion,
+            index=2,
             priority=2,
             weight=1.0,
-            name="backup_transmissions",
+            name="protected_completion",
         )
         self.model.setObjectiveN(
-            completion,
-            index=2,
+            flow_tiebreaker,
+            index=3,
             priority=1,
             weight=1.0,
-            name="completion_tiebreak",
+            name="flow_tiebreaker",
         )
 
         log_file = (
@@ -353,5 +402,37 @@ class PreplannedDeferredProtectionFormulation(DeferredProtectionFormulation):
             accounting["future_reservation_holding_link_second_squared"]
             if beta_weighted
             else None
+        )
+        schedule_json["12i-Objective_Hierarchy"] = [
+            "reserved occupied link-epochs",
+            "reservation holding",
+            "protected completion",
+            "flow tiebreaker",
+        ]
+        schedule_json["12j-Actual_Working_Completion_Epoch"] = max(
+            (
+                row["working_completion_epoch"]
+                for row in chunk_completion_profile
+            ),
+            default=0,
+        )
+        schedule_json["12k-Actual_Protection_Completion_Epoch"] = (
+            self.find_demand_satisfied_k() + 1
+        )
+        schedule_json["12l-Configured_Service_Deadline_Epoch"] = (
+            self.final_deadline + 1
+        )
+        detection_delay = self.user_input.instance.detection_delay_epochs
+        latest_relevant_failure = max(
+            0,
+            schedule_json["12j-Actual_Working_Completion_Epoch"] - 1,
+        )
+        schedule_json["12m-Pairing_Detection_Delay_Epochs"] = detection_delay
+        schedule_json["12n-Latest_Relevant_Failure_Epoch"] = (
+            latest_relevant_failure
+        )
+        schedule_json["12o-Latest_Detection_Precedes_Activation"] = (
+            latest_relevant_failure + detection_delay
+            <= self.deferred_activation_epoch
         )
         return flows, schedule_json

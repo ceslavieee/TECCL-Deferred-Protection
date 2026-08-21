@@ -208,6 +208,7 @@ class BaseFormulation(ABC):
         self.model.Params.MIPFocus = self.user_input.gurobi.mip_focus
         self.model.Params.Method = self.user_input.gurobi.method
         self.model.Params.Heuristics = self.user_input.gurobi.heuristics
+        self.model.Params.NoRelHeurWork = self.user_input.gurobi.no_rel_heur_work
         self.model.Params.Presolve = self.user_input.gurobi.presolve
         self.model.Params.SolutionLimit = self.user_input.gurobi.solution_limit
         # self.model.Params.NoRelHeurTime = 1200

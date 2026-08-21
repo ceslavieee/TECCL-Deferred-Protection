@@ -126,6 +126,9 @@ def replay(
     persistent: Dict[Commodity, Set[int]] = {
         commodity: {commodity[0]} for commodity in commodities
     }
+    node_arrival_epoch: Dict[Tuple[Commodity, int], int] = {
+        (commodity, commodity[0]): 0 for commodity in commodities
+    }
     arrivals: Dict[int, List[Tuple[Commodity, int]]] = defaultdict(list)
     completion: Dict[Commodity, int] = {}
     executed: List[Flow] = []
@@ -140,6 +143,7 @@ def replay(
         for commodity, node in arrivals.get(epoch, []):
             if node in data_nodes:
                 persistent[commodity].add(node)
+                node_arrival_epoch.setdefault((commodity, node), epoch)
             else:
                 switch_arrivals[(commodity, node)] += 1
 
@@ -175,6 +179,10 @@ def replay(
     return {
         "completion": completion,
         "incomplete": incomplete,
+        "delivered_nodes": {
+            commodity: set(nodes) for commodity, nodes in persistent.items()
+        },
+        "node_arrival_epoch": node_arrival_epoch,
         "executed": executed,
         "failed_drops": failed_drops,
         "causality_drops": causality_drops,

@@ -1,0 +1,13 @@
+{
+  "accounting_unit": "occupied chunk-transfer units per directed link-epoch",
+  "arrival_epoch": 0,
+  "horizon_epochs": 12,
+  "epochs": [
+    {
+      "src": 0,
+      "dst": 1,
+      "epoch": 0,
+      "occupancy": 1
+    }
+  ]
+}

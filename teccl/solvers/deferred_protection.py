@@ -116,9 +116,57 @@ class DeferredProtectionFormulation(BaseFormulation):
             self.final_deadline,
             max(self.deferred_activation_epoch, self.failure_time_epoch + self.detection_delay_epochs),
         )
+        self.recovery_inherits_working_arrivals = True
         self.enable_dynamic_backup_release = self.user_input.instance.enable_dynamic_backup_release
         self.failure_scenarios = self._enumerate_failure_scenarios()
         self._fixed_demand_link_epoch_cache = None
+        self.prior_link_epoch_occupancy = self._load_prior_link_epoch_occupancy()
+
+    def _load_prior_link_epoch_occupancy(self) -> Dict[Tuple[int, int, int], int]:
+        """Load already committed traffic in request-local link epochs."""
+
+        occupancy_path = self.user_input.instance.prior_link_epoch_occupancy_file
+        if not occupancy_path:
+            return {}
+        path = Path(occupancy_path)
+        payload = json.loads(path.read_text())
+        if payload.get("accounting_unit") != "occupied chunk-transfer units per directed link-epoch":
+            raise ValueError(
+                "Unsupported prior occupancy accounting unit in "
+                f"{occupancy_path}"
+            )
+        occupancy: Dict[Tuple[int, int, int], int] = defaultdict(int)
+        for row in payload.get("epochs", []):
+            i = int(row["src"])
+            j = int(row["dst"])
+            k = int(row["epoch"])
+            value = int(row.get("occupancy", 1))
+            if not (0 <= i < self.num_nodes and 0 <= j < self.num_nodes):
+                raise ValueError(f"Prior occupancy uses unknown link {i}->{j}")
+            if self.topology.capacity[i][j] <= 0:
+                raise ValueError(f"Prior occupancy uses absent link {i}->{j}")
+            if not 0 <= k < self.num_epochs:
+                raise ValueError(
+                    f"Prior occupancy epoch {k} outside local horizon "
+                    f"[0, {self.num_epochs})"
+                )
+            if value <= 0:
+                raise ValueError(f"Prior occupancy must be positive: {row}")
+            occupancy[(i, j, k)] += value
+
+        for (i, j, k), value in occupancy.items():
+            epoch_capacity = self.topology.capacity[i][j] * self.epoch_duration
+            beta_num_back = max(0, int(np.ceil(1 / epoch_capacity)) - 1)
+            nominal_bound = (beta_num_back + 1) * epoch_capacity
+            if value > nominal_bound + 1e-9:
+                raise ValueError(
+                    f"Prior occupancy {value} exceeds nominal bound "
+                    f"{nominal_bound} on {i}->{j} at epoch {k}"
+                )
+        return dict(occupancy)
+
+    def _prior_occupancy(self, i: int, j: int, k: int) -> int:
+        return int(self.prior_link_epoch_occupancy.get((i, j, k), 0))
 
     def _enumerate_failure_scenarios(self) -> List[Tuple[int, int]]:
         scenarios = []
@@ -349,7 +397,7 @@ class DeferredProtectionFormulation(BaseFormulation):
             for s, c, k in product(self.nodes, self.chunks, self.epochs):
                 if s == j:
                     continue
-                if link_type in [self.LinkType.GPU_SWITCH, self.LinkType.GPU_GPU] and k in not_necessary_k:
+                if k in not_necessary_k:
                     continue
                 self.flow_w[s][i][j][c][k] = self.model.addVar(
                     0, 1, vtype=GRB.INTEGER, name="flow_w_%d_%d_%d_%d_%d" % (s, i, j, c, k)
@@ -424,7 +472,7 @@ class DeferredProtectionFormulation(BaseFormulation):
                     for s, c, k in product(self.nodes, self.chunks, self.epochs):
                         if s == j:
                             continue
-                        if link_type in [self.LinkType.GPU_SWITCH, self.LinkType.GPU_GPU] and k in not_necessary_k:
+                        if k in not_necessary_k:
                             continue
                         self.flow_r[(scenario_idx, s, i, j, c, k)] = self.model.addVar(
                             0,
@@ -659,13 +707,12 @@ class DeferredProtectionFormulation(BaseFormulation):
             cap_constr = gp.LinExpr(0.0)
             epoch_capacity = self.topology.capacity[i][j] * self.epoch_duration
             beta_num_back = max(0, int(np.ceil(1 / epoch_capacity)) - 1)
-            if k - beta_num_back < 0:
-                continue
             for l in range(beta_num_back + 1):
                 for s, c in product(self.nodes, self.chunks):
                     if k - l >= 0:
                         cap_constr.add(self.flow_w[s][i][j][c][k - l])
                         cap_constr.add(self.flow_p[s][i][j][c][k - l])
+            cap_constr.addConstant(self._prior_occupancy(i, j, k))
             self.model.addConstr(
                 cap_constr <= ((beta_num_back + 1) * epoch_capacity),
                 name="capacity_%d_%d_%d" % (i, j, k),
@@ -904,7 +951,16 @@ class DeferredProtectionFormulation(BaseFormulation):
                     )
                 elif k <= self.recovery_start_epoch and i not in self.topology.switch_indices:
                     buffer_constr.add(self._buffer_r(scenario_idx, s, i, c, k - 1))
-                    self._add_valid_working_arrivals(buffer_constr, s, i, c, k, failed_i, failed_j)
+                    if self.recovery_inherits_working_arrivals:
+                        self._add_valid_working_arrivals(
+                            buffer_constr,
+                            s,
+                            i,
+                            c,
+                            k,
+                            failed_i,
+                            failed_j,
+                        )
                     self.model.addConstr(
                         buffer_constr == buffer_var,
                         name="node_inherited_buffer_recovery_%d_%d_%d_%d_%d" % (scenario_idx, s, i, c, k),
@@ -917,7 +973,16 @@ class DeferredProtectionFormulation(BaseFormulation):
                     )
                 elif i not in self.topology.switch_indices:
                     buffer_constr.add(self._buffer_r(scenario_idx, s, i, c, k - 1))
-                    self._add_valid_working_arrivals(buffer_constr, s, i, c, k, failed_i, failed_j)
+                    if self.recovery_inherits_working_arrivals:
+                        self._add_valid_working_arrivals(
+                            buffer_constr,
+                            s,
+                            i,
+                            c,
+                            k,
+                            failed_i,
+                            failed_j,
+                        )
                     for j in self.nodes:
                         if self.topology.capacity[j][i] <= 0:
                             continue
@@ -1064,8 +1129,6 @@ class DeferredProtectionFormulation(BaseFormulation):
                 cap_constr = gp.LinExpr(0.0)
                 epoch_capacity = self.topology.capacity[i][j] * self.epoch_duration
                 beta_num_back = max(0, int(np.ceil(1 / epoch_capacity)) - 1)
-                if k - beta_num_back < 0:
-                    continue
                 for l in range(beta_num_back + 1):
                     active_k = k - l
                     if active_k < 0:
@@ -1076,6 +1139,7 @@ class DeferredProtectionFormulation(BaseFormulation):
                         recovery_var = self._flow_r(scenario_idx, s, i, j, c, active_k)
                         if self._is_var(recovery_var):
                             cap_constr.add(recovery_var)
+                cap_constr.addConstant(self._prior_occupancy(i, j, k))
                 self.model.addConstr(
                     cap_constr <= ((beta_num_back + 1) * epoch_capacity),
                     name="capacity_recovery_%d_%d_%d_%d" % (scenario_idx, i, j, k),
@@ -1607,16 +1671,19 @@ class DeferredProtectionFormulation(BaseFormulation):
             "7e-Failure_Time_Epoch": self.failure_time_epoch + 1,
             "7f-Detection_Delay_Epochs": self.detection_delay_epochs,
             "7g-Recovery_Start_Epoch": self.recovery_start_epoch + 1,
-            "7h-Recovery_Inherits_Scenario_Valid_Working_Buffers": self.real_failure_timing_enabled,
+            "7h-Recovery_Inherits_Scenario_Valid_Working_Buffers": (
+                self.real_failure_timing_enabled
+                and self.recovery_inherits_working_arrivals
+            ),
             "7i-Post_Failure_Working_Flows_Continue": self.real_failure_timing_enabled,
             "7j-Failure_Model": self.user_input.instance.failure_model.name,
             "7k-Failure_Exposure_Granularity": (
-                "fixed demand-link-epoch exposure"
+                "fixed embedded demand-link-epoch exposure"
                 if (
                     self.user_input.instance.failure_model == FailureModel.EXACT
                     and self._load_fixed_working_demand_link_epochs()
                 )
-                else "per-demand future link exposure"
+                else "solver-selected embedded demand-path exposure (not replay-exact)"
                 if self.user_input.instance.failure_model == FailureModel.EXACT
                 else "source-chunk future link exposure"
             ),
